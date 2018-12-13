@@ -26,3 +26,14 @@ $ git submodule update
 ```sh
 chsh $USER # enter /bin/zsh
 ```
+
+## Use nvim instead of vim
+```sh
+$ sudo apt-get install software-properties-common \
+$ sudo apt-get install python-software-properties \
+$ sudo add-apt-repository ppa:neovim-ppa/stable \
+$ sudo apt-get update \
+$ sudo apt-get install neovim \
+$ ln -s ~/.vimrc ~/.config/nvim/init.vim \
+$ ln -s ~/.vim ~/.config/nvim \
+```
