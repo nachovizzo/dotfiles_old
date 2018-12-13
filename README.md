@@ -22,6 +22,11 @@ $ git submodule init
 $ git submodule update
 ```
 
+## Install zsh-autosuggestions(could be done by submodules but fork is required)
+```sh
+$ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
 ## Change the default shell for zsh
 ```sh
 chsh $USER # enter /bin/zsh
