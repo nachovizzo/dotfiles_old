@@ -17,6 +17,7 @@ $ cd ~
 $ git init
 $ git remote add origin git@github.com:nachovizzo/dotfiles.git
 $ git fetch
+$ git reset origin/master --hard
 $ git pull origin master
 $ git submodule init
 $ git submodule update
