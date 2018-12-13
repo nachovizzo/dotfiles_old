@@ -4,3 +4,6 @@
 [submodule ".vim_runtime"]
 	path = .vim_runtime
 	url = ./.vim_runtime
+[submodule ".tmux/plugins"]
+	path = .tmux/plugins
+	url = ./.tmux/plugins/
