@@ -1,8 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/ivizzo/.oh-my-zsh
-
-# mkvirtualenv
-export WORKON_HOME="/home/ivizzo/.virtualenvs/"
+export ZSH=/home/$USER/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -101,7 +98,6 @@ alias rescan="nmcli device wifi rescan"
 alias list="nmcli device wifi list"
 alias deko='cd ~/Desktop'
 alias gitc='git checkout'
-alias kraken='ssh ivizzo@kraken'
 alias xcopy='xclip -selection clipboard'
 alias copywd='pwd | xclip -selection clipboard'
 alias ll='ls -hltrBF --group-directories-first --color=auto'
