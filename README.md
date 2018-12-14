@@ -33,6 +33,11 @@ $ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh
 chsh $USER # enter /bin/zsh
 ```
 
+## Install all packages(optional)
+```sh
+$ sudo apt update && cat pkglist | xargs sudo apt install
+```
+
 ## Use nvim instead of vim
 ```sh
 $ sudo apt-get install software-properties-common \
