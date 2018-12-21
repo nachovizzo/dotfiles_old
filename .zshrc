@@ -112,8 +112,6 @@ fi_replace()
 }
 export TERM=xterm-256color
 
-source /opt/ros/lunar/setup.zsh
-
 # https://docs.python.org/3/using/cmdline.html#envvar-PYTHONDONTWRITEBYTECODE
 # Don't write .pyc files while running Python
 PYTHONDONTWRITEBYTECODE=true
