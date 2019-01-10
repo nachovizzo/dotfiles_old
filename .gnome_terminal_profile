@@ -1,0 +1,14 @@
+[/]
+foreground-color='#CDD3DE'
+visible-name='Oceanic Next'
+palette=['#1B2B34', '#EC5F67', '#99C794', '#FAC863', '#6699CC', '#C594C5', '#5FB3B3', '#A7ADBA', '#4F5B66', '#EC5F67', '#99C794', '#FAC863', '#6699CC', '#C594C5', '#5FB3B3', '#D8DEE9']
+use-system-font=true
+use-transparent-background=true
+use-theme-colors=false
+font='Fira Code 12'
+use-theme-transparency=false
+use-theme-background=false
+bold-color-same-as-fg=true
+bold-color='#CDD3DE'
+background-color='#1B2B34'
+background-transparency-percent=7
