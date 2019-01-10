@@ -104,3 +104,4 @@ dev/
 snap/
 Teaching/
 texmf/
+.pam_environment
