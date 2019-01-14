@@ -107,3 +107,4 @@ texmf/
 .pam_environment
 pbuilder/
 .bazaar/
+.tig_history
