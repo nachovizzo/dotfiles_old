@@ -123,3 +123,8 @@ alias suspend='systemctl suspend'
 # www.webupd8.org/2015/11/configure-qt5-application-style-icons.html
 EDITOR="/usr/bin/vi"
 export COMMAND_NOT_FOUND_INSTALL_PROMPT=1
+
+
+# From http://packaging.ubuntu.com/html/getting-set-up.html
+export DEBFULLNAME="Ignacio Vizzo"
+export DEBEMAIL="ivizzo@uni-bonn.de"
