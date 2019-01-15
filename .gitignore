@@ -108,3 +108,4 @@ texmf/
 pbuilder/
 .bazaar/
 .tig_history
+.devscripts
