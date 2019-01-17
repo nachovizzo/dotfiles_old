@@ -99,6 +99,7 @@ alias list="nmcli device wifi list"
 alias deko='cd ~/Desktop'
 alias de='cd ~/dev'
 alias te='cd ~/Teaching'
+alias adr='cd ~/Andromeda'
 alias xopen='xdg-open'
 alias gitc='git checkout'
 alias xcopy='xclip -selection clipboard'
