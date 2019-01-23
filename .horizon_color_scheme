@@ -1,0 +1,8 @@
+% ==================================
+% Nacho's custom color for pdfs
+\usepackage{pagecolor}
+\definecolor{horizon}{RGB}{28,30,38}
+\definecolor{text_color}{RGB}{187,187,187}
+\pagecolor{horizon}
+\color{text_color}
+% ==================================
