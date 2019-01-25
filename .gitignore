@@ -115,3 +115,4 @@ texmf/
 .tig_history
 .devscripts
 .texlive2017/
+.jupyter/
