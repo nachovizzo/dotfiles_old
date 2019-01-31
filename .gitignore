@@ -116,3 +116,4 @@ texmf/
 .devscripts
 .texlive2017/
 .jupyter/
+.nv/
