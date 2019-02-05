@@ -107,6 +107,7 @@ alias gitc='git checkout'
 alias xcopy='xclip -selection clipboard'
 alias copywd='pwd | xclip -selection clipboard'
 alias ll='ls -hltrBF --group-directories-first --color=auto'
+alias tm='tmux'
 
 fi_replace()
 {
