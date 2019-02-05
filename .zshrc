@@ -130,3 +130,4 @@ export COMMAND_NOT_FOUND_INSTALL_PROMPT=1
 # From http://packaging.ubuntu.com/html/getting-set-up.html
 export DEBFULLNAME="Ignacio Vizzo"
 export DEBEMAIL="ivizzo@uni-bonn.de"
+source /opt/ros/melodic/setup.zsh
