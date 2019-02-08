@@ -1,0 +1,5 @@
+[user]
+	email = ignaciovizzo@gmail.com
+	name = Ignacio Vizzo
+[core]
+	excludesfile = /home/ivizzo/.gitignore_global

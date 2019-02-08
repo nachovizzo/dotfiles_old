@@ -47,7 +47,6 @@ texmf/
 .gdb_history
 .gdbinit_bak
 .git-got-cache/
-.gitconfig
 .github_token
 .gitkraken/
 .gksu.lock
