@@ -1,6 +1,13 @@
 [user]
-	email = ignaciovizzo@gmail.com
-	name = Ignacio Vizzo
+    email = ignaciovizzo@gmail.com
+    name = Ignacio Vizzo
 [core]
-	excludesfile = /home/ivizzo/.gitignore_global
-	editor = nvim
+    excludesfile = /home/ivizzo/.gitignore_global
+    editor = nvim
+
+# Add some git common alias
+[url "git@github.com:"]
+    insteadOf = github:
+
+[url "git@gitlab.ipb.uni-bonn.de:"]
+    insteadOf = gitlab:
