@@ -33,11 +33,14 @@ bonanza-color='#ff3305ff'
 refresh-rate=50
 
 [plugins/unityshell]
+launcher-minimize-window=true
+show-launcher='Enabled'
+lock-screen='<Control><Alt>l'
+launcher-switcher-forward='Disabled'
+inactive-shadow-color='#000000a5'
 show-desktop-key='<Control><Alt>d'
 launcher-switcher-prev='Disabled'
 launcher-hide-mode=1
-show-launcher='Enabled'
-launcher-minimize-window=true
 
 [plugins/wall]
 thumb-highlight-gradient-shadow-color='#dfdfdfff'
@@ -69,15 +72,18 @@ ground-color1='#b3b3b3cc'
 expo-key='<Control><Alt>s'
 ground-color2='#b3b3b300'
 
-[plugins/screenshot]
-selection-outline-color='#2f2f4f9f'
-selection-fill-color='#2f2f4f4f'
+[plugins/place]
+mode=5
 
 [plugins/staticswitcher]
 background-color='#333333d9'
 
 [plugins/firepaint]
 fire-color='#ff3305ff'
+
+[plugins/screenshot]
+selection-outline-color='#2f2f4f9f'
+selection-fill-color='#2f2f4f4f'
 
 [plugins/core]
 hsize=2
