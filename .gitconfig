@@ -11,3 +11,5 @@
 
 [url "git@gitlab.ipb.uni-bonn.de:"]
     insteadOf = gitlab:
+[pager]
+	branch = false
