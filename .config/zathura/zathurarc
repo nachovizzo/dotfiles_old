@@ -12,4 +12,5 @@ set adjust-open "best-fit"
 set pages-per-row "1"
 set page-padding "0"
 
-
+map = zoom in
+map - zoom out
