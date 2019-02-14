@@ -18,3 +18,8 @@ map [normal] = zoom in
 map [normal]- zoom out
 map [fullscreen] = zoom in
 map [fullscreen]- zoom out
+
+# Sometimes we want the dark mode but with the original
+# colors
+map [normal]     t set recolor-keephue
+map [fullscreen] t set recolor-keephue
