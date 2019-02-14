@@ -124,3 +124,5 @@ export COMMAND_NOT_FOUND_INSTALL_PROMPT=1
 export DEBFULLNAME="Ignacio Vizzo"
 export DEBEMAIL="ivizzo@uni-bonn.de"
 #source /opt/ros/melodic/setup.zsh
+
+export DATASETS=/home/ivizzo/dev/datasets
