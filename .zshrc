@@ -114,10 +114,6 @@ alias suspend='systemctl suspend'
 
 export TERM=xterm-256color
 
-# https://docs.python.org/3/using/cmdline.html#envvar-PYTHONDONTWRITEBYTECODE
-# Don't write .pyc files while running Python
-PYTHONDONTWRITEBYTECODE=true
-
 # From http://packaging.ubuntu.com/html/getting-set-up.html
 export COMMAND_NOT_FOUND_INSTALL_PROMPT=1
 
@@ -126,3 +122,6 @@ export DEBEMAIL="ivizzo@uni-bonn.de"
 #source /opt/ros/melodic/setup.zsh
 
 export DATASETS=/home/ivizzo/dev/datasets
+
+#Little hack to be able to find modules in subdris running scripts from somewhere else ;)
+export PYTHONPATH=$PYTHONPATH:
