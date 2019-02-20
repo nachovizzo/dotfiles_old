@@ -1,0 +1,8 @@
+[pylama]
+format = pylint
+linters = pylint,pycodestyle,pydocstyle
+
+[pylama:pycodestyle]
+max_line_length = 80
+ignore = E111
+
