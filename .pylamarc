@@ -6,3 +6,6 @@ linters = pylint,pycodestyle,pydocstyle
 max_line_length = 80
 ignore = E111
 
+[pylama:pydocstyle]
+ignore = D213
+
