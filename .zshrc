@@ -125,3 +125,4 @@ export DATASETS=/home/ivizzo/dev/datasets
 
 #Little hack to be able to find modules in subdris running scripts from somewhere else ;)
 export PYTHONPATH=$PYTHONPATH:
+export PATH=$PATH:$HOME/.local/bin/
