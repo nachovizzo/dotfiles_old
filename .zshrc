@@ -121,8 +121,8 @@ export DEBFULLNAME="Ignacio Vizzo"
 export DEBEMAIL="ivizzo@uni-bonn.de"
 #source /opt/ros/melodic/setup.zsh
 
-export DATASETS=/home/ivizzo/dev/datasets
-export MODELS=/home/ivizzo/dev/models
+export DATASETS=$HOME/dev/datasets
+export MODELS=$HOME/dev/models
 
 #Little hack to be able to find modules in subdris running scripts from somewhere else ;)
 export PYTHONPATH=$PYTHONPATH:
