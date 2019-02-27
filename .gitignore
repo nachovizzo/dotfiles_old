@@ -120,3 +120,4 @@ texmf/
 .pyzo/
 .mono/
 .zshrc_local
+.onnx/
