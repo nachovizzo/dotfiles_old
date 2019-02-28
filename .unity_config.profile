@@ -63,9 +63,9 @@ background-color='#333333d9'
 
 [plugins/grid]
 put-maximize-key='<Super>Up'
-right-maximize='<Control><Alt>Right'
 put-restore-key='<Super>Down'
-left-maximize='<Control><Alt>Left'
+left-maximize='<Control><Super>Left'
+right-maximize='<Control><Super>Right'
 
 [plugins/decor]
 active-shadow-color='#00000080'
