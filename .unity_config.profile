@@ -21,9 +21,9 @@ bonanza-color='#ff3305ff'
 [plugins/put]
 put-restore-key='<Control><Alt>KP_Insert'
 put-pointer-key='<Control><Alt>z'
-put-previous-output-key='<Super>Right'
 put-center-key='<Control><Alt>KP_Begin'
-put-next-output-key='<Super>Left'
+put-previous-output-key='<Super>Left'
+put-next-output-key='<Super>Right'
 
 [plugins/composite]
 refresh-rate=50
