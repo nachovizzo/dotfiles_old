@@ -2,7 +2,7 @@
 # /home/ivizzo/.nvidia-settings-rc
 #
 # Configuration file for nvidia-settings - the NVIDIA X Server Settings utility
-# Generated on Wed Feb 27 13:26:38 2019
+# Generated on Fri Mar  1 12:41:59 2019
 #
 
 # ConfigProperties:
@@ -13,9 +13,9 @@ SliderTextEntries = Yes
 IncludeDisplayNameInConfigFile = Yes
 ShowQuitDialog = Yes
 UpdateRulesOnProfileNameChange = Yes
-Timer = Memory_Used_(GPU_0),Yes,3000
-Timer = Thermal_Monitor_(GPU_0),Yes,1000
 Timer = PowerMizer_Monitor_(GPU_0),Yes,1000
+Timer = Thermal_Monitor_(GPU_0),Yes,1000
+Timer = Memory_Used_(GPU_0),Yes,3000
 
 # Attributes:
 
@@ -99,9 +99,9 @@ ipb24:0[DPY:DP-5]/DitheringDepth=0
 ipb24:0[DPY:DP-5]/ColorSpace=0
 ipb24:0[DPY:DP-5]/ColorRange=0
 ipb24:0[DPY:DP-5]/SynchronousPaletteUpdates=0
-ipb24:0[DPY:USB-C-0]/Dithering=0
-ipb24:0[DPY:USB-C-0]/DitheringMode=0
-ipb24:0[DPY:USB-C-0]/DitheringDepth=0
-ipb24:0[DPY:USB-C-0]/ColorSpace=0
-ipb24:0[DPY:USB-C-0]/ColorRange=0
-ipb24:0[DPY:USB-C-0]/SynchronousPaletteUpdates=0
+ipb24:0[DPY:DP-6]/Dithering=0
+ipb24:0[DPY:DP-6]/DitheringMode=0
+ipb24:0[DPY:DP-6]/DitheringDepth=0
+ipb24:0[DPY:DP-6]/ColorSpace=0
+ipb24:0[DPY:DP-6]/ColorRange=0
+ipb24:0[DPY:DP-6]/SynchronousPaletteUpdates=0
