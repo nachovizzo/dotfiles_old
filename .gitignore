@@ -16,6 +16,7 @@ Teaching/
 texmf/
 workspace-cdtdebug/
 .tmux/resurrect/
+VirtualBox\ VMs/
 
 # Hidden files
 .bzr.log
