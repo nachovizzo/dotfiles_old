@@ -47,6 +47,9 @@ export MODELS=$HOME/dev/models
 export PYTHONPATH=$PYTHONPATH:
 export PATH=$PATH:$HOME/.local/bin/
 
+# This allow you to install a package if it's not found on the system
+export COMMAND_NOT_FOUND_INSTALL_PROMPT=1
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 source $HOME/.aliases.zsh
 
