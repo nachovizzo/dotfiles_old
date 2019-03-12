@@ -29,25 +29,16 @@ plugins=(
     extract
 )
 
-# User configuration
-
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-source $HOME/.aliases.zsh
-
 export TERM=xterm-256color
 
 # From http://packaging.ubuntu.com/html/getting-set-up.html
-export COMMAND_NOT_FOUND_INSTALL_PROMPT=1
-
 export DEBFULLNAME="Ignacio Vizzo"
 export DEBEMAIL="ivizzo@uni-bonn.de"
-#source /opt/ros/melodic/setup.zsh
 
 export DATASETS=$HOME/dev/datasets
 export MODELS=$HOME/dev/models
@@ -55,6 +46,9 @@ export MODELS=$HOME/dev/models
 #Little hack to be able to find modules in subdris running scripts from somewhere else ;)
 export PYTHONPATH=$PYTHONPATH:
 export PATH=$PATH:$HOME/.local/bin/
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+source $HOME/.aliases.zsh
 
 # Source oh-my-zsh configs
 source $ZSH/oh-my-zsh.sh
