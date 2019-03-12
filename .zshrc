@@ -38,45 +38,7 @@ export EDITOR='vim'
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias apts='apt-cache search'
-alias erp='er-repo'
-alias suqui='subl ./'
-alias apts='apt-cache search'
-alias lgrep='ll  | grep'
-alias hgrep='history | grep'
-alias erps='er-repo status'
-alias catree='cat .tree | less'
-alias naqui='nautilus ./'
-alias py='ipython3'
-alias python='python3'
-alias code='code-insiders'
-alias coit='code . && exit'
-alias cor='code -r'
-alias cl=" /usr/bin/clear"
-alias rescan="nmcli device wifi rescan"
-alias list="nmcli device wifi list"
-alias deko='cd ~/Desktop'
-alias de='cd ~/dev'
-alias te='cd ~/Teaching'
-alias adr='cd ~/Andromeda'
-alias re='cd ~/Research'
-alias pu='cd ~/Publications'
-alias bo='cd ~/Documents/Books/'
-alias za='zathura'
-alias xopen='xdg-open'
-alias gitc='git checkout'
-alias xcopy='xclip -selection clipboard'
-alias copywd='pwd | xclip -selection clipboard'
-alias ll='ls -hltrBF --group-directories-first --color=auto'
-alias tm='tmux'
-alias suspend='systemctl suspend'
+source $HOME/.aliases.zsh
 
 export TERM=xterm-256color
 
