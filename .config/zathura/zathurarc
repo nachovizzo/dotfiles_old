@@ -1,4 +1,4 @@
-set recolor true
+set recolor false
 #set recolor-keephue
 #set recolor-reverse-video true
 set recolor-lightcolor "#1C1E26" # Horizon backgorund
