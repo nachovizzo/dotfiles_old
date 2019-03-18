@@ -10,7 +10,7 @@ set first-page-column "1:1"
 set window-width "1920"
 set window-height "1080"
 set adjust-open "best-fit"
-set page-padding "0"
+set page-padding "2"
 set guioptions "v"
 
 map [normal] = zoom in
