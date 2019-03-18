@@ -10,7 +10,6 @@ set first-page-column "1:1"
 set window-width "1920"
 set window-height "1080"
 set adjust-open "best-fit"
-set pages-per-row "1"
 set page-padding "0"
 set guioptions "v"
 
@@ -28,7 +27,12 @@ map [fullscreen] t set recolor-keephue
 map [normal] p1 set "pages-per-row 1"
 map [normal] p2 set "pages-per-row 2"
 map [normal] p3 set "pages-per-row 3"
-
 map [fullscreen] p1 set "pages-per-row 1"
 map [fullscreen] p2 set "pages-per-row 2"
 map [fullscreen] p3 set "pages-per-row 3"
+
+# Make the scroll keybinding the same as vimium
+map [normal]     d scroll half-down
+map [fullscreen] d scroll half-down
+map [normal]     u scroll half-up
+map [fullscreen] u scroll half-up
