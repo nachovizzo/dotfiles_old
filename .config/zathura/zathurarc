@@ -23,3 +23,12 @@ map [fullscreen]- zoom out
 # colors
 map [normal]     t set recolor-keephue
 map [fullscreen] t set recolor-keephue
+
+# Add a shortcut to display 3 pages per row
+map [normal] p1 set "pages-per-row 1"
+map [normal] p2 set "pages-per-row 2"
+map [normal] p3 set "pages-per-row 3"
+
+map [fullscreen] p1 set "pages-per-row 1"
+map [fullscreen] p2 set "pages-per-row 2"
+map [fullscreen] p3 set "pages-per-row 3"
