@@ -1,6 +1,6 @@
 {
-  "Ignacio Vizzo Copyright": {
-    "prefix": "Copy",
+  "C++ Ignacio Vizzo Copyright Template": {
+    "prefix": "cppcoopy",
     "body": [
       "/**",
       " * Created on $CURRENT_DATE-$CURRENT_MONTH-$CURRENT_YEAR",
@@ -8,27 +8,16 @@
       " * Copyright (c) $CURRENT_YEAR Ignacio Vizzo",
       " */",
     ],
-    "description": "Add Copyright"
+    "description": "C++ Ignacio Vizzo Copyright Template"
   },
-  "Ignacio Copyright": {
-    "prefix": "icopy",
+  "Generic Ignacio Vizzo Copyright Template": {
+    "prefix": "gcopy",
     "body": [
       "$LINE_COMMENT @file      $TM_FILENAME",
-      "$LINE_COMMENT @mantainer Ignacio Vizzo     [ivizzo@uni-bonn.de]",
+      "$LINE_COMMENT @author    Ignacio Vizzo     [ivizzo@uni-bonn.de]",
       "$LINE_COMMENT",
-      "$LINE_COMMENT Copyright (c) 2019 Igor Bogoslavskyi, all rights reserved",
+      "$LINE_COMMENT Copyright (c) 2019 Ignacio Vizzo, all rights reserved",
     ],
-    "description": "Add Copyright"
-  }
-  "Igor Copyright": {
-    "prefix": "Igorcopy",
-    "body": [
-      "$LINE_COMMENT @file      $TM_FILENAME",
-      "$LINE_COMMENT @author    Igor Bogoslavskyi [igor.bogoslavskyi@gmail.com]",
-      "$LINE_COMMENT @mantainer Ignacio Vizzo     [ivizzo@uni-bonn.de]",
-      "$LINE_COMMENT",
-      "$LINE_COMMENT Copyright (c) 2018 Igor Bogoslavskyi, all rights reserved",
-    ],
-    "description": "Add Copyright"
+    "description": "Generic Ignacio Vizzo Copyright Template"
   }
 }
