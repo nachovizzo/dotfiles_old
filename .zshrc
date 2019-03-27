@@ -53,8 +53,9 @@ export COMMAND_NOT_FOUND_INSTALL_PROMPT=1
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 source $HOME/.aliases.zsh
 
+# Source any local modifications
+source $HOME/.zshrc_local
+
 # Source oh-my-zsh configs
 source $ZSH/oh-my-zsh.sh
 
-# Source any local modifications
-source $HOME/.zshrc_local
