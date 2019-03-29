@@ -125,3 +125,5 @@ VirtualBox
 .mono/
 .zshrc_local
 .onnx/
+.z
+
