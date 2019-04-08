@@ -20,6 +20,7 @@
     "dataset",
     "dtype",
     "footnotetext",
+    "fscanf",
     "getcwd",
     "gitlab",
     "gmail",
@@ -108,6 +109,7 @@
   "workbench.editor.tabSizing": "fit",
   "workbench.iconTheme": "vscode-icons",
   "workbench.colorTheme": "Horizon",
+  "explorer.confirmDragAndDrop": false,
   "files.exclude": {
     "**/.clang-format": true,
     "**/.gitignore": true,
@@ -122,6 +124,7 @@
   /*----------------------------- C++ STUFF ----------------------------------*/
   "C_Cpp.default.cppStandard": "c++11",
 
+  // clang-format
   "C_Cpp.clang_format_style": "Google",
   "C_Cpp.clang_format_sortIncludes": true,
   "C_Cpp.clang_format_fallbackStyle": "Google",
@@ -143,6 +146,7 @@
 
   // Clang
   "c-cpp-flylint.clang.enable": true,
+  "c-cpp-flylint.clang.extraArgs": ["-Wno-c++98-compat"],
   "c-cpp-flylint.clang.standard": ["c++11"],
   "c-cpp-flylint.clang.pedantic": true,
   "c-cpp-flylint.clang.includePaths": [
@@ -222,6 +226,7 @@
 
   /*------------------------------ CMAKE -------------------------------------*/
   "cmake.configureOnOpen": false,
+  "cmake-tools-helper.cmake_download_path": "/home/ivizzo/.vscode-insiders/extensions/maddouri.cmake-tools-helper-0.2.1/cmake_download",
 
   /*------------------------------ OTHERS ------------------------------------*/
   "[shellscript]": {
@@ -242,7 +247,5 @@
       "strings": true
     },
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "cmake-tools-helper.cmake_download_path": "/home/ivizzo/.vscode-insiders/extensions/maddouri.cmake-tools-helper-0.2.1/cmake_download",
-  "window.zoomLevel": 0
+  }
 }
