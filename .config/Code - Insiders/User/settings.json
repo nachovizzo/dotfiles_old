@@ -1,0 +1,248 @@
+{
+  /*-----------------------   SPELL CHECKER ----------------------------------*/
+  "cSpell.enabled": true,
+  "cSpell.language": "en",
+  "cSpell.numSuggestions": 20,
+  "cSpell.showStatus": true,
+  "cSpell.userWords": [
+    "arange",
+    "astype",
+    "backends",
+    "bogoslavskyi",
+    "chdir",
+    "chrono",
+    "cmap",
+    "cmdline",
+    "conv",
+    "cuda",
+    "cyrill",
+    "d",
+    "dataset",
+    "dtype",
+    "footnotetext",
+    "getcwd",
+    "gitlab",
+    "gmail",
+    "imshow",
+    "intelli",
+    "isabs",
+    "isdir",
+    "ivizzo",
+    "killpg",
+    "kitti",
+    "laserscanvis",
+    "lualatex",
+    "milioto",
+    "msvc",
+    "nclasses",
+    "ndarray",
+    "nostdinc",
+    "npoints",
+    "number",
+    "numclasses",
+    "numpy",
+    "nvidia",
+    "nvinfer",
+    "odometry",
+    "opencv",
+    "pointcloud",
+    "pointclouds",
+    "pointnet",
+    "popen",
+    "pyplot",
+    "random",
+    "repo",
+    "ruamel",
+    "sense",
+    "set",
+    "shutil",
+    "sigint",
+    "silversearch",
+    "squeezeseg",
+    "stoi",
+    "strftime",
+    "strptime",
+    "styleguide",
+    "submodule",
+    "suma",
+    "textred",
+    "textredbf",
+    "todos",
+    "unsqueeze",
+    "velodyne",
+    "vizzo",
+    "workspace's",
+    "x",
+    "xkcd",
+    "xticklabels",
+    "yticklabels"
+  ],
+
+  /*-------------------- GLOBAL EDITOR CONFIGURATIONS -------------------------*/
+  "editor.minimap.enabled": false,
+  "editor.formatOnSave": true,
+  "editor.rulers": [80],
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "'Fira Code'",
+  "editor.formatOnPaste": true,
+  "editor.tabSize": 2,
+  "editor.cursorBlinking": "solid",
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": true,
+  "editor.autoIndent": true,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "name": "No italics",
+        "scope": ["comment", "variable.language", "variable.parameter"],
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
+  },
+
+  /*-------------------- VISUAL STUDIO CONFIGURATIONS-------------------------*/
+  "window.titleBarStyle": "native",
+  "workbench.settings.editor": "json",
+  "workbench.editor.tabSizing": "fit",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "Horizon",
+  "files.exclude": {
+    "**/.clang-format": true,
+    "**/.gitignore": true,
+    "**/.vscode": true,
+    "**/__pycache__": true
+  },
+
+  /*----------------------------- SETTINGS SYNC-------------------------------*/
+  "sync.gist": "5b1132acee0e3118d06ad7cee8f7e211",
+  "sync.autoUpload": false,
+
+  /*----------------------------- C++ STUFF ----------------------------------*/
+  "C_Cpp.default.cppStandard": "c++11",
+
+  "C_Cpp.clang_format_style": "Google",
+  "C_Cpp.clang_format_sortIncludes": true,
+  "C_Cpp.clang_format_fallbackStyle": "Google",
+
+  // Static Code Analysis: Cppcheck && Clang
+  "c-cpp-flylint.run": "onSave",
+  "c-cpp-flylint.enable": true,
+  "c-cpp-flylint.standard": ["c11", "c++11"],
+  "c-cpp-flylint.language": "c++",
+  "c-cpp-flylint.ignoreParseErrors": true,
+  "c-cpp-flylint.includePaths": [
+    "${workspaceFolder}/**",
+    "${workspaceFolder}/src/**",
+    "${workspaceFolder}/include/**"
+  ],
+
+  // Disable this crap, I'm not willing to pay for a C++ linter.
+  "c-cpp-flylint.flexelint.enable": false,
+
+  // Clang
+  "c-cpp-flylint.clang.enable": true,
+  "c-cpp-flylint.clang.standard": ["c++11"],
+  "c-cpp-flylint.clang.pedantic": true,
+  "c-cpp-flylint.clang.includePaths": [
+    "${workspaceFolder}/**",
+    "${workspaceFolder}/src/**",
+    "${workspaceFolder}/include/**"
+  ],
+
+  // Cppcheck
+  "c-cpp-flylint.cppcheck.enable": true,
+  "c-cpp-flylint.cppcheck.verbose": false,
+
+  // Linter Configuration [cpplint]:
+  "cpplint.headers": ["hpp", "h"],
+
+  /*----------------------------- PYTHON ----------------------------------*/
+  // "python.formatting.provider": "yapf",
+  "python.formatting.provider": "autopep8",
+  "python.formatting.autopep8Args": [
+    "--max-line-length",
+    "80",
+    "--ignore",
+    "E111, E121"
+  ],
+
+  // Automatic organize imports
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+
+  // Linters: Pylama
+  "python.linting.pylamaEnabled": true,
+  "python.linting.pylamaArgs": ["-o", "/home/ivizzo/.pylamarc"],
+
+  // Pylint
+  "python.linting.pylintEnabled": true,
+  "python.linting.pydocstyleEnabled": true,
+
+  // PEP8 style and arguments
+  "python.linting.pep8Enabled": true,
+  "python.linting.pep8Path": "pycodestyle",
+  "python.linting.pep8Args": [
+    "--max-line-length",
+    "80",
+    "--ignore",
+    "E111, E114"
+  ],
+
+  // Auto docstring style for python
+  "autoDocstring.docstringFormat": "google",
+  "autoDocstring.includeDescription": true,
+  "autoDocstring.newlineBeforeSummary": false,
+
+  /*----------------------------- LATEX --------------------------------------*/
+  "latex-workshop.latex.autoBuild.run": "never",
+  "latex-workshop.view.pdf.viewer": "tab",
+
+  /*--------------------------- VIM MODE -------------------------------------*/
+  "vim.disableExtension": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<esc>"]
+    },
+    {
+      "before": ["k", "j"],
+      "after": ["<esc>"]
+    }
+  ],
+
+  /*------------------------------- GIT --------------------------------------*/
+  "git.enabled": true,
+  "git.autofetch": true,
+  "git.autoStash": true,
+
+  /*------------------------------ CMAKE -------------------------------------*/
+  "cmake.configureOnOpen": false,
+
+  /*------------------------------ OTHERS ------------------------------------*/
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "PeterJausovec.vscode-docker"
+  },
+  "[yaml]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cmake-tools-helper.cmake_download_path": "/home/ivizzo/.vscode-insiders/extensions/maddouri.cmake-tools-helper-0.2.1/cmake_download",
+  "window.zoomLevel": 0
+}
