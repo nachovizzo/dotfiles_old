@@ -4,3 +4,6 @@ if type lesspipe.sh >/dev/null 2>&1; then
   export LESSOPEN='|lesspipe.sh %s'
 fi
 
+if type pygmentize >/dev/null 2>&1; then
+  export LESSCOLORIZER='pygmentize'
+fi
