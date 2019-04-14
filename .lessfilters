@@ -1,0 +1,6 @@
+# https://www.topbug.net/blog/2016/09/27/make-gnu-less-more-powerful/
+# Set the Less input preprocessor.
+if type lesspipe.sh >/dev/null 2>&1; then
+  export LESSOPEN='|lesspipe.sh %s'
+fi
+
