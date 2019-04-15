@@ -1,5 +1,5 @@
 ---
-Checks: "*,-fuchsia-default-arguments"
+Checks: "*,-fuchsia-default-arguments, -llvm-header-guard"
 HeaderFilterRegex: ".*"
 AnalyzeTemporaryDtors: false
 FormatStyle: google
