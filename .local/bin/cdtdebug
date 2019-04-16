@@ -1,0 +1,13 @@
+#!/bin/sh
+
+CURR_DIR=${PWD##*/}
+CDT_DEBUGGER="$HOME/cdtdebugger"
+WORKSPACE="$CDT_DEBUGGER/workspaces/$CURR_DIR"
+
+# Create sort of "unique" folder for the cdt-debug shit
+if [ ! -d "$WORKSPACE" ]; then
+  mkdir -p "$WORKSPACE"
+fi
+
+# Run the cdt-debugger on the workspace
+$CDT_DEBUGGER/debugger/cdtdebug -data $WORKSPACE -e "$@"
