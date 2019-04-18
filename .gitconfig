@@ -2,7 +2,7 @@
     email = ignaciovizzo@gmail.com
     name = Ignacio Vizzo
 [core]
-    excludesfile = /home/ivizzo/.gitignore_global
+    excludesfile = $HOME/.gitignore_global
     editor = nvim
 
 # Add some git common alias
