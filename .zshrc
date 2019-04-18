@@ -33,6 +33,9 @@ plugins=(
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
 
+# Make sure Google Tests run always with a colored output
+export GTEST_COLOR=1
+
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 export TERM=xterm-256color
