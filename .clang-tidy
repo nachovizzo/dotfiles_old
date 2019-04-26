@@ -1,5 +1,5 @@
 ---
-Checks:          'clang-diagnostic-*,clang-analyzer-*,*,-fuchsia-default-arguments, -llvm-header-guard, -llvm-include-order,*,modernize-*-fuchsia-default-arguments,-llvm-header-guard,-llvm-include-order'
+Checks:          'clang-diagnostic-*,clang-analyzer-*,*,-fuchsia-default-arguments, -llvm-header-guard, -llvm-include-order'
 WarningsAsErrors: ''
 HeaderFilterRegex: '.*'
 AnalyzeTemporaryDtors: false
