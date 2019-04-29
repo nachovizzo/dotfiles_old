@@ -31,7 +31,7 @@ plugins=(
 )
 
 # Preferred editor for local and remote sessions
-export EDITOR='vim'
+export EDITOR='nvim'
 
 # Make sure Google Tests run always with a colored output
 export GTEST_COLOR=1
