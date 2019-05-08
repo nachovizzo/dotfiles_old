@@ -1,5 +1,6 @@
 #!/bin/sh
 
+export SWT_GTK3=0
 CURR_DIR=${PWD##*/}
 CDT_DEBUGGER="$HOME/cdtdebugger"
 WORKSPACE="$CDT_DEBUGGER/workspaces/$CURR_DIR"
