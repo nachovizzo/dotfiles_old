@@ -54,6 +54,10 @@ export PATH=$PATH:$HOME/.local/bin/
 # This allow you to install a package if it's not found on the system
 export COMMAND_NOT_FOUND_INSTALL_PROMPT=1
 
+# Fix GTK weird shit:
+#   GLib-CRITICAL **: g_variant_new_string: assertion 'string != NULL' failed
+export SWT_GTK3=0
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 source $HOME/.aliases.zsh
 
