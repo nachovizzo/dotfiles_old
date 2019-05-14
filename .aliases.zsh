@@ -30,5 +30,6 @@ alias copywd='pwd | xclip -selection clipboard'
 alias ll='ls -hltrBF --group-directories-first --color=auto'
 alias tm='tmux'
 alias suspend='systemctl suspend'
+alias rmrf='rm -rf'
 
 
