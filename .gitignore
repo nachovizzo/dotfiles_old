@@ -130,3 +130,5 @@ VirtualBox
 .adobe/
 .lldb
 .gem/
+.scanview.cfg
+
