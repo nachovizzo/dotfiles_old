@@ -1,0 +1,20 @@
+{
+  "Print to console": {
+    "prefix": "cmake_project",
+    "body": [
+      "$LINE_COMMENT ~~~",
+      "$LINE_COMMENT @file      $TM_FILENAME",
+      "$LINE_COMMENT @author    Ignacio Vizzo     [ivizzo@uni-bonn.de]",
+      "$LINE_COMMENT",
+      "$LINE_COMMENT Copyright (c) 2019 Ignacio Vizzo, all rights reserved",
+      "project($WORKSPACE_NAME)",
+      "set(CMAKE_CXX_STANDARD 14)",
+      "",
+      "set(CMAKE_BUILD_TYPE Debug)",
+      "set(CMAKE_CXX_FLAGS \"-Wall -Wextra\")",
+      "set(CMAKE_CXX_FLAGS_DEBUG \"-g -O0\")",
+      "set(CMAKE_EXPORT_COMPILE_COMMANDS ON)"
+    ],
+    "description": "Generic Ignacio Vizzo Copyright Template"
+  }
+}
