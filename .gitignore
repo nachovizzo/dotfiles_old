@@ -131,4 +131,5 @@ VirtualBox
 .lldb
 .gem/
 .scanview.cfg
+.vboxclient-*
 
