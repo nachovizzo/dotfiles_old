@@ -132,4 +132,5 @@ VirtualBox
 .gem/
 .scanview.cfg
 .vboxclient-*
+.ai2thor/
 
