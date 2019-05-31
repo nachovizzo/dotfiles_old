@@ -7,6 +7,7 @@
       "$LINE_COMMENT @author    Ignacio Vizzo     [ivizzo@uni-bonn.de]",
       "$LINE_COMMENT",
       "$LINE_COMMENT Copyright (c) 2019 Ignacio Vizzo, all rights reserved",
+      "cmake_minimum_required(VERSION 3.10)",
       "project($WORKSPACE_NAME)",
       "set(CMAKE_CXX_STANDARD 14)",
       "",
