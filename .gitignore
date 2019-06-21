@@ -133,4 +133,4 @@ VirtualBox
 .scanview.cfg
 .vboxclient-*
 .ai2thor/
-
+.vscode-cpptools/
