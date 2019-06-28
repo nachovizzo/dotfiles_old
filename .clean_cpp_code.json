@@ -1,0 +1,7 @@
+{
+  "c-cpp-flylint.clang.enable": false,
+  "editor.formatOnSave": false,
+  "cSpell.enabled": false,
+  "cpplint.cpplintPath": "/dev/null",
+  "editor.renderWhitespace": "none"
+}
