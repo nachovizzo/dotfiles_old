@@ -3,11 +3,11 @@
     "prefix": "guard",
     "description": "Adds an ifndef include guard to a C header",
     "body": [
-      "#ifndef INCLUDE_${TM_FILENAME/^([^\\.]*)\\..*$/${1:/upcase}/}_${TM_FILENAME/^.*\\.([^\\.]*)$/${1:/upcase}/}_",
-      "#define INCLUDE_${TM_FILENAME/^([^\\.]*)\\..*$/${1:/upcase}/}_${TM_FILENAME/^.*\\.([^\\.]*)$/${1:/upcase}/}_",
+      "#ifndef ${TM_FILENAME/^([^\\.]*)\\..*$/${1:/upcase}/}_${TM_FILENAME/^.*\\.([^\\.]*)$/${1:/upcase}/}_",
+      "#define ${TM_FILENAME/^([^\\.]*)\\..*$/${1:/upcase}/}_${TM_FILENAME/^.*\\.([^\\.]*)$/${1:/upcase}/}_",
       "",
-      "#endif  // INCLUDE_${TM_FILENAME/^([^\\.]*)\\..*$/${1:/upcase}/}_${TM_FILENAME/^.*\\.([^\\.]*)$/${1:/upcase}/}_",
-      "",
+      "#endif  // ${TM_FILENAME/^([^\\.]*)\\..*$/${1:/upcase}/}_${TM_FILENAME/^.*\\.([^\\.]*)$/${1:/upcase}/}_",
+      ""
     ]
   }
 }
