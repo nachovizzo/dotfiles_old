@@ -1,0 +1,9 @@
+{
+  "longitude": 7.087025,
+  "latitude": 50.72739,
+  "temperature_scale": 0,
+  "hide_location": "True",
+  "notifications": "True",
+  "round_temperature": "True",
+  "automatic_location_detection": "False"
+}
