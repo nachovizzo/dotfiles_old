@@ -1,0 +1,12 @@
+# !/usr/bin/sh
+# @file    read_clean_cpp_code
+# @author  Ignacio Vizzo     [ivizzo@uni-bonn.de]
+#
+# Copyright (c) 2019 Ignacio Vizzo, University of Bonn.
+echo "Linking \e[1m\e[36m~/.clean_cpp_code.json\e[0m to \e[1m\e[34m.vscode/settings.json\e[0m"
+mkdir -p .vscode/
+if [ -f .vscode/settings.json ]; then
+  mv .vscode/settings.json .vscode/settings.json.bak
+fi
+ln -s ~/.clean_cpp_code.json .vscode/settings.json
+echo "done"
