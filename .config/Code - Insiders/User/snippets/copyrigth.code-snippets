@@ -20,7 +20,7 @@
     ],
     "description": "Generic Ignacio Vizzo Copyright Template"
   },
-  "Generic Ignacio Vizzo Copyright Template": {
+  "Generic LaTeX Ignacio Vizzo Copyright Template": {
     "prefix": "lcopy",
     "body": [
       "$LINE_COMMENT @file    $TM_FILENAME",
