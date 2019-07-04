@@ -1,0 +1,17 @@
+{
+  /*----------------------------- LATEX --------------------------------------*/
+  "latex-workshop.latex.autoBuild.run": "onFileChange",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "files.exclude": {
+    "IEEEtran.bst*/": true,
+    "*.aux": true,
+    "*.bbl": true,
+    "*.blg": true,
+    "*.fdb*": true,
+    "*.fls": true,
+    "*.log": true,
+    "*.gz": true,
+    "*.yml": true,
+    "*.cls": true
+  }
+}
