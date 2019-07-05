@@ -3,5 +3,8 @@
   "editor.formatOnSave": false,
   "cSpell.enabled": false,
   "cpplint.cpplintPath": "/dev/null",
-  "editor.renderWhitespace": "none"
+  "editor.renderWhitespace": "none",
+  "python.autoComplete.extraPaths": [
+    "/opt/ros/melodic/lib/python2.7/dist-packages"
+  ]
 }
