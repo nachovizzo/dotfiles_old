@@ -136,4 +136,5 @@ VirtualBox
 .vscode-cpptools/
 .yarnrc
 .cat_installer
+.latexdraw
 
