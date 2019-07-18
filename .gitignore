@@ -19,6 +19,7 @@ cdtdebugger/
 .tmux/resurrect/
 VirtualBox\ VMs/
 VirtualBox
+lib/
 
 # Hidden files
 .bzr.log
