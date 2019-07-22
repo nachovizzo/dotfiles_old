@@ -1,0 +1,5 @@
+# @file      cat_all_files
+# @author    Ignacio Vizzo     [ivizzo@uni-bonn.de]
+#
+# Copyright (c) 2019 Ignacio Vizzo, all rights reserved
+for source in *; do echo "\e[1m\e[93m$source:\e[0m" && cat $source && echo; done
