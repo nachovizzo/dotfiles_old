@@ -12,6 +12,8 @@ set window-height "1080"
 set adjust-open "best-fit"
 set page-padding "2"
 set guioptions "v"
+set pages-per-row "2"
+
 
 map [normal] = zoom in
 map [normal]- zoom out
