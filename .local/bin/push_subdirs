@@ -1,0 +1,17 @@
+# !/usr/bin/zsh
+# @file      push_subdirs
+# @author    Ignacio Vizzo     [ivizzo@uni-bonn.de]
+#
+# Copyright (c) 2019 Ignacio Vizzo, all rights reserved
+PWD=$(pwd)
+DIRS=$(ls -d *)
+echo "\e[1m\e[36mUpdating all the sub-repositories we find in $PWD"
+for repo in $DIRS; do
+  if [ -d $repo/.git ]; then
+    echo "\e[1m\e[93mUpdating git repository found in $repo ...\e[0m"
+    cd $repo
+    git push
+    cd ../
+  fi
+done
+echo "done"
