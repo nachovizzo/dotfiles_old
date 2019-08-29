@@ -21,6 +21,8 @@ VirtualBox\ VMs/
 VirtualBox
 lib/
 .rssowl2/
+.var/
+gPodder/
 
 # Hidden files
 .bzr.log
