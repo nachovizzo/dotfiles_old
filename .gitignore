@@ -20,6 +20,7 @@ cdtdebugger/
 VirtualBox\ VMs/
 VirtualBox
 lib/
+.rssowl2/
 
 # Hidden files
 .bzr.log
