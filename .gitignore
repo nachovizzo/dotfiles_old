@@ -143,4 +143,5 @@ gPodder/
 .latexdraw
 .xsel.log
 .tldr/
+.org.**/
 
