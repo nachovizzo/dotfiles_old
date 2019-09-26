@@ -3,6 +3,7 @@ set recolor false
 #set recolor-reverse-video true
 set recolor-lightcolor "#1C1E26" # Horizon backgorund
 set recolor-darkcolor  "#BBBBBB" # Horizon text color
+set recolor-keephue "true"
 
 set window-title-basename "true"
 set selection-clipboard "clipboard"
