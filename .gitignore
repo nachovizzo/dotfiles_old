@@ -23,6 +23,7 @@ lib/
 .rssowl2/
 .var/
 gPodder/
+anaconda3/
 
 # Hidden files
 .bzr.log
