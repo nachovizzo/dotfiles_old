@@ -146,4 +146,5 @@ anaconda3/
 .tldr/
 .org.**/
 .conda/
+.kite/
 
