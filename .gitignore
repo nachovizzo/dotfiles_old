@@ -147,4 +147,4 @@ anaconda3/
 .org.**/
 .conda/
 .kite/
-
+.gimp**
