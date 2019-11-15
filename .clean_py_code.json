@@ -2,4 +2,16 @@
   "editor.formatOnSave": false,
   "cSpell.enabled": false,
   "editor.renderWhitespace": "none",
+  "python.linting.pylamaEnabled": false,
+  "python.linting.pylintEnabled": false,
+  "python.linting.pydocstyleEnabled": false,
+  "python.linting.pycodestyleEnabled": false,
+  "python.formatting.provider": "none",
+    // Automatic organize imports
+    "[python]": {
+      "editor.codeActionsOnSave": {
+        "source.organizeImports": false
+      },
+      "editor.defaultFormatter": "none"
+    },
 }
