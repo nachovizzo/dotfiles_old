@@ -1,108 +1,133 @@
-[/]
-plugins-with-set-keys=['commands', 'expo', 'mousepoll', 'gnomecompat', 'fade', 'composite', 'grid', 'session', 'resize', 'animation', 'matecompat', 'vpswitch', 'staticswitcher', 'unitymtgrabhandles', 'unityshell', 'colorfilter', 'scale', 'ezoom', 'wall', 'opengl', 'core', 'workarounds', 'place', 'switcher', 'snap', 'move', 'decor', 'water', 'trailfocus', 'animationplus', 'freewins', 'opacify', 'clone', 'mag', 'screenshot', 'winrules', 'maximumize', 'showmouse', 'thumbnail', 'wizard', 'notification', 'splash', 'fadedesktop', 'neg', 'animationjc', 'widget', 'addhelper', 'cubeaddon', 'scalefilter', 'annotate', 'resizeinfo', 'obs', 'imgjpeg', 'td', 'crashhandler', 'firepaint', 'wallpaper', 'blur', 'animationaddon', 'cube', 'extrawm', 'bench', 'workspacenames', 'titleinfo', 'shelf', 'animationsim', 'mblur', 'wobbly', 'showdesktop', 'put', 'showrepaint', 'rotate', 'scaleaddon', 'shift', 'kdecompat', 'ring', 'imgsvg']
+[expo]
+s0_expo_key = <Control><Alt>s
+s0_ground_color1 = #b3b3b3cc
+s0_ground_color2 = #b3b3b300
 
-[plugins/animationaddon]
-fire-color='#ff3305ff'
-beam-color='#7f7f7fff'
+[animationplus]
+s0_bonanza_color = #ff3305ff
 
-[plugins/resizeinfo]
-gradient-1='#cccce6cc'
-gradient-2='#f3f3f3cc'
-gradient-3='#d9d9d9cc'
-outline-color='#e6e6e6ff'
+[freewins]
+s0_snap_threshold = 50
+s0_circle_color = #54befb80
+s0_line_color = #1800ffff
+s0_cross_line_color = #1800ffff
 
-[plugins/cubeaddon]
-ground-color1='#b3b3b3cc'
-ground-color2='#b3b3b300'
+[mag]
+s0_zoom_in_button = <Alt><Super>Button4
+s0_zoom_out_button = <Alt><Super>Button5
 
-[plugins/animationplus]
-bonanza-color='#ff3305ff'
+[screenshot]
+s0_selection_outline_color = #2f2f4f9f
+s0_selection_fill_color = #2f2f4f4f
 
-[plugins/put]
-put-restore-key='<Control><Alt>KP_Insert'
-put-pointer-key='<Control><Alt>z'
-put-center-key='<Control><Alt>KP_Begin'
-put-previous-output-key='<Super>Right'
-put-next-output-key='<Super>Left'
+[gnomecompat]
+s0_run_command_terminal_key = <Control><Alt>t
 
-[plugins/composite]
-refresh-rate=50
+[showmouse]
+s0_color = #ffdf3fff
 
-[plugins/thumbnail]
-thumb-color='#0000007f'
-font-background-color='#0000007f'
+[thumbnail]
+s0_thumb_color = #0000007f
+s0_font_background_color = #0000007f
 
-[plugins/unityshell]
-launcher-minimize-window=true
-show-launcher='Enabled'
-num-launchers=0
-lock-screen='<Control><Alt>l'
-launcher-switcher-forward='Disabled'
-inactive-shadow-color='#000000a5'
-show-desktop-key='<Control><Alt>d'
-launcher-switcher-prev='Disabled'
-launcher-hide-mode=1
+[composite]
+s0_refresh_rate = 50
+s0_unredirect_fullscreen_windows = false
 
-[plugins/ezoom]
-zoom-box-fill-color='#2f2f2f4f'
-zoom-box-outline-color='#2f2f4f9f'
+[grid]
+s0_put_maximize_key = <Super>Up
+s0_put_restore_key = <Super>Down
 
-[plugins/animation]
-unminimize-effects=['animation:Glide 2']
-close-matches=['((type=Normal | Unknown) | name=sun-awt-X11-XFramePeer | name=sun-awt-X11-XDialogPeer) & !(role=toolTipTip | role=qtooltip_label) & !(type=Normal & override_redirect=1) & !(name=gnome-screensaver) & !(name=gnome-screenshot)', '((type=Menu | PopupMenu | DropdownMenu | Combo | Dialog | ModalDialog | Normal) & !(class=\\.exe$))', '(type=Tooltip | Notification | Utility) & !(name=compiz) & !(title=notify-osd)']
-open-matches=['((type=Normal | Unknown) | name=sun-awt-X11-XFramePeer | name=sun-awt-X11-XDialogPeer) & !(role=toolTipTip | role=qtooltip_label) & !(type=Normal & override_redirect=1) & !(name=gnome-screensaver)', '((type=Menu | PopupMenu | DropdownMenu | Combo | Dialog | ModalDialog | Normal) & !(class=\\.exe$))', '(type=Tooltip | Notification | Utility) & !(name=compiz) & !(title=notify-osd)']
+[animation]
+s0_open_matches = ((type=Normal | Unknown) | name=sun-awt-X11-XFramePeer | name=sun-awt-X11-XDialogPeer) & !(role=toolTipTip | role=qtooltip_label) & !(type=Normal & override_redirect=1) & !(name=gnome-screensaver);((type=Menu | PopupMenu | DropdownMenu | Combo | Dialog | ModalDialog | Normal) & !(class=\.exe$));(type=Tooltip | Notification | Utility) & !(name=compiz) & !(title=notify-osd);
+s0_close_matches = ((type=Normal | Unknown) | name=sun-awt-X11-XFramePeer | name=sun-awt-X11-XDialogPeer) & !(role=toolTipTip | role=qtooltip_label) & !(type=Normal & override_redirect=1) & !(name=gnome-screensaver) & !(name=gnome-screenshot);((type=Menu | PopupMenu | DropdownMenu | Combo | Dialog | ModalDialog | Normal) & !(class=\.exe$));(type=Tooltip | Notification | Utility) & !(name=compiz) & !(title=notify-osd);
+s0_unminimize_effects = animation:Glide 2;
 
-[plugins/freewins]
-cross-line-color='#1800ffff'
-snap-threshold=50
-circle-color='#54befb80'
-line-color='#1800ffff'
+[cubeaddon]
+s0_ground_color1 = #b3b3b3cc
+s0_ground_color2 = #b3b3b300
 
-[plugins/switcher]
-background-color='#333333d9'
+[staticswitcher]
+s0_background_color = #333333d9
 
-[plugins/grid]
-put-maximize-key='<Super>Up'
-put-restore-key='<Super>Down'
-left-maximize='<Control><Super>Left'
-right-maximize='<Control><Super>Right'
+[annotate]
+s0_erase_button = Disabled
+s0_clear_button = <Alt><Super>Button3
+s0_draw_shapes_from_center = false
+s0_fill_color = #ff000015
+s0_erase_width = 50.000000
+s0_stroke_width = 5.000000
 
-[plugins/decor]
-active-shadow-color='#00000080'
-inactive-shadow-color='#000000ff'
+[resizeinfo]
+s0_gradient_1 = #cccce6cc
+s0_gradient_2 = #f3f3f3cc
+s0_gradient_3 = #d9d9d9cc
+s0_outline_color = #e6e6e6ff
 
-[plugins/expo]
-ground-color1='#b3b3b3cc'
-expo-key='<Control><Alt>s'
-ground-color2='#b3b3b300'
+[unityshell]
+s0_lock_screen = <Control><Alt>l
+s0_show_desktop_key = <Control><Alt>d
+s0_inactive_shadow_color = #000000a5
+s0_launcher_switcher_forward = Disabled
+s0_launcher_switcher_prev = Disabled
+s0_launcher_hide_mode = 1
+s0_launcher_minimize_window = true
+s0_alt_tab_forward = <Control><Alt>Tab
+s0_alt_tab_prev = <Shift><Control><Alt>Tab
+s0_alt_tab_forward_all = <Alt>Tab
+s0_alt_tab_prev_all = <Shift><Alt>Tab
 
-[plugins/place]
-mode=5
+[firepaint]
+s0_fire_color = #ff3305ff
 
-[plugins/staticswitcher]
-background-color='#333333d9'
+[ezoom]
+s0_zoom_in_button = <Alt><Super>Button4
+s0_zoom_out_button = <Alt><Super>Button5
+s0_zoom_box_outline_color = #2f2f4f9f
+s0_zoom_box_fill_color = #2f2f2f4f
+s0_zoom_mode = 1
 
-[plugins/firepaint]
-fire-color='#ff3305ff'
+[wall]
+s0_thumb_highlight_gradient_shadow_color = #dfdfdfff
+s0_arrow_base_color = #e6e6e6d9
+s0_arrow_shadow_color = #dcdcdcd9
 
-[plugins/screenshot]
-selection-outline-color='#2f2f4f9f'
-selection-fill-color='#2f2f4f4f'
+[animationaddon]
+s0_beam_color = #7f7f7fff
+s0_fire_color = #ff3305ff
 
-[plugins/core]
-hsize=2
-outputs=['1920x1080+1920+0', '1920x1080+3840+0', '1920x1080+0+0']
-vsize=2
-active-plugins=['core', 'composite', 'opengl', 'place', 'put', 'resize', 'wall', 'compiztoolbox', 'grid', 'imgpng', 'move', 'scale', 'expo', 'unityshell']
+[opengl]
+s0_texture_filter = 0
+s0_lighting = true
+s0_texture_compression = true
 
-[plugins/wall]
-thumb-highlight-gradient-shadow-color='#dfdfdfff'
-arrow-base-color='#e6e6e6d9'
-arrow-shadow-color='#dcdcdcd9'
+[core]
+s0_active_plugins = core;composite;opengl;place;put;resize;wall;annotate;compiztoolbox;grid;imgpng;mousepoll;move;scale;expo;ezoom;unityshell;
+s0_outputs = 1920x1080+1920+0;1920x1080+3840+0;1920x1080+0+0;
+s0_maximize_window_key = Disabled
+s0_unmaximize_or_minimize_window_key = <Super>Down
+s0_hsize = 3
+s0_vsize = 2
 
-[plugins/shift]
-ground-color1='#b3b3b3cc'
-ground-color2='#b3b3b300'
+[place]
+s0_mode = 5
+s0_multioutput_mode = 1
 
-[plugins/showmouse]
-color='#ffdf3fff'
+[switcher]
+s0_background_color = #333333d9
+
+[decor]
+s0_active_shadow_color = #00000080
+s0_inactive_shadow_color = #000000ff
+
+[put]
+s0_put_center_key = <Control><Alt>KP_Begin
+s0_put_restore_key = <Control><Alt>KP_Insert
+s0_put_pointer_key = <Control><Alt>z
+s0_put_next_output_key = <Super>Right
+s0_put_previous_output_key = <Super>Left
+
+[shift]
+s0_ground_color1 = #b3b3b3cc
+s0_ground_color2 = #b3b3b300
+
