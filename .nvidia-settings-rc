@@ -2,7 +2,7 @@
 # /home/ivizzo/.nvidia-settings-rc
 #
 # Configuration file for nvidia-settings - the NVIDIA X Server Settings utility
-# Generated on Wed Mar  6 10:53:45 2019
+# Generated on Tue Nov 19 17:55:23 2019
 #
 
 # ConfigProperties:
@@ -13,12 +13,12 @@ SliderTextEntries = Yes
 IncludeDisplayNameInConfigFile = Yes
 ShowQuitDialog = Yes
 UpdateRulesOnProfileNameChange = Yes
-Timer = PowerMizer_Monitor_(GPU_0),Yes,1000
-Timer = Thermal_Monitor_(GPU_0),Yes,1000
-Timer = Memory_Used_(GPU_0),Yes,3000
-Timer = Memory_Used_(GPU_1),Yes,3000
-Timer = Thermal_Monitor_(GPU_1),Yes,1000
 Timer = PowerMizer_Monitor_(GPU_1),Yes,1000
+Timer = Thermal_Monitor_(GPU_1),Yes,1000
+Timer = Memory_Used_(GPU_1),Yes,3000
+Timer = Memory_Used_(GPU_0),Yes,3000
+Timer = Thermal_Monitor_(GPU_0),Yes,1000
+Timer = PowerMizer_Monitor_(GPU_0),Yes,1000
 
 # Attributes:
 
@@ -30,7 +30,7 @@ ipb24:0.0/FXAA=0
 ipb24:0.0/AllowFlipping=1
 ipb24:0.0/FSAAAppControlled=1
 ipb24:0.0/LogAnisoAppControlled=1
-ipb24:0.0/OpenGLImageSettings=1
+ipb24:0.0/OpenGLImageSettings=0
 ipb24:0.0/FSAAAppEnhanced=0
 ipb24:0.0/ShowGraphicsVisualIndicator=0
 ipb24:0[DPY:DP-0]/RedBrightness=0.000000
@@ -60,6 +60,15 @@ ipb24:0[DPY:HDMI-0]/DitheringDepth=0
 ipb24:0[DPY:HDMI-0]/ColorSpace=0
 ipb24:0[DPY:HDMI-0]/ColorRange=0
 ipb24:0[DPY:HDMI-0]/SynchronousPaletteUpdates=0
+ipb24:0[DPY:DP-2]/RedBrightness=0.000000
+ipb24:0[DPY:DP-2]/GreenBrightness=0.000000
+ipb24:0[DPY:DP-2]/BlueBrightness=0.000000
+ipb24:0[DPY:DP-2]/RedContrast=0.000000
+ipb24:0[DPY:DP-2]/GreenContrast=0.000000
+ipb24:0[DPY:DP-2]/BlueContrast=0.000000
+ipb24:0[DPY:DP-2]/RedGamma=1.000000
+ipb24:0[DPY:DP-2]/GreenGamma=1.000000
+ipb24:0[DPY:DP-2]/BlueGamma=1.000000
 ipb24:0[DPY:DP-2]/Dithering=0
 ipb24:0[DPY:DP-2]/DitheringMode=0
 ipb24:0[DPY:DP-2]/DitheringDepth=0
@@ -72,6 +81,15 @@ ipb24:0[DPY:DP-3]/DitheringDepth=0
 ipb24:0[DPY:DP-3]/ColorSpace=0
 ipb24:0[DPY:DP-3]/ColorRange=0
 ipb24:0[DPY:DP-3]/SynchronousPaletteUpdates=0
+ipb24:0[DPY:DP-4]/RedBrightness=0.000000
+ipb24:0[DPY:DP-4]/GreenBrightness=0.000000
+ipb24:0[DPY:DP-4]/BlueBrightness=0.000000
+ipb24:0[DPY:DP-4]/RedContrast=0.000000
+ipb24:0[DPY:DP-4]/GreenContrast=0.000000
+ipb24:0[DPY:DP-4]/BlueContrast=0.000000
+ipb24:0[DPY:DP-4]/RedGamma=1.000000
+ipb24:0[DPY:DP-4]/GreenGamma=1.000000
+ipb24:0[DPY:DP-4]/BlueGamma=1.000000
 ipb24:0[DPY:DP-4]/Dithering=0
 ipb24:0[DPY:DP-4]/DitheringMode=0
 ipb24:0[DPY:DP-4]/DitheringDepth=0
