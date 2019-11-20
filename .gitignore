@@ -24,6 +24,7 @@ lib/
 .var/
 gPodder/
 anaconda3/
+Library/
 
 # Hidden files
 .bzr.log
