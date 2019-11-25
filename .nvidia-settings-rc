@@ -2,7 +2,7 @@
 # /home/ivizzo/.nvidia-settings-rc
 #
 # Configuration file for nvidia-settings - the NVIDIA X Server Settings utility
-# Generated on Mon Nov 25 12:22:24 2019
+# Generated on Mon Nov 25 16:35:45 2019
 #
 
 # ConfigProperties:
@@ -13,12 +13,12 @@ SliderTextEntries = Yes
 IncludeDisplayNameInConfigFile = Yes
 ShowQuitDialog = Yes
 UpdateRulesOnProfileNameChange = Yes
-Timer = PowerMizer_Monitor_(GPU_0),Yes,1000
-Timer = Thermal_Monitor_(GPU_0),Yes,1000
-Timer = Memory_Used_(GPU_0),Yes,3000
-Timer = Memory_Used_(GPU_1),Yes,3000
-Timer = Thermal_Monitor_(GPU_1),Yes,1000
 Timer = PowerMizer_Monitor_(GPU_1),Yes,1000
+Timer = Thermal_Monitor_(GPU_1),Yes,1000
+Timer = Memory_Used_(GPU_1),Yes,3000
+Timer = Memory_Used_(GPU_0),Yes,3000
+Timer = Thermal_Monitor_(GPU_0),Yes,1000
+Timer = PowerMizer_Monitor_(GPU_0),Yes,1000
 
 # Attributes:
 
@@ -31,7 +31,7 @@ ipb24:0.0/FXAA=0
 ipb24:0.0/AllowFlipping=1
 ipb24:0.0/FSAAAppControlled=1
 ipb24:0.0/LogAnisoAppControlled=1
-ipb24:0.0/OpenGLImageSettings=2
+ipb24:0.0/OpenGLImageSettings=1
 ipb24:0.0/FSAAAppEnhanced=0
 ipb24:0.0/GammaCorrectedAALinesValue=16
 ipb24:0.0/ShowGraphicsVisualIndicator=0
