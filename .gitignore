@@ -25,6 +25,7 @@ lib/
 gPodder/
 anaconda3/
 Library/
+octave/
 
 # Hidden files
 .bzr.log
@@ -149,3 +150,5 @@ Library/
 .conda/
 .kite/
 .gimp**
+.octave_**
+
