@@ -20,6 +20,18 @@
     ],
     "description": "Generic Ignacio Vizzo Copyright Template"
   },
+  "Generic SSE Copyright Template": {
+    "prefix": "sscopy",
+    "body": [
+      "$LINE_COMMENT @file      $TM_FILENAME",
+      "$LINE_COMMENT @author    Lorenzo Nardi     [lnardi@uni-bonn.de]",
+      "$LINE_COMMENT @author    Ignacio Vizzo     [ivizzo@uni-bonn.de]",
+      "$LINE_COMMENT @author    Nived Chebrolu    [nived.chebrolu@uni-bonn.de]",
+      "$LINE_COMMENT",
+      "$LINE_COMMENT Copyright (c) 2019 all rights reserved"
+    ],
+    "description": "Generic Ignacio Vizzo Copyright Template"
+  },
   "Generic LaTeX Ignacio Vizzo Copyright Template": {
     "prefix": "lcopy",
     "body": [
