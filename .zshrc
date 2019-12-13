@@ -45,7 +45,7 @@ export DEBFULLNAME="Ignacio Vizzo"
 export DEBEMAIL="ivizzo@uni-bonn.de"
 
 export DATASETS=$HOME/dev/datasets
-export MODELS=$HOME/dev/models
+export MODELS=$HOME/dev/deep_learning/models
 
 #Little hack to be able to find modules in subdris running scripts from somewhere else ;)
 export PYTHONPATH=$PYTHONPATH:
