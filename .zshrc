@@ -4,7 +4,11 @@ export ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="fwalch"
+if [[ -n $SSH_CONNECTION ]]; then
+  ZSH_THEME="fwalch-hostname"
+else
+  ZSH_THEME="fwalch"
+fi
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
