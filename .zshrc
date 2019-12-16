@@ -71,9 +71,6 @@ source $HOME/.zshrc_local
 # Source oh-my-zsh configs
 source $ZSH/oh-my-zsh.sh
 
-# Use colors for less command
-source $HOME/.lessfilters
-
 # Add go binaries to local PATH
 export PATH=$PATH:/usr/local/go/bin
 
