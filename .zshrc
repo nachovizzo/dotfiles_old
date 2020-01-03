@@ -25,13 +25,13 @@ ENABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    z
-    git
-    colored-man-pages
-    sudo
-    zsh-autosuggestions
-    command-not-found
-    extract
+  z
+  git
+  colored-man-pages
+  sudo
+  zsh-autosuggestions
+  command-not-found
+  extract
 )
 
 # Preferred editor for local and remote sessions
@@ -54,6 +54,7 @@ export MODELS=$HOME/dev/deep_learning/models
 #Little hack to be able to find modules in subdris running scripts from somewhere else ;)
 export PYTHONPATH=$PYTHONPATH:
 export PATH=$PATH:$HOME/.local/bin/
+export PATH=$PATH:$HOME/scripts/
 
 # This allow you to install a package if it's not found on the system
 export COMMAND_NOT_FOUND_INSTALL_PROMPT=1
@@ -73,4 +74,3 @@ source $ZSH/oh-my-zsh.sh
 
 # Add go binaries to local PATH
 export PATH=$PATH:/usr/local/go/bin
-
