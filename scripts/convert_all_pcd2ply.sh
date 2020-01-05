@@ -11,5 +11,5 @@ echo "\e[1m\e[36mConverting all .pcd scans we find in $PWD ...\e[0m"
 for SCAN in $PWD/*.pcd; do
   [ -f "$SCAN" ] || continue
   SCAN_NAME="${SCAN%.*}"
-  pcl_pcd2ply $SCAN $SCAN_NAME.ply
+  pcl_pcd2ply $SCAN $SCAN_NAME.ply -format 1 -use_camera 0
 done
