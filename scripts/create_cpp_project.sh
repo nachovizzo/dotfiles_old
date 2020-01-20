@@ -15,7 +15,10 @@ cp -r $HOME/scripts/cpp_template_project/.vscode .
 
 echo "\e[1m\e[93mBuilding Project\e[0m"
 cd build
-cmake ..
+cmake \
+  -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
+  -DCMAKE_BUILD_TYPE=Debug \
+  ..
 make all
 
 echo "\e[1m\e[93mTesting...\e[0m"
