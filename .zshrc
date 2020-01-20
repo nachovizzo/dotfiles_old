@@ -74,3 +74,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Add go binaries to local PATH
 export PATH=$PATH:/usr/local/go/bin
+
+# Add Open3D Binaries to path
+export PATH=$PATH:/$HOME/dev/libs/Open3D/build/bin/
+
