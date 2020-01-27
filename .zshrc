@@ -32,7 +32,6 @@ plugins=(
   zsh-autosuggestions
   command-not-found
   extract
-  zsh-completions
 )
 
 # Preferred editor for local and remote sessions
