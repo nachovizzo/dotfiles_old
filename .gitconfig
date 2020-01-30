@@ -3,7 +3,7 @@
     name = Ignacio Vizzo
 [core]
     excludesfile = /home/ivizzo/.gitignore_global
-    editor = nvim
+    editor = vim
 
 # Add some git common alias
 [url "git@github.com:"]
