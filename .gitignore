@@ -26,6 +26,7 @@ gPodder/
 anaconda3/
 Library/
 octave/
+data/
 
 # Hidden files
 .bzr.log
