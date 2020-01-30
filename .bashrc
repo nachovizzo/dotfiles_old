@@ -123,8 +123,8 @@ fi
 if ! hash zsh 2>/dev/null; then
     if ! $HOME/lib/zsh/bin/zsh 2>/dev/null; then
         echo "****************************************************************"
-        echo "\e[1m\e[93mzsh is NOT available in your system\e[0m"
-        echo "\e[1m\e[93mCompile from source with scripts/insall_zsh_no_root.sh\e[0m"
+        echo -e "\e[31mzsh is NOT available in your system\e[0m"
+        echo -e "\e[31mCompile from source with scripts/insall_zsh_no_root.sh\e[0m"
         echo "****************************************************************"
     else
         export FPATH=$HOME/lib/zsh/share/zsh/5.7.1-test-2/functions:$FPATH
