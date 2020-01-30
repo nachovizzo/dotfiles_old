@@ -152,4 +152,5 @@ octave/
 .gimp**
 .octave_**
 .evo/
+.matlab/
 
