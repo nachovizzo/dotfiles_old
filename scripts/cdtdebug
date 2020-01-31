@@ -10,7 +10,7 @@ WORKSPACE="$CDT_DEBUGGER/workspaces/$CURR_DIR"
 
 usage() {
   cat <<EOF
-Usage: ${0##*/} [-h] [-c/--core]
+Usage: ${0##*/} [-h] [-c/--core] [-p/--pid]
 Launch a gdb session using the standalone cdtdebugger, also possible to debug
 core files
 
@@ -18,6 +18,8 @@ core files
     -c corefile If you want to do post mostern debug provide the core file. Due
                 Implementation issues, you can only run this as the following:
                 ${0##*/} -c <corefile> <program>
+    -p pid      Attach gdb session to running process. Does not check if the pid
+                actully exists
 EOF
 }
 
@@ -32,7 +34,16 @@ while test $; do
       CORE=$2
       shift
     else
-      echo 'ERROR: "--core" requires a non-empty option argument.'
+      echo 'ERROR: "-c / --core" requires a non-empty option argument.'
+      exit 1
+    fi
+    ;;
+  -p | --pid)
+    if [ "$2" ]; then
+      PID=$2
+      shift
+    else
+      echo 'ERROR: "-p / --pid" requires a non-empty option argument.'
       exit 1
     fi
     ;;
@@ -60,6 +71,10 @@ PROGRAM=$@
 if [ "$CORE" ]; then
   echo "Debugging corefile $CORE, program $PROGRAM"
   $CDT_DEBUGGER/debugger/cdtdebug -data $WORKSPACE -c "$CORE" -e "$PROGRAM"
+elif [ "$PID" ]; then
+  PROCES_NAME=$(ps -p $PID -o comm=)
+  echo "Debugging process \e[93m$PROCES_NAME\e[0m with pid=$PID"
+  $CDT_DEBUGGER/debugger/cdtdebug -data $WORKSPACE -a "$PID"
 else
   # Run the cdt-debugger on the workspace
   echo "Debugging $PROGRAM"
