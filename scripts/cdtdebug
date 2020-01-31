@@ -1,14 +1,69 @@
 #!/bin/sh
-
+# @file      cdtdebug
+# @author    Ignacio Vizzo     [ivizzo@uni-bonn.de]
+#
+# Copyright (c) 2019 Ignacio Vizzo, all rights reserved
 export SWT_GTK3=0
 CURR_DIR=${PWD##*/}
 CDT_DEBUGGER="$HOME/cdtdebugger"
 WORKSPACE="$CDT_DEBUGGER/workspaces/$CURR_DIR"
+
+usage() {
+  cat <<EOF
+Usage: ${0##*/} [-h] [-c/--core]
+Launch a gdb session using the standalone cdtdebugger, also possible to debug
+core files
+
+    -h          display this help and exit
+    -c corefile If you want to do post mostern debug provide the core file. Due
+                Implementation issues, you can only run this as the following:
+                ${0##*/} -c <corefile> <program>
+EOF
+}
+
+while test $; do
+  case $1 in
+  -h | -\? | --help)
+    usage
+    exit
+    ;;
+  -c | --core)
+    if [ "$2" ]; then
+      CORE=$2
+      shift
+    else
+      echo 'ERROR: "--core" requires a non-empty option argument.'
+      exit 1
+    fi
+    ;;
+  --)
+    shift
+    break
+    ;;
+  -?*)
+    printf 'WARN: Unknown option (ignored): %s\n' "$1" >&2
+    ;;
+  *)
+    break
+    ;;
+  esac
+
+  shift
+done
 
 # Create sort of "unique" folder for the cdt-debug shit
 if [ ! -d "$WORKSPACE" ]; then
   mkdir -p "$WORKSPACE"
 fi
 
-# Run the cdt-debugger on the workspace
-$CDT_DEBUGGER/debugger/cdtdebug -data $WORKSPACE -e "$@"
+PROGRAM=$@
+if [ "$CORE" ]; then
+  echo "Debugging corefile $CORE, program $PROGRAM"
+  $CDT_DEBUGGER/debugger/cdtdebug -data $WORKSPACE -c "$CORE" -e "$PROGRAM"
+else
+  # Run the cdt-debugger on the workspace
+  echo "Debugging $PROGRAM"
+  $CDT_DEBUGGER/debugger/cdtdebug -data $WORKSPACE -e "$PROGRAM"
+fi
+
+return 0
