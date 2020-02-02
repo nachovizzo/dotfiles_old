@@ -9,7 +9,6 @@ alias catree='cat .tree | less'
 alias naqui='nautilus ./'
 alias py='ipython3'
 alias python='python3'
-alias code='code-insiders'
 alias coit='code . && exit'
 alias cor='code -r'
 alias cl=" /usr/bin/clear"
