@@ -14,4 +14,3 @@ echo "\e[1m\e[93mMounting datasets from dataserver into $DATASETS/dataserver/\e[
 sshfs -o ro,IdentityFile=$HOME/.ssh/id_rsa \
   nacho@dataserver:/export/datasets/ \
   $DATASETS/dataserver
-
