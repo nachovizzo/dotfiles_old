@@ -121,14 +121,14 @@ fi
 #
 # Copyright (c) 2019 Ignacio Vizzo, all rights reserved
 if ! hash zsh; then
-    if ! $HOME/lib/zsh/bin/zsh; then
+    if ! $HOME/usr/bin/zsh; then
         echo "****************************************************************"
         echo -e "\e[31mzsh is NOT available in your system\e[0m"
         echo -e "\e[31mCompile from source with scripts/insall_zsh_no_root.sh\e[0m"
         echo "****************************************************************"
     else
-        export FPATH=$HOME/lib/zsh/share/zsh/5.7.1-test-2/functions:$FPATH
-        export PATH=$PATH:$HOME/lib/zsh/bin
-        exec $HOME/lib/zsh/bin/zsh -l
+        export FPATH=$HOME/usr/share/zsh/5.7.1-test-2/functions:$FPATH
+        export PATH=$PATH:$HOME/usr/bin
+        exec $HOME/usr/bin/zsh -l
     fi
 fi
