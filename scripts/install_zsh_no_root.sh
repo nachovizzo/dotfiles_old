@@ -42,7 +42,7 @@
 # Using Oh-My-Zsh also fixes this issue.
 #
 
-ZSH_INSTALL_DIR=$HOME/lib/zsh
+ZSH_INSTALL_DIR=$HOME/usr
 
 # switch to tmp folder
 mkdir tmp
@@ -107,9 +107,6 @@ cd ..
 
 # clone repository into local dotfiles
 git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-
-# copy template file into home directory
-cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 
 cd ..
 
