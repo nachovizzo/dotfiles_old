@@ -27,6 +27,10 @@ anaconda3/
 Library/
 octave/
 data/
+bin/
+share/
+doc/
+tmp/
 
 # Hidden files
 .bzr.log
