@@ -78,3 +78,7 @@ export PATH=$PATH:/usr/local/go/bin
 # Add Open3D Binaries to path
 export PATH=$PATH:/$HOME/dev/libs/Open3D/build/bin/
 
+# Add local stuff
+export PATH=$HOME/bin:$PATH
+export LD_LIBRARY_PATH=$HOME/lib/:$LD_LIBRARY_PATH
+
