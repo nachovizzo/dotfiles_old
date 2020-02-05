@@ -31,6 +31,7 @@ bin/
 share/
 doc/
 tmp/
+usr/
 
 # Hidden files
 .bzr.log
