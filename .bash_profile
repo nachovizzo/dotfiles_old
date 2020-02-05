@@ -6,7 +6,7 @@
 # When running thorugh ssh sessions we need to manually source zsh, fallback to
 # bash in case it's not there
 if ! hash zsh; then
-      if ! $HOME/usr/bin/zsh; then
+      if ! hash $HOME/usr/bin/zsh; then
             echo "****************************************************************"
             echo -e "\e[31mzsh is NOT available in your system\e[0m"
             echo -e "\e[31mCompile from source with scripts/insall_zsh_no_root.sh\e[0m"
