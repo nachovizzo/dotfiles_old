@@ -120,8 +120,8 @@ fi
 # @author    Ignacio Vizzo     [ivizzo@uni-bonn.de]
 #
 # Copyright (c) 2019 Ignacio Vizzo, all rights reserved
-if ! hash zsh 2>/dev/null; then
-    if ! $HOME/lib/zsh/bin/zsh 2>/dev/null; then
+if ! hash zsh; then
+    if ! $HOME/lib/zsh/bin/zsh; then
         echo "****************************************************************"
         echo -e "\e[31mzsh is NOT available in your system\e[0m"
         echo -e "\e[31mCompile from source with scripts/insall_zsh_no_root.sh\e[0m"
