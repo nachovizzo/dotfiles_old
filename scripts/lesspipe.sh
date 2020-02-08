@@ -29,7 +29,7 @@
 # Author:  Wolfgang Friebel, DESY (Wolfgang.Friebel AT desy.de)
 #
 #===============================================================================
-( [[ -n 1 && -n 2 ]] ) > /dev/null 2>&1 || exec zsh -y --ksh-arrays -- "$0" ${1+"$@"}
+([[ -n 1 && -n 2 ]]) >/dev/null 2>&1 || exec zsh -y --ksh-arrays -- "$0" ${1+"$@"}
 #setopt KSH_ARRAYS SH_WORD_SPLIT 2>/dev/null
 set +o noclobber
 tarcmd='tar'
@@ -39,20 +39,20 @@ dir=${dir%%lesspipe.sh*\%s}
 dir=${dir%%/}
 PATH=$PATH:$dir
 
-cmd_exist () {
-  command -v "$1" > /dev/null 2>&1 && return 0 || return 1
+cmd_exist() {
+  command -v "$1" >/dev/null 2>&1 && return 0 || return 1
 }
 if [[ "$LESS_ADVANCED_PREPROCESSOR" = '' ]]; then
-   NOL_A_P=_NO_L_A_P
+  NOL_A_P=_NO_L_A_P
 fi
 
 filecmd() {
   file -L -s "$@"
-  file -L -s -i "$@" 2> /dev/null | sed -n 's/.*charset=/;/p' | tr a-z A-Z
+  file -L -s -i "$@" 2>/dev/null | sed -n 's/.*charset=/;/p' | tr a-z A-Z
 }
 
-sep=:						# file name separator
-altsep==					# alternate separator character
+sep=:    # file name separator
+altsep== # alternate separator character
 if [[ -e "$1" && "$1" = *$sep* || "$1" = *$altsep ]]; then
   sep=$altsep
   xxx="${1%=}"
@@ -61,7 +61,7 @@ fi
 if cmd_exist mktemp; then
   tmpdir=$(mktemp -d "${TMPDIR:-/tmp}/lesspipe.XXXXXXXXXX")
 
-  nexttmp () {
+  nexttmp() {
     # nexttmp -d returns a directory
     mktemp $1 "${tmpdir}/XXXXXXXX"
   }
@@ -69,7 +69,7 @@ else
   tmpdir=${TMPDIR:-/tmp}/lesspipe.$RANDOM
   mkdir $tmpdir
 
-  nexttmp () {
+  nexttmp() {
     new="$tmpdir/lesspipe.$RANDOM"
     [[ "$1" = -d ]] && mkdir $new
     echo $new
@@ -82,8 +82,8 @@ trap - PIPE
 unset iconv
 iconv() {
   if [[ -z "$iconv" ]]; then
-    arg=$(printf "%s$(command iconv --help 2>/dev/null | \
-      sed -n 's/.*\(--.*-subst=\)\(FORMATSTRING\).*/\1\\033[7m?\\033[m/p' | \
+    arg=$(printf "%s$(command iconv --help 2>/dev/null |
+      sed -n 's/.*\(--.*-subst=\)\(FORMATSTRING\).*/\1\\033[7m?\\033[m/p' |
       tr \\n ' ')")
     if [[ -n "$arg" ]]; then
       iconv="command iconv -c $arg  -t //TRANSLIT"
@@ -91,20 +91,20 @@ iconv() {
       iconv="command iconv -c"
     fi
   fi
-  if $iconv "$@" > /dev/null 2>&1; then
+  if $iconv "$@" >/dev/null 2>&1; then
     msg "append $sep to filename to view the $2 encoded data"
     $iconv "$@"
   fi
 }
 
-msg () {
+msg() {
   if [[ -n "$LESSQUIET" ]]; then
     return
   fi
   echo "==> $@"
 }
 
-filetype () {
+filetype() {
   # wrapper for 'file' command
   typeset name
   name="$1"
@@ -112,7 +112,7 @@ filetype () {
     name="$filen"
   fi
   if [[ "$1" = - ]]; then
-    dd bs=40000 count=1 > "$tmpdir/file" 2>/dev/null
+    dd bs=40000 count=1 >"$tmpdir/file" 2>/dev/null
     set "$tmpdir/file" "$2"
   fi
   typeset type
@@ -130,21 +130,21 @@ filetype () {
   elif [[ ("$type" = *Zip* || "$type" = *ZIP*) && ("$name" = *.jar || "$name" = *.xpi) ]]; then
     type=" Zip compressed Jar archive"
   elif [[ "$type" = *Microsoft\ Office\ Document* && ("$name" = *.ppt) ]]; then
-       type=" PowerPoint document"
+    type=" PowerPoint document"
   elif [[ "$type" = *Microsoft\ Office\ Document* && ("$name" = *.xls) ]]; then
-       type=" Excel document"
+    type=" Excel document"
   elif [[ "$type" = *Hierarchical\ Data\ Format* && ("$name" = *.nc4) ]]; then
-       type=" NetCDF Data Format data"
+    type=" NetCDF Data Format data"
   elif [[ "$type" = *roff\ *,* && ("$name" = */[Mm]akefile || "$name" = */[Mm]akefile.* || "$name" = */BSDmakefile || "$name" = *.mk) ]]; then
-       # Sometimes a BSD makefile is identified as "troff or
-       # preprocessor input text" probably due to its ".if" style
-       # directives.
-       type=" BSD makefile script,${type#*,}}"
+    # Sometimes a BSD makefile is identified as "troff or
+    # preprocessor input text" probably due to its ".if" style
+    # directives.
+    type=" BSD makefile script,${type#*,}}"
   fi
   echo "$type"
 }
 
-show () {
+show() {
   file1="${1%%$sep*}"
   rest1="${1#$file1}"
   while [[ "$rest1" = ::* ]]; do
@@ -157,7 +157,7 @@ show () {
       file1="${1%$rest1}"
     fi
   done
-  if [[ ! -e $file1  && "$file1" != '-' ]]; then
+  if [[ ! -e $file1 && "$file1" != '-' ]]; then
     return
   fi
   rest11="${rest1#$sep}"
@@ -241,7 +241,7 @@ show () {
   fi
 }
 
-get_cmd () {
+get_cmd() {
   cmd=
   typeset t
   if [[ "$1" = *[bg]zip*compress* || "$1" = *compress\'d\ * || "$1" = *packed\ data* || "$1" = *LZMA\ compressed* || "$1" = *lzip\ compressed* || "$1" = *[Xx][Zz]\ compressed* || "$1" = *Zstandard\ compressed* || "$1" = *[Bb]rotli\ compressed* || "$1" = *LZ4\ compressed* ]]; then ## added '#..then' to fix vim's syntax parsing
@@ -251,30 +251,30 @@ get_cmd () {
       cmd=(bzip2 -cd "$2")
       if [[ "$2" != - ]]; then filen="$2"; fi
       case "$filen" in
-        *.bz2) filen="${filen%.bz2}";;
-        *.tbz) filen="${filen%.tbz}.tar";;
+      *.bz2) filen="${filen%.bz2}" ;;
+      *.tbz) filen="${filen%.tbz}.tar" ;;
       esac
       return
     elif [[ "$1" = *LZMA\ compressed* ]] && cmd_exist lzma; then
       cmd=(lzma -cd "$2")
       if [[ "$2" != - ]]; then filen="$2"; fi
       case "$filen" in
-        *.lzma) filen="${filen%.lzma}";;
-        *.tlz) filen="${filen%.tlz}.tar";;
+      *.lzma) filen="${filen%.lzma}" ;;
+      *.tlz) filen="${filen%.tlz}.tar" ;;
       esac
-    elif [[ "$1" = *gzip\ compress* || "$1" =  *compress\'d\ * || "$1" = *packed\ data* ]]; then ## added '#..then' to fix vim's syntax parsing
+    elif [[ "$1" = *gzip\ compress* || "$1" = *compress\'d\ * || "$1" = *packed\ data* ]]; then ## added '#..then' to fix vim's syntax parsing
       cmd=(gzip -cd "$2")
       if [[ "$2" != - ]]; then filen="$2"; fi
       case "$filen" in
-        *.gz) filen="${filen%.gz}";;
-        *.tgz) filen="${filen%.tgz}.tar";;
+      *.gz) filen="${filen%.gz}" ;;
+      *.tgz) filen="${filen%.tgz}.tar" ;;
       esac
     elif [[ "$1" = *[Xx][Zz]\ compressed* ]] && cmd_exist xz; then
       cmd=(xz -cd "$2")
       if [[ "$2" != - ]]; then filen="$2"; fi
       case "$filen" in
-       *.xz) filen="${filen%.xz}";;
-       *.txz) filen="${filen%.txz}.tar";;
+      *.xz) filen="${filen%.xz}" ;;
+      *.txz) filen="${filen%.txz}.tar" ;;
       esac
     fi
     return
@@ -286,14 +286,14 @@ get_cmd () {
     if [[ "$1" = *\ tar* || "$1" = *\	tar* ]]; then
       cmd=(istar "$2" "$file2")
     elif [[ "$1" = *Debian* ]]; then
-      data=`ar t "$2"|grep data.tar`
+      data=$(ar t "$2" | grep data.tar)
       cmd2=("unpack_cmd" "$data")
       t=$(nexttmp)
       if [[ "$file2" = control/* ]]; then
-        istemp "ar p" "$2" control.tar.gz | gzip -dc - > "$t"
+        istemp "ar p" "$2" control.tar.gz | gzip -dc - >"$t"
         file2=".${file2:7}"
       else
-        istemp "ar p" "$2" $data | $("${cmd2[@]}") > "$t"
+        istemp "ar p" "$2" $data | $("${cmd2[@]}") >"$t"
       fi
       cmd=(istar "$t" "$file2")
     elif [[ "$1" = *Zip* || "$1" = *ZIP* || "$1" = *JAR* ]] && cmd_exist unzip; then
@@ -319,31 +319,31 @@ get_cmd () {
   fi
 }
 
-iscab () {
+iscab() {
   typeset t
   if [[ "$1" = - ]]; then
     t=$(nexttmp)
-    cat > "$t"
+    cat >"$t"
     set "$t" "$2"
   fi
   cabextract -pF "$2" "$1"
 }
 
-istar () {
+istar() {
   $tarcmd Oxf "$1" "$2" 2>/dev/null
 }
 
-isdvi () {
+isdvi() {
   typeset t
   if [[ "$1" != *.dvi ]]; then
     t="$tmpdir/tmp.dvi"
-    cat "$1" > "$t"
+    cat "$1" >"$t"
     set "$t"
   fi
   dvi2tty -q "$1"
 }
 
-istemp () {
+istemp() {
   typeset prog
   typeset t
   prog="$1"
@@ -352,7 +352,7 @@ istemp () {
   shift
   if [[ "$t" = - ]]; then
     t=$(nexttmp)
-    cat > "$t"
+    cat >"$t"
   fi
   if [[ $# -gt 0 ]]; then
     $prog "$t" "$@" 2>/dev/null
@@ -361,7 +361,7 @@ istemp () {
   fi
 }
 
-nodash () {
+nodash() {
   typeset prog
   prog="$1"
   shift
@@ -377,20 +377,20 @@ nodash () {
   fi
 }
 
-isrpm () {
+isrpm() {
   if cmd_exist rpm2cpio && cmd_exist cpio; then
     typeset t
     if [[ "$1" = - ]]; then
       t=$(nexttmp)
-      cat > "$t"
+      cat >"$t"
       set "$t" "$2"
     fi
     # setup $b as a batch file containing "$b.out"
     typeset b
     b=$(nexttmp)
-    echo "$b.out" > "$b"
+    echo "$b.out" >"$b"
     # to support older versions of cpio the --to-stdout option is not used here
-    rpm2cpio "$1" 2>/dev/null|cpio -i --quiet --rename-batch-file "$b" "$2"
+    rpm2cpio "$1" 2>/dev/null | cpio -i --quiet --rename-batch-file "$b" "$2"
     cat "$b.out"
   elif cmd_exist rpmunpack && cmd_exist cpio; then
     # rpmunpack will write to stdout if it gets file from stdin
@@ -400,9 +400,8 @@ isrpm () {
   fi
 }
 
-
 #parsexml () { nodash "elinks -dump -default-mime-type text/xml" "$1"; }
-parsehtml () {
+parsehtml() {
   if [[ "$PARSEHTML" = no ]]; then
     msg "No suitable tool for HTML parsing found, install one of html2text, elinks, links, lynx or w3m"
     return
@@ -410,23 +409,23 @@ parsehtml () {
 }
 
 unpack_cmd() {
-    cmd_string="cat"
-    if [[ "$1" == *xz ]]; then
-      cmd_string="xz -dc -"
-    elif [[ "$1" == *gz ]]; then
-      cmd_string="gzip -dc -"
-    elif [[ "$1" == *bz2 ]]; then
-      cmd_string="bzip2 -dc -"
-    elif [[ "$1" == *lzma ]]; then
-      cmd_string="lzma -dc -"
-    elif [[ "$1" == *zst ]]; then
-      cmd_string="zstd -dcqM4294967295 -"
-    elif [[ ("$1" == *br || "$1" == *bro) ]]; then
-      cmd_string="brotli -dc -"
-    elif [[ "$1" == *lz4 ]]; then
-      cmd_string="lz4 -dcq -"
-    fi
-    echo "$cmd_string"
+  cmd_string="cat"
+  if [[ "$1" == *xz ]]; then
+    cmd_string="xz -dc -"
+  elif [[ "$1" == *gz ]]; then
+    cmd_string="gzip -dc -"
+  elif [[ "$1" == *bz2 ]]; then
+    cmd_string="bzip2 -dc -"
+  elif [[ "$1" == *lzma ]]; then
+    cmd_string="lzma -dc -"
+  elif [[ "$1" == *zst ]]; then
+    cmd_string="zstd -dcqM4294967295 -"
+  elif [[ ("$1" == *br || "$1" == *bro) ]]; then
+    cmd_string="brotli -dc -"
+  elif [[ "$1" == *lz4 ]]; then
+    cmd_string="lz4 -dcq -"
+  fi
+  echo "$cmd_string"
 }
 
 isfinal() {
@@ -462,9 +461,9 @@ isfinal() {
     exit 1
   elif [[ "$1" = *directory* ]]; then
     cmd=(ls -lA $COLOR "$2")
-    if ! ls $COLOR > /dev/null 2>&1; then
+    if ! ls $COLOR >/dev/null 2>&1; then
       cmd=(ls -lA -G "$2")
-      if ! ls -lA -G > /dev/null 2>&1; then
+      if ! ls -lA -G >/dev/null 2>&1; then
         cmd=(ls -lA "$2")
       fi
     fi
@@ -506,7 +505,7 @@ isfinal() {
       echo
       istemp "ar p" "$2" control.tar.gz | gzip -dc - | $tarcmd tvf - | sed -r 's/(.{48})\./\1control/'
     fi
-    data=`ar t "$2"|grep data.tar`
+    data=$(ar t "$2" | grep data.tar)
     cmd2=("unpack_cmd" "$data")
     echo
     istemp "ar p" "$2" $data | $("${cmd2[@]}") | $tarcmd tvf -
@@ -548,7 +547,7 @@ isfinal() {
     elif cmd_exist bsdtar; then
       msg "use rar_file${sep}contained_file to view a file in the archive"
       istemp "bsdtar tvf" "$2"
-    fi 
+    fi
   elif [[ "$1" = *[Cc]abinet* ]] && cmd_exist cabextract; then
     msg "use cab_file${sep}contained_file to view a file in the cabinet"
     istemp "cabextract -l" "$2"
@@ -564,7 +563,8 @@ isfinal() {
   elif [[ "$PARSEHTML" = yes && "$1" = *PDF* ]] && cmd_exist pdftohtml; then
     msg "append $sep to filename to view the PDF source"
     t=$(nexttmp)
-    cat "$2" > "$t"; pdftohtml -stdout "$t" | parsehtml -
+    cat "$2" >"$t"
+    pdftohtml -stdout "$t" | parsehtml -
   elif [[ "$PARSEHTML" = yes && ("$1" = *OpenDocument\ [CHMPST]* || "$1" = *OpenOffice\.org\ 1\.x\ [CIWdgpst]*) ]] && cmd_exist unzip; then
     if cmd_exist sxw2txt; then
       msg "append $sep to filename to view the OpenOffice or OpenDocument source"
@@ -576,11 +576,11 @@ isfinal() {
     if [[ "$2" != - ]]; then
       msg "append $sep to filename to view the raw data"
       isoinfo -d -i "$2"
-      joliet=`isoinfo -d -i "$2" | egrep '^Joliet'|cut -c1`
+      joliet=$(isoinfo -d -i "$2" | egrep '^Joliet' | cut -c1)
       echo "================================= Content ======================================"
       isoinfo -lR$joliet -i "$2"
     fi
-  elif [[ "$1" = *image\ data*  || "$1" = *JPEG\ file* || "$1" = *JPG\ file* ]] && cmd_exist identify; then
+  elif [[ "$1" = *image\ data* || "$1" = *JPEG\ file* || "$1" = *JPG\ file* ]] && cmd_exist identify; then
     msg "append $sep to filename to view the raw data"
     identify -verbose "$2"
   elif [[ "$1" = *perl\ Storable$NOL_A_P* ]]; then
@@ -620,14 +620,14 @@ isfinal() {
   fi
   if [[ "$2" = - ]]; then
     cat
-  fi  
+  fi
 }
 
 IFS=$sep a="$@"
 IFS=' '
 if [[ "$a" = "" ]]; then
   if [[ "$0" != /* ]]; then
-     pat=`pwd`/
+    pat=$(pwd)/
   fi
   if [[ "$SHELL" = *csh ]]; then
     echo "setenv LESSOPEN \"|$pat$0 %s\""

@@ -1,8 +1,9 @@
-#!/bin/sh
+#!/usr/bin/env zsh
 # @file      cdtdebug
 # @author    Ignacio Vizzo     [ivizzo@uni-bonn.de]
 #
 # Copyright (c) 2019 Ignacio Vizzo, all rights reserved
+source load_colors.zsh
 export SWT_GTK3=0
 CURR_DIR=${PWD##*/}
 CDT_DEBUGGER="$HOME/cdtdebugger"
@@ -73,7 +74,7 @@ if [ "$CORE" ]; then
   $CDT_DEBUGGER/debugger/cdtdebug -data $WORKSPACE -c "$CORE" -e "$PROGRAM"
 elif [ "$PID" ]; then
   PROCES_NAME=$(ps -p $PID -o comm=)
-  echo "Debugging process \e[93m$PROCES_NAME\e[0m with pid=$PID"
+  echo "Debugging process ${BOLD_YELLOW}$PROCES_NAME${RESET} with pid=$PID"
   $CDT_DEBUGGER/debugger/cdtdebug -data $WORKSPACE -a "$PID"
 else
   # Run the cdt-debugger on the workspace

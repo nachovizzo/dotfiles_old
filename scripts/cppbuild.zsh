@@ -1,5 +1,5 @@
-#!/bin/sh
-# @file      cppbuild
+#!/usr/bin/env zsh
+# @file      cppbuild.zsh
 # @author    Ignacio Vizzo     [ivizzo@uni-bonn.de]
 #
 # Copyright (c) 2019 Ignacio Vizzo, all rights reserved
@@ -7,6 +7,7 @@
 # This simple shell script will allow you to build a simple C++/C object using
 # the shell, it will use the name of the file as the name of the output binary
 # It's not smart, it's not a build system, don't expect too much out of it
+source load_colors.zsh
 
 # Get the source filenmae
 FILE="$@"
@@ -18,13 +19,13 @@ EXT="${FILE#*.}"
 PROGRAM="${FILE%.$EXT}"
 
 if test "$EXT" = "cpp"; then
-  echo "\e[1m\e[39mBuilding C++ program = \e[1m\e[93m\""$PROGRAM"\"\e[0m..."
+  echo "${BOLD_WHITE}Building C++ program = ${BOLD_YELLOW}\""$PROGRAM"\"${RESET}..."
   g++ --std=c++14 -Wall -Wextra -g3 -O0 $FILE -o $PROGRAM
 elif test "$EXT" = "c"; then
-  echo "\e[1m\e[39mBuilding C program = \e[1m\e[93m\""$PROGRAM"\"\e[0m..."
+  echo "${BOLD_WHITE}Building C program = ${BOLD_YELLOW}\""$PROGRAM"\"${RESET}..."
   gcc --std=c11 -Wall -Wextra -g3 -O0 $FILE -o $PROGRAM
 else
-  echo "\e[1m\e[39mFile extension =\"\e[1m\e[33m"$EXT"\e[0m\" not supported, aborting..."
+  echo "File extension =\"${BOLD_RED}".$EXT"${RESET}\" not supported, aborting..."
 fi
 
-echo "\e[1m\e[39mDone!\e[0m"
+echo "${BOLD_WHITE}Done!${RESET}"

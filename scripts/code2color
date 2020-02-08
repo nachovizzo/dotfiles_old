@@ -869,7 +869,7 @@ if ($@) {
   $bold = "\e[1m";
   $underline = "\e[4m";
   $reverse = "\e[7m";
-  $reset = "\e[0m";
+  $reset = "${RESET}";
   $red = "\e[31m";
   $green = "\e[32m";
   $yellow = "\e[33m";

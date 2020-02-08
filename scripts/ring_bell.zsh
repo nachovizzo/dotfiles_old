@@ -1,4 +1,4 @@
-# !/usr/bin/sh
+#!/usr/bin/env zsh
 # @file      ring_bell
 # @author    Ignacio Vizzo     [ivizzo@uni-bonn.de]
 #

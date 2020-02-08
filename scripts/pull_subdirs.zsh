@@ -1,16 +1,17 @@
-# !/usr/bin/zsh
-# @file      push_subdirs
+#!/usr/bin/env zsh
+# @file      pull_subdirs.zsh
 # @author    Ignacio Vizzo     [ivizzo@uni-bonn.de]
 #
 # Copyright (c) 2019 Ignacio Vizzo, all rights reserved
+source load_colors.zsh
 PWD=$(pwd)
 DIRS=$(ls -d *)
-echo "\e[1m\e[36mUpdating all the sub-repositories we find in $PWD"
+echo "${BOLD_CYAN}Updating all the sub-repositories we find in $PWD"
 for repo in $DIRS; do
   if [ -d $repo/.git ]; then
-    echo "\e[1m\e[93mUpdating git repository found in $repo ...\e[0m"
+    echo "${BOLD_YELLOW}Updating git repository found in $repo ...${RESET}"
     cd $repo
-    git push
+    git pull
     cd ../
   fi
 done

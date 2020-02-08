@@ -1,9 +1,9 @@
-#!/bin/zsh
-# @file      cat_all_files
+#!/usr/bin/env zsh
+# @file      cat_all_files.zsh
 # @author    Ignacio Vizzo     [ivizzo@uni-bonn.de
 #
 # Copyright (c) 2019 Ignacio Vizzo, all rights reserved
-source $ZSH/custom/load_colors.zsh
+source load_colors.zsh
 
 for source in *; do
   echo "${BOLD_YELLOW}$source:${RESET}"
