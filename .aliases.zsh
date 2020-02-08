@@ -32,3 +32,5 @@ alias suspend='systemctl suspend'
 alias rmrf='rm -rf'
 alias vp='cp'
 
+source $HOME/scripts/aliases.zsh
+
