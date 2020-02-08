@@ -7,6 +7,7 @@
 # NOTE: Rememver to add `dataserver` to your /etc/hosts file
 
 # First umount all the mounted remote file systems, just in case
+mkdir -p $DATASETS/dataserver
 fusermount -q -u $DATASETS/dataserver
 
 # Mount this directory as read only so we don't screw up anything

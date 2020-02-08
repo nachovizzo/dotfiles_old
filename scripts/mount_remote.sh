@@ -5,6 +5,7 @@
 # Copyright (c) 2019 Ignacio Vizzo, all rights reserved
 #
 # First umount all the mounted remote file systems, just in case
+mkdir -p $DATASETS/remote
 fusermount -q -u $DATASETS/remote
 
 # This comes from my remote home directory, it's my own fault if I meto la pata
