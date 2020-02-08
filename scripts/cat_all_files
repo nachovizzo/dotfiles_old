@@ -1,5 +1,11 @@
+#!/bin/zsh
 # @file      cat_all_files
-# @author    Ignacio Vizzo     [ivizzo@uni-bonn.de]
+# @author    Ignacio Vizzo     [ivizzo@uni-bonn.de
 #
 # Copyright (c) 2019 Ignacio Vizzo, all rights reserved
-for source in *; do echo "\e[1m\e[93m$source:\e[0m" && cat $source && echo; done
+source $ZSH/custom/load_colors.zsh
+
+for source in *; do
+  echo "${BOLD_YELLOW}$source:${RESET}"
+  cat $source && echo
+done
