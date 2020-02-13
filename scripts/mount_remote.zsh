@@ -5,6 +5,7 @@
 # Copyright (c) 2019 Ignacio Vizzo, all rights reserved
 #
 # First umount all the mounted remote file systems, just in case
+source load_colors.zsh
 mkdir -p $DATASETS/remote
 fusermount -q -u $DATASETS/remote
 
