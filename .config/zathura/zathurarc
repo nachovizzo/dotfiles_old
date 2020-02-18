@@ -1,10 +1,9 @@
-set recolor false
 #set recolor-reverse-video true
 #set recolor-lightcolor "#1C1E26" # Horizon backgorund
 #set recolor-darkcolor  "#BBBBBB" # Horizon text color
+set recolor-keephue "true"
 set recolor-darkcolor  "#EEFFFF" # Material backgorund
 set recolor-lightcolor "#263238" # Material text color
-set recolor-keephue "false"
 
 set window-title-basename "true"
 set selection-clipboard "clipboard"
@@ -15,7 +14,6 @@ set adjust-open "best-fit"
 set page-padding "2"
 set guioptions "v"
 set pages-per-row "2"
-
 
 map [normal] = zoom in
 map [normal]- zoom out
