@@ -31,6 +31,7 @@ alias tm='tmux'
 alias suspend='systemctl suspend'
 alias rmrf='rm -rf'
 alias vp='cp'
+alias kitti_monitor='htop -p $(pgrep -d, eval_sequence)'
 
 source $HOME/scripts/aliases.zsh
 
