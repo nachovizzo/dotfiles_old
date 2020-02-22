@@ -1,6 +1,7 @@
 {
   /*----------------------------- LATEX --------------------------------------*/
   "latex-workshop.latex.autoBuild.run": "onFileChange",
+  "git.enabled": false,
   "latex-workshop.view.pdf.viewer": "tab",
   "files.exclude": {
     "IEEEtran.bst*/": true,
