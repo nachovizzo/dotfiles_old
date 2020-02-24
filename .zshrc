@@ -81,3 +81,8 @@ export PATH=$PATH:/$HOME/dev/libs/Open3D/build/bin/
 # Add local stuff
 export PATH=$HOME/usr/bin:$PATH
 export LD_LIBRARY_PATH=$HOME/usr/lib/:$LD_LIBRARY_PATH
+
+# Not sure if I should do it like this, but it's worth to try it
+# I will store all the virtual env there
+export VIRTUALENV=$HOME/dev/virtualenv/
+
