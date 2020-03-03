@@ -160,4 +160,5 @@ opt/
 .octave_**
 .evo/
 .matlab/
+.openshot*
 
