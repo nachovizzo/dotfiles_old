@@ -37,5 +37,6 @@ alias rmrf='rm -rf'
 alias vp='cp'
 alias kitti_monitor='htop -p $(pgrep -d, eval_sequence) --sort-key=Command'
 alias mapping_monitor='htop -p $(pgrep -d, -f "python3 ./mapping_pipeline.py") --sort-key=Command'
+alias df='df -h -xsquashfs -xtmpfs -xdevtmpfs'
 
 source $HOME/scripts/aliases.zsh
