@@ -1,3 +1,7 @@
+# @file      .zshrc
+# @author    Ignacio Vizzo     [ivizzo@uni-bonn.de]
+#
+# Copyright (c) 2019 Ignacio Vizzo, all rights reserved
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -85,4 +89,3 @@ export LD_LIBRARY_PATH=$HOME/usr/lib/:$LD_LIBRARY_PATH
 # Not sure if I should do it like this, but it's worth to try it
 # I will store all the virtual env there
 export VIRTUALENV=$HOME/dev/virtualenv/
-

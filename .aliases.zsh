@@ -1,3 +1,7 @@
+# @file      .aliases.zsh
+# @author    Ignacio Vizzo     [ivizzo@uni-bonn.de]
+#
+# Copyright (c) 2019 Ignacio Vizzo, all rights reserved
 alias apts='apt-cache search'
 alias erp='er-repo'
 alias suqui='subl ./'
@@ -35,4 +39,3 @@ alias kitti_monitor='htop -p $(pgrep -d, eval_sequence) --sort-key=Command'
 alias mapping_monitor='htop -p $(pgrep -d, -f "python3 ./mapping_pipeline.py") --sort-key=Command'
 
 source $HOME/scripts/aliases.zsh
-

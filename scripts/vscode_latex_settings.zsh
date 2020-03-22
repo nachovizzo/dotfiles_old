@@ -9,5 +9,5 @@ mkdir -p .vscode/
 if [ -f .vscode/settings.json ]; then
   mv .vscode/settings.json .vscode/settings.json.bak
 fi
-ln -s ~/.latex_papers.json .vscode/settings.json
+ln -s vscode_settings_templates/.latex_papers.json .vscode/settings.json
 echo "done"

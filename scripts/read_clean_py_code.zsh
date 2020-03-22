@@ -10,5 +10,5 @@ mkdir -p .vscode/
 if [ -f .vscode/settings.json ]; then
   mv .vscode/settings.json .vscode/settings.json.bak
 fi
-ln -s ~/.clean_py_code.json .vscode/settings.json
+ln -s vscode_settings_templates/.clean_py_code.json .vscode/settings.json
 echo "done"
