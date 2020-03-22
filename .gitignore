@@ -161,4 +161,8 @@ opt/
 .evo/
 .matlab/
 .openshot*
-
+.openjfx*
+.yarn*
+.ipyvolume*
+.gphoto*
+.gnome2_private*
