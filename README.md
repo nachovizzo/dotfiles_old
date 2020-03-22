@@ -33,12 +33,6 @@ git submodule update
 chsh $USER # enter /bin/zsh
 ```
 
-## Install all packages(optional)
-
-```sh
-sudo apt update && cat pkglist | xargs sudo apt install
-```
-
 ## Use nvim instead of vim
 
 ```sh
