@@ -167,3 +167,4 @@ opt/
 .gphoto*
 .gnome2_private*
 .regolith-gnome-backup
+.zoom/
