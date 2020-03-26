@@ -359,8 +359,7 @@ set_from_resource $i3-wm.i3xrocks.config i3-wm.i3xrocks.config "$HOME/.config/re
 
 # The bar configuration
 bar {
-  # position $i3-wm.bar.position
-  position top
+  position $i3-wm.bar.position
   font $i3-wm.bar.font
   separator_symbol $i3-wm.bar.separator
   status_command i3xrocks -c $i3-wm.i3xrocks.config
