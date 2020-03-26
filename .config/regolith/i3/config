@@ -185,7 +185,7 @@ bindsym $mod+$alt+q [con_id="__focused__"] exec --no-startup-id kill -9 $(xdotoo
 bindsym $mod+Shift+c exec "xrdb -merge $HOME/.Xresources-regolith && i3 reload"
 
 # Session // Restart i3 // <Super><Shift> r ##
-bindsym $mod+Shift+r restart
+bindsym $mod+Shift+r exec "xrdb -merge $HOME/.Xresources-regolith && i3 reload"
 
 ## Session // Logout // <Super><Shift> e ##
 bindsym $mod+Shift+e exec /usr/bin/gnome-session-quit --logout
