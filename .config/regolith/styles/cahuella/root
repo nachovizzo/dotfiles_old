@@ -1,0 +1,14 @@
+! -- Styles - Colors
+#include "/home/ivizzo/.config/regolith/styles/cahuella/color"
+
+! -- Styles - Fonts
+#include "/home/ivizzo/.config/regolith/styles/cahuella/typeface"
+
+! -- Styles - Theme
+#include "/home/ivizzo/.config/regolith/styles/cahuella/theme"
+
+! -- Applications
+! These files map values defined above into specific app settings.
+#include "/home/ivizzo/.config/regolith/styles/i3-wm"
+#include "/home/ivizzo/.config/regolith/styles/i3xrocks"
+#include "/home/ivizzo/.config/regolith/styles/gnome"
