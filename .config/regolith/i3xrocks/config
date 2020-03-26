@@ -78,9 +78,9 @@ interval=30
 # Rofication
 #
 # Displays notifications.
-[rofication]
-command=/usr/share/i3xrocks/rofication-statusi3blocks.py
-interval=10
+#[rofication]
+#command=/usr/share/i3xrocks/rofication-statusi3blocks.py
+#interval=10
 
 # Date Time
 [time2]
