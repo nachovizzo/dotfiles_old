@@ -1,0 +1,2 @@
+! -- This points to the root Xresource file.
+#include "/etc/regolith/styles/cahuella/root"
