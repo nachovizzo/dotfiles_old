@@ -1,0 +1,5 @@
+[Desktop Entry]
+NoDisplay=true
+Type=Application
+Name=TouchpadToggle
+Exec=/home/ivizzo/scripts/touchpad_toggle.sh
