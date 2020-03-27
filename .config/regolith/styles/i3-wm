@@ -7,6 +7,7 @@ i3-wm.font: typeface_wm
 i3-wm.bar.font: typeface_bar
 
 i3-wm.bar.position: i3wm_bar_position
+i3-wm.bar.trayoutput: i3wm_bar_trayoutput
 i3-wm.bar.background.color: color_base03
 i3-wm.bar.statusline.color: color_base1
 i3-wm.bar.separator.color: color_blue

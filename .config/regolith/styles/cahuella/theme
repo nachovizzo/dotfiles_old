@@ -8,3 +8,4 @@
 #define i3wm_gaps_inner_size            12
 #define i3wm_gaps_outer_size            0
 #define i3wm_bar_position               top
+#define i3wm_bar_trayoutput             primary
