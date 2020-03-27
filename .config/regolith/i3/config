@@ -405,5 +405,7 @@ exec --no-startup-id /usr/bin/regolith-ftue
 exec --no-startup-id /usr/bin/unclutter -b
 
 # This remaps the caps lock to the super key, this way we can use super AND caps lock as the master key for i3
+# TODO: Move this to .xprofile or something like this
 exec --no-startup-id "setxkbmap -option 'caps:super'"
+exec --no-startup-id "xcape -e 'Super_L=Escape' -t 300"
 
