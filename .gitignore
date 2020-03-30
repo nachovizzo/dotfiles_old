@@ -33,6 +33,7 @@ doc/
 tmp/
 usr/
 opt/
+Videos/
 
 # Hidden files
 .bzr.log
