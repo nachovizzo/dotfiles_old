@@ -169,3 +169,4 @@ Videos/
 .gnome2_private*
 .regolith-gnome-backup
 .zoom/
+.clangd/
