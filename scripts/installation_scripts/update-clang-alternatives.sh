@@ -20,6 +20,7 @@ sudo update-alternatives \
   --slave /usr/bin/clang-format clang-format /usr/bin/clang-format-${VERSION} \
   --slave /usr/bin/clang-tidy clang-tidy /usr/bin/clang-tidy-${VERSION} \
   --slave /usr/bin/clang-tidy-diff.py clang-tidy-diff.py /usr/bin/clang-tidy-diff-${VERSION}.py \
+  --slave /usr/bin/run-clang-tidy run-clang-tidy /usr/bin/run-clang-tidy-${VERSION} \
   --slave /usr/bin/clang-include-fixer clang-include-fixer /usr/bin/clang-include-fixer-${VERSION} \
   --slave /usr/bin/clang-offload-bundler clang-offload-bundler /usr/bin/clang-offload-bundler-${VERSION} \
   --slave /usr/bin/clangd clangd /usr/bin/clangd-${VERSION} \
