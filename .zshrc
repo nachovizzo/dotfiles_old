@@ -59,6 +59,7 @@ export MODELS=$HOME/dev/deep_learning/models
 export PYTHONPATH=$PYTHONPATH:
 export PATH=$PATH:$HOME/.local/bin/
 export PATH=$PATH:$HOME/scripts/
+export PATH=$PATH:$HOME/scripts/installation_scripts/
 
 # This allow you to install a package if it's not found on the system
 export COMMAND_NOT_FOUND_INSTALL_PROMPT=1
