@@ -1,4 +1,3 @@
-#TODO: This doesn't work yet
 #!/bin/sh
 
 # Use CapsLock as Super key

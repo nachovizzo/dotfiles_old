@@ -395,17 +395,6 @@ bindsym XF86LaunchA exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.
 # Start the installed regolith-compositor
 exec --no-startup-id /usr/share/regolith-compositor/init
 
-# Start Rofication for notifications
-# exec --no-startup-id /usr/share/rofication/rofication-daemon.py
-
-# Launch first time user experience script
-exec --no-startup-id /usr/bin/regolith-ftue
-
 # Hide the mouse pointer if unused for a duration
 exec --no-startup-id /usr/bin/unclutter -b
-
-# This remaps the caps lock to the super key, this way we can use super AND caps lock as the master key for i3
-# TODO: Move this to .xprofile or something like this
-exec --no-startup-id "setxkbmap -option 'caps:super'"
-exec --no-startup-id "xcape -e 'Super_L=Escape' -t 300"
 

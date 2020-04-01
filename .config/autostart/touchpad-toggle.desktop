@@ -1,5 +1,11 @@
 [Desktop Entry]
-NoDisplay=true
+Display=true
 Type=Application
-Name=TouchpadToggle
-Exec=/home/ivizzo/scripts/touchpad_toggle.sh
+Exec=/home/ivizzo/scripts/config/touchpad_toggle.sh
+Hidden=false
+NoDisplay=true
+X-GNOME-Autostart-enabled=true
+Name[en_US]=Disable Touchpad
+Name=Disable Touchpad
+Comment[en_US]=Disable touchpad on laptopts
+Comment=Disable touchpad on laptopts

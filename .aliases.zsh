@@ -40,4 +40,4 @@ alias mapping_monitor='htop -p $(pgrep -d, -f "python3 ./mapping_pipeline.py") -
 alias df='df -h -xsquashfs -xtmpfs -xdevtmpfs'
 alias i3config='$EDITOR ~/.config/regolith/i3/config'
 
-source $HOME/scripts/aliases.zsh
+source $HOME/scripts/config/aliases.zsh
