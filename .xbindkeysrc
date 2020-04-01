@@ -31,7 +31,7 @@
 #keystate_capslock = enable
 
 #TouchpadToggle
-"$HOME/scripts/touchpad_toggle.sh"
+"$HOME/scripts/config/touchpad_toggle.sh"
     m:0x0 + c:152
     XF86Explorer 
 
