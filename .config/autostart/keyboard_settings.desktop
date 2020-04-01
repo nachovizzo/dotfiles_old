@@ -2,7 +2,7 @@
 Type=Application
 Exec=/home/ivizzo/scripts/config/keyboard_settings.sh
 Hidden=false
-NoDisplay=false
+NoDisplay=true
 X-GNOME-Autostart-enabled=true
 Name[en_US]=Custom Keyboard Settings
 Name=Custom Keyboard Settings
