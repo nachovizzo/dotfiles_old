@@ -74,7 +74,7 @@ bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
-## Modify // Containing Workspace // <Super><Ctrl><Shift> ↑ ↓ ← → ##
+# Modify // Containing Workspace // <Super><Ctrl><Shift> ↑ ↓ ← → ##
 bindsym $mod+Ctrl+Shift+Left move workspace to output left
 bindsym $mod+Ctrl+Shift+Down move workspace to output down
 bindsym $mod+Ctrl+Shift+Up move workspace to output up
@@ -210,14 +210,6 @@ bindsym $mod+d exec gnome-control-center display
 bindsym $mod+w exec gnome-control-center wifi
 ## Launch // File Browser // <Super><Shift> n ##
 bindsym $mod+Shift+n exec nautilus
-## Launch // Notification Viewer // <Super> n ##
-# bindsym $mod+n exec /usr/share/rofication/rofication-gui.py
-
-# i3-snapshot for load/save current layout
-## Modify // Save Window Layout // <Super> , ##
-bindsym $mod+comma  exec /usr/bin/i3-snapshot -o > /tmp/i3-snapshot 
-## Modify // Load Window Layout // <Super> . ##
-bindsym $mod+period exec /usr/bin/i3-snapshot -c < /tmp/i3-snapshot
 
 # Toggle bar visibility
 ## Modify // Toggle Bar // <Super> i ##
@@ -227,11 +219,11 @@ bindsym $mod+i bar mode toggle
 floating_maximum_size -1 x -1
 for_window [class="Gnome-control-center"] floating enable
 
-## Resize // Enter Resize Mode // <Super> r ##
+# Resize // Enter Resize Mode // <Super> r ##
 mode "Resize Mode" {
         # These bindings trigger as soon as you enter the resize mode
 
-        ## Resize // Resize Window // ↑ ↓ ← → ##
+        # Resize // Resize Window // ↑ ↓ ← → ##
         bindsym Left resize shrink width 6 px or 6 ppt
         bindsym Down resize grow height 6 px or 6 ppt
         bindsym Up resize shrink height 6 px or 6 ppt
@@ -242,7 +234,7 @@ mode "Resize Mode" {
         bindsym Shift+Up resize shrink height 12 px or 12 ppt
         bindsym Shift+Right resize grow width 12 px or 12 ppt
 
-        ## Resize // Resize Window // k j h l ##
+        # Resize // Resize Window // k j h l ##
         bindsym h resize shrink width 6 px or 6 ppt
         bindsym k resize grow height 6 px or 6 ppt
         bindsym j resize shrink height 6 px or 6 ppt
@@ -253,20 +245,20 @@ mode "Resize Mode" {
         bindsym Shift+j resize shrink height 12 px or 12 ppt
         bindsym Shift+l resize grow width 12 px or 12 ppt
 
-        ## Resize // Window Gaps // + - ##
+        # Resize // Window Gaps // + - ##
         bindsym minus gaps inner current minus 6
         bindsym plus gaps inner current plus 6
         bindsym Shift+minus gaps inner current minus 12
         bindsym Shift+plus gaps inner current plus 12
 
-        ## Resize // Exit Resize Mode // Escape or Enter ## 
+        # Resize // Exit Resize Mode // Escape or Enter ## 
         bindsym Return mode "default"
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
 bindsym $mod+r mode "Resize Mode"
 
-## Other // Toggle this Dialog // <Super>? ##
+# Other // Toggle this Dialog // <Super>? ##
 bindsym $mod+question exec --no-startup-id /usr/bin/remontoire-toggle
 
 # Disable titlebar
@@ -379,16 +371,17 @@ bar {
   }
 }
 
-# Spotify related key bindings
-#bindsym XF86AudioPlay exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
-#bindsym XF86AudioStop exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop"
-#bindsym XF86AudioPrev exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
-#bindsym XF86AudioNext exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
-
-# Lenovo settings
+# Lenovo custom settings
+## Custom // Toggle Presenter Mode // <Super> p ##
+bindsym $mod+p exec "$HOME/scripts/config/presenter_mode_toggle.sh"
+## Custom // Previous Song // <Fn> F9 ##
 bindsym XF86Tools exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+# Custom // PlayPause // <Fn> F10 ##
 bindsym XF86Search exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+# Custom // Next Song // <Fn> F11 ##
 bindsym XF86LaunchA exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+# Custom // Touchpad Toggle // <Fn> F12 ##
+bindsym XF86Explorer exec "$HOME/scripts/config/touchpad_toggle.sh"
 
 # The following exec calls run programs in the background when i3 starts.
 
