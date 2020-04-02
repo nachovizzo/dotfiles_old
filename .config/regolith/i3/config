@@ -374,13 +374,13 @@ bar {
 # Lenovo custom settings
 ## Custom // Toggle Presenter Mode // <Super> p ##
 bindsym $mod+p exec "$HOME/scripts/config/presenter_mode_toggle.sh"
-## Custom // Previous Song // <Fn> F9 ##
+# Custom // Previous Song // <Fn> F9 ##
 bindsym XF86Tools exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
 # Custom // PlayPause // <Fn> F10 ##
 bindsym XF86Search exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
 # Custom // Next Song // <Fn> F11 ##
 bindsym XF86LaunchA exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
-# Custom // Touchpad Toggle // <Fn> F12 ##
+## Custom // Touchpad Toggle // <Fn> F12 ##
 bindsym XF86Explorer exec "$HOME/scripts/config/touchpad_toggle.sh"
 
 # The following exec calls run programs in the background when i3 starts.
