@@ -3,11 +3,11 @@ foreground-color='#CDD3DE'
 visible-name='Oceanic Next'
 palette=['#1B2B34', '#EC5F67', '#99C794', '#FAC863', '#6699CC', '#C594C5', '#5FB3B3', '#A7ADBA', '#4F5B66', '#EC5F67', '#99C794', '#FAC863', '#6699CC', '#C594C5', '#5FB3B3', '#D8DEE9']
 bold-is-bright=true
-cursor-shape='ibeam'
+cursor-shape='block'
 use-system-font=false
 use-theme-colors=false
 use-transparent-background=true
-font='Fira Code weight=450 10'
+font='Fira Code weight=450 11'
 use-theme-transparency=false
 allow-bold=true
 scrollback-unlimited=true
@@ -15,4 +15,6 @@ use-theme-background=false
 bold-color-same-as-fg=true
 bold-color='#CDD3DE'
 background-color='rgb(28,30,38)'
-background-transparency-percent=7
+background-transparency-percent=15
+text-blink-mode='focused'
+audible-bell=false
