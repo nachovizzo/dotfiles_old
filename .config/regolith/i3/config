@@ -37,6 +37,9 @@ hide_edge_borders smart
 ## Launch // Terminal // <Super> Enter ##
 bindsym $mod+Return exec /usr/bin/x-terminal-emulator
 
+## Launch // VSCode // <Super> u ##
+bindsym $mod+u exec /snap/bin/code
+
 ## Launch // Browser // <Super><Shift> Enter ##
 bindsym $mod+Shift+Return exec gtk-launch $(xdg-settings get default-web-browser)
 
