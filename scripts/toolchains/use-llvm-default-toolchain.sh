@@ -4,5 +4,3 @@
 #
 # Copyright (c) 2019 Ignacio Vizzo, all rights reserved
 sudo update-alternatives --set cc /usr/bin/clang
-sudo update-alternatives --set c++ /usr/bin/clang++
-sudo update-alternatives --set ld /usr/bin/lld
