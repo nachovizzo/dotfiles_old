@@ -6,7 +6,10 @@
 # gsettings set org.gnome.settings-daemon.plugins.keyboard active false
 
 # Use CapsLock as Super key
-setxkbmap -option 'caps:super' && notify-send -i keyboard "CapsLock" "Disabled"
+# Gnome(do once):
+# gsettings set org.gnome.desktop.input-sources xkb-options "['caps:super']"
+# setxkbmap -option 'caps:super'
 
 # Use CapsLock as Escape key if nothing else is pressed aftwerwards
 xcape -e 'Super_L=Escape' -t 300
+notify-send -i keyboard "CapsLock" "Disabled"
