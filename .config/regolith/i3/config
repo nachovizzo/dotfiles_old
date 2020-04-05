@@ -181,6 +181,8 @@ bindsym $mod+$alt+Ctrl+9 move container to workspace number $ws19; workspace num
 
 ## Session // Exit App // <Super> q ##
 bindsym $mod+q [con_id="__focused__"] kill
+bindsym $alt+F4 [con_id="__focused__"] kill
+
 ## Session // Kill App // <Super><Alt> q ##
 bindsym $mod+$alt+q [con_id="__focused__"] exec --no-startup-id kill -9 $(xdotool getwindowfocus getwindowpid)
 
