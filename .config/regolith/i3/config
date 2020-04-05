@@ -391,7 +391,7 @@ bindsym XF86Explorer exec "$HOME/scripts/config/touchpad_toggle.sh"
 # The following exec calls run programs in the background when i3 starts.
 
 # Start the installed regolith-compositor
-exec --no-startup-id /usr/share/regolith-compositor/init
+exec --no-startup-id "compton -f --config $HOME/.config/regolith/compton/config"
 
 # Hide the mouse pointer if unused for a duration
 exec --no-startup-id /usr/bin/unclutter -b
