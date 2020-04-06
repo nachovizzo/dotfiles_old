@@ -43,12 +43,15 @@ bindsym $mod+u exec /snap/bin/code
 ## Launch // Browser // <Super><Shift> Enter ##
 bindsym $mod+Shift+Return exec gtk-launch $(xdg-settings get default-web-browser)
 
+## Launch // Incognito // <Super><Shift> n ##
+bindsym $mod+Shift+n exec google-chrome --incognito
+
 set_from_resource $rofiTheme rofi.theme "regolith-theme"
 
 # rofi app and window launchers
 ## Launch // Application // <Super> Space ##
 bindsym $mod+space exec rofi -show drun -theme $rofiTheme
-## Launch // Command // <Super><Shift> Space ##
+# Launh // Command // <Super><Shift> Space ##
 bindsym $mod+Shift+space exec rofi -show run -theme $rofiTheme
 ## Navigate // Window by Name // <Super><Ctrl> Space ##
 bindsym $mod+Ctrl+space exec rofi -show window -theme $rofiTheme
@@ -213,8 +216,8 @@ bindsym $mod+c exec gnome-control-center
 bindsym $mod+d exec gnome-control-center display
 ## Modify // Wifi Settings // <Super> w ##
 bindsym $mod+w exec gnome-control-center wifi
-## Launch // File Browser // <Super><Shift> n ##
-bindsym $mod+Shift+n exec nautilus
+## Launch // File Browser // <Super> n ##
+bindsym $mod+n exec nautilus
 
 # Toggle bar visibility
 ## Modify // Toggle Bar // <Super> i ##
