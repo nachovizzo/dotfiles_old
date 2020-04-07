@@ -170,3 +170,4 @@ Videos/
 .regolith-gnome-backup
 .zoom/
 .clangd/
+.vscode-server/
