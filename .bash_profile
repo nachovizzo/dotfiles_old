@@ -3,6 +3,9 @@
 #
 # Copyright (c) 2019 Ignacio Vizzo, all rights reserved
 
+# First we need to check if we are on Windows...
+grep -qEi "(lhhicrosoft|WSL)" /proc/version &> /dev/null && cd $HOME && exec zsh -l
+
 # When running thorugh ssh sessions we need to manually source zsh, fallback to
 # bash in case it's not there
 if ! hash zsh >/dev/null 2>&1; then
