@@ -11,5 +11,5 @@
 # setxkbmap -option 'caps:super'
 
 # Use CapsLock as Escape key if nothing else is pressed aftwerwards
+# notify-send -i keyboard "CapsLock" "Disabled"
 xcape -e 'Super_L=Escape' -t 300
-notify-send -i keyboard "CapsLock" "Disabled"
