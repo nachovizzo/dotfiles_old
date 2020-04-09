@@ -1,7 +1,7 @@
 [Desktop Entry]
 Display=true
 Type=Application
-Exec=/home/ivizzo/scripts/config/touchpad_toggle.sh
+Exec=/home/ivizzo/scripts/config/touchpad_toggle.sh true
 Hidden=false
 NoDisplay=true
 X-GNOME-Autostart-enabled=true
