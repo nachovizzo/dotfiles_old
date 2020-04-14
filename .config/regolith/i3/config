@@ -223,6 +223,9 @@ bindsym $mod+Shift+n exec nautilus
 ## Modify // Toggle Bar // <Super> i ##
 bindsym $mod+i bar mode toggle
 
+# Launch flameshot as annotation tool
+bindsym $mod+a exec "flameshot gui"
+
 # Cause Settings app to float above tiled windows
 floating_maximum_size -1 x -1
 for_window [class="Gnome-control-center"] floating enable
