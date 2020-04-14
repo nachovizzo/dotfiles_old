@@ -224,7 +224,7 @@ bindsym $mod+Shift+n exec nautilus
 bindsym $mod+i bar mode toggle
 
 # Launch flameshot as annotation tool
-bindsym $mod+a exec "flameshot gui"
+bindsym $mod+a exec "$HOME/scripts/flameshot/full_screen.sh"
 
 # Cause Settings app to float above tiled windows
 floating_maximum_size -1 x -1
