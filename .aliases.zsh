@@ -42,4 +42,7 @@ alias i3config='$EDITOR ~/.config/regolith/i3/config'
 alias codeconfig='$EDITOR ~/.config/Code/User/settings.json'
 alias -g latest='*(om[1])'
 
+alias no_prompt='export ZSH_THEME="no_prompt" && source $ZSH/oh-my-zsh.sh'
+alias bash_theme='export ZSH_THEME="bash" && source $ZSH/oh-my-zsh.sh'
+
 source $HOME/scripts/config/aliases.zsh
