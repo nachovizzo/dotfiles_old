@@ -225,6 +225,7 @@ bindsym $mod+i bar mode toggle
 
 # Launch flameshot as annotation tool
 bindsym $mod+a exec "$HOME/scripts/flameshot/full_screen.sh"
+bindsym $mod+$alt+a exec "flameshot gui"
 
 # Cause Settings app to float above tiled windows
 floating_maximum_size -1 x -1
