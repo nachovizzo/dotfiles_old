@@ -400,6 +400,10 @@ bindsym $mod+$alt+a exec "flameshot gui"
 ## Presentation // ScreenKey // <Super> s ##
 bindsym $mod+s exec "$HOME/scripts/config/screenkey_toggle.sh"
 
+## Presentation // Start Streaming // <Super> F9 ##
+## Presentation // Stop Streaming // <Super> F10 ##
+## Presentation // Start Recording // <Super> F11 ##
+## Presentation // Stop Recording // <Super> F12 ##
 
 # The following exec calls run programs in the background when i3 starts.
 # Start the installed regolith-compositor
