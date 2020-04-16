@@ -38,3 +38,10 @@ map [normal]     d scroll half-down
 map [fullscreen] d scroll half-down
 map [normal]     u scroll half-up
 map [fullscreen] u scroll half-up
+
+# Allow to set white background for reading
+map [normal] w set "default-bg \"#FFFFFF\""
+map [normal] b set "default-bg \"#000000\""
+map [fullscreen] w set "default-bg \"#FFFFFF\""
+map [fullscreen] b set "default-bg \"#000000\""
+
