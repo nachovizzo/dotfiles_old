@@ -398,8 +398,7 @@ bindsym $mod+a exec "$HOME/scripts/flameshot/full_screen.sh"
 bindsym $mod+$alt+a exec "flameshot gui"
 
 ## Presentation // ScreenKey // <Super> s ##
-bindsym $mod+s exec screenkey
-bindsym $mod+$alt+s exec "killall screenkey"
+bindsym $mod+s exec "$HOME/scripts/config/screenkey_toggle.sh"
 
 
 # The following exec calls run programs in the background when i3 starts.
