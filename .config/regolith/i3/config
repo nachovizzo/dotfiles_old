@@ -68,7 +68,7 @@ bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
 
-## Modify // Window Position // <Super><Shift> ↑ ↓ ← → ##
+# Modify // Window Position // <Super><Shift> ↑ ↓ ← → ##
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
@@ -116,7 +116,7 @@ bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
-## Navigate // Workspace // <Super><Ctrl> 0..9 ##
+# Navigate // Workspace // <Super><Ctrl> 0..9 ##
 bindsym $mod+Ctrl+1 workspace number $ws11
 bindsym $mod+Ctrl+2 workspace number $ws12
 bindsym $mod+Ctrl+3 workspace number $ws13
@@ -137,7 +137,7 @@ bindsym $mod+Shift+Tab workspace prev
 ## Navigate // Previous Workspace // <Super><Alt> ← ##
 bindsym $mod+$alt+Left workspace prev
 
-## Modify // Move Window to Workspace // <Super><Shift> 0..9 ##
+# Modify // Move Window to Workspace // <Super><Shift> 0..9 ##
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
 bindsym $mod+Shift+3 move container to workspace number $ws3
@@ -148,7 +148,7 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
-## Modify // Move Window to Workspace // <Super><Ctrl><Shift> 0..9 ##
+# Modify // Move Window to Workspace // <Super><Ctrl><Shift> 0..9 ##
 bindsym $mod+Shift+Ctrl+1 move container to workspace number $ws11
 bindsym $mod+Shift+Ctrl+2 move container to workspace number $ws12
 bindsym $mod+Shift+Ctrl+3 move container to workspace number $ws13
@@ -160,7 +160,7 @@ bindsym $mod+Shift+Ctrl+8 move container to workspace number $ws18
 bindsym $mod+Shift+Ctrl+9 move container to workspace number $ws19
 
 # move focused container to workspace, move to workspace
-## Modify // Take Window to Workspace // <Super><Alt> 0..9 ##
+# Modify // Take Window to Workspace // <Super><Alt> 0..9 ##
 bindsym $mod+$alt+1 move container to workspace number $ws1; workspace number $ws1  
 bindsym $mod+$alt+2 move container to workspace number $ws2; workspace number $ws2
 bindsym $mod+$alt+3 move container to workspace number $ws3; workspace number $ws3
@@ -171,7 +171,7 @@ bindsym $mod+$alt+7 move container to workspace number $ws7; workspace number $w
 bindsym $mod+$alt+8 move container to workspace number $ws8; workspace number $ws8
 bindsym $mod+$alt+9 move container to workspace number $ws9; workspace number $ws9
 bindsym $mod+$alt+0 move container to workspace number $ws10; workspace number $ws10
-## Modify // Take Window to Workspace // <Super><Alt><Ctrl> 0..9 ##
+# Modify // Take Window to Workspace // <Super><Alt><Ctrl> 0..9 ##
 bindsym $mod+$alt+Ctrl+1 move container to workspace number $ws11; workspace number $ws11
 bindsym $mod+$alt+Ctrl+2 move container to workspace number $ws12; workspace number $ws12
 bindsym $mod+$alt+Ctrl+3 move container to workspace number $ws13; workspace number $ws13
@@ -222,13 +222,6 @@ bindsym $mod+Shift+n exec nautilus
 # Toggle bar visibility
 ## Modify // Toggle Bar // <Super> i ##
 bindsym $mod+i bar mode toggle
-
-# Launch flameshot as annotation tool
-bindsym $mod+a exec "$HOME/scripts/flameshot/full_screen.sh"
-bindsym $mod+$alt+a exec "flameshot gui"
-# Launch and Kill screenkey
-bindsym $mod+s exec screenkey
-bindsym $mod+$alt+s exec "killall screenkey"
 
 # Cause Settings app to float above tiled windows
 floating_maximum_size -1 x -1
@@ -387,19 +380,29 @@ bar {
 }
 
 # Lenovo custom settings
-## Custom // Toggle Presenter Mode // <Super> p ##
-bindsym $mod+p exec "$HOME/scripts/config/presenter_mode_toggle.sh"
 # Custom // Previous Song // <Fn> F9 ##
 bindsym XF86Tools exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
 # Custom // PlayPause // <Fn> F10 ##
 bindsym XF86Search exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
 # Custom // Next Song // <Fn> F11 ##
 bindsym XF86LaunchA exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
-## Custom // Touchpad Toggle // <Fn> F12 ##
+
+## Presentation // Toggle Presenter Mode // <Super> p ##
+bindsym $mod+p exec "$HOME/scripts/config/presenter_mode_toggle.sh"
+
+## Presentation // Touchpad Toggle // <Fn> F12 ##
 bindsym XF86Explorer exec "$HOME/scripts/config/touchpad_toggle.sh"
 
-# The following exec calls run programs in the background when i3 starts.
+## Presentation // Annotate Screen // <Super> a ##
+bindsym $mod+a exec "$HOME/scripts/flameshot/full_screen.sh"
+bindsym $mod+$alt+a exec "flameshot gui"
 
+## Presentation // ScreenKey // <Super> s ##
+bindsym $mod+s exec screenkey
+bindsym $mod+$alt+s exec "killall screenkey"
+
+
+# The following exec calls run programs in the background when i3 starts.
 # Start the installed regolith-compositor
 exec --no-startup-id "compton -f --config $HOME/.config/regolith/compton/config"
 
