@@ -226,6 +226,7 @@ bindsym $mod+i bar mode toggle
 # Cause Settings app to float above tiled windows
 floating_maximum_size -1 x -1
 for_window [class="Gnome-control-center"] floating enable
+for_window [class="Spotify"] floating enable
 
 # Resize // Enter Resize Mode // <Super> r ##
 mode "Resize Mode" {
