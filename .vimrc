@@ -9,5 +9,3 @@ try
 source ~/.vim_runtime/my_configs.vim
 catch
 endtry
-
-let g:go_version_warning = 0
