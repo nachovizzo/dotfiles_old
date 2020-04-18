@@ -212,8 +212,6 @@ bindsym $mod+Shift+s exec systemctl suspend
 
 ## Modify // Settings // <Super> c ##
 bindsym $mod+c exec gnome-control-center
-## Modify // Display Settings // <Super> d ##
-bindsym $mod+d exec gnome-control-center display
 ## Modify // Wifi Settings // <Super> w ##
 bindsym $mod+w exec gnome-control-center wifi
 ## Launch // File Browser // <Super><Shift> n ##
@@ -387,6 +385,9 @@ bindsym XF86Tools exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.sp
 bindsym XF86Search exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
 # Custom // Next Song // <Fn> F11 ##
 bindsym XF86LaunchA exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+
+# Show desktop
+bindsym $mod+d exec "$HOME/scripts/config/show_desktop.sh"
 
 ## Presentation // Toggle Presenter Mode // <Super> p ##
 bindsym $mod+p exec "$HOME/scripts/config/presenter_mode_toggle.sh"
