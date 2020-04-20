@@ -167,7 +167,7 @@ Videos/
 .ipyvolume*
 .gphoto*
 .gnome2_private*
-.regolith-gnome-backup
+.regolith-gnome-backup*
 .zoom/
 .clangd/
 .vscode-server/
