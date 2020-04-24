@@ -6,7 +6,7 @@
 source load_colors.zsh
 export SWT_GTK3=0
 CURR_DIR=${PWD##*/}
-CDT_DEBUGGER="$HOME/cdtdebugger"
+CDT_DEBUGGER="$HOME/dev/cdtdebugger"
 WORKSPACE="$CDT_DEBUGGER/workspaces/$CURR_DIR"
 
 usage() {

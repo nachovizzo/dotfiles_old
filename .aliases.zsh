@@ -20,6 +20,7 @@ alias rescan="nmcli device wifi rescan"
 alias list="nmcli device wifi list"
 alias deko='cd ~/Desktop'
 alias de='cd ~/dev'
+alias ex='cd ~/dev/examples'
 alias te='cd ~/Teaching'
 alias adr='cd ~/Andromeda'
 alias re='cd ~/Research/bibliography'
