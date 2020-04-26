@@ -185,8 +185,6 @@ bindsym $mod+Shift+f floating toggle
 
 ## Modify // Move to Scratchpad // <><Ctrl> m ##
 bindsym $mod+Ctrl+m move to scratchpad
-## Navigate // Scratchpad // <Super><Ctrl> a ##
-# FIXME: Is this needed? bindsym $mod+Ctrl+a scratchpad show
 
 ## Modify // Tile/Float Focus Toggle // <><Shift> t ##
 bindsym $mod+Shift+t focus mode_toggle
@@ -292,10 +290,6 @@ bindsym $mod+Shift+s exec $i3-wm.program.sleep
 set_from_resource $i3-wm.program.settings i3-wm.program.settings gnome-control-center
 bindsym $mod+c exec $i3-wm.program.settings
 
-## Modify // Display Settings // <> d ##
-set_from_resource $i3-wm.program.display i3-wm.program.display gnome-control-center display
-bindsym $mod+d exec $i3-wm.program.display
-
 ## Modify // Wifi Settings // <> w ##
 set_from_resource $i3-wm.program.wifi i3-wm.program.wifi gnome-control-center wifi
 bindsym $mod+w exec $i3-wm.program.wifi
@@ -308,9 +302,9 @@ bindsym $mod+b exec $i3-wm.program.bluetooth
 set_from_resource $i3-wm.program.files i3-wm.program.files /usr/bin/nautilus --new-window
 bindsym $mod+Shift+n exec $i3-wm.program.files
 
-## Launch // Notification Viewer // <> n ##
+## Launch // Notification Viewer // <><Alt> n ##
 set_from_resource $i3-wm.program.notification_ui i3-wm.program.notification_ui /usr/bin/rofication-gui
-bindsym $mod+n exec $i3-wm.program.notification_ui
+bindsym $mod+alt+n exec $i3-wm.program.notification_ui
 
 ###############################################################################
 # Workspace Management
@@ -512,7 +506,7 @@ bindsym $mod+u exec /snap/bin/code
 # FIXME: Serach old configuration
 
 ## Launch // Incognito // <Super> n ##
-# FIXME: conflig keybinding bindsym $mod+n exec google-chrome --incognito
+bindsym $mod+n exec google-chrome --incognito
 
 # Cause Settings app to float above tiled windows
 for_window [class="Spotify"] floating enable
@@ -526,7 +520,7 @@ bindsym XF86Search exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.s
 bindsym XF86LaunchA exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
 
 # Show desktop
-#FIXME: conflict keybindg bindsym $mod+d exec "$HOME/scripts/config/show_desktop.sh"
+bindsym $mod+d exec "$HOME/scripts/config/show_desktop.sh"
 
 ## Presentation // Toggle Presenter Mode // <Super> p ##
 bindsym $mod+p exec "$HOME/scripts/config/presenter_mode_toggle.sh"
