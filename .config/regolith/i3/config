@@ -1,14 +1,52 @@
-# i3 config file for the Regolith Desktop Environment
+###############################################################################
+# i3-gaps config file for the Regolith Desktop Environment
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
+# 
+###############################################################################
+#
+# In this config file, may values are taken from Xresources with the directive 
+# set_from_resource:
+#
+# set_from_resource <i3 variable name> <Xresources key> <default value>
+# 
+# This configuration file utilizes Xresource variables to enable users to
+# change the configuration without having to make a copy of this config file.
+# The benefit to not copying this file is easier upgrading in the future.
+# To update a value in this config without making a copy, update the Xresource 
+# value in the file ~/.config/regolith/Xresources.
+# 
+# For example, to change the bar position to the top of the screen this is the
+# i3 config entry:
+# set_from_resource $i3-wm.bar.position i3-wm.bar.position bottom
+#
+# So add this line to ~/.config/regolith/Xresources to change it's value:
+# i3-wm.bar.position: top
+#
+# Reload i3 after making Xresource changes.  Learn more at 
+# https://regolith-linux.org/docs/howto/override-xres/
+#
+###############################################################################
+#
+# This file uses a machine-parsable format for comments. The schema:
+# ## <Category> // <Action> // <Keybinding> ##
+# Learn more at https://github.com/regolith-linux/remontoire
+#
+###############################################################################
 
-# This defines which key super maps to on your keyboard.
+###############################################################################
+# Meta Key Mappings
 # Alt key is Mod1, and Windows key is Mod4
+###############################################################################
+
 set_from_resource $mod  i3-wm.mod Mod4
 set_from_resource $alt  i3-wm.alt Mod1
 
-# Color values are defined in ~/.Xresources-regolith
+###############################################################################
+# Workspace Names
 # These are the labels which define each i3 workspace.
+###############################################################################
+
 set_from_resource $ws1  i3-wm.workspace.01.name "1"
 set_from_resource $ws2  i3-wm.workspace.02.name "2"
 set_from_resource $ws3  i3-wm.workspace.03.name "3"
@@ -37,14 +75,8 @@ hide_edge_borders smart
 ## Launch // Terminal // <Super> Enter ##
 bindsym $mod+Return exec /usr/bin/x-terminal-emulator
 
-## Launch // VSCode // <Super> u ##
-bindsym $mod+u exec /snap/bin/code
-
 ## Launch // Browser // <Super><Shift> Enter ##
 bindsym $mod+Shift+Return exec gtk-launch $(xdg-settings get default-web-browser)
-
-## Launch // Incognito // <Super> n ##
-bindsym $mod+n exec google-chrome --incognito
 
 set_from_resource $rofiTheme rofi.theme "regolith-theme"
 
@@ -378,6 +410,22 @@ bar {
   }
 }
 
+###############################################################################
+# Nacho's Customizations
+###############################################################################
+## Launch // VSCode // <Super> u ##
+bindsym $mod+u exec /snap/bin/code
+
+## Launch // Incognito // <Super> n ##
+bindsym $mod+n exec google-chrome --incognito
+
+# ## Session // Exit App // <Super> q ##
+# bindsym $mod+q [con_id="__focused__"] kill
+bindsym $alt+F4 [con_id="__focused__"] kill
+
+# Cause Settings app to float above tiled windows
+for_window [class="Spotify"] floating enable
+
 # Lenovo custom settings
 # Custom // Previous Song // <Fn> F9 ##
 bindsym XF86Tools exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
@@ -407,6 +455,9 @@ bindsym $mod+s exec "$HOME/scripts/config/screenkey_toggle.sh"
 ## Presentation // Start Recording // <Super> F11 ##
 ## Presentation // Stop Recording // <Super> F12 ##
 
+
+
+###############################################################################
 # The following exec calls run programs in the background when i3 starts.
 # Start the installed regolith-compositor
 exec --no-startup-id "compton -f --config $HOME/.config/regolith/compton/config"
