@@ -502,9 +502,6 @@ focus_follows_mouse yes
 ## Launch // VSCode // <Super> u ##
 bindsym $mod+u exec /snap/bin/code
 
-# Start the installed regolith-compositor
-# FIXME: Serach old configuration
-
 ## Launch // Incognito // <Super> n ##
 bindsym $mod+n exec google-chrome --incognito
 
