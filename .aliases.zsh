@@ -50,4 +50,5 @@ alias tterminal='gnome-terminal --tab-with-profile="Teaching Light"&& exit'
 
 alias glow='glow -p'
 
+alias meld='GTK_THEME=Adwaita:light meld'
 source $HOME/scripts/config/aliases.zsh
