@@ -500,6 +500,7 @@ bindsym $mod+n exec google-chrome --incognito
 
 # Cause Settings app to float above tiled windows
 for_window [class="Spotify"] floating enable
+for_window [class="zoom"] floating enable
 
 # Lenovo custom settings
 # Custom // Previous Song // <Fn> F9 ##
