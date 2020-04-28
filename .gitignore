@@ -170,3 +170,4 @@ Videos/
 .clangd/
 .vscode-server/
 .nvidia-settings-rc
+.nix*
