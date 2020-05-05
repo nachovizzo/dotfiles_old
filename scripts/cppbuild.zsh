@@ -20,10 +20,10 @@ PROGRAM="${FILE%.$EXT}"
 
 if test "$EXT" = "cpp"; then
   echo "${BOLD_WHITE}Building C++ program = ${BOLD_YELLOW}\""$PROGRAM"\"${RESET}..."
-  g++ --std=c++17 -Wall -Wextra -g0 -O3 $FILE -o $PROGRAM
+  c++ --std=c++17 -Wall -Wextra -g0 -O3 $FILE -o $PROGRAM
 elif test "$EXT" = "c"; then
   echo "${BOLD_WHITE}Building C program = ${BOLD_YELLOW}\""$PROGRAM"\"${RESET}..."
-  gcc --std=c11 -Wall -Wextra -g0 -O3 $FILE -o $PROGRAM
+  cc --std=c11 -Wall -Wextra -g0 -O3 $FILE -o $PROGRAM
 else
   echo "File extension =\"${BOLD_RED}".$EXT"${RESET}\" not supported, aborting..."
 fi
