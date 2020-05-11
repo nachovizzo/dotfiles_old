@@ -519,6 +519,7 @@ bindsym $mod+p exec "$HOME/scripts/config/presenter_mode_toggle.sh"
 
 ## Presentation // Touchpad Toggle // <Fn> F12 ##
 bindsym XF86Explorer exec "$HOME/scripts/config/touchpad_toggle.sh"
+bindsym $mod+m exec "$HOME/scripts/config/touchpad_toggle.sh"
 
 ## Presentation // Annotate Screen // <Super> a ##
 bindsym $mod+a exec "$HOME/scripts/flameshot/full_screen.sh"
