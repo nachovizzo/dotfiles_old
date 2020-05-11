@@ -171,3 +171,4 @@ Videos/
 .vscode-server/
 .nvidia-settings-rc
 .nix*
+.python-gitlab.cfg
