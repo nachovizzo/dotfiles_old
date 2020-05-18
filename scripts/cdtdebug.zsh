@@ -4,7 +4,6 @@
 #
 # Copyright (c) 2019 Ignacio Vizzo, all rights reserved
 source load_colors.zsh
-export SWT_GTK3=0
 CURR_DIR=${PWD##*/}
 CDT_DEBUGGER="$HOME/dev/cdtdebugger"
 WORKSPACE="$CDT_DEBUGGER/workspaces/$CURR_DIR"
@@ -69,6 +68,7 @@ if [ ! -d "$WORKSPACE" ]; then
 fi
 
 PROGRAM=$@
+export GTK_THEME="Adwaita:light"
 if [ "$CORE" ]; then
   echo "Debugging corefile $CORE, program $PROGRAM"
   $CDT_DEBUGGER/debugger/cdtdebug -data $WORKSPACE -c "$CORE" -e "$PROGRAM"
