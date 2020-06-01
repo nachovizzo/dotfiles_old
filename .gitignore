@@ -127,7 +127,7 @@ Videos/
 .xournal/
 .xsession-errors*
 .zcompdump*
-.zsh_history
+.zsh_history*
 .pam_environment
 .bazaar/
 .tig_history
