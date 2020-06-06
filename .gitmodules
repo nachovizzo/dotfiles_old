@@ -1,9 +1,6 @@
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
 	url = git@github.com:nachovizzo/oh-my-zsh.git
-[submodule ".vim_runtime"]
-	path = .vim_runtime
-	url = git@github.com:nachovizzo/vimrc.git
 [submodule ".tmux/plugins"]
 	path = .tmux/plugins
 	url = git@github.com:nachovizzo/tmux-plugins.git
