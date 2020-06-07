@@ -11,6 +11,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'vimwiki/vimwiki'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
 
 " Initialize plugin system
 call plug#end()
