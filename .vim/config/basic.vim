@@ -37,6 +37,7 @@ set lazyredraw
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color and stuff
 colorscheme gruvbox
+set background=dark
 set colorcolumn=80
 
 " Enable syntax highlighting
