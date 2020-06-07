@@ -6,15 +6,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree'
 Plug 'zhou13/vim-easyescape'
-Plug 'tpope/vim-fugitive'
 Plug 'nachovizzo/committia.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-surround'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'powerline/powerline'
-
 
 " Initialize plugin system
 call plug#end()
@@ -59,5 +53,3 @@ let g:easyescape_chars = { "j": 1, "k": 1 }
 let g:easyescape_timeout = 100
 cnoremap jk <ESC>
 cnoremap kj <ESC>
-
-" source ~/.vim/config/coc.vim
