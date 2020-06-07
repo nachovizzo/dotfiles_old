@@ -10,6 +10,10 @@ Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'Chiel92/vim-autoformat'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'PotatoesMaster/i3-vim-syntax'
+Plug 'vimwiki/vimwiki'
+Plug 'tpope/vim-commentary'
 
 " Initialize plugin system
 call plug#end()
