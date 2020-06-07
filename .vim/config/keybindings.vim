@@ -1,6 +1,3 @@
-" Enable filetype plugins
-filetype plugin on
-filetype indent on
 
 " leader keybindings
 nmap <leader>w :w<cr>
