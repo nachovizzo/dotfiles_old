@@ -9,6 +9,12 @@ Plug 'zhou13/vim-easyescape'
 Plug 'tpope/vim-fugitive'
 Plug 'nachovizzo/committia.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'junegunn/goyo.vim'
+Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'powerline/powerline'
+
 
 " Initialize plugin system
 call plug#end()
