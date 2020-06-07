@@ -5,10 +5,11 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree'
-Plug 'zhou13/vim-easyescape'
 Plug 'nachovizzo/committia.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+Plug 'Chiel92/vim-autoformat'
 
 " Initialize plugin system
 call plug#end()
@@ -46,10 +47,9 @@ set colorcolumn=80
 map <leader>e :e! ~/.vimrc<cr>
 autocmd! bufwritepost ~/.vimrc source ~/.vimrc
 
-""""""""""""""""""""""""""""""
-" => Easyescape config
-""""""""""""""""""""""""""""""
-let g:easyescape_chars = { "j": 1, "k": 1 }
-let g:easyescape_timeout = 100
-cnoremap jk <ESC>
-cnoremap kj <ESC>
+imap jk <ESC>
+imap kj <ESC>
+
+let g:airline_powerline_fonts = 1
+au BufWrite * :Autoformat
+
