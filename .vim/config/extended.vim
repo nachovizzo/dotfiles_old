@@ -14,4 +14,3 @@ try
     set undofile
 catch
 endtry
-

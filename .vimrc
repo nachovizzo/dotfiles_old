@@ -12,6 +12,8 @@ Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'vimwiki/vimwiki'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
+Plug 'lambdalisue/suda.vim'
+Plug 'mboughaba/i3config.vim'
 
 " Initialize plugin system
 call plug#end()
