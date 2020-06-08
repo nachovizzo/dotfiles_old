@@ -15,7 +15,3 @@ try
 catch
 endtry
 
-" Automatically format files after writing the buffer
-au BufWrite * :Autoformat
-autocmd BufWritePre * %s/\s\+$//e
-autocmd BufWritepre * %s/\n\+\%$//e
