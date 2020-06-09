@@ -292,6 +292,10 @@ bindsym $mod+c exec $i3-wm.program.settings
 set_from_resource $i3-wm.program.wifi i3-wm.program.wifi gnome-control-center wifi
 bindsym $mod+w exec $i3-wm.program.wifi
 
+## Modify // Sound Settings // <> s ##
+set_from_resource $i3-wm.program.wifi i3-wm.program.wifi gnome-control-center sound
+bindsym $mod+s exec $i3-wm.program.wifi
+
 ## Modify // Bluetooth Settings // <> b ##
 set_from_resource $i3-wm.program.bluetooth i3-wm.program.bluetooth gnome-control-center bluetooth
 bindsym $mod+b exec $i3-wm.program.bluetooth
@@ -526,7 +530,7 @@ bindsym $mod+a exec "$HOME/scripts/flameshot/full_screen.sh"
 bindsym $mod+$alt+a exec "flameshot gui"
 
 ## Presentation // ScreenKey // <Super> s ##
-bindsym $mod+s exec "$HOME/scripts/config/screenkey_toggle.sh"
+bindsym $mod+$alt+s exec "$HOME/scripts/config/screenkey_toggle.sh"
 
 ## Presentation // Start Streaming // <Super> F9 ##
 ## Presentation // Stop Streaming // <Super> F10 ##
