@@ -15,11 +15,16 @@ Plug 'tpope/vim-fugitive'
 Plug 'lambdalisue/suda.vim'
 Plug 'mboughaba/i3config.vim'
 
+" Under evaluation
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+
 " Initialize plugin system
 call plug#end()
 
 " All the real configuration
 source ~/.vim/config/basic.vim
+source ~/.vim/config/filetypes.vim
 source ~/.vim/config/keybindings.vim
 source ~/.vim/config/plugins_config.vim
 source ~/.vim/config/extended.vim

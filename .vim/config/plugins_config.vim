@@ -15,4 +15,6 @@ map <leader>n :NERDTreeToggle<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => suda plugin
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:suda_smart_edit = 1
+let g:suda_smart_edit=1
+
+source ~/.vim/config/coc.vim
