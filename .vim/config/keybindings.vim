@@ -1,6 +1,7 @@
 
 " leader keybindings
 nmap <leader>w :w<cr>
+nmap <C-s> :w<cr>
 nmap <leader>q :q!<cr>
 
 imap jk <ESC>
