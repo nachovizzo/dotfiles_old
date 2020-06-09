@@ -17,4 +17,3 @@ map <leader>n :NERDTreeToggle<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:suda_smart_edit=1
 
-source ~/.vim/config/coc.vim

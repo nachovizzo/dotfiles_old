@@ -16,8 +16,8 @@ Plug 'lambdalisue/suda.vim'
 Plug 'mboughaba/i3config.vim'
 
 " Under evaluation
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" source ~/.vim/config/coc.vim
 
 " Initialize plugin system
 call plug#end()
