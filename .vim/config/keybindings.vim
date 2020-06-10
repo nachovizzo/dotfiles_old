@@ -13,6 +13,9 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" Visual Block replaced by paste comand
+nnoremap <C-b> <c-v>
+
 " Copy paste like almost real humans
 map <C-c> "+y
 map <C-V> "+p
