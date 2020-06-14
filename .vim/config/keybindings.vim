@@ -7,15 +7,27 @@ nmap <leader>q :q!<cr>
 imap jk <ESC>
 imap kj <ESC>
 
-" Shortcutting split navigation, saving a keypress:
+""""""""""""""""""""""""""""""
+" => Shortcutting split navigation, saving a keypress:
+""""""""""""""""""""""""""""""
+" Remap split navitations to just CTRL +hjkl
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+" Same but using the leader, you can't hold down this key, what a shame
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
+
+" Split configurations
+set splitbelow splitright
+noremap <silent> <C-Left>  :vertical resize +3<CR>
+noremap <silent> <C-Right> :vertical resize -3<CR>
+noremap <silent> <C-Up>    :resize +3<CR>
+noremap <silent> <C-Down>  :resize -3<CR>
 
 " Visual Block replaced by paste comand
 nnoremap <C-b> <c-v>
