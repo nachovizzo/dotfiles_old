@@ -14,6 +14,8 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'lambdalisue/suda.vim'
 Plug 'mboughaba/i3config.vim'
+Plug 'ryanoasis/vim-devicons'
+
 
 " Initialize plugin system
 call plug#end()

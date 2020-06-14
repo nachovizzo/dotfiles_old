@@ -48,8 +48,8 @@ vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
 vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
 
-
-
 " Automatically format files after writing the buffer, removing whitespaces
 " and end of line(if any)
 nmap <leader>f :Autoformat<cr> | %s/\s\+$//e | %s/\n\+\%$//e
+
+map <leader>n :NERDTreeToggle<cr>
