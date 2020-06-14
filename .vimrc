@@ -3,7 +3,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree'
 Plug 'nachovizzo/committia.vim'
-Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'Chiel92/vim-autoformat'
@@ -15,7 +14,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'lambdalisue/suda.vim'
 Plug 'mboughaba/i3config.vim'
 Plug 'ryanoasis/vim-devicons'
-
 
 " Initialize plugin system
 call plug#end()
