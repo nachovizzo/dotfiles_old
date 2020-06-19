@@ -11,3 +11,7 @@ gdb_test() {
     eval "gdb -cd="${CWD}" -ex=r --args ${TEST_COMMAND} ${EXTRA_ARGS}"
 }
 
+
+grab() {
+    realpath "$1" | tr -d "\n" | xclip -selection clipboard
+}
