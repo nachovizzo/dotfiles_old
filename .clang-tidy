@@ -4,14 +4,15 @@ Checks: '*,
 -google-*,
 -zircon-*,
 -abseil-*,
--modernize-use-trailing-return-type,
 -llvm-*,
+-modernize-use-trailing-return-type,
+-modernize-pass-by-value,
 -cppcoreguidelines-pro-type-vararg,
--hicpp-vararg,
--misc-non-private-member-variables-in-classes,
 -cppcoreguidelines-pro-bounds-pointer-arithmetic,
 -cppcoreguidelines-avoid-magic-numbers,
 -readability-magic-numbers,
+-misc-non-private-member-variables-in-classes,
+-hicpp-vararg,
 '
 HeaderFilterRegex: '.*'
 
