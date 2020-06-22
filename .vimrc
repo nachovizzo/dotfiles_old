@@ -15,6 +15,9 @@ Plug 'lambdalisue/suda.vim'
 Plug 'mboughaba/i3config.vim'
 Plug 'ryanoasis/vim-devicons'
 
+" Pluc coc-nvim on first call
+Plug 'neoclide/coc.nvim', { 'on': 'CocEnable' }
+
 " Initialize plugin system
 call plug#end()
 

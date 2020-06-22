@@ -1,0 +1,11 @@
+{
+    "clangd.arguments": [
+        "--log=verbose",
+        "--pretty",
+        "--background-index",
+        "--clang-tidy",
+        "--header-insertion=iwyu",
+        "--suggest-missing-includes",
+        "--compile-commands-dir=build/"
+    ]
+}
