@@ -12,11 +12,6 @@ let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => suda plugin
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:suda_smart_edit=1
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => CoC Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Source the standard settings from https://github.com/neoclide/coc.nvim

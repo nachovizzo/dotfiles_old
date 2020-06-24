@@ -1,4 +1,3 @@
-
 " leader keybindings
 nmap <leader>w :w<cr>
 nmap <leader>q :q!<cr>
@@ -6,7 +5,6 @@ nmap <C-s> :w<cr>
 
 imap jk <ESC>
 imap kj <ESC>
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Shortcutting split navigation, saving a keypress:
