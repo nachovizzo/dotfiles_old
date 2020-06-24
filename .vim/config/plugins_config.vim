@@ -14,15 +14,6 @@ let NERDTreeMinimalUI = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => CoC Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <silent>gd <Plug>(coc-definition)
-nmap <silent>gy <Plug>(coc-type-definition)
-nmap <silent>gi <Plug>(coc-implementation)
-nmap <silent>gr <Plug>(coc-references)
-nmap <silent>g[ <Plug>(coc-diagnostic-prev)
-nmap <leader>g] <Plug>(coc-diagnostic-next)
-nmap <silent>rn <Plug>(coc-rename)
-nmap <leader>qf <Plug>(coc-fix-current)
-
 function! EnableCoc()
     exec "CocEnable"
     set signcolumn=yes
@@ -38,4 +29,3 @@ endfunction
 nnoremap <silent> <leader>ce :call EnableCoc()<cr>
 nnoremap <silent> <leader>cd :call DisableCoc()<cr>
 nnoremap <silent> <leader>cr :CocRestart<cr>
-nnoremap <silent> <M-o>  :CocCommand clangd.switchSourceHeader<cr>

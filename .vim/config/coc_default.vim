@@ -1,3 +1,14 @@
+" Keystrokes mappings
+nmap <silent>gd <Plug>(coc-definition)
+nmap <silent>gy <Plug>(coc-type-definition)
+nmap <silent>gi <Plug>(coc-implementation)
+nmap <silent>gr <Plug>(coc-references)
+nmap <silent>g[ <Plug>(coc-diagnostic-prev)
+nmap <leader>g] <Plug>(coc-diagnostic-next)
+nmap <silent>rn <Plug>(coc-rename)
+nmap <leader>qf <Plug>(coc-fix-current)
+nnoremap <silent> <M-o>  :CocCommand clangd.switchSourceHeader<cr>
+
 " Settings taken from https://github.com/neoclide/coc.nvim
 " Give more space for displaying messages.
 set cmdheight=2
