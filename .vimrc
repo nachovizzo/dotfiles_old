@@ -7,12 +7,9 @@ Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'Chiel92/vim-autoformat'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'vimwiki/vimwiki'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
-Plug 'lambdalisue/suda.vim'
-Plug 'mboughaba/i3config.vim'
 Plug 'ryanoasis/vim-devicons'
 
 " Pluc coc-nvim on first call
