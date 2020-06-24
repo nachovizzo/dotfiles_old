@@ -14,10 +14,6 @@ let NERDTreeMinimalUI = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => CoC Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Source the standard settings from https://github.com/neoclide/coc.nvim
-source ~/.vim/config/coc_default.vim
-
-" GoTo code navigation.
 nmap <silent>gd <Plug>(coc-definition)
 nmap <silent>gy <Plug>(coc-type-definition)
 nmap <silent>gi <Plug>(coc-implementation)
@@ -30,6 +26,7 @@ nmap <leader>qf <Plug>(coc-fix-current)
 function! EnableCoc()
     exec "CocEnable"
     set signcolumn=yes
+    source ~/.vim/config/coc_default.vim
 endfunction
 
 function! DisableCoc()
