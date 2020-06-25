@@ -1,4 +1,6 @@
-" leader keybindings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => The most relevant keybindigs
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <leader>w :w<cr>
 nmap <leader>q :q!<cr>
 nmap <C-s> :w<cr>
@@ -6,6 +8,13 @@ nmap <C-s> :w<cr>
 imap jk <ESC>
 imap kj <ESC>
 
+
+" Copy paste: leader+c / leader+v
+map <leader>c "+y
+map <leader>p "+p
+
+" Disable highlight when <leader><cr> is pressed
+map <silent> <leader><cr> :noh<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Shortcutting split navigation, saving a keypress:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -33,52 +42,24 @@ noremap <silent> <C-Left>  :vertical resize +3<CR>
 noremap <silent> <C-Right> :vertical resize -3<CR>
 noremap <silent> <C-Up>    :resize +3<CR>
 noremap <silent> <C-Down>  :resize -3<CR>
-
-" Visual Block replaced by paste comand
-nnoremap <C-b> <c-v>
-
-" Copy paste like almost real humans
-map <C-c> "+y
-map <C-V> "+p
-
-" Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Helper functions
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function! CmdLine(str)
-    call feedkeys(":" . a:str)
-endfunction
-
-function! VisualSelection(direction, extra_filter) range
-    let l:saved_reg = @"
-    execute "normal! vgvy"
-
-    let l:pattern = escape(@", "\\/.*'$^~[]")
-    let l:pattern = substitute(l:pattern, "\n$", "", "")
-
-    if a:direction == 'gv'
-        call CmdLine("Ack '" . l:pattern . "' " )
-    elseif a:direction == 'replace'
-        call CmdLine("%s" . '/'. l:pattern . '/')
-    endif
-
-    let @/ = l:pattern
-    let @" = l:saved_reg
-endfunction
-
-""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Visual mode related
-""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
 
 " Automatically format files after writing the buffer, removing whitespaces
 " and end of line(if any)
 nmap <leader>f :Autoformat<cr> | %s/\s\+$//e | %s/\n\+\%$//e
 
-""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERDTree bindings
-""""""""""""""""""""""""""""""
-map <leader>n :NERDTreeToggle<cr>
-nnoremap <silent> <Leader>v :NERDTreeFind<CR>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <silent><leader>n :NERDTreeToggle<cr>
+nnoremap <silent><Leader>m :NERDTreeFind<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => CoC Settings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <silent> <leader>ce :call EnableCoc()<cr>
+nnoremap <silent> <leader>cd :call DisableCoc()<cr>
+nnoremap <silent> <leader>cr :CocRestart<cr>
