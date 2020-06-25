@@ -15,6 +15,7 @@ map <leader>p "+p
 
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Shortcutting split navigation, saving a keypress:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -41,6 +42,7 @@ noremap <silent> <C-Left>  :vertical resize +3<CR>
 noremap <silent> <C-Right> :vertical resize -3<CR>
 noremap <silent> <C-Up>    :resize +3<CR>
 noremap <silent> <C-Down>  :resize -3<CR>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Visual mode related
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -49,11 +51,13 @@ vnoremap <silent><leader>r :call VisualSelection('replace', '')<CR>
 " Automatically format files after writing the buffer, removing whitespaces
 " and end of line(if any)
 nmap <silent><leader>f :Autoformat<cr> | %s/\s\+$//e | %s/\n\+\%$//e
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERDTree bindings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <silent><leader>n :NERDTreeToggle<cr>
 nnoremap <silent><Leader>m :NERDTreeFind<CR>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => CoC Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
