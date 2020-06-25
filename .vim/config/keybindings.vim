@@ -22,16 +22,16 @@ map <leader>e :e! ~/.vimrc<cr>
 " => Shortcutting split navigation, saving a keypress:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remap split navitations to just CTRL +hjkl
-map <M-h> <C-w>h
-map <M-j> <C-w>j
-map <M-k> <C-w>k
-map <M-l> <C-w>l
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
-" Remap move windows with just CTRL+SHITT+hjkl
-map <C-h> <C-w>H
-map <C-j> <C-w>J
-map <C-k> <C-w>K
-map <C-l> <C-w>L
+" Remap move windows with just ALT+hjkl
+map <M-h> <C-w>H
+map <M-j> <C-w>J
+map <M-k> <C-w>K
+map <M-l> <C-w>L
 
 " Same but using the leader, you can't hold down this key, what a shame
 nnoremap <leader>h :wincmd h<CR>
