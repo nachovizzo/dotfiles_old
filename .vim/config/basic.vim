@@ -32,6 +32,8 @@ set incsearch
 " Don't redraw while executing macros (good performance config)
 set lazyredraw
 
+" Slpit to right when vertical, below when horizonatal
+set splitbelow splitright
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
