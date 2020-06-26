@@ -494,7 +494,7 @@ bar {
 # Nacho's Customizations
 ###############################################################################
 # window focus follows your mouse movements as the mouse crosses window borders
-focus_follows_mouse yes
+# focus_follows_mouse yes
 
 ## Launch // VSCode // <Super> u ##
 bindsym $mod+u exec /snap/bin/code
