@@ -10,8 +10,8 @@ imap jk <ESC>
 imap kj <ESC>
 
 " Copy paste: leader+c / leader+v
-nmap <leader>c "+y
-nmap <leader>p "+p
+map <C-c> "+y
+map <leader>p "+p
 
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
