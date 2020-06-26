@@ -21,7 +21,7 @@ map <leader>e :e! ~/.vimrc<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Shortcutting split navigation, saving a keypress:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Remap split navitations to just CTRL +hjkl
+" Remap split navigations to just CTRL +hjkl
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
@@ -34,10 +34,10 @@ map <M-k> <C-w>K
 map <M-l> <C-w>L
 
 " Same but using the leader, you can't hold down this key, what a shame
-nmap <leader>h :wincmd h<CR>
-nmap <leader>j :wincmd j<CR>
-nmap <leader>k :wincmd k<CR>
-nmap <leader>l :wincmd l<CR>
+nmap <silent> <leader>h :wincmd h<CR>
+nmap <silent> <leader>j :wincmd j<CR>
+nmap <silent> <leader>k :wincmd k<CR>
+nmap <silent> <leader>l :wincmd l<CR>
 
 " Split configurations
 nmap <silent> <C-Left>  :vertical resize +3<CR>
