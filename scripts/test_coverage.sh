@@ -3,12 +3,13 @@
 # @author    Ignacio Vizzo     [ivizzo@uni-bonn.de]
 #
 # Copyright (c) 2020 Ignacio Vizzo, all rights reserved
-
 set -e
 
-# First add coverage flags to CMake project
-cmake -DCMAKE_CXX_FLAGS="-fprofile-instr-generate -fcoverage-mapping" ..
-make -j all
+# First add coverage flags to CMake project and re-build it
+cmake -DCMAKE_BUILD_TYPE=Debug \
+    -DCMAKE_CXX_FLAGS="-fprofile-instr-generate -fcoverage-mapping" \
+    .. &&
+    make -j all
 
 BUILD_DIR=$(pwd)
 TEST_DIR=$(ctest --show-only=json-v1 | jq '.tests[0].properties[0].value' | tr -d '"')
@@ -22,7 +23,7 @@ LLVM_PROFILE_FILE="TestCoverage.profraw" ${TEST_COMMAND}
 llvm-profdata merge -sparse TestCoverage.profraw -o TestCoverage.profdata
 
 # Create the html report
-llvm-cov show  ${TEST_COMMAND} \
+llvm-cov show ${TEST_COMMAND} \
     -instr-profile=TestCoverage.profdata \
     -show-line-counts-or-regions \
     -output-dir=${BUILD_DIR}/coverage/ \
@@ -33,6 +34,10 @@ llvm-cov show  ${TEST_COMMAND} \
 llvm-cov report ${TEST_COMMAND} \
     -instr-profile=TestCoverage.profdata \
     -ignore-filename-regex="tests/"
+
+# Cleanup the coverage files
+rm *.profdata
+rm *.profraw
 
 # Go back to build directory
 cd "${BUILD_DIR}"
