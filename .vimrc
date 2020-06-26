@@ -13,9 +13,6 @@ Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vimwiki/vimwiki'
 
-" Under evaluation
-Plug 'unblevable/quick-scope'
-
 call plug#end()
 
 " All the real configuration
