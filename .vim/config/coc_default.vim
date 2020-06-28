@@ -7,7 +7,7 @@ nmap <silent>g[ <Plug>(coc-diagnostic-prev)
 nmap <leader>g] <Plug>(coc-diagnostic-next)
 nmap <silent>rn <Plug>(coc-rename)
 nmap <leader>qf <Plug>(coc-fix-current)
-nnoremap <silent> <M-o>  :CocCommand clangd.switchSourceHeader<cr>
+nmap <M-o>  :CocCommand clangd.switchSourceHeader<cr>
 
 " Settings taken from https://github.com/neoclide/coc.nvim
 " Give more space for displaying messages.
