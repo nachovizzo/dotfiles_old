@@ -506,6 +506,7 @@ bindsym $mod+n exec google-chrome --incognito
 for_window [class="Spotify"] floating enable
 for_window [class="zoom"] floating enable
 for_window [class="Gedit"] floating enable
+for_window [class="matplotlib"] floating enable
 
 # Lenovo custom settings
 # Custom // Previous Song // <Fn> F9 ##
