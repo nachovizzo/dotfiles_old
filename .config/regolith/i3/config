@@ -496,10 +496,10 @@ bar {
 # window focus follows your mouse movements as the mouse crosses window borders
 # focus_follows_mouse yes
 
-## Launch // VSCode // <Super> u ##
+## Launch // VSCode // <> u ##
 bindsym $mod+u exec /snap/bin/code
 
-## Launch // Incognito // <Super> n ##
+## Launch // Incognito // <> n ##
 bindsym $mod+n exec google-chrome --incognito
 
 # Cause Settings app to float above tiled windows
@@ -519,24 +519,24 @@ bindsym XF86LaunchA exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.
 # Show desktop
 bindsym $mod+d exec "$HOME/scripts/config/show_desktop.sh"
 
-## Presentation // Toggle Presenter Mode // <Super> p ##
+## Presentation // Toggle Presenter Mode // <> p ##
 bindsym $mod+p exec "$HOME/scripts/config/presenter_mode_toggle.sh"
 
 ## Presentation // Touchpad Toggle // <Fn> F12 ##
 bindsym XF86Explorer exec "$HOME/scripts/config/touchpad_toggle.sh"
 bindsym $mod+m exec "$HOME/scripts/config/touchpad_toggle.sh"
 
-## Presentation // Annotate Screen // <Super> a ##
+## Presentation // Annotate Screen // <> a ##
 bindsym $mod+a exec "$HOME/scripts/flameshot/full_screen.sh"
 bindsym $mod+$alt+a exec "flameshot gui"
 
-## Presentation // ScreenKey // <Super> s ##
+## Presentation // ScreenKey // <><Alt>s ##
 bindsym $mod+$alt+s exec "$HOME/scripts/config/screenkey_toggle.sh"
 
-## Presentation // Start Streaming // <Super> F9 ##
-## Presentation // Stop Streaming // <Super> F10 ##
-## Presentation // Start Recording // <Super> F11 ##
-## Presentation // Stop Recording // <Super> F12 ##
+## Presentation // Start Streaming // <> F9 ##
+## Presentation // Stop Streaming // <> F10 ##
+## Presentation // Start Recording // <> F11 ##
+## Presentation // Stop Recording // <> F12 ##
 
 
 ###############################################################################
