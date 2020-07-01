@@ -9,9 +9,9 @@ export ZSH=$HOME/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 if [[ -n $SSH_CONNECTION ]]; then
-  ZSH_THEME="fwalch-hostname"
+    ZSH_THEME="fwalch-hostname"
 else
-  ZSH_THEME="fwalch"
+    ZSH_THEME="fwalch"
 fi
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
@@ -29,13 +29,13 @@ ENABLE_CORRECTION="false"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  z
-  git
-  colored-man-pages
-  sudo
-  zsh-autosuggestions
-  command-not-found
-  extract
+    z
+    git
+    colored-man-pages
+    sudo
+    zsh-autosuggestions
+    command-not-found
+    extract
 )
 
 # Preferred editor for local and remote sessions
@@ -88,3 +88,7 @@ export LD_LIBRARY_PATH=$HOME/usr/lib/:$LD_LIBRARY_PATH
 # Not sure if I should do it like this, but it's worth to try it
 # I will store all the virtual env there
 export VIRTUALENV=$HOME/dev/virtualenv/
+
+# On an ambiguous completion, instead of listing possibilities or beeping,
+# insert the first match immediately.
+setopt menu_complete
