@@ -92,3 +92,5 @@ export VIRTUALENV=$HOME/dev/virtualenv/
 # On an ambiguous completion, instead of listing possibilities or beeping,
 # insert the first match immediately.
 setopt menu_complete
+disable -r time       # disable shell reserved word
+alias time='time -p ' # -p for POSIX output
