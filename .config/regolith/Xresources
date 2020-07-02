@@ -1,3 +1,4 @@
 i3-wm.bar.trayoutput:           primary
 i3-wm.bar.position:             top
 i3-wm.gaps.inner.size:          9
+i3-wm.program.1:                $HOME/.local/bin/alternating_layouts.py
