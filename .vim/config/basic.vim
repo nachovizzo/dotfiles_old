@@ -34,6 +34,14 @@ set lazyredraw
 
 " Slpit to right when vertical, below when horizonatal
 set splitbelow splitright
+
+" Don't wrap lines
+set nowrap
+
+" Don't break lines at exactly the width of the window, which causes some
+" words to be split across two lines.
+set linebreak
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
