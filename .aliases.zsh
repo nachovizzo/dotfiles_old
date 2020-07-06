@@ -54,6 +54,8 @@ alias mapping_monitor='htop -p $(pgrep -d, -f "python3 ./mapping_pipeline.py") -
 alias df='df -h -xsquashfs -xtmpfs -xdevtmpfs'
 alias i3config='$EDITOR ~/.config/regolith/i3/config'
 alias codeconfig='$EDITOR ~/.config/Code/User/settings.json'
+alias rn='ranger .'
+
 alias -g latest='*(om[1])'
 
 alias no_prompt='export ZSH_THEME="no_prompt" && source $ZSH/oh-my-zsh.sh && _zsh_autosuggest_disable'
