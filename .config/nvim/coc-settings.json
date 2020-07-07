@@ -7,5 +7,21 @@
         "--header-insertion=iwyu",
         "--suggest-missing-includes",
         "--compile-commands-dir=build/"
+    ],
+    "python.pythonPath": "python3",
+    "python.formatting.provider": "yapf",
+    "python.autoComplete.extraPaths": [
+        "/home/ivizzo/.local/lib/python3.6/site-packages/",
+        "/home/ivizzo/.local/lib/python3.6/site-packages/open3d/"
+    ],
+    "python.linting.pylamaEnabled": false,
+    "python.linting.pylamaArgs": ["-o", "/home/ivizzo/.pylamarc"],
+    "python.linting.pylintEnabled": true,
+    "python.linting.pydocstyleEnabled": false,
+    "python.linting.pydocstyleArgs": [
+        "--max-line-length",
+        "80",
+        "--ignore",
+        "E111, E117"
     ]
 }
