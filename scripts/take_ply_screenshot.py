@@ -4,11 +4,13 @@
 # Copyright (c) 2020 Ignacio Vizzo, all rights reserved
 
 import sys
+
 import click
 import matplotlib.pyplot as plt
 import numpy as np
 import open3d as o3d
-from plyfile import PlyData
+
+from print_geometry_type import is_mesh
 
 
 def take_screenshot(ply, filename, options=None, camera=None):
@@ -36,14 +38,6 @@ def take_screenshot(ply, filename, options=None, camera=None):
     vis.add_geometry(ply)
     vis.run()
     vis.destroy_window()
-
-
-def is_mesh(filename):
-    with open(filename, 'rb') as ply:
-        header = PlyData._parse_header(ply)
-        if 'face' in header:
-            return header['face'].count != 0
-    return 'vertex_indices' in header.header
 
 
 @click.command()
