@@ -66,3 +66,8 @@ nmap <silent><Leader>m :NERDTreeFind<CR>
 nmap <silent><leader>ce :call EnableCoc()<cr>
 nmap <silent><leader>cd :call DisableCoc()<cr>
 nmap <silent><leader>cr :CocRestart<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Function Calls
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <Leader>ipdb :call InsertLine()<CR>

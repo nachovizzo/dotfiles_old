@@ -35,3 +35,11 @@ function! DisableCoc()
     exec "CocDisable"
     set signcolumn=no
 endfunction
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Inster Python debugger inline
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! InsertLine()
+  let trace = expand("import ipdb; ipdb.set_trace()")
+  execute "normal o".trace
+endfunction

@@ -172,3 +172,6 @@ Videos/
 .nvidia-settings-rc
 .nix*
 .python-gitlab.cfg
+
+# Other stuff
+*.pyc
