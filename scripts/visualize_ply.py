@@ -13,7 +13,7 @@ import open3d as o3d
 from print_geometry_type import is_mesh
 
 
-def take_screenshot(ply, filename, options=None, camera=None):
+def visualize_geometry(ply, filename, headless, options=None, camera=None):
     def save_screenshoot(vis):
         image = vis.capture_screen_float_buffer(False)
         plt.imsave(filename + '.jpg', np.asarray(image), dpi=1)
@@ -29,12 +29,15 @@ def take_screenshot(ply, filename, options=None, camera=None):
         ctr = vis.get_view_control()
         ctr.convert_from_pinhole_camera_parameters(viewpoint)
     else:
-        vis.create_window(width=960, height=1080)
+        # Use the width and height of a standard i3wm + split + gaps
+        vis.create_window(width=944, height=1035)
 
     if options:
         vis.get_render_option().load_from_json(options)
 
-    vis.register_animation_callback(save_screenshoot)
+    if headless:
+        vis.register_animation_callback(save_screenshoot)
+
     vis.add_geometry(ply)
     vis.run()
     vis.destroy_window()
@@ -51,16 +54,20 @@ def take_screenshot(ply, filename, options=None, camera=None):
               required=True,
               default='screenshot',
               help='Where to store the screenshot')
-def main(file, out):
+@click.option('--headless',
+              is_flag=True,
+              default=False,
+              help='Headless rendering mode')
+def main(file, out, headless):
     # TODO: Add options and camera
     if is_mesh(file):
         mesh = o3d.io.read_triangle_mesh(file)
         mesh.compute_triangle_normals()
         mesh.compute_vertex_normals()
-        take_screenshot(mesh, out)
+        visualize_geometry(mesh, out, headless)
     else:
         pcd = o3d.io.read_point_cloud(file)
-        take_screenshot(pcd, out)
+        visualize_geometry(pcd, out, headless)
 
 
 if __name__ == "__main__":

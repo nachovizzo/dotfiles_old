@@ -3,5 +3,4 @@
 #
 # Copyright (c) 2019 Ignacio Vizzo, all rights reserved
 source $VIRTUALENV/open3d_headless/bin/activate
-python3 /home/ivizzo/scripts/take_ply_screenshot.py ${@}
-
+python3 /home/ivizzo/scripts/visualize_ply.py ${@}

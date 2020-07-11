@@ -174,7 +174,7 @@ handle_image() {
         application/octet-stream|text/plain)
             if [[ "$FILE_EXTENSION_LOWER" == "ply" ]]; then
                 plytojpg --file "${FILE_PATH}" --out "${IMAGE_CACHE_PATH%.*}" \
-                    && exit 6 || exit 1
+                    --headless && exit 6 || exit 1
             fi;;
 
 
