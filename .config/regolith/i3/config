@@ -246,6 +246,7 @@ hide_edge_borders smart
 
 ## Session // Exit App // <><Shift> q ##
 bindsym $mod+q [con_id="__focused__"] kill
+bindsym $alt+F4 [con_id="__focused__"] kill
 
 ## Session // Terminate App // <><Alt> q ##
 bindsym $mod+$alt+q [con_id="__focused__"] exec --no-startup-id kill -9 $(xdotool getwindowfocus getwindowpid)
