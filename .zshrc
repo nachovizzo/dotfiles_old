@@ -91,4 +91,4 @@ export VIRTUALENV=$HOME/dev/virtualenv/
 
 # On an ambiguous completion, instead of listing possibilities or beeping,
 # insert the first match immediately.
-setopt menu_complete
+# setopt menu_complete
