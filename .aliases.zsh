@@ -19,6 +19,7 @@ alias cl=" /usr/bin/clear"
 alias rescan="nmcli device wifi rescan"
 alias list="nmcli device wifi list"
 alias deko='cd ~/Desktop'
+alias dekon='cd ~/Desktop && ranger'
 alias de='cd ~/dev'
 alias ex='cd ~/dev/examples'
 alias te='cd ~/Teaching'

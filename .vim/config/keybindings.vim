@@ -70,4 +70,4 @@ nmap <silent><leader>cr :CocRestart<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Function Calls
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <Leader>ipdb :call InsertLine()<CR>
+map <Leader>ipdb :call InsertIpdbLine()<CR>
