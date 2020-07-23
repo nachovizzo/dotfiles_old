@@ -79,5 +79,11 @@ set expandtab
 set smarttab
 
 " 1 tab == 4 spaces
+set expandtab
+set tabstop=4
 set shiftwidth=4
-set tabstop=4 softtabstop=4
+set softtabstop=-1
+set smarttab
+
+" For C++ files use 2 instead of 4
+au BufRead,BufEnter *.cpp,*.cc,*.h,*.hpp setlocal ts=2 sw=2
