@@ -15,3 +15,24 @@ gdb_test() {
 grab() {
     realpath "$1" | tr -d "\n" | xclip -selection clipboard
 }
+
+wsp_compress() {
+    echo "Compressing $1 for WhatsApp, output video will be $2 ..."
+    ffmpeg -i $1 -vcodec libx264 -acodec aac $2
+    echo "Done!"
+}
+
+split_video() {
+    VIDEO="$1"
+    BASENAME="$(basename -- $VIDEO)"
+    FILENAME=${BASENAME%.*}
+
+    VIDEO_LENGTH="$(ffprobe -i $VIDEO -show_entries format=duration -v quiet -of csv='p=0')"
+    SPLIT_SECONDS=$(($VIDEO_LENGTH / 2))
+    SPLIT="$(date -d@"${SPLIT_SECONDS}" -u +%H:%M:%S)"
+
+    echo "Splitting in half $VIDEO..."
+    ffmpeg -i $1 -t ${SPLIT} -c copy "${FILENAME}"_part_1.mp4 \
+        -ss ${SPLIT} -c copy "${FILENAME}"_part_2.mp4
+    echo "Done!"
+}
