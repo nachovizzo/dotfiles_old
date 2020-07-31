@@ -103,6 +103,23 @@ def collect_options_and_camera_position(use_last=False):
               default=False,
               help='Use the last camera/render options')
 def main(dataset, sequence, start, end, delay, use_last):
+    """Visualize all the scans of a given dataset, with the capability of
+    selecting a viewpoint and some rendering options.
+
+    This script was designed with the KITTI dataset in mind and it's mostly
+    used to visualize that data, when it comes in .ply format. But it could be
+    also used for other types of datasets.
+
+    By default it will try to read all the .ply files on the current directory,
+    or on the specified dataset directory + a given sequence. If not dataset is
+    specified then the sequence option is ignored
+
+    Viewpoint and Rendering Options: You can move the mouse to select the
+    viewpoint that will be used across all the visualizations, and you can also
+    change the rendering options, like the point size, colors, etc. This script
+    is better understood when trying some examples. IT's safe to use and
+    doesn't change any of your data
+    """
     if dataset:
         scans_path = os.path.join(dataset, 'sequences', sequence, 'velodyne/')
     else:
