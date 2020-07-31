@@ -23,6 +23,7 @@ def sendmessage(message):
     subprocess.Popen(['notify-send', message])
     return
 
+
 def cleanup_screenshots():
     """Everytime we capture the camera information, Open3D also outputs a .png
     file, in this function we aim to only delete the file we just genreated."""
@@ -76,6 +77,19 @@ def collect_options_and_camera_position(use_last=False):
     # cleanup the taken screenshot
     cleanup_screenshots()
     return option_file, camera_file
+
+
+def get_filename(path, idx):
+    filenames = sorted(glob.glob(path + '*.ply'))
+    return int(filenames[idx].split('.')[0].split('/')[-1])
+
+
+def last_file(path):
+    return get_filename(path, -1)
+
+
+def first_file(path):
+    return get_filename(path, 0)
 
 
 @click.command()
@@ -135,11 +149,17 @@ def main(dataset, sequence, start, end, delay, use_last, capture):
     else:
         scans_path = os.path.join(os.getcwd(), '')
 
-    scan_names = sorted(glob.glob(scans_path + '*.ply'))
-    first_scan = o3d.io.read_point_cloud(scan_names[start])
+    def id_to_file(num):
+        scan_id = str(num).zfill(6)
+        scan_file = os.path.join(scans_path, scan_id + '.ply')
+        return scan_file, scan_id
+
+    scans_path = os.path.join(dataset, 'sequences', sequence, 'velodyne/')
 
     # Calculate the ammount of scans to visualize
-    end = len(scan_names) if not end else end
+    end = last_file(scans_path) if not end else end
+    start = first_file(scans_path) if not start else start
+    assert end > start
     print("Rendering scans [{s},{e}] from:{d}".format(s=start,
                                                       e=end,
                                                       d=scans_path))
@@ -147,6 +167,7 @@ def main(dataset, sequence, start, end, delay, use_last, capture):
     # Now it's time to create your visualizer
     vis = o3d.visualization.Visualizer()
     vis.create_window()
+    first_scan = o3d.io.read_point_cloud(id_to_file(start)[0])
     vis.add_geometry(first_scan)
 
     # If you want a new camera/render options you should pick by hand:
@@ -172,7 +193,8 @@ def main(dataset, sequence, start, end, delay, use_last, capture):
     vis.run()
 
     for idx in trange(start, end):
-        scan = o3d.io.read_point_cloud(scan_names[idx])
+        scan_file, scan_id = id_to_file(idx)
+        scan = o3d.io.read_point_cloud(scan_file)
         vis.clear_geometries()
         vis.add_geometry(scan)
         ctr.convert_from_pinhole_camera_parameters(camera)
@@ -182,10 +204,10 @@ def main(dataset, sequence, start, end, delay, use_last, capture):
         if capture:
             # Take a screenshot of the scene, use KITTI format for naming
             image = vis.capture_screen_float_buffer(False)
-            plt.imsave(str(idx).zfill(6) + ".png", np.asarray(image), dpi=1)
+            filename = os.path.join('results', scan_id + ".png")
+            plt.imsave(filename, np.asarray(image), dpi=1)
         else:
             time.sleep(delay)
-
 
     vis.destroy_window()
 
