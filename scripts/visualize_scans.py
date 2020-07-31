@@ -29,6 +29,7 @@ def main():
     vis.run()
 
     for scan in scan_names:
+        print("Reading", scan)
         vis.clear_geometries()
         vis.add_geometry(o3d.io.read_point_cloud(scan))
         vis.poll_events()
