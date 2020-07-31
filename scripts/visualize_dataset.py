@@ -8,9 +8,12 @@ import os
 import time
 import glob
 import shutil
+import time
 
 import click
 import open3d as o3d
+import numpy as np
+import matplotlib.pyplot as plt
 from tqdm import trange
 
 import subprocess
@@ -102,7 +105,11 @@ def collect_options_and_camera_position(use_last=False):
               is_flag=True,
               default=False,
               help='Use the last camera/render options')
-def main(dataset, sequence, start, end, delay, use_last):
+@click.option('--capture',
+              is_flag=True,
+              default=False,
+              help='Take a screenshot of the scene')
+def main(dataset, sequence, start, end, delay, use_last, capture):
     """Visualize all the scans of a given dataset, with the capability of
     selecting a viewpoint and some rendering options.
 
@@ -118,7 +125,10 @@ def main(dataset, sequence, start, end, delay, use_last):
     viewpoint that will be used across all the visualizations, and you can also
     change the rendering options, like the point size, colors, etc. This script
     is better understood when trying some examples. IT's safe to use and
-    doesn't change any of your data
+    doesn't change any of your data.
+
+    If capture flag is set, a screenshot of each visualization is taken and
+    saved to the current directory.
     """
     if dataset:
         scans_path = os.path.join(dataset, 'sequences', sequence, 'velodyne/')
@@ -168,7 +178,14 @@ def main(dataset, sequence, start, end, delay, use_last):
         ctr.convert_from_pinhole_camera_parameters(camera)
         vis.poll_events()
         vis.update_renderer()
-        time.sleep(delay)
+        vis.update_renderer()
+        if capture:
+            # Take a screenshot of the scene, use KITTI format for naming
+            image = vis.capture_screen_float_buffer(False)
+            plt.imsave(str(idx).zfill(6) + ".png", np.asarray(image), dpi=1)
+        else:
+            time.sleep(delay)
+
 
     vis.destroy_window()
 
