@@ -4,19 +4,17 @@
 #
 # Copyright (c) 2020 Ignacio Vizzo, all rights reserved
 
-import os
-import time
 import glob
+import os
 import shutil
+import subprocess
 import time
 
 import click
-import open3d as o3d
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
+import open3d as o3d
 from tqdm import trange
-
-import subprocess
 
 
 def sendmessage(message):
@@ -156,7 +154,7 @@ def main(dataset, sequence, start, end, delay, use_last, capture):
 
     scans_path = os.path.join(dataset, 'sequences', sequence, 'velodyne/')
 
-    # Calculate the ammount of scans to visualize
+    # Calculate the amount of scans to visualize
     end = last_file(scans_path) if not end else end
     start = first_file(scans_path) if not start else start
     assert end > start
