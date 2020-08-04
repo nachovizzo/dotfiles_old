@@ -24,7 +24,11 @@ fi
 
 cd $ORIGIN
 find -type d -exec mkdir -p -- $DESTINATION/{} \;
+
+# Copy also all the symbolic links
+find -type l -exec cp -r --parents --preserve=links \{\} $DESTINATION/ \;
 cd ..
+
 
 # Copy all the *.txt files to destination
 rsync -a             \
