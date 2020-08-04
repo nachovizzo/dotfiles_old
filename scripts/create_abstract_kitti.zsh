@@ -10,7 +10,9 @@
 source load_colors.zsh
 
 # First copy all the directory structure from the original dataset
-$HOME/scripts/copy_kitti_dir.zsh dataset abstract
+dataset=$1
+abstract=$2
+$HOME/scripts/copy_kitti_dir.zsh $dataset $abstract
 
 cat << EOF
 Creating symbolic links to the following folders (if they exists):
@@ -22,12 +24,11 @@ EOF
 # Create a function to replicate functionallity
 function create_symbolic_link() {
     folder=$1
-    src=$(readlink -f dataset/sequences/$seq/$folder/)
-    abstract=$(readlink -f abstract/sequences/$seq/)
-    dst="$abstract/${folder}"
-    if [ -d "$dst" ]; then
-        rmdir $dst
-        ln -fs $src $abstract
+    src=$(readlink -f $dataset/sequences/$seq/$folder/)
+    dst=$(readlink -f $abstract/sequences/$seq/)
+    if [ -d "$dst/$folder" ]; then
+        rmdir $dst/$folder
+        ln -fs $src $dst
     fi
 }
 
@@ -40,4 +41,4 @@ for seq in $(seq -w 00 21); do
 done
 
 echo "KITTI-Abstract Created Successfully!"
-tree -d abstract/
+tree -d $abstract/
