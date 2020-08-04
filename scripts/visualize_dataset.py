@@ -152,8 +152,6 @@ def main(dataset, sequence, start, end, delay, use_last, capture):
         scan_file = os.path.join(scans_path, scan_id + '.ply')
         return scan_file, scan_id
 
-    scans_path = os.path.join(dataset, 'sequences', sequence, 'velodyne/')
-
     # Calculate the amount of scans to visualize
     end = last_file(scans_path) if not end else end
     start = first_file(scans_path) if not start else start
