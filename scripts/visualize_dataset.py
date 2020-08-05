@@ -188,7 +188,9 @@ def main(dataset, sequence, start, end, delay, use_last, capture):
     print(" >>> Press [q] to continue <<<")
     vis.run()
 
-    for idx in trange(start, end):
+    pbar = trange(start, end)
+    for idx in pbar:
+        pbar.set_description('Visualizing scan {}'.format(str(idx).zfill(6)))
         scan_file, scan_id = id_to_file(idx)
         scan = o3d.io.read_point_cloud(scan_file)
         vis.clear_geometries()
