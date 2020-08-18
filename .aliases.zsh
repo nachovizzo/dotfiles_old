@@ -58,6 +58,7 @@ alias i3config='$EDITOR ~/.config/regolith/i3/config'
 alias codeconfig='$EDITOR ~/.config/Code/User/settings.json'
 alias rn='ranger .'
 alias tkb='take build'
+alias jpc='jupyter console --existing'
 
 alias -g latest='*(om[1])'
 
