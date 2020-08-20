@@ -13,6 +13,6 @@ fusermount -q -u $DATASETS/dataserver
 
 # Mount this directory as read only so we don't screw up anything
 echo "${BOLD_YELLOW}Mounting datasets from dataserver into $DATASETS/dataserver/${RESET}"
-sshfs -o ro,IdentityFile=$HOME/.ssh/id_rsa \
+sshfs -o reconnect,ro,ServerAliveInterval=15,ServerAliveCountMax=3,IdentityFile=$HOME/.ssh/id_rsa \
   nacho@dataserver:/export/datasets/ \
   $DATASETS/dataserver
