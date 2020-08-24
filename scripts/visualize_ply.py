@@ -44,11 +44,8 @@ def visualize_geometry(ply, filename, headless, options=None, camera=None):
 
 
 @click.command()
-@click.option('--file',
-              '-f',
-              type=click.Path(exists=True),
-              required=True,
-              help='The full path to the mesh to visualize')
+@click.argument('filename',
+                type=click.Path(exists=True))
 @click.option('--out',
               '-o',
               required=True,
@@ -58,15 +55,15 @@ def visualize_geometry(ply, filename, headless, options=None, camera=None):
               is_flag=True,
               default=False,
               help='Headless rendering mode')
-def main(file, out, headless):
+def main(filename, out, headless):
     # TODO: Add options and camera
-    if is_mesh(file):
-        mesh = o3d.io.read_triangle_mesh(file)
+    if is_mesh(filename):
+        mesh = o3d.io.read_triangle_mesh(filename)
         mesh.compute_triangle_normals()
         mesh.compute_vertex_normals()
         visualize_geometry(mesh, out, headless)
     else:
-        pcd = o3d.io.read_point_cloud(file)
+        pcd = o3d.io.read_point_cloud(filename)
         visualize_geometry(pcd, out, headless)
 
 
