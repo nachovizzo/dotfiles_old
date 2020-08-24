@@ -518,6 +518,11 @@ bindsym XF86Search exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.s
 # Custom // Next Song // <Fn> F11 ##
 bindsym XF86LaunchA exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
 
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
 # Show desktop
 bindsym $mod+d exec "$HOME/scripts/config/show_desktop.sh"
 
