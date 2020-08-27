@@ -523,8 +523,9 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-# Show desktop
-bindsym $mod+d exec "$HOME/scripts/config/show_desktop.sh"
+## Modify // Display Settings // <> d ##
+set_from_resource $i3-wm.program.display i3-wm.program.display gnome-control-center display
+bindsym $mod+d exec $i3-wm.program.display
 
 ## Presentation // Toggle Presenter Mode // <> p ##
 bindsym $mod+p exec "$HOME/scripts/config/presenter_mode_toggle.sh"
