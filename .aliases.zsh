@@ -69,3 +69,5 @@ alias glow='glow -p'
 
 alias meld='GTK_THEME=Adwaita:light meld'
 source $HOME/scripts/config/aliases.zsh
+
+alias shit='echo "SHIT"'
