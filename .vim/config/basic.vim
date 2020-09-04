@@ -47,7 +47,7 @@ set linebreak
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color and stuff
 colorscheme gruvbox
-set background=dark
+set background=light
 set colorcolumn=80
 
 let g:gruvbox_contrast_dark = 'hard'
