@@ -176,3 +176,4 @@ Videos/
 # Other stuff
 *.pyc
 .pyenv
+.cups/
