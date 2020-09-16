@@ -45,6 +45,9 @@ nmap <silent> <C-Right> :vertical resize -3<CR>
 nmap <silent> <C-Up>    :resize +3<CR>
 nmap <silent> <C-Down>  :resize -3<CR>
 
+" Always move down with vim keys even in soft-lines
+noremap <expr> j v:count ? 'j' : 'gj'
+noremap <expr> k v:count ? 'k' : 'gk'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Visual mode related
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
