@@ -77,6 +77,9 @@ bindsym $mod+Return exec /usr/bin/x-terminal-emulator
 ## Launch // Floating Terminal // <><Alt> Enter ##
 bindsym $mod+$alt+Return exec gnome-terminal --class=floating_term
 
+## Launch // Sticky // <><Shift> s ##
+bindsym $mod+Shift+s sticky toggle
+
 ## Launch // Browser // <><Shift> Enter ##
 bindsym $mod+Shift+Return exec gtk-launch $(xdg-settings get default-web-browser)
 
@@ -281,8 +284,8 @@ set_from_resource $i3-wm.program.lock i3-wm.program.lock dbus-send --type=method
 bindsym $mod+Escape exec $i3-wm.program.lock
 
 ## Session // Sleep // <><Shift> s ##
-set_from_resource $i3-wm.program.sleep i3-wm.program.sleep systemctl suspend
-bindsym $mod+Shift+s exec $i3-wm.program.sleep
+# set_from_resource $i3-wm.program.sleep i3-wm.program.sleep systemctl suspend
+# bindsym $mod+Shift+s exec $i3-wm.program.sleep
 
 ###############################################################################
 # System Management
