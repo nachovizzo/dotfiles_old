@@ -12,6 +12,7 @@ alias erps='er-repo status'
 alias catree='cat .tree | less'
 alias naqui='nautilus ./'
 alias py='ipython3'
+alias pip='pip3'
 alias coit='code . && exit'
 alias cor='code -r'
 alias cl=" /usr/bin/clear"
@@ -69,5 +70,3 @@ alias glow='glow -p'
 
 alias meld='GTK_THEME=Adwaita:light meld'
 source $HOME/scripts/config/aliases.zsh
-
-alias shit='echo "SHIT"'
