@@ -74,6 +74,9 @@ set_from_resource $ws19 i3-wm.workspace.19.name "19"
 ## Launch // Terminal // <> Enter ##
 bindsym $mod+Return exec /usr/bin/x-terminal-emulator
 
+## Launch // Floating Terminal // <><Alt> Enter ##
+bindsym $mod+$alt+Return exec gnome-terminal --class=floating_term
+
 ## Launch // Browser // <><Shift> Enter ##
 bindsym $mod+Shift+Return exec gtk-launch $(xdg-settings get default-web-browser)
 
@@ -504,6 +507,7 @@ bindsym $mod+u exec /snap/bin/code
 bindsym $mod+n exec google-chrome --incognito
 
 # Cause Settings app to float above tiled windows
+for_window [class="floating_term"] floating enable
 for_window [class="Spotify"] floating enable
 for_window [class="zoom"] floating enable
 for_window [class="Gedit"] floating enable
