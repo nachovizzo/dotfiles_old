@@ -177,3 +177,4 @@ Videos/
 *.pyc
 .pyenv
 .cups/
+.texlive*/
