@@ -7,9 +7,9 @@
 
 # Use CapsLock as Super key
 # Gnome(do once):
-# gsettings set org.gnome.desktop.input-sources xkb-options "['caps:super']"
-# setxkbmap -option 'caps:super'
+gsettings set org.gnome.desktop.input-sources xkb-options "['caps:super']"
+setxkbmap -option 'caps:super'
 
 # Use CapsLock as Escape key if nothing else is pressed aftwerwards
 # notify-send -i keyboard "CapsLock" "Disabled"
-xcape -e 'Super_L=Escape' -t 300
+# xcape -e 'Super_L=Escape' -t 300
