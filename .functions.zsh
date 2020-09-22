@@ -22,6 +22,12 @@ add_to_path() {
     echo "${BIN} added to \$PATH"
 }
 
+add_to_pypath() {
+    BIN=$(realpath "$1" | tr -d "\n")
+    export PYTHONPATH=${BIN}${PYTHONPATH:+:${PYTHONPATH}}
+    echo "${BIN} added to \$PYTHONPATH"
+}
+
 wsp_compress() {
     echo "Compressing $1 for WhatsApp, output video will be $2 ..."
     ffmpeg -i $1 -vcodec libx264 -acodec aac $2
