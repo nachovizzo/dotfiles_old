@@ -13,6 +13,9 @@ Checks: '*,
 -readability-magic-numbers,
 -misc-non-private-member-variables-in-classes,
 -hicpp-vararg,
+-hicpp-special-member-functions,
+-cppcoreguidelines-special-member-functions,
+-readability-redundant-access-specifiers,
 '
 HeaderFilterRegex: '.*'
 
