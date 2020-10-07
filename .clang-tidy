@@ -16,6 +16,8 @@ Checks: '*,
 -hicpp-special-member-functions,
 -cppcoreguidelines-special-member-functions,
 -readability-redundant-access-specifiers,
+-hicpp-uppercase-literal-suffix,
+-readability-uppercase-literal-suffix,
 '
 HeaderFilterRegex: '.*'
 
