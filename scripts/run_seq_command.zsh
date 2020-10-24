@@ -6,9 +6,10 @@
 source load_colors.zsh
 COMMAND="$@"
 
-echo "Running the following command in all KITTI sequnces: ${BOLD_CYAN}${COMMAND}${RESET}"
+echo "Running the following command in all KITTI sequnces: ${BOLD_YELLOW}${COMMAND}${RESET}"
 echo "---------------------------------------------------------------------------------------------"
 
 for SEQ in $(seq -w 00 10); do
-    $COMMAND $SEQ
+    echo "Running for sequence $SEQ"
+    eval $COMMAND $SEQ
 done
