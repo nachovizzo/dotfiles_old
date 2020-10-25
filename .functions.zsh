@@ -48,3 +48,7 @@ split_video() {
         -ss ${SPLIT} -c copy "${FILENAME}"_part_2.mp4
     echo "Done!"
 }
+
+function gi() {
+    curl -sLw n https://www.toptal.com/developers/gitignore/api/$@
+}
