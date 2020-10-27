@@ -8,7 +8,7 @@ source load_colors.zsh
 echo "Evaluating full KITTI Odometry benchmark in: ${BOLD_YELLOW}$(pwd)${RESET}"
 
 echo "Translational/Rotational errors:"
-echo -n "["
+echo -n "trans_error: ["
 for seq in $(seq -w 00 10); do
     kitti_seq_err $DATASETS/kitti-odometry/dataset/poses/${seq}.txt *${seq}*txt \
         | tail -n2 \
@@ -18,7 +18,7 @@ for seq in $(seq -w 00 10); do
 done
 echo "]"
 
-echo -n "["
+echo -n "rot_error: ["
 for seq in $(seq -w 00 10); do
     kitti_seq_err $DATASETS/kitti-odometry/dataset/poses/${seq}.txt *${seq}*txt \
         | tail -n1 \
