@@ -181,3 +181,5 @@ Videos/
 .nsightsystems/
 .dotnet/
 go/
+.landscape/
+.motd_shown
