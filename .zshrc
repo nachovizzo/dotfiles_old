@@ -28,3 +28,9 @@ source $HOME/.aliases.zsh
 source $HOME/.functions.zsh
 source $HOME/.zshrc_local
 source $ZSH/oh-my-zsh.sh
+
+# Conda crap
+if [ -f $HOME/dev/anaconda3/etc/profile.d/conda.sh ]; then
+    . $HOME/dev/anaconda3/etc/profile.d/conda.sh
+    source $ZSH/custom/plugins/zsh-autoswitch-conda/autoswitch_conda.plugin.zsh
+fi

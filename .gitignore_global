@@ -20,3 +20,7 @@
 # VsCode stuff #
 ######################
 .vscode/
+
+# other stuff #
+######################
+.cenv
