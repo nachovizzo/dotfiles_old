@@ -29,7 +29,6 @@ ENABLE_CORRECTION="false"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    autoswitch_conda
     colored-man-pages
     command-not-found
     extract
@@ -88,3 +87,8 @@ export PATH=$HOME/usr/bin:$PATH
 
 # Virtual environments
 export VIRTUALENV=$HOME/dev/virtualenv/
+
+if [ -f $HOME/dev/anaconda3/etc/profile.d/conda.sh ]; then
+    source $ZSH/custom/plugins/autoswitch_conda/
+    . $HOME/dev/anaconda3/etc/profile.d/conda.sh
+fi
