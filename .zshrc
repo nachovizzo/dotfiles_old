@@ -29,14 +29,15 @@ ENABLE_CORRECTION="false"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    tmux
-    z
-    git
+    autoswitch_conda
     colored-man-pages
-    sudo
-    zsh-autosuggestions
     command-not-found
     extract
+    git
+    sudo
+    tmux
+    z
+    zsh-autosuggestions
 )
 
 # Preferred editor for local and remote sessions
