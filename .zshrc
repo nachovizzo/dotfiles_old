@@ -90,6 +90,6 @@ export VIRTUALENV=$HOME/dev/virtualenv/
 
 # Conda crap
 if [ -f $HOME/dev/anaconda3/etc/profile.d/conda.sh ]; then
-    source $ZSH/custom/plugins/zsh-autoswitch-conda
     . $HOME/dev/anaconda3/etc/profile.d/conda.sh
+    source $ZSH/custom/plugins/zsh-autoswitch-conda/autoswitch_conda.plugin.zsh
 fi
