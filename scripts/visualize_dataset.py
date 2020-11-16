@@ -108,16 +108,9 @@ def collect_options_and_camera_position(vis):
 
 
 @click.command()
-@click.option('--dataset',
-              '-d',
-              type=click.Path(exists=True),
-              required=False,
-              help='Full path to dataset location [KITTI format]')
-@click.option('--sequence',
-              '-s',
-              type=str,
-              default="00",
-              help='Sequence number [KITTI format]')
+@click.argument('dataset',
+                type=click.Path(exists=True),
+                required=False)
 @click.option('--start',
               type=int,
               default=0,
@@ -138,7 +131,7 @@ def collect_options_and_camera_position(vis):
               is_flag=True,
               default=False,
               help='Use a black background instead of white')
-def main(dataset, sequence, start, end, delay, capture, black):
+def main(dataset, start, end, delay, capture, black):
     """Visualize all the scans of a given dataset, with the capability of
     selecting a viewpoint and some rendering options.
 
@@ -147,8 +140,7 @@ def main(dataset, sequence, start, end, delay, capture, black):
     also used for other types of datasets.
 
     By default it will try to read all the .ply files on the current directory,
-    or on the specified dataset directory + a given sequence. If not dataset is
-    specified then the sequence option is ignored
+    or on the specified dataset directory.
 
     Viewpoint and Rendering Options: You can move the mouse to select the
     viewpoint that will be used across all the visualizations, and you can also
@@ -160,7 +152,7 @@ def main(dataset, sequence, start, end, delay, capture, black):
     saved to the current directory.
     """
     if dataset:
-        scans_path = os.path.join(dataset, 'sequences', sequence, 'velodyne/')
+        scans_path = os.path.join(dataset, '')
     else:
         scans_path = os.path.join(os.getcwd(), '')
 
