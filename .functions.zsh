@@ -52,3 +52,7 @@ split_video() {
 function gi() {
     curl -sLw n https://www.toptal.com/developers/gitignore/api/$@
 }
+
+function cuda_is_availabe() {
+    python3 -c "import torch; print(torch.cuda.is_available())"
+}
