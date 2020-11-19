@@ -14,7 +14,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vimwiki/vimwiki'
 Plug 'tikhomirov/vim-glsl'
 
-
 call plug#end()
 
 " All the real configuration
