@@ -1,5 +1,7 @@
-call plug#begin('~/.vim/plugged')
+" Automatically install plug if not there
+source ~/.vim/config/plug.vim
 
+call plug#begin('~/.vim/plugged')
 Plug 'Chiel92/vim-autoformat'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'morhetz/gruvbox'
