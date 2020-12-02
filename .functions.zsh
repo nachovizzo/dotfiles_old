@@ -61,3 +61,8 @@ function gi() {
 function cuda_is_availabe() {
     python3 -c "import torch; print(torch.cuda.is_available())"
 }
+
+start_notebook() {
+    echo "Starting background Jupyter notebook server on $(pwd)..."
+    tmux new -s "[notebook] $(basename $(pwd))" -d 'jupyter notebook .'
+}
