@@ -1801,8 +1801,8 @@ div .text_cell_render {
 div.cell.text_cell .CodeMirror-lines {
  padding-top: .7em !important;
  padding-bottom: .4em !important;
- padding-left: .5em !important;
- padding-right: .5em !important;
+ padding-left: .0em !important;
+ padding-right: .0em !important;
  margin-top: .4em;
  margin-bottom: .3em;
 }
@@ -1865,8 +1865,8 @@ div.cell.text_cell.rendered .prompt {
  font-weight: normal;
  color: #bdae93 !important;
  text-align: right !important;
- min-width: 14.5ex !important;
- width: 14.5ex !important;
+ min-width: 11.5ex !important;
+ width: 11.5ex !important;
  background-color: #282828;
  border-right: 0px solid rgba(215,153,33,.50);
  border-left: 4px solid #282828;
@@ -1877,8 +1877,8 @@ div.cell.text_cell.unrendered .prompt {
  font-weight: normal;
  color: #bdae93 !important;
  text-align: right !important;
- min-width: 14.5ex !important;
- width: 14.5ex !important;
+ min-width: 11.5ex !important;
+ width: 11.5ex !important;
  border-right: 0px solid rgba(215,153,33,.50);
  border-left: 4px solid #282828;
  background-color: #282828;
@@ -2909,8 +2909,8 @@ div.CodeMirror pre {
 }
 div.CodeMirror-lines {
  padding-bottom: .9em;
- padding-left: .5em;
- padding-right: 1.5em;
+ padding-left: .0em;
+ padding-right: 0.0em;
  padding-top: .7em;
 }
 span.ansiblack,
