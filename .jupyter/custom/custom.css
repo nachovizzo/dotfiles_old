@@ -1620,6 +1620,9 @@ div.prompt.input_prompt {
  min-width: 11.5ex;
  width: 11.5ex !important;
 }
+div.cell.code_cell .input_prompt {
+ border-right: 0px solid #fabd2f;
+}
 div.cell.selected .prompt {
  top: 0;
 }
@@ -1737,7 +1740,7 @@ div.prompt.output_prompt {
  border-bottom-right-radius: 0px;
  min-width: 11.5ex !important;
  width: 11.5ex !important;
- border-right: 2px solid transparent;
+ border-right: 0px solid transparent;
 }
 div.out_prompt_overlay.prompt {
  font-family: monospace, monospace;
@@ -1749,7 +1752,7 @@ div.out_prompt_overlay.prompt {
  border-bottom-right-radius: 0px;
  min-width: 11.5ex !important;
  width: 11.5ex !important;
- border-right: 2px solid transparent;
+ border-right: 0px solid transparent;
  color: transparent;
 }
 div.out_prompt_overlay.prompt:hover {
@@ -1763,22 +1766,22 @@ div.out_prompt_overlay.prompt:hover {
  border-top-left-radius: 0px;
  min-width: 11.5ex !important;
  width: 11.5ex !important;
- border-right: 2px solid #928374 !important;
+ border-right: 0px solid #928374 !important;
 }
 div.cell.code_cell .output_prompt {
- border-right: 2px solid transparent;
+ border-right: 0px solid transparent;
  color: transparent;
 }
 div.cell.selected .output_prompt,
 div.cell.selected .out_prompt_overlay.prompt {
  border-left: 5px solid #504945;
- border-right: 2px solid #1d2021;
+ border-right: 0px solid #1d2021;
  border-radius: 0px !important;
 }
 .edit_mode div.cell.selected .output_prompt,
 .edit_mode div.cell.selected .out_prompt_overlay.prompt {
  border-left: 5px solid #504945;
- border-right: 2px solid #1d2021;
+ border-right: 0px solid #1d2021;
  border-radius: 0px !important;
 }
 div.text_cell,
@@ -1865,7 +1868,7 @@ div.cell.text_cell.rendered .prompt {
  min-width: 14.5ex !important;
  width: 14.5ex !important;
  background-color: #282828;
- border-right: 2px solid rgba(215,153,33,.50);
+ border-right: 0px solid rgba(215,153,33,.50);
  border-left: 4px solid #282828;
 }
 div.cell.text_cell.unrendered .prompt {
@@ -1876,24 +1879,24 @@ div.cell.text_cell.unrendered .prompt {
  text-align: right !important;
  min-width: 14.5ex !important;
  width: 14.5ex !important;
- border-right: 2px solid rgba(215,153,33,.50);
+ border-right: 0px solid rgba(215,153,33,.50);
  border-left: 4px solid #282828;
  background-color: #282828;
 }
 div.cell.text_cell.rendered .prompt {
- border-right: 2px solid rgba(215,153,33,.50);
+ border-right: 0px solid rgba(215,153,33,.50);
 }
 div.cell.text_cell.rendered.selected .prompt {
  top: 0;
  border-left: 4px solid #fabd2f;
- border-right: 2px solid rgba(215,153,33,.50);
+ border-right: 0px solid rgba(215,153,33,.50);
 }
 div.text_cell.unrendered.selected .prompt,
 div.text_cell.rendered.selected .prompt {
  top: 0;
  background: #282828;
  border-left: 4px solid #504945;
- border-right: 2px solid rgba(215,153,33,.50);
+ border-right: 0px solid rgba(215,153,33,.50);
 }
 div.rendered_html code {
  font-family: monospace, monospace;
