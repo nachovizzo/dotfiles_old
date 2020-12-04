@@ -1620,9 +1620,6 @@ div.prompt.input_prompt {
  min-width: 11.5ex;
  width: 11.5ex !important;
 }
-div.cell.code_cell .input_prompt {
- border-right: 2px solid #fabd2f;
-}
 div.cell.selected .prompt {
  top: 0;
 }
