@@ -2908,10 +2908,10 @@ div.CodeMirror pre {
  color: #ebdbb2;
 }
 div.CodeMirror-lines {
- padding-bottom: .9em;
- padding-left: .0em;
- padding-right: 0.0em;
- padding-top: .7em;
+ padding-bottom: 0em;
+ padding-left: 0em;
+ padding-right: 0em;
+ padding-top: 0em;
 }
 span.ansiblack,
 .ansi-black-fg {
