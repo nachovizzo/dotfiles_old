@@ -3044,9 +3044,6 @@ div.CodeMirror-linenumber,
 .CodeMirror-linenumber {
  color: #bdae93;
 }
-.cm-s-ipython .CodeMirror-cursor {
- border-left: 2px solid #0095ff !important;
-}
 .cm-s-ipython span.cm-comment {
  color: #928374;
  font-style: italic;
