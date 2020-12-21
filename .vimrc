@@ -6,7 +6,7 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'morhetz/gruvbox'
 Plug 'nachovizzo/committia.vim'
-Plug 'neoclide/coc.nvim', { 'on': 'CocEnable' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
