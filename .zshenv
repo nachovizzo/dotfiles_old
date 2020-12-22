@@ -27,3 +27,7 @@ export MODELS=$HOME/dev/deep_learning/models
 # Virtual environments
 export VIRTUALENV=$HOME/dev/virtualenv/
 export AUTOSWITCH_SILENT=true
+
+if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
+    . $HOME/.nix-profile/etc/profile.d/nix.sh;
+fi
