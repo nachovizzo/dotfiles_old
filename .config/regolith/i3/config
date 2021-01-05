@@ -352,9 +352,9 @@ hide_edge_borders $i3-wm.hide.edge.borders
 # Session Management
 ###############################################################################
 
-## Session // Exit App // <><Shift> q ##
-set_from_resource $i3-wm.binding.exit_app i3-wm.binding.exit_app Shift+q
-bindsym $mod+$i3-wm.binding.exit_app [con_id="__focused__"] kill
+# ## Session // Exit App // <><Shift> q ##
+# set_from_resource $i3-wm.binding.exit_app i3-wm.binding.exit_app Shift+q
+# bindsym $mod+$i3-wm.binding.exit_app [con_id="__focused__"] kill
 
 ## Session // Terminate App // <><Alt> q ##
 set_from_resource $i3-wm.binding.kill_app i3-wm.binding.kill_app Mod1+q
@@ -635,14 +635,18 @@ bar {
 ###############################################################################
 # Nacho's Customizations
 ###############################################################################
-# window focus follows your mouse movements as the mouse crosses window borders
-# focus_follows_mouse yes
+## Session // Exit App // <> q ##
+set_from_resource $i3-wm.binding.exit_app i3-wm.binding.exit_app q
+bindsym $mod+$i3-wm.binding.exit_app [con_id="__focused__"] kill
+
+## Session // Exit App // <Alt> F4 ##
+bindsym $alt+F4 [con_id="__focused__"] kill
 
 ## Launch // VSCode // <> u ##
 bindsym $mod+u exec /snap/bin/code
 
-## Launch // Incognito // <> n ##
-bindsym $mod+n exec google-chrome --incognito
+## Launch // Incognito // <> p ##
+bindsym $mod+p exec google-chrome --incognito
 
 # Cause Settings app to float above tiled windows
 for_window [class="floating_term"] floating enable
@@ -665,20 +669,12 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-## Modify // Display Settings // <> d ##
-set_from_resource $i3-wm.program.display i3-wm.program.display gnome-control-center display
-bindsym $mod+d exec $i3-wm.program.display
-
 ## Presentation // Toggle Presenter Mode // <> p ##
 bindsym $mod+p exec "$HOME/scripts/config/presenter_mode_toggle.sh"
 
 ## Presentation // Touchpad Toggle // <Fn> F12 ##
 bindsym XF86Explorer exec "$HOME/scripts/config/touchpad_toggle.sh"
 bindsym $mod+m exec "$HOME/scripts/config/touchpad_toggle.sh"
-
-## Presentation // Annotate Screen // <> a ##
-bindsym $mod+a exec "$HOME/scripts/flameshot/full_screen.sh"
-bindsym $mod+$alt+a exec "flameshot gui"
 
 ## Presentation // ScreenKey // <><Alt>s ##
 bindsym $mod+$alt+s exec "$HOME/scripts/config/screenkey_toggle.sh"
@@ -687,7 +683,6 @@ bindsym $mod+$alt+s exec "$HOME/scripts/config/screenkey_toggle.sh"
 ## Presentation // Stop Streaming // <> F10 ##
 ## Presentation // Start Recording // <> F11 ##
 ## Presentation // Stop Recording // <> F12 ##
-
 
 ###############################################################################
 # External programs launched with i3
