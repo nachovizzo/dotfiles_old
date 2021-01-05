@@ -185,3 +185,4 @@ go/
 .motd_shown
 .sane/
 .surfshark
+.todo.db
