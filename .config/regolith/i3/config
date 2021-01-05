@@ -679,6 +679,12 @@ bindsym $mod+m exec "$HOME/scripts/config/touchpad_toggle.sh"
 ## Presentation // ScreenKey // <><Alt>s ##
 bindsym $mod+$alt+s exec "$HOME/scripts/config/screenkey_toggle.sh"
 
+## Presentation // Screenshot // <><PrtSc> ##
+bindsym $mod+Print exec "flameshot gui"
+
+## Presentation // Annotate Screen // <><Shift><PrtSc> ##
+bindsym $mod+Shift+Print exec "$HOME/scripts/flameshot/full_screen.sh"
+
 ## Presentation // Start Streaming // <> F9 ##
 ## Presentation // Stop Streaming // <> F10 ##
 ## Presentation // Start Recording // <> F11 ##

@@ -3,8 +3,8 @@
 # @author    Ignacio Vizzo     [ivizzo@uni-bonn.de]
 #
 # Copyright (c) 2019 Ignacio Vizzo, all rights reserved
-WIDTH=$(xrandr --query | awk -F '[ x,+]' '/\<connected\>/{print $4}')
-HEIGHT=$(xrandr --query | awk -F '[ x,+]' '/\<connected\>/{print $5}')
+WIDTH=$(xrandr --query | awk -F '[ x,+]' '/connected primary/{print $4}')
+HEIGHT=$(xrandr --query | awk -F '[ x,+]' '/connected primary/{print $5}')
 
 # Launch the snapshot gui
 flameshot gui && sleep 0.05
