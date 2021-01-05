@@ -645,8 +645,8 @@ bindsym $alt+F4 [con_id="__focused__"] kill
 ## Launch // VSCode // <> u ##
 bindsym $mod+u exec /snap/bin/code
 
-## Launch // Incognito // <> p ##
-bindsym $mod+p exec google-chrome --incognito
+## Launch // Incognito Browser // <><Alt> Enter ##
+bindsym $mod+$alt+Return exec google-chrome --incognito
 
 # Cause Settings app to float above tiled windows
 for_window [class="floating_term"] floating enable
