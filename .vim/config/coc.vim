@@ -1,3 +1,5 @@
+set signcolumn=no
+
 " Keystrokes mappings
 nmap <silent>gd <Plug>(coc-definition)
 nmap <silent>gy <Plug>(coc-type-definition)

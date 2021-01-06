@@ -22,19 +22,6 @@ function! VisualSelection(direction, extra_filter) range
     let @" = l:saved_reg
 endfunction
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => CoC Settings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function! EnableCoc()
-    exec "CocEnable"
-    set signcolumn=yes
-    source ~/.vim/config/coc_default.vim
-endfunction
-
-function! DisableCoc()
-    exec "CocDisable"
-    set signcolumn=no
-endfunction
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Inster Python debugger inline
