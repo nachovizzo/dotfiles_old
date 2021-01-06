@@ -402,8 +402,8 @@ bindsym $mod+$i3-wm.binding.sleep exec $i3-wm.program.sleep
 # System Management
 ###############################################################################
 
-## Modify // Settings // <> c ##
-set_from_resource $i3-wm.binding.settings i3-wm.binding.settings c
+## Modify // Settings // <> s ##
+set_from_resource $i3-wm.binding.settings i3-wm.binding.settings s
 set_from_resource $i3-wm.program.settings i3-wm.program.settings gnome-control-center --class=floating_window
 bindsym $mod+$i3-wm.binding.settings exec $i3-wm.program.settings
 
@@ -684,6 +684,10 @@ bindsym $mod+Print exec "flameshot gui"
 
 ## Presentation // Annotate Screen // <><Shift><PrtSc> ##
 bindsym $mod+Shift+Print exec "$HOME/scripts/flameshot/full_screen.sh"
+
+## Copy Paste Utilities
+bindsym --release $mod+c exec --no-startup-id "copy-paste copy"
+bindsym --release $mod+v exec --no-startup-id "copy-paste paste"
 
 ## Presentation // Start Streaming // <> F9 ##
 ## Presentation // Stop Streaming // <> F10 ##

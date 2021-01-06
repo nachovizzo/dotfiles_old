@@ -1,0 +1,17 @@
+#!/bin/bash
+cmd=$1
+win=$(xprop -id $(xdotool getactivewindow) | grep 'WM_CLASS(STRING)' | cut -d'"' -f2)
+
+if [[ "${cmd}" == "copy" ]]; then
+    case $win in
+        "gnome-terminal-server") key="ctrl+Shift+c" ;;
+        *) key="ctrl+c" ;;
+    esac
+elif [[ "${cmd}" == "paste" ]]; then
+    case $win in
+        "gnome-terminal-server") key="ctrl+Shift+v" ;;
+        *) key="ctrl+v" ;;
+    esac
+fi
+
+xdotool key --clearmodifiers "$key"
