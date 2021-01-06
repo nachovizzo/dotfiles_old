@@ -14,4 +14,4 @@ elif [[ "${cmd}" == "paste" ]]; then
     esac
 fi
 
-xdotool key --clearmodifiers "$key"
+xdotool key "$key"
