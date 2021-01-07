@@ -255,8 +255,8 @@ bindsym $mod+$i3-wm.binding.take_down move workspace to output down
 bindsym $mod+$i3-wm.binding.take_up move workspace to output up
 bindsym $mod+$i3-wm.binding.take_right move workspace to output right
 
-## Modify // Vertical Window Orientation // <> v ##
-set_from_resource $i3-wm.binding.split_v i3-wm.binding.split_v v
+## Modify // Vertical Window Orientation // <><Shift> v ##
+set_from_resource $i3-wm.binding.split_v i3-wm.binding.split_v Shift+v
 bindsym $mod+$i3-wm.binding.split_v split vertical
 
 ## Modify // Horizontal Window Orientation // <> g ##
