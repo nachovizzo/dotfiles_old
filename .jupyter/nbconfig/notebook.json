@@ -15,7 +15,8 @@
   },
   "autopep8": {
     "hotkeys": {
-      "process_selected": "Alt-F"
+      "process_selected": "Alt-F",
+      "process_all": "Alt-Shift-F"
     }
   }
 }
