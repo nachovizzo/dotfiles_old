@@ -1,0 +1,21 @@
+{
+  "load_extensions": {
+    "vim_binding/vim_binding": true,
+    "code_prettify/autopep8": true,
+    "execute_time/ExecuteTime": true
+  },
+  "Cell": {
+    "cm_config": {
+      "lineNumbers": false
+    }
+  },
+  "Notebook": {
+    "Header": true,
+    "Toolbar": false
+  },
+  "autopep8": {
+    "hotkeys": {
+      "process_selected": "Alt-F"
+    }
+  }
+}
