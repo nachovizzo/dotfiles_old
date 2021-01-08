@@ -7,7 +7,7 @@ nmap <silent>gi <Plug>(coc-implementation)
 nmap <silent>gr <Plug>(coc-references)
 nmap <silent>g[ <Plug>(coc-diagnostic-prev)
 nmap <leader>g] <Plug>(coc-diagnostic-next)
-nmap <silent>rn <Plug>(coc-rename)
+nmap <leader>rn <Plug>(coc-rename)
 nmap <leader>qf <Plug>(coc-fix-current)
 nmap <M-o>  :CocCommand clangd.switchSourceHeader<cr>
 
