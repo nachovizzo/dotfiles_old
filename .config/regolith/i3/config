@@ -215,8 +215,8 @@ bindsym $mod+$i3-wm.binding.ws_prev_on_output2 workspace prev_on_output
 set_from_resource $i3-wm.binding.next_free i3-wm.binding.next_free grave
 bindsym $mod+$i3-wm.binding.next_free exec --no-startup-id /usr/bin/i3-next-workspace
 
-## Navigate // Scratchpad // <><Ctrl> a ##
-set_from_resource $i3-wm.binding.scratchpad i3-wm.binding.scratchpad Ctrl+a
+## Navigate // Scratchpad // <><Shift> a ##
+set_from_resource $i3-wm.binding.scratchpad i3-wm.binding.scratchpad Shift+a
 bindsym $mod+$i3-wm.binding.scratchpad scratchpad show
 
 ###############################################################################
@@ -275,8 +275,8 @@ bindsym $mod+$i3-wm.binding.fullscreen_toggle fullscreen toggle
 set_from_resource $i3-wm.binding.float_toggle i3-wm.binding.float_toggle Shift+f
 bindsym $mod+Shift+$i3-wm.binding.float_toggle floating toggle
 
-## Modify // Move to Scratchpad // <><Ctrl> m ##
-set_from_resource $i3-wm.binding.move_scratchpad i3-wm.binding.move_scratchpad Ctrl+m
+## Modify // Move to Scratchpad // <><Shift> m ##
+set_from_resource $i3-wm.binding.move_scratchpad i3-wm.binding.move_scratchpad Shift+m
 bindsym $mod+$i3-wm.binding.move_scratchpad move to scratchpad
 
 ## Modify // Tile/Float Focus Toggle // <><Shift> t ##
