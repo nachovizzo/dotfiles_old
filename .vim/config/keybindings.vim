@@ -75,3 +75,4 @@ map <Leader>ipdb :call InsertIpdbLine()<CR>
 nnoremap <silent> <leader>ce :CocEnable<cr>
 nnoremap <silent> <leader>cd :CocDisable<cr>
 nnoremap <silent> <leader>cr :CocRestart<cr>
+nnoremap <silent> <leader>co :CocConfig<cr>
