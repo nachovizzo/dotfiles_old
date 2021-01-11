@@ -1,4 +1,14 @@
-set signcolumn=no
+" coc.nvim extensions
+let g:coc_global_extensions = [
+    \'coc-clangd',
+    \'coc-cmake',
+    \'coc-json',
+    \'coc-json',
+    \'coc-pyright',
+    \'coc-sh',
+    \'coc-vimlsp',
+    \'coc-yaml',
+\]
 
 " Keystrokes mappings
 nmap <silent>gd <Plug>(coc-definition)
@@ -12,6 +22,8 @@ nmap <leader>qf <Plug>(coc-fix-current)
 nmap <M-o>  :CocCommand clangd.switchSourceHeader<cr>
 
 " Settings taken from https://github.com/neoclide/coc.nvim
+set signcolumn=no
+
 " Give more space for displaying messages.
 set cmdheight=2
 

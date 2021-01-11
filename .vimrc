@@ -16,17 +16,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vimwiki/vimwiki'
 call plug#end()
 
-" coc.nvim extensions
-let g:coc_global_extensions = [
-    \'coc-clangd',
-    \'coc-cmake',
-    \'coc-json',
-    \'coc-json',
-    \'coc-pyright',
-    \'coc-sh',
-    \'coc-vimlsp',
-    \'coc-yaml',
-\]
 
 " All the real configuration
 source ~/.vim/config/basic.vim
