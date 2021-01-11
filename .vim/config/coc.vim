@@ -1,3 +1,15 @@
+" Extensions used so far
+let g:coc_global_extensions = [
+    \'coc-json',
+    \'coc-yaml',
+    \'coc-vimlsp',
+    \'coc-sh',
+    \'coc-pyright',
+    \'coc-json',
+    \'coc-cmake',
+    \'coc-clangd'
+\]
+
 set signcolumn=no
 
 " Keystrokes mappings
