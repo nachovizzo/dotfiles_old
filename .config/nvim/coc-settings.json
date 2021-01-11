@@ -1,23 +1,16 @@
 {
+    "clangd.enabled": true,
+    "clangd.compilationDatabasePath": "build/",
     "clangd.arguments": [
-        "--log=verbose",
-        "--pretty",
         "--background-index",
         "--clang-tidy",
         "--header-insertion=iwyu",
-        "--suggest-missing-includes",
-        "--compile-commands-dir=build/"
+        "--suggest-missing-includes"
     ],
     "python.pythonPath": "python3",
     "python.formatting.provider": "yapf",
-    "python.autoComplete.extraPaths": [
-        "/home/ivizzo/.local/lib/python3.6/site-packages/",
-        "/home/ivizzo/.local/lib/python3.6/site-packages/open3d/"
-    ],
-    "python.linting.pylamaEnabled": false,
-    "python.linting.pylamaArgs": ["-o", "/home/ivizzo/.pylamarc"],
     "python.linting.pylintEnabled": true,
-    "python.linting.pydocstyleEnabled": false,
+    "python.linting.pydocstyleEnabled": true,
     "python.linting.pydocstyleArgs": [
         "--max-line-length",
         "80",
