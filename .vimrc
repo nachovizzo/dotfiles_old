@@ -18,14 +18,14 @@ call plug#end()
 
 " coc.nvim extensions
 let g:coc_global_extensions = [
-    \'coc-json',
-    \'coc-yaml',
-    \'coc-vimlsp',
-    \'coc-sh',
-    \'coc-pyright',
-    \'coc-json',
+    \'coc-clangd',
     \'coc-cmake',
-    \'coc-clangd'
+    \'coc-json',
+    \'coc-json',
+    \'coc-pyright',
+    \'coc-sh',
+    \'coc-vimlsp',
+    \'coc-yaml',
 \]
 
 " All the real configuration
