@@ -3,6 +3,7 @@ source ~/.vim/config/plug.vim
 
 call plug#begin('~/.vim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'kevinoid/vim-jsonc'
 Plug 'morhetz/gruvbox'
 Plug 'nachovizzo/committia.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}

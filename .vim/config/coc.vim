@@ -3,7 +3,6 @@ let g:coc_global_extensions = [
     \'coc-clangd',
     \'coc-cmake',
     \'coc-json',
-    \'coc-json',
     \'coc-pyright',
     \'coc-sh',
     \'coc-vimlsp',
