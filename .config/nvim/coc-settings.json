@@ -9,12 +9,5 @@
     ],
     "python.pythonPath": "python3",
     "python.formatting.provider": "yapf",
-    "python.linting.pylintEnabled": true,
-    "python.linting.pydocstyleEnabled": true,
-    "python.linting.pydocstyleArgs": [
-        "--max-line-length",
-        "80",
-        "--ignore",
-        "E111, E117"
-    ]
+    "python.linting.pylintEnabled": true
 }

@@ -54,10 +54,6 @@ noremap <expr> k v:count ? 'k' : 'gk'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 vmap <silent><leader>r :call VisualSelection('replace', '')<CR>
 
-" Automatically format files after writing the buffer, removing whitespaces
-" and end of line(if any)
-nmap <silent><leader>f :Autoformat<cr> | %s/\s\+$//e | %s/\n\+\%$//e
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERDTree bindings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -76,3 +72,9 @@ nnoremap <silent> <leader>ce :CocEnable<cr>
 nnoremap <silent> <leader>cd :CocDisable<cr>
 nnoremap <silent> <leader>cr :CocRestart<cr>
 nnoremap <silent> <leader>co :CocConfig<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Format Settings (using CoC)
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <silent><leader>f  :Format<cr> | %s/\s\+$//e
+nmap <silent><leader>or :OR<cr>
