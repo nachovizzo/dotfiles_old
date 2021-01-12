@@ -15,7 +15,7 @@ map <leader>p "+p
 map <C-c> "+y
 
 " Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
+map <silent><leader><cr> :noh<cr>
 
 " Quickly open vim config file
 map <leader>e :e! ~/.vimrc<cr>
@@ -68,10 +68,10 @@ map <Leader>ipdb :call InsertIpdbLine()<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => CoC Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent> <leader>ce :CocEnable<cr>
-nnoremap <silent> <leader>cd :CocDisable<cr>
-nnoremap <silent> <leader>cr :CocRestart<cr>
-nnoremap <silent> <leader>co :CocConfig<cr>
+nnoremap <silent><leader>ce :CocEnable<cr>
+nnoremap <silent><leader>cd :CocDisable<cr>
+nnoremap <silent><leader>cr :CocRestart<cr>
+nnoremap <silent><leader>co :CocConfig<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Format Settings (using CoC)

@@ -24,7 +24,7 @@ nmap <silent>gr <Plug>(coc-references)
 nmap <silent>g[ <Plug>(coc-diagnostic-prev)
 nmap <leader>g] <Plug>(coc-diagnostic-next)
 nmap <leader>rn <Plug>(coc-rename)
-nmap <leader>qf <Plug>(coc-fix-current)
+nmap <leader>cf <Plug>(coc-fix-current)
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
