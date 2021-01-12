@@ -9,6 +9,6 @@
         "--suggest-missing-includes"
     ],
     "python.pythonPath": "python3",
-    "python.formatting.provider": "yapf",
+    "python.formatting.provider": "autopep8",
     "python.linting.pylintEnabled": true
 }
