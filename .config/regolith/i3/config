@@ -132,15 +132,6 @@ bindsym $mod+$i3-wm.binding.look_selector exec $i3-wm.program.look_selector
 ###############################################################################
 # Window and Workspace Navigation
 ###############################################################################
-
-## Navigate // Relative Parent // <> a ##/
-set_from_resource $i3-wm.binding.focus_parent i3-wm.binding.focus_parent a
-bindsym $mod+$i3-wm.binding.focus_parent focus parent
-
-## Navigate // Relative Child // <> z ##/
-set_from_resource $i3-wm.binding.focus_child i3-wm.binding.focus_child z
-bindsym $mod+$i3-wm.binding.focus_child focus child
-
 ## Navigate // Relative Window // <> ↑ ↓ ← → ##
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
