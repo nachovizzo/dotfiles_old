@@ -11,3 +11,4 @@ let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 let NERDTreeMinimalUI = 1
 let NERDTreeQuitOnOpen = 1
 let NERDTreeShowHidden = 1
+let NERDTreeShowLineNumbers = 1
