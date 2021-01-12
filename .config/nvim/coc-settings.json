@@ -1,4 +1,5 @@
 {
+    "coc.preferences.messageLevel": "error",
     "clangd.enabled": true,
     "clangd.compilationDatabasePath": "build/",
     "clangd.arguments": [
