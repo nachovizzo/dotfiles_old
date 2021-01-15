@@ -19,6 +19,9 @@ map <silent><leader><cr> :noh<cr>
 
 " Quickly open vim config file
 map <leader>e :e! ~/.vimrc<cr>
+
+" Jumb back to last buffer
+map <leader>6 <c-^><cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Shortcutting split navigation, saving a keypress:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
