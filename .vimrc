@@ -4,7 +4,7 @@ source ~/.vim/config/plug.vim
 call plug#begin('~/.vim/plugged')
 Plug 'antoinemadec/coc-fzf'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'junegunn/fzf', {'dir': '~/.fzf','do': './install --all'}
+Plug 'junegunn/fzf', {'dir': '~/.fzf','do': './install --bin'}
 Plug 'junegunn/fzf.vim'
 Plug 'kevinoid/vim-jsonc'
 Plug 'morhetz/gruvbox'
