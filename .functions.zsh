@@ -1,3 +1,6 @@
+function lgrep() { ll | grep "$1" | fzf }
+function hgrep() { history | grep "$1" | fzf }
+
 to_xclip() {
     echo "Copying $@ to clipboard"
     cat "$@" | xcopy
