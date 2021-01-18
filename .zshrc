@@ -25,8 +25,9 @@ plugins=(
     zsh-autosuggestions
 )
 
+source $ZSH/oh-my-zsh.sh
+
 source $HOME/.aliases.zsh
 source $HOME/.functions.zsh
 source $HOME/.zshrc_local
-source $ZSH/oh-my-zsh.sh
 source $ZSH_CUSTOM/plugins/zsh-autoswitch-virtualenv/autoswitch_virtualenv.plugin.zsh

@@ -1,5 +1,5 @@
-lgrep() { ll | grep "$1" | fzf }
-hgrep() { history | grep "$1" | fzf }
+function lgrep() { ll | grep $* | fzf }
+function hgrep() { history | grep $* | fzf }
 
 to_xclip() {
     echo "Copying $@ to clipboard"
