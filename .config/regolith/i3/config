@@ -679,6 +679,7 @@ bindsym $mod+Shift+Print exec "$HOME/scripts/flameshot/full_screen.sh"
 ## Copy Paste Utilities
 bindsym --release $mod+c exec --no-startup-id "copy-paste copy"
 bindsym --release $mod+v exec --no-startup-id "copy-paste paste"
+bindsym --release $mod+x exec --no-startup-id "copy-paste cut"
 
 ## Presentation // Start Streaming // <> F9 ##
 ## Presentation // Stop Streaming // <> F10 ##

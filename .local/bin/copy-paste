@@ -12,6 +12,11 @@ elif [[ "${cmd}" == "paste" ]]; then
         "gnome-terminal-server") key="ctrl+Shift+v" ;;
         *) key="ctrl+v" ;;
     esac
+elif [[ "${cmd}" == "cut" ]]; then
+    case $win in
+        "gnome-terminal-server") key="ctrl+Shift+c" ;;
+        *) key="ctrl+x" ;;
+    esac
 fi
 
 xdotool key "$key"
