@@ -3,6 +3,7 @@
 *.class
 *.o
 *.so
+**/*build/
 
 # Packages #
 ############
