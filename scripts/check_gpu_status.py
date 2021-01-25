@@ -30,9 +30,9 @@ ipb_hostnames = [
 
 @click.command()
 @click.argument('extra_hosts', nargs=-1, type=str)
-@click.option('--no_ipb', is_flag=True, help='Dont use ipb hosts')
+@click.option('--all', is_flag=True, help='Use ipb hosts')
 @click.option('--verbose', '-v', is_flag=True, help='Run nvidia-smi')
-def main(verbose, extra_hosts, no_ipb):
+def main(verbose, extra_hosts, all):
     """
     This utility allows you to check the current overload of the GPU's at the
     ipb-lab. It comes with a predefined set of host names that you are very
@@ -50,23 +50,22 @@ def main(verbose, extra_hosts, no_ipb):
     Your typical usage would be something like:
 
     \b
-    $ ./check_gpu_status.py ipb24 ipb25
+    $ ./check_gpu_status.py ipb24 ipb25 --all # append to ipb_hostnames
 
 
     Where ipb24, and ipb25 are hosts that are not contianed in the glorified
     host lists.
 
-    If you wish to only check the hosts you specify, just pass the --no_ipb flag
-    to this script
+    If you wish to only check the hosts you specify
 
     \b
-    $ ./check_gpu_status.py ipb24 ipb25 --no_ipb
+    $ ./check_gpu_status.py ipb24 ipb25 
 
     """
-    if no_ipb:
-        hostnames = list(extra_hosts)
-    else:
+    if all or not extra_hosts:
         hostnames = ipb_hostnames + list(extra_hosts)
+    else:
+        hostnames = list(extra_hosts)
     if not hostnames:
         print("[ERROR] You should specify at least one hostname")
         sys.exit(1)

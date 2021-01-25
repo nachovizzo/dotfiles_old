@@ -185,7 +185,23 @@ def get_gpu_infos(nvidiasmi_output):
         model = gpu.find('product_name').text
         processes = gpu.findall('processes')[0]
         pids = [process.find('pid').text for process in processes]
-        gpu_infos.append({'idx': idx, 'model': model, 'pids': pids})
+        gpu_util = gpu.find('utilization').find('gpu_util').text
+        gpu_util = int(gpu_util.split(' ')[0])
+        mem_util = gpu.find('utilization').find('memory_util').text
+        mem_util = int(mem_util.split(' ')[0])
+        power_draw = gpu.find('power_readings').find('power_draw').text
+        power_draw = float(power_draw.split(' ')[0])
+        power_limit = gpu.find('power_readings').find('power_limit').text
+        power_limit = float(power_limit.split(' ')[0])
+        pow_util = int(100 * (power_draw / power_limit))
+        gpu_infos.append({
+            'idx': idx,
+            'model': model,
+            'pids': pids,
+            'gpu_util': gpu_util,
+            'mem_util': mem_util,
+            'pow_util': pow_util
+        })
 
     return gpu_infos
 
@@ -221,6 +237,7 @@ def print_gpu_infos(server, gpu_infos, run_ps, run_get_real_names,
         real_names_by_users = run_get_real_names(users=all_users)
 
     info('Server {}:'.format(server))
+    free_servers = []
     for gpu_info in gpu_infos:
         users = set((users_by_pid[pid] for pid in gpu_info['pids']))
         if filter_by_user is not None and filter_by_user not in users:
@@ -229,23 +246,35 @@ def print_gpu_infos(server, gpu_infos, run_ps, run_get_real_names,
         for user in BLACKLISTED_USERS:
             users.discard(user)
 
-        if len(gpu_info['pids']) == 0 or len(users) == 0:
+        gpu_util = gpu_info['gpu_util']
+        mem_util = gpu_info['mem_util']
+        pow_util = gpu_info['pow_util']
+
+        # If it's really sleeping, it will be free, otherwise not.
+        gpu_is_free = pow_util < 10 and gpu_util < 10 and mem_util < 10
+        if gpu_is_free or len(gpu_info['pids']) == 0:
             status = 'Free'
-            res = 'Server {}: GPU {} ({})'.format(server,
-                                                  gpu_info['idx'],
-                                                  gpu_info['model'])
+            free_servers.append('Server {}: GPU {} ({})'.format(server,
+                                                                gpu_info['idx'],
+                                                                gpu_info['model']))
         else:
             if translate_to_real_names:
                 users = ['{} ({})'.format(user, real_names_by_users[user])
                          for user in users]
 
-            status = 'Used by {}'.format(', '.join(users))
-            res = None
+            if users:
+                status = 'Used by {}'.format(', '.join(users))
+            else:
+                status = 'Used by Someone'
 
-        info('\tGPU {} ({}): {}'.format(gpu_info['idx'],
-                                        gpu_info['model'],
-                                        status))
-        return res
+        info('\tGPU {} ({}) (gpu_util={}%, mem_util={}%, pow_util={}%) : {}'.
+             format(gpu_info['idx'],
+                    gpu_info['model'],
+                    gpu_info['gpu_util'],
+                    gpu_info['mem_util'],
+                    gpu_info['pow_util'],
+                    status))
+    return free_servers
 
 
 def main(argv):
@@ -312,14 +341,15 @@ def main(argv):
             res = print_gpu_infos(server, gpu_infos, run_ps, run_get_real_names,
                                   filter_by_user=args.user,
                                   translate_to_real_names=args.finger)
-            free_servers.append(res) if res else None
+            free_servers.append(*res) if res else None
         else:
             print_free_gpus(server, gpu_infos)
 
-    print(80*'*')
-    print("List of free GPUs:")
-    print(*free_servers, sep='\n')
-    print(80*'*')
+    if free_servers:
+        print(120*'*')
+        print("List of free GPUs:")
+        print(*free_servers, sep='\n')
+        print(120*'*')
 
 
 if __name__ == '__main__':
