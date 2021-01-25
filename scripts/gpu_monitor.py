@@ -16,6 +16,12 @@ from collections import defaultdict
 from functools import partial
 from logging import debug, info, error
 
+# Some users doesn't make sense to analyze
+BLACKLISTED_USERS = [
+    'root',
+    'gdm',
+]
+
 # Default timeout in seconds after which SSH stops trying to connect
 DEFAULT_SSH_TIMEOUT = 3
 
@@ -220,18 +226,26 @@ def print_gpu_infos(server, gpu_infos, run_ps, run_get_real_names,
         if filter_by_user is not None and filter_by_user not in users:
             continue
 
-        if len(gpu_info['pids']) == 0:
+        for user in BLACKLISTED_USERS:
+            users.discard(user)
+
+        if len(gpu_info['pids']) == 0 or len(users) == 0:
             status = 'Free'
+            res = 'Server {}: GPU {} ({})'.format(server,
+                                                  gpu_info['idx'],
+                                                  gpu_info['model'])
         else:
             if translate_to_real_names:
                 users = ['{} ({})'.format(user, real_names_by_users[user])
                          for user in users]
 
             status = 'Used by {}'.format(', '.join(users))
+            res = None
 
         info('\tGPU {} ({}): {}'.format(gpu_info['idx'],
                                         gpu_info['model'],
                                         status))
+        return res
 
 
 def main(argv):
@@ -266,6 +280,7 @@ def main(argv):
     if args.user or args.finger:
         args.list = True
 
+    free_servers = []
     for server in args.servers:
         if server == '.' or server == 'localhost' or server == '127.0.0.1':
             run_nvidiasmi = run_nvidiasmi_local
@@ -294,11 +309,17 @@ def main(argv):
         gpu_infos = get_gpu_infos(nvidiasmi)
 
         if args.list:
-            print_gpu_infos(server, gpu_infos, run_ps, run_get_real_names,
-                            filter_by_user=args.user,
-                            translate_to_real_names=args.finger)
+            res = print_gpu_infos(server, gpu_infos, run_ps, run_get_real_names,
+                                  filter_by_user=args.user,
+                                  translate_to_real_names=args.finger)
+            free_servers.append(res) if res else None
         else:
             print_free_gpus(server, gpu_infos)
+
+    print(80*'*')
+    print("List of free GPUs:")
+    print(*free_servers, sep='\n')
+    print(80*'*')
 
 
 if __name__ == '__main__':
