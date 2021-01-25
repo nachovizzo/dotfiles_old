@@ -346,10 +346,10 @@ def main(argv):
             print_free_gpus(server, gpu_infos)
 
     if free_servers:
-        print(120*'*')
+        print(80*'*')
         print("List of free GPUs:")
         print(*free_servers, sep='\n')
-        print(120*'*')
+        print(80*'*')
 
 
 if __name__ == '__main__':
