@@ -70,7 +70,9 @@ def main(verbose, extra_hosts, no_ipb):
     if not hostnames:
         print("[ERROR] You should specify at least one hostname")
         sys.exit(1)
+    print(80*'-')
     print("Hostnames to be analyed:", *hostnames, sep='\n')
+    print(80*'-')
     if verbose:
         print("Running nvidia-smi an all specified hosts")
         for host in hostnames:
