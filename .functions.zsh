@@ -90,3 +90,7 @@ start_carlzviz () {
     printf "\n%s\n" "carlaviz is up and running, opening visualizer"
     xdg-open http://127.0.0.1:8080/
 }
+
+naqui() {
+    tmux new -s "nautilus@$(basename $(pwd))" -d 'nautilus .'
+}
