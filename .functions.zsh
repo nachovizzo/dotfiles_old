@@ -37,9 +37,11 @@ add_to_pypath() {
 }
 
 wsp_compress() {
-    echo "Compressing $1 for WhatsApp, output video will be $2 ..."
-    ffmpeg -i $1 -vcodec libx264 -acodec aac $2
-    echo "Done!"
+    VIDEO="$1"
+    BASENAME="$(basename -- $VIDEO)"
+    FILENAME=${BASENAME%.*}
+    echo "Compressing $VIDEO for WhatsApp..."
+    ffmpeg -i "${VIDEO}" -vcodec libx264 -acodec aac "${FILENAME}".mp4
 }
 
 split_video() {
