@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# @file      ipb-split-runneling
+# @author    Ignacio Vizzo     [ivizzo@uni-bonn.de
+#
+# Copyright (c) 2020 Ignacio Vizzo, all rights reserved
+#
+# For more instructions on this variables please check the vpnc-script
+# 
+# Add this line at the end of the ipb-vpnc.conf file:
+#     Script /etc/vpnc/ipb-split-tunneling
+
+INTERNAL_IP4_DNS=
+CISCO_SPLIT_INC=1
+CISCO_SPLIT_INC_0_ADDR=131.220.0.0
+CISCO_SPLIT_INC_0_MASK=255.255.0.0
+CISCO_SPLIT_INC_0_MASKLEN=16
+. /usr/share/vpnc-scripts/vpnc-script
