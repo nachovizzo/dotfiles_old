@@ -58,6 +58,7 @@ alias codeconfig='$EDITOR ~/.config/Code/User/settings.json'
 alias rn='ranger .'
 alias tkb='take build'
 alias jpc='jupyter console --existing'
+alias ag='ag -U'
 
 alias -g latest='*(om[1])'
 
