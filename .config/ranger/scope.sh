@@ -176,11 +176,12 @@ handle_image() {
                 && exit 6 || exit 1;;
 
 
-        ## PLY, some ply files are text/plain
+        ## PLY|PCD, some ply files are text/plain
         application/octet-stream|text/plain)
-            if [[ "$FILE_EXTENSION_LOWER" == "ply" ]]; then
-                plytojpg "${FILE_PATH}" --out "${IMAGE_CACHE_PATH%.*}" && exit 6 || exit 1
-            fi;;
+            case "$FILE_EXTENSION_LOWER" in
+                ply|pcd) plytojpg "${FILE_PATH}" --out "${IMAGE_CACHE_PATH%.*}" && exit 6 || exit 1
+            esac;;
+
 
 
         ## ePub, MOBI, FB2 (using Calibre)

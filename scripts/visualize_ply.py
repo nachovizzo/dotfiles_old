@@ -3,6 +3,7 @@
 #
 # Copyright (c) 2020 Ignacio Vizzo, all rights reserved
 
+import os
 import sys
 
 import click
@@ -56,8 +57,11 @@ def visualize_geometry(ply, filename, headless, options=None, camera=None):
               default=False,
               help='Headless rendering mode')
 def main(filename, out, headless):
-    # TODO: Add options and camera
-    if is_mesh(filename):
+    file_extension = os.path.splitext(filename)[-1]
+    if file_extension == '.pcd':
+        pcd = o3d.io.read_point_cloud(filename)
+        visualize_geometry(pcd, out, headless)
+    elif is_mesh(filename):
         mesh = o3d.io.read_triangle_mesh(filename)
         mesh.compute_triangle_normals()
         mesh.compute_vertex_normals()
