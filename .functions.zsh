@@ -69,3 +69,24 @@ start_notebook() {
     echo "Starting background Jupyter notebook server on $(pwd)..."
     tmux new -s "[notebook] $(basename $(pwd))" -d 'jupyter notebook .'
 }
+
+start_carlzviz () {
+    echo "Launching carlaviz in the background"
+    tmux new -s "carlaviz" -d '
+    docker run -it \
+        --network="host" \
+        -e carlaviz_host_ip=localhost \
+        -e carla_server_ip=localhost \
+        -e carla_server_port=2000 \
+        mjxu96/carlaviz:0.9.10
+    '
+
+    printf "%s" "Waiting for carlaviz to become alive"
+    while ! timeout 1 portping -c 1 localhost 8080 &>/dev/null; do
+      printf "%c" "."
+      sleep 1
+    done
+    sleep 1
+    printf "\n%s\n" "carlaviz is up and running, opening visualizer"
+    xdg-open http://127.0.0.1:8080/
+}
