@@ -14,8 +14,8 @@ map <leader>c "+y
 map <leader>p "+p
 map <C-c> "+y
 
-" Disable highlight when <leader><cr> is pressed
-map <silent><leader><cr> :noh<cr>
+" Toggle highlight when <leader><cr> is pressed
+map <silent><expr> <leader><cr> (&hls && v:hlsearch ? ':nohls' : ':set hls')."\n"
 
 " Quickly open vim config file
 map <leader>e :e! ~/.vimrc<cr>
