@@ -21,7 +21,6 @@ set splitbelow splitright
 set nowrap
 set linebreak
 set hidden
-set scrolloff=8
 set nohlsearch
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
