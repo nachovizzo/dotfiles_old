@@ -14,7 +14,6 @@ command -v zsh &> /dev/null && exec zsh -l
 if [ -f "$HOME/usr/bin/zsh" ]; then
     # We need the nacho's local zsh build of zsh
     export FPATH=$HOME/usr/share/zsh/5.7.1-test-2/functions:$FPATH
-    export PATH=$PATH:$HOME/usr/bin
     exec $HOME/usr/bin/zsh -l
  else
     echo "****************************************************************"
