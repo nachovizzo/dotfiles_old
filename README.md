@@ -17,3 +17,18 @@ git pull origin master
 git submodule init
 git submodule update
 ```
+
+## Example `.zshrc_local`
+
+This is the file I don't track with git because it might contain local specific
+configurations and sensitive info.
+
+As an example it usually contains(for the sudo-less servers):
+
+```sh
+# Default install prefix on home directory
+export CMAKE_INSTALL_PREFIX=$HOME/usr/
+export CPATH=$HOME/usr/include/
+export LD_LIBRARY_PATH=$HOME/usr/lib:$LD_LIBRARY_PATH
+export MANPATH=$MANPATH:$HOME/usr/share/man/
+``
