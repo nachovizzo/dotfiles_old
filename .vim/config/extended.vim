@@ -11,3 +11,12 @@ au BufNewFile,BufRead .clang-* set syntax=yaml
 
 " For C++ files use 2 instead of 4
 au BufRead,BufEnter *.cpp,*.cc,*.h,*.hpp setlocal ts=2 sw=2
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Autoreaload buffer when something changes
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd FocusGained,BufEnter,CursorHold,CursorHoldI *
+            \ if mode() !~ '\v(c|r.?|!|t)' && getcmdwintype() == '' | checktime | endif
+
+autocmd FileChangedShellPost *
+            \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
