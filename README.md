@@ -31,4 +31,4 @@ export CMAKE_INSTALL_PREFIX=$HOME/usr/
 export CPATH=$HOME/usr/include/
 export LD_LIBRARY_PATH=$HOME/usr/lib:$LD_LIBRARY_PATH
 export MANPATH=$MANPATH:$HOME/usr/share/man/
-``
+```
