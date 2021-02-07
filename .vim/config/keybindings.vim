@@ -80,4 +80,5 @@ nnoremap <silent><leader>co :CocConfig<cr>
 " => Format Settings (using Neoformat)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <silent><leader>f  :Neoformat<cr>
+xmap <silent><leader>f  :Neoformat<cr>
 nmap <silent><leader>or :OR<cr>
