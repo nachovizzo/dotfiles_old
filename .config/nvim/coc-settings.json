@@ -10,6 +10,5 @@
         "--suggest-missing-includes"
     ],
     "python.pythonPath": "python3",
-    "python.formatting.provider": "autopep8",
     "python.linting.pylintEnabled": true
 }

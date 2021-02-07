@@ -20,3 +20,12 @@ set mouse=a
 nnoremap <silent> <space><space> :<C-u>CocFzfList symbols<CR>
 nnoremap <silent> <space>coc     :<C-u>CocFzfList<CR>
 nnoremap <silent> <space>d       :<C-u>CocFzfList diagnostics --current-buf<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => neoformat settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:neoformat_enabled_python = ['autopep8']
+let g:neoformat_try_formatprg = 1
+let g:neoformat_basic_format_align = 1
+let g:neoformat_basic_format_retab = 1
+let g:neoformat_basic_format_trim = 1

@@ -77,7 +77,7 @@ nnoremap <silent><leader>cr :CocRestart<cr>
 nnoremap <silent><leader>co :CocConfig<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Format Settings (using CoC)
+" => Format Settings (using Neoformat)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <silent><leader>f  :Format<cr> | %s/\s\+$//e
+nmap <silent><leader>f  :Neoformat<cr>
 nmap <silent><leader>or :OR<cr>
