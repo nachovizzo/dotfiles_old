@@ -18,7 +18,6 @@ Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 call plug#end()
 
-
 " All the real configuration
 source ~/.vim/config/basic.vim
 source ~/.vim/config/coc.vim

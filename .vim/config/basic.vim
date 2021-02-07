@@ -31,6 +31,7 @@ set background=dark
 set colorcolumn=80
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_invert_selection='0'
+let g:gruvbox_undercurl=0
 syntax enable
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
