@@ -22,7 +22,7 @@ set nowrap
 set linebreak
 set hidden
 set nohlsearch
-set formatoptions-=ro
+set formatoptions-=cro
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
