@@ -2,8 +2,8 @@
 " => The most relevant keybindigs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <leader>w :w<cr>
+nmap <leader>x :x<cr>
 nmap <leader>q :q!<cr>
-nmap <C-s> :w<cr>
 
 " j+k or k+j escapes insert mode
 imap jk <ESC>
@@ -12,7 +12,6 @@ imap kj <ESC>
 " Copy paste: leader+c / leader+v
 map <leader>c "+y
 map <leader>p "+p
-map <C-c> "+y
 
 " Toggle highlight when <leader><cr> is pressed
 map <silent><expr> <leader><cr> (&hls && v:hlsearch ? ':set nohlsearch' : ':set hls')."\n"
@@ -38,16 +37,16 @@ map <M-k> <C-w>K
 map <M-l> <C-w>L
 
 " Same but using the leader, you can't hold down this key, what a shame
-nmap <silent> <leader>h :wincmd h<CR>
-nmap <silent> <leader>j :wincmd j<CR>
-nmap <silent> <leader>k :wincmd k<CR>
-nmap <silent> <leader>l :wincmd l<CR>
+nmap <silent><leader>h :wincmd h<cr>
+nmap <silent><leader>j :wincmd j<cr>
+nmap <silent><leader>k :wincmd k<cr>
+nmap <silent><leader>l :wincmd l<cr>
 
 " Split configurations
-nmap <silent> <C-Left>  :vertical resize +3<CR>
-nmap <silent> <C-Right> :vertical resize -3<CR>
-nmap <silent> <C-Up>    :resize +3<CR>
-nmap <silent> <C-Down>  :resize -3<CR>
+nmap <silent><C-Left>  :vertical resize +3<cr>
+nmap <silent><C-Right> :vertical resize -3<cr>
+nmap <silent><C-Up>    :resize +3<cr>
+nmap <silent><C-Down>  :resize -3<cr>
 
 " Always move down with vim keys even in soft-lines
 noremap <expr> j v:count ? 'j' : 'gj'
@@ -56,9 +55,9 @@ noremap <expr> k v:count ? 'k' : 'gk'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Visual mode related
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-vmap <silent><leader>r :call VisualSelection('replace', '')<CR>
+vmap <silent><leader>r :call VisualSelection('replace', '')<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Function Calls
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <Leader>ipdb :call InsertIpdbLine()<CR>
+map <Leader>ipdb :call InsertIpdbLine()<cr>
