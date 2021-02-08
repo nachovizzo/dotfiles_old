@@ -60,7 +60,7 @@ vmap <silent><leader>r :call VisualSelection('replace', '')<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERDTree bindings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <silent><leader>n :NERDTreeToggle<cr>
+nmap <silent><leader>n :CocCommand explorer<cr>
 nmap <silent><Leader>m :NERDTreeFind<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
