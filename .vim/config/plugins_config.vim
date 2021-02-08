@@ -31,3 +31,12 @@ let g:coc_explorer_global_presets = {
 \   },
 \ }
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => gruvbox colorscheme modifications for CoC
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" User underline instead of undercurl
+hi CocErrorHighlight   cterm=underline gui=underline
+hi CocWarningHighlight cterm=underline gui=underline
+hi CocInfoHighlight    cterm=underline gui=underline
+hi CocHintHighlight    cterm=underline gui=underline

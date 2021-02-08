@@ -20,3 +20,8 @@ autocmd FocusGained,BufEnter,CursorHold,CursorHoldI *
 
 autocmd FileChangedShellPost *
             \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Disable automatic comment insertion
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
