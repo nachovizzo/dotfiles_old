@@ -11,7 +11,6 @@ Plug 'nachovizzo/committia.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ryanoasis/vim-devicons'
 Plug 'sbdchd/neoformat'
-Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -24,4 +23,6 @@ source ~/.vim/config/coc.vim
 source ~/.vim/config/functions.vim
 source ~/.vim/config/keybindings.vim
 source ~/.vim/config/plugins_config.vim
+source ~/.vim/config/plugins_keys.vim
 source ~/.vim/config/extended.vim
+

@@ -52,33 +52,13 @@ nmap <silent> <C-Down>  :resize -3<CR>
 " Always move down with vim keys even in soft-lines
 noremap <expr> j v:count ? 'j' : 'gj'
 noremap <expr> k v:count ? 'k' : 'gk'
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Visual mode related
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 vmap <silent><leader>r :call VisualSelection('replace', '')<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => NERDTree bindings
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <silent><leader>n :CocCommand explorer<cr>
-nmap <silent><Leader>m :NERDTreeFind<CR>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Function Calls
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <Leader>ipdb :call InsertIpdbLine()<CR>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => CoC Settings
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent><leader>ce :CocEnable<cr>
-nnoremap <silent><leader>cd :CocDisable<cr>
-nnoremap <silent><leader>cr :CocRestart<cr>
-nnoremap <silent><leader>co :CocConfig<cr>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Format Settings (using Neoformat)
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <silent><leader>f  :Neoformat<cr>
-xmap <silent><leader>f  :Neoformat<cr>
-nmap <silent><leader>or :OR<cr>
