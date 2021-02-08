@@ -9,7 +9,6 @@ Plug 'kevinoid/vim-jsonc'
 Plug 'morhetz/gruvbox'
 Plug 'nachovizzo/committia.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'ryanoasis/vim-devicons'
 Plug 'sbdchd/neoformat'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -25,4 +24,3 @@ source ~/.vim/config/keybindings.vim
 source ~/.vim/config/plugins_config.vim
 source ~/.vim/config/plugins_keys.vim
 source ~/.vim/config/extended.vim
-
