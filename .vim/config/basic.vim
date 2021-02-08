@@ -31,8 +31,13 @@ set background=dark
 set colorcolumn=80
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_invert_selection='0'
-let g:gruvbox_undercurl=0
 syntax enable
+
+" User underline instead of undercurl
+hi CocErrorHighlight   cterm=underline gui=underline
+hi CocWarningHighlight cterm=underline gui=underline
+hi CocInfoHighlight    cterm=underline gui=underline
+hi CocHintHighlight    cterm=underline gui=underline
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
