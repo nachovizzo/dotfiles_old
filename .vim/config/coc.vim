@@ -42,6 +42,9 @@ command! -nargs=? Fold      :call CocAction('fold', <f-args>)
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR        :call CocAction('runCommand', 'editor.action.organizeImport')
 
+" Add :CocToggle to shut up the diagnostic when not needed
+command! -nargs=0 CocToggle :call CocAction('diagnosticToggle')
+
 " Map function and class text objects
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
 xmap if <Plug>(coc-funcobj-i)

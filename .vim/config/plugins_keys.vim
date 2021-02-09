@@ -2,6 +2,7 @@
 " => CoC Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <silent><leader>ce :CocEnable<cr>
+nnoremap <silent><leader>ct :CocToggle<cr>
 nnoremap <silent><leader>cd :CocDisable<cr>
 nnoremap <silent><leader>cr :CocRestart<cr>
 nnoremap <silent><leader>co :CocConfig<cr>
@@ -25,4 +26,4 @@ nnoremap <silent> <space>d       :<C-u>CocFzfList diagnostics --current-buf<CR>
 " => coc-explorer bindings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <silent><leader>m :CocCommand explorer<cr>
-nmap <silent><leader>n :CocCommand explorer --preset floating<CR> 
+nmap <silent><leader>n :CocCommand explorer --preset floating<CR>
