@@ -9,9 +9,6 @@ autocmd! BufWritePost ~/.vimrc,~/.vim/config/basic.vim,~/.vim/config/coc.vim,~/.
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 au BufNewFile,BufRead .clang-* set syntax=yaml
 
-" For C++ files use 2 instead of 4
-au BufRead,BufEnter *.cpp,*.cc,*.h,*.hpp setlocal ts=2 sw=2
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Autoreaload buffer when something changes
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
