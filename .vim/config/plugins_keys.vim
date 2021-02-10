@@ -28,3 +28,8 @@ nnoremap <silent> <space>d       :<C-u>CocFzfList diagnostics --current-buf<CR>
 nmap <silent><leader>m :CocCommand explorer<cr>
 nmap <silent><leader>n :CocCommand explorer --preset floating<cr>
 nmap <silent><leader>b :CocCommand explorer --preset buffer<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => SilverSearcher bindings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <silent><leader>ag :Ag <c-r><c-w><cr>
