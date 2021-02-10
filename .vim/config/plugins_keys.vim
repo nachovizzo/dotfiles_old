@@ -26,5 +26,5 @@ nnoremap <silent> <space>d       :<C-u>CocFzfList diagnostics --current-buf<CR>
 " => coc-explorer bindings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <silent><leader>m :CocCommand explorer<cr>
-nmap <silent><leader>n :CocCommand explorer --preset buffer<CR>
-nmap <silent><leader>b :CocCommand explorer --preset floating<CR>
+nmap <silent><leader>n :CocCommand explorer --preset floating<cr>
+nmap <silent><leader>b :CocCommand explorer --preset buffer<cr>
