@@ -1,8 +1,14 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fast editing and reloading of vimrc configs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd! BufWritePost ~/.vimrc,~/.vim/config/basic.vim,~/.vim/config/coc.vim,~/.vim/config/keybindings.vim,~/.vim/config/plugins_config.vim,~/.vim/config/extended.vim
-            \ source ~/.vimrc | AirlineRefresh
+autocmd! BufWritePost ~/.vimrc                         source ~/.vimrc | AirlineRefresh
+autocmd! BufWritePost ~/.vim/config/basic.vim          source ~/.vimrc | AirlineRefresh
+autocmd! BufWritePost ~/.vim/config/coc.vim            source ~/.vimrc | AirlineRefresh
+autocmd! BufWritePost ~/.vim/config/functions.vim      source ~/.vimrc | AirlineRefresh
+autocmd! BufWritePost ~/.vim/config/keybindings.vim    source ~/.vimrc | AirlineRefresh
+autocmd! BufWritePost ~/.vim/config/plugins_config.vim source ~/.vimrc | AirlineRefresh
+autocmd! BufWritePost ~/.vim/config/plugins_keys.vim   source ~/.vimrc | AirlineRefresh
+autocmd! BufWritePost ~/.vim/config/extended.vim       source ~/.vimrc | AirlineRefresh
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Filetypes syntax settings
