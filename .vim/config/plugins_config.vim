@@ -43,3 +43,9 @@ hi CocErrorHighlight   cterm=underline gui=underline
 hi CocWarningHighlight cterm=underline gui=underline
 hi CocInfoHighlight    cterm=underline gui=underline
 hi CocHintHighlight    cterm=underline gui=underline
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => NERDCommenter
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:NERDCreateDefaultMappings = 1
+let g:NERDSpaceDelims = 1

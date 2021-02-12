@@ -33,3 +33,8 @@ nmap <silent><leader>b :CocCommand explorer --preset buffer<cr>
 " => SilverSearcher bindings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <silent><leader>ag :Ag <c-r><c-w><cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => NERDCommenter
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <silent>gc <Plug>NERDCommenterToggle<cr>
