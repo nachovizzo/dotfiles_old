@@ -37,4 +37,5 @@ nmap <silent><leader>ag :Ag <c-r><c-w><cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERDCommenter
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent>gc <Plug>NERDCommenterToggle<cr>
+nmap <silent>gc <Plug>NERDCommenterToggle<cr>
+xmap <silent>gc <Plug>NERDCommenterToggle<cr>
