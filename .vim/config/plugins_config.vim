@@ -47,5 +47,5 @@ hi CocHintHighlight    cterm=underline gui=underline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERDCommenter
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:NERDCreateDefaultMappings = 1
+let g:NERDCreateDefaultMappings = 0
 let g:NERDSpaceDelims = 1
