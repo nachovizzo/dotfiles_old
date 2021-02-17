@@ -21,23 +21,27 @@ def copy_viewpoint_to_clipboard():
     trajectory = options['trajectory'][0]
 
     # Get the trajectory parameters in a more human readable factor
-    resolution = 3
+    resolution = 4
     front = list(np.asarray(trajectory['front']).round(resolution))
     lookat = list(np.asarray(trajectory['lookat']).round(resolution))
     up = list(np.asarray(trajectory['up']).round(resolution))
-    zoom = np.asarray(trajectory['zoom'])
+    zoom = np.asarray(trajectory['zoom']).round(2)
 
     # Put this into the clipboard
     output = """front={front},
-    lookat={lookat},
-    up={up},
-    zoom={zoom}"""
+lookat={lookat},
+up={up},
+zoom={zoom})"""
     pyperclip.copy(output.format(front=front,
                                  lookat=lookat,
                                  up=up,
                                  zoom=zoom))
 
     print("ViewTrajectory copied to the system clipboard")
+    print(output.format(front=front,
+                        lookat=lookat,
+                        up=up,
+                        zoom=zoom))
 
 
 if __name__ == "__main__":
