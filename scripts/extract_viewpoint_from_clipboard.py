@@ -21,7 +21,7 @@ def copy_viewpoint_to_clipboard():
     trajectory = options['trajectory'][0]
 
     # Get the trajectory parameters in a more human readable factor
-    resolution = 4
+    resolution = 2
     front = list(np.asarray(trajectory['front']).round(resolution))
     lookat = list(np.asarray(trajectory['lookat']).round(resolution))
     up = list(np.asarray(trajectory['up']).round(resolution))
