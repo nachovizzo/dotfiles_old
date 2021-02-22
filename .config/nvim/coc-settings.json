@@ -5,7 +5,8 @@
         "--background-index",
         "--clang-tidy",
         "--header-insertion=iwyu",
-        "--suggest-missing-includes"
+        "--suggest-missing-includes",
+        "-j=8"
     ],
     "python.pythonPath": "python3",
     "python.linting.pylintEnabled": true,
