@@ -4,3 +4,10 @@
 # currently installed theme will be used to
 # set plot style if no arguments provided
 # jtplot.style()
+
+AIS_RED_INT = [154, 0, 0]
+AIS_BLUE_INT = [51, 102, 153]
+
+AIS_RED = [0.604, 0, 0]
+AIS_BLUE = [0.2, 0.4, 0.6]
+
