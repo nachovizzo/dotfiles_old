@@ -96,3 +96,7 @@ start_carlzviz () {
 naqui() {
     tmux new -s "nautilus@$(basename $(pwd))" -d 'nautilus .'
 }
+
+jupyter-light-theme() {
+    jt -t grade3 -fs 11 -altp -tfs 11 -nfs 11 -cellw 100% -T -vim
+}
