@@ -3045,7 +3045,7 @@ div.CodeMirror-linenumber,
  color: #828892;
 }
 .cm-s-ipython .CodeMirror-cursor {
- border-left: 2px solid #ff711a !important;
+ border-left: 1px solid #ff711a !important;
 }
 .cm-s-ipython span.cm-comment {
  color: #8d8d8d;
@@ -3182,7 +3182,7 @@ div.cell.text_cell .cm-s-default span.cm-variable-3 {
  color: #e22978;
 }
 .CodeMirror-cursor {
- border-left: 2px solid #ff711a !important;
+ border-left: 1px solid #ff711a !important;
  border-right: none;
  width: 0;
 }
