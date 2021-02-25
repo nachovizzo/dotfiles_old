@@ -60,8 +60,6 @@ alias jpc='jupyter console --existing'
 alias ag='ag -U'
 alias start_notebook_tunnel='ssh -f -N ipb24-tunnel'
 
-alias start_headless_notebook='jupyter notebook --no-browser --port=8080 .'
-
 alias -g latest='*(om[1])'
 
 alias no_prompt='export ZSH_THEME="no_prompt" && source $ZSH/oh-my-zsh.sh && _zsh_autosuggest_disable'

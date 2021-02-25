@@ -72,6 +72,11 @@ start_notebook() {
     tmux new -s "[notebook] $(basename $(pwd))" -d 'jupyter notebook .'
 }
 
+start_noteook_headless() {
+    echo "Starting headless background Jupyter notebook server on $(pwd)..."
+    tmux new -s "[notebook] $(basename $(pwd))" -d 'jupyter notebook --no-browser --port=8080 .'
+}
+
 start_carlzviz () {
     echo "Launching carlaviz in the background"
     tmux new -s "carlaviz" -d '
