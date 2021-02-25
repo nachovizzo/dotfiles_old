@@ -2,7 +2,8 @@
   "load_extensions": {
     "vim_binding/vim_binding": true,
     "code_prettify/autopep8": true,
-    "execute_time/ExecuteTime": true
+    "execute_time/ExecuteTime": true,
+    "jupyter-js-widgets/extension": true
   },
   "Cell": {
     "cm_config": {
