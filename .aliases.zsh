@@ -58,6 +58,7 @@ alias rn='ranger .'
 alias tkb='take build'
 alias jpc='jupyter console --existing'
 alias ag='ag -U'
+alias start_notebook_tunnel='ssh -f -N ipb24-tunnel'
 
 alias -g latest='*(om[1])'
 
