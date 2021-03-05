@@ -2,6 +2,7 @@
 source ~/.vim/config/plug.vim
 
 call plug#begin('~/.vim/plugged')
+Plug 'airblade/vim-rooter'
 Plug 'antoinemadec/coc-fzf'
 Plug 'junegunn/fzf', {'dir': '~/.fzf'}
 Plug 'junegunn/fzf.vim'
