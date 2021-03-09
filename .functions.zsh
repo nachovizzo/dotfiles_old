@@ -85,7 +85,7 @@ start_tensorboard() {
     gtk-launch $(xdg-settings get default-web-browser) $URL > /dev/null
 }
 
-start_noteook_headless() {
+start_notebook_headless() {
     echo "Starting headless background Jupyter notebook server on $(pwd)..."
     tmux new -s "[notebook] $(basename $(pwd))" -d 'jupyter notebook --no-browser --port=8080 .'
 }
