@@ -188,3 +188,4 @@ go/
 .todo.db
 Sharing
 Public
+.fzf
