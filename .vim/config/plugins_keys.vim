@@ -18,9 +18,9 @@ nmap <silent><leader>or :OR<cr>
 " => coc-fzf Keybindigs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set mouse=a
-nnoremap <silent> <space><space> :<C-u>CocFzfList symbols<CR>
-nnoremap <silent> <space>coc     :<C-u>CocFzfList<CR>
-nnoremap <silent> <space>d       :<C-u>CocFzfList diagnostics --current-buf<CR>
+nnoremap <silent><leader><space> :<C-u>CocFzfList symbols<CR>
+nnoremap <silent><leader>cl      :<C-u>CocFzfList<CR>
+nnoremap <silent><leader>d       :<C-u>CocFzfList diagnostics --current-buf<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => coc-explorer bindings

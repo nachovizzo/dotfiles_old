@@ -1,4 +1,8 @@
 {
+    // CoC Settings
+    "diagnostic.enable": false,
+
+    // C++
     "clangd.enabled": true,
     "clangd.compilationDatabasePath": "build/",
     "clangd.arguments": [
@@ -8,6 +12,8 @@
         "--suggest-missing-includes",
         "-j=8"
     ],
+
+    // Python
     "python.pythonPath": "python3",
     "python.linting.pylintEnabled": true,
     "python.linting.pylintArgs": [
