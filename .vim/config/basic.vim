@@ -22,6 +22,7 @@ set nowrap
 set linebreak
 set hidden
 set nohlsearch
+set cmdheight=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
