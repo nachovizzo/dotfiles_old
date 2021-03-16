@@ -6,7 +6,7 @@ let g:airline_powerline_fonts = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Format Settings (using Neoformat)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:neoformat_enabled_python = ['autopep8', 'docformatter']
+let g:neoformat_enabled_python = ['black', 'docformatter']
 let g:neoformat_enabled_cpp = ['clangformat']
 let g:neoformat_enabled_c = ['clangformat']
 let g:neoformat_basic_format_align = 1
