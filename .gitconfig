@@ -4,15 +4,6 @@
 [core]
     excludesfile = /home/ivizzo/.gitignore_global
     editor = vim
-
-# Add some git common alias
-[url "git@github.com:"]
-    insteadOf = github:
-
-[url "git@gitlab.ipb.uni-bonn.de:"]
-    insteadOf = gitlab:
-[pager]
-    branch = false
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
@@ -20,10 +11,21 @@
     required = true
 [push]
     default = simple
-
 [diff]
     tool = meld
 [difftool "meld"]
     cmd = "GTK_THEME=Adwaita:light meld $LOCAL $REMOTE"
 [difftool]
     prompt = false
+[color]
+  ui = always
+[pager]
+    branch = false
+    log = diff-highlight | less
+    show = diff-highlight | less
+    diff = diff-highlight | less
+[color "diff-highlight"]
+  oldNormal = red
+  oldHighlight = red bold 52
+  newNormal = green
+  newHighlight = green bold 22
