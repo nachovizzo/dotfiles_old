@@ -4,3 +4,6 @@
 [submodule ".tmux/plugins"]
 	path = .tmux/plugins
 	url = git@github.com:nachovizzo/tmux-plugins.git
+[submodule "3rdparty/diff-so-fancy"]
+	path = 3rdparty/diff-so-fancy
+	url = git@github.com:so-fancy/diff-so-fancy.git

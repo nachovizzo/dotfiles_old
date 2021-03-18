@@ -2,10 +2,11 @@
 export ZSH=$HOME/.oh-my-zsh
 
 # PATH
-export PATH=$PATH:$HOME/.local/bin/
 export PATH=$PATH:$HOME/scripts/
+export PATH=$PATH:$HOME/usr/bin
+export PATH=$PATH:$HOME/.local/bin/
 export PATH=$PATH:/usr/local/go/bin
-export PATH=$HOME/usr/bin:$PATH
+export PATH=$PATH:$(ls -d $HOME/3rdparty/*/)
 
 # Preferred editor for local and remote sessions
 export EDITOR='nvim'
