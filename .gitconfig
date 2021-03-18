@@ -12,11 +12,18 @@
 [url "git@gitlab.ipb.uni-bonn.de:"]
     insteadOf = gitlab:
 [pager]
-	branch = false
+    branch = false
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
 [push]
-	default = simple
+    default = simple
+
+[diff]
+    tool = meld
+[difftool "meld"]
+    cmd = "GTK_THEME=Adwaita:light meld $LOCAL $REMOTE"
+[difftool]
+    prompt = false
