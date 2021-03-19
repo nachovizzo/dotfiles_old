@@ -39,3 +39,8 @@ nmap <silent><leader>ag :Ag <c-r><c-w><cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <silent>gc <Plug>NERDCommenterToggle<cr>
 xmap <silent>gc <Plug>NERDCommenterToggle<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => fzf plugin
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <C-p> :Files<cr>
