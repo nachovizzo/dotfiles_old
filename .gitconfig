@@ -11,7 +11,7 @@
     process = git-lfs filter-process
     required = true
 [push]
-    default = simple
+	default = current
 [diff]
     tool = meld
 [difftool "meld"]
