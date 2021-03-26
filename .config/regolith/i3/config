@@ -384,10 +384,6 @@ set_from_resource $i3-wm.binding.lock i3-wm.binding.lock Escape
 set_from_resource $i3-wm.program.lock i3-wm.program.lock dbus-send --type=method_call --dest=org.gnome.ScreenSaver /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock
 bindsym $mod+$i3-wm.binding.lock exec $i3-wm.program.lock
 
-## Session // Sleep // <><Shift> s ##
-set_from_resource $i3-wm.binding.sleep i3-wm.binding.sleep Shift+s
-set_from_resource $i3-wm.program.sleep i3-wm.program.sleep systemctl suspend
-bindsym $mod+$i3-wm.binding.sleep exec $i3-wm.program.sleep
 
 ###############################################################################
 # System Management
@@ -672,6 +668,13 @@ bindsym $mod+$alt+s exec "$HOME/scripts/config/screenkey_toggle.sh"
 
 ## Presentation // Screenshot // <><PrtSc> ##
 bindsym $mod+Print exec "flameshot gui"
+
+## Session // Sleep //
+## Presentation // Screenshot // <><Shift> s #
+# set_from_resource $i3-wm.binding.sleep i3-wm.binding.sleep Shift+s
+# set_from_resource $i3-wm.program.sleep i3-wm.program.sleep systemctl suspend
+# bindsym $mod+$i3-wm.binding.sleep exec $i3-wm.program.sleep
+bindsym $mod+Shift+s exec "flameshot gui"
 
 ## Presentation // Annotate Screen // <><Shift><PrtSc> ##
 bindsym $mod+Shift+Print exec "$HOME/scripts/flameshot/full_screen.sh"
