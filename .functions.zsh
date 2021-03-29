@@ -118,3 +118,7 @@ naqui() {
 jupyter-light-theme() {
     jt -t grade3 -fs 11 -altp -tfs 11 -nfs 11 -cellw 100% -T -vim
 }
+
+vim_binary () {
+    vim $(which $1)
+}
