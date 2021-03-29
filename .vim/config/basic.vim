@@ -22,7 +22,7 @@ set nowrap
 set linebreak
 set hidden
 set nohlsearch
-set cmdheight=1
+set cmdheight=2
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts

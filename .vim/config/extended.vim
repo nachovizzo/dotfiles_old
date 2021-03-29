@@ -28,3 +28,11 @@ autocmd FileChangedShellPost *
 " => Disable automatic comment insertion
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Jump to last line when opening a file
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g'\"" | endif
+endif
