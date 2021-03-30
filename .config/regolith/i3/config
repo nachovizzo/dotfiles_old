@@ -389,9 +389,9 @@ bindsym $mod+$i3-wm.binding.lock exec $i3-wm.program.lock
 # System Management
 ###############################################################################
 
-## Modify // Settings // <> s ##
+## Modify // Sound Settings // <> s ##
 set_from_resource $i3-wm.binding.settings i3-wm.binding.settings s
-set_from_resource $i3-wm.program.settings i3-wm.program.settings gnome-control-center --class=floating_window
+set_from_resource $i3-wm.program.settings i3-wm.program.settings gnome-control-center --class=floating_window sound
 bindsym $mod+$i3-wm.binding.settings exec $i3-wm.program.settings
 
 ## Modify // Display Settings // <> d ##
