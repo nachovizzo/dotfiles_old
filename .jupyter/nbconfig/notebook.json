@@ -7,7 +7,7 @@
     "contrib_nbextensions_help_item/main": true,
     "toc2/main": true,
     "hide_input_all/main": true,
-    "livemdpreview/livemdpreview": true
+    "livemdpreview/livemdpreview": false
   },
   "Cell": {
     "cm_config": {
