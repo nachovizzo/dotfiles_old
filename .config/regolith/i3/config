@@ -642,6 +642,8 @@ for_window [class="zoom"] floating enable
 for_window [class="Gedit"] floating enable
 for_window [class="matplotlib"] floating enable
 for_window [class="jabref"] floating enable
+for_window [class="rviz"] floating enable
+for_window [class="obs"] floating enable
 
 # Lenovo custom settings
 # Custom // Previous Song // <Fn> F9 ##
