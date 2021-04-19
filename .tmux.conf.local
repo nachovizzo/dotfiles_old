@@ -347,6 +347,8 @@ set -g mouse on
 # move status line to top
 #set -g status-position top
 
+unbind q
+bind q kill-session
 # -- tpm -----------------------------------------------------------------------
 
 # while I don't use tpm myself, many people requested official support so here
