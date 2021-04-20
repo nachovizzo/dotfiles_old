@@ -348,7 +348,7 @@ set -g mouse on
 #set -g status-position top
 
 unbind q
-bind q kill-session
+bind q confirm-before -p "kill tmux session \"#S\"? (y/n)" kill-session
 
 # -- vim -----------------------------------------------------------------------
 # Smart pane switching with awareness of Vim splits.
