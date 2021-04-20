@@ -350,6 +350,9 @@ set -g mouse on
 unbind q
 bind q confirm-before -p "kill tmux session \"#S\"? (y/n)" kill-session
 
+# Add extra split
+# split current window vertically
+bind | split-window -h
 # -- vim -----------------------------------------------------------------------
 # Smart pane switching with awareness of Vim splits.
 # See: https://github.com/christoomey/vim-tmux-navigator
