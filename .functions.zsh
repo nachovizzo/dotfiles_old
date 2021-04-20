@@ -122,3 +122,9 @@ jupyter-light-theme() {
 vim_binary () {
     vim $(which $1)
 }
+
+cpp_sources() {
+    find . -regextype posix-extended -regex \
+        ".*\.(cpp|cxx|cc|hpp|hxx|h)" |
+        grep -vE "^./(build)/"
+}
