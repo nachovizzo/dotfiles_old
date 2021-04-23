@@ -344,6 +344,10 @@ set -g mouse on
 # set -g prefix C-a
 # bind C-a send-prefix
 
+# Unbind C-a prefix, I use this for other tasks
+set -gu prefix2
+unbind C-a
+
 # move status line to top
 #set -g status-position top
 
