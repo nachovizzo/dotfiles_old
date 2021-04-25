@@ -128,3 +128,9 @@ cpp_sources() {
         ".*\.(cpp|cxx|cc|hpp|hxx|h)" |
         grep -vE "^./(build)/"
 }
+
+filename () {
+    BASENAME="$(basename -- $1)"
+    FILENAME=${BASENAME%.*}
+    echo $FILENAME
+}
