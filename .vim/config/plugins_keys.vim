@@ -25,6 +25,8 @@ nnoremap <silent><leader>d       :<C-u>CocFzfList diagnostics --current-buf<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => coc-explorer bindings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" TODO: Fix this shit!
+" let $foo=expand('%:p:h')
 nmap <silent><leader>m :CocCommand explorer<cr>
 nmap <silent><leader>n :CocCommand explorer --preset floating<cr>
 nmap <silent><leader>b :CocCommand explorer --preset buffer<cr>
