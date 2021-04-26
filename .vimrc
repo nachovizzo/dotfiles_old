@@ -2,7 +2,6 @@
 source ~/.vim/config/plug.vim
 
 call plug#begin('~/.vim/plugged')
-Plug 'airblade/vim-rooter'
 Plug 'antoinemadec/coc-fzf'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --bin' }
