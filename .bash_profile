@@ -3,9 +3,6 @@
 #
 # Copyright (c) 2019 Ignacio Vizzo, all rights reserved
 
-# First we need to check if we are on Windows...
-grep -qEi "(microsoft|WSL)" /proc/version &> /dev/null && cd $HOME && exec zsh -l
-
 # If the zsh binary is available, then use the one installed in the system
 command -v zsh &> /dev/null && exec zsh -l
 
