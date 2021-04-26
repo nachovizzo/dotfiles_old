@@ -3,6 +3,11 @@ HYPHEN_INSENSITIVE="true"
 DISABLE_AUTO_UPDATE="true"
 ENABLE_CORRECTION="false"
 
+ZSH_TMUX_AUTOSTART="true"
+ZSH_TMUX_AUTOSTART_ONCE="true"
+ZSH_TMUX_AUTOCONNECT="false"
+ZSH_TMUX_AUTOQUIT="true"
+
 plugins=(
     colored-man-pages
     command-not-found
