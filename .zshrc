@@ -1,14 +1,4 @@
-# @file      .zshrc
-# @author    Ignacio Vizzo     [ivizzo@uni-bonn.de]
-#
-# Copyright (c) 2020 Ignacio Vizzo, all rights reserved
-#
-if [[ -n $SSH_CONNECTION ]]; then
-    ZSH_THEME="fwalch-hostname"
-else
-    ZSH_THEME="fwalch"
-fi
-
+[[ -n $SSH_CONNECTION ]] && ZSH_THEME="fwalch-hostname" || ZSH_THEME="fwalch"
 HYPHEN_INSENSITIVE="true"
 DISABLE_AUTO_UPDATE="true"
 ENABLE_CORRECTION="false"
@@ -26,7 +16,6 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-
 source $HOME/.aliases.zsh
 source $HOME/.functions.zsh
 source $HOME/.zshrc_local
