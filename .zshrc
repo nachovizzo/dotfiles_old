@@ -10,6 +10,7 @@ DISABLE_AUTO_UPDATE="true"
 ENABLE_CORRECTION="false"
 HYPHEN_INSENSITIVE="true"
 ZSH_TMUX_AUTOCONNECT="false"
+ZSH_TMUX_AUTOQUIT="false"
 
 plugins=(
     colored-man-pages
