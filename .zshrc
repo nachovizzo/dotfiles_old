@@ -32,7 +32,7 @@ source $HOME/.aliases.zsh
 source $HOME/.functions.zsh
 source $HOME/.zshrc_local
 
-autoload -U compinit && compinit
+# autoload -U compinit && compinit
 
 # Start tmux automatically if available
 if command -v tmux &>/dev/null &&
