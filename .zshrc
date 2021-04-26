@@ -36,9 +36,10 @@ autoload -U compinit && compinit
 
 # Start tmux automatically if available
 if command -v tmux &>/dev/null &&
-    [ -n "$PS1" ] &&
+    [[ -n "$PS1" ]] &&
+    [[ ! -n "$SSH_CONNECTION" ]] &&
     [[ ! "$TERM" =~ screen ]] &&
     [[ ! "$TERM" =~ tmux ]] &&
-    [ -z "$TMUX" ]; then
+    [[ -z "$TMUX" ]]; then
     exec tmux
 fi
