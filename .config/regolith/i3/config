@@ -630,7 +630,7 @@ bindsym $mod+$i3-wm.binding.exit_app [con_id="__focused__"] kill
 for_window [class="floating_google"] floating enable
 set_from_resource $i3-wm.binding.google i3-wm.binding.google g
 set_from_resource $i3-wm.program.google i3-wm.program.google google-chrome --new-window --start-fullscreen www.google.com --class=floating_google
-bindsym $mod+y fullscreen disable, floating enable, resize set 1200 400, sticky enable, move window to position 200 500
+bindsym $mod+y fullscreen disable, floating enable, resize set 1320 780, sticky enable, move window to position 300 150
 bindsym $mod+$i3-wm.binding.google exec $i3-wm.program.google
 
 ## Session // Exit App // <Alt> F4 ##
