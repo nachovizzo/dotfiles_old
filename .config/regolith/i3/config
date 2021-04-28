@@ -628,7 +628,7 @@ bindsym $mod+$i3-wm.binding.exit_app [con_id="__focused__"] kill
 
 ## Launch // Google Search // <> g##
 set_from_resource $i3-wm.binding.google i3-wm.binding.google g
-set_from_resource $i3-wm.program.google i3-wm.program.google google-chrome --app=https://www.google.com --class=floating_google
+set_from_resource $i3-wm.program.google i3-wm.program.google google-chrome --user-data-dir=/tmp/chrome/ --app=https://www.google.com --class=floating_google
 bindsym $mod+$i3-wm.binding.google exec $i3-wm.program.google
 
 ## Session // Exit App // <Alt> F4 ##
