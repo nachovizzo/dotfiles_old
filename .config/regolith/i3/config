@@ -95,7 +95,7 @@ bindsym $mod+$i3-wm.binding.terminal exec /usr/bin/x-terminal-emulator
 
 ## Launch // Browser // <><Shift> Enter ##
 set_from_resource $i3-wm.binding.browser i3-wm.binding.browser Shift+Return
-bindsym $mod+$i3-wm.binding.browser exec gtk-launch $(xdg-settings get default-web-browser)
+bindsym $mod+$i3-wm.binding.browser exec google-chrome --new-window 
 
 set_from_resource $rofiTheme rofi.theme /etc/regolith/styles/lascaille/rofi.rasi
 
@@ -628,7 +628,7 @@ bindsym $mod+$i3-wm.binding.exit_app [con_id="__focused__"] kill
 
 ## Launch // Google Search // <> g##
 set_from_resource $i3-wm.binding.google i3-wm.binding.google g
-set_from_resource $i3-wm.program.google i3-wm.program.google google-chrome --new-window --app=https://www.google.com --class=Google
+set_from_resource $i3-wm.program.google i3-wm.program.google google-chrome --app=https://www.google.com --class=floating_google
 bindsym $mod+$i3-wm.binding.google exec $i3-wm.program.google
 
 ## Session // Exit App // <Alt> F4 ##
@@ -641,7 +641,7 @@ bindsym $mod+u exec /snap/bin/code
 bindsym $mod+Ctrl+Return exec google-chrome --incognito
 
 # Cause Settings app to float above tiled windows
-for_window [class="Google"] floating enable, resize set 1320 780, move window to position 300 150
+for_window [class="floating_google"] floating enable, resize set 1320 780, move window to position 300 150
 for_window [class="Spotify"] floating enable, resize set 1320 780, move window to position 300 150
 for_window [class="zoom"] floating enable, resize set 1320 780, move window to position 300 150
 for_window [class="Gedit"] floating enable
