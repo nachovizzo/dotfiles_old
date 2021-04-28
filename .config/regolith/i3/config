@@ -627,10 +627,8 @@ set_from_resource $i3-wm.binding.exit_app i3-wm.binding.exit_app q
 bindsym $mod+$i3-wm.binding.exit_app [con_id="__focused__"] kill
 
 ## Launch // Google Search // <> g##
-for_window [class="floating_google"] floating enable
 set_from_resource $i3-wm.binding.google i3-wm.binding.google g
-set_from_resource $i3-wm.program.google i3-wm.program.google google-chrome --new-window --start-fullscreen www.google.com --class=floating_google
-bindsym $mod+y fullscreen disable, floating enable, resize set 1320 780, sticky enable, move window to position 300 150
+set_from_resource $i3-wm.program.google i3-wm.program.google google-chrome --new-window www.google.com --class=floating_google
 bindsym $mod+$i3-wm.binding.google exec $i3-wm.program.google
 
 ## Session // Exit App // <Alt> F4 ##
@@ -643,8 +641,9 @@ bindsym $mod+u exec /snap/bin/code
 bindsym $mod+Ctrl+Return exec google-chrome --incognito
 
 # Cause Settings app to float above tiled windows
-for_window [class="Spotify"] floating enable
-for_window [class="zoom"] floating enable
+for_window [class="floating_google"] fullscreen disable, floating enable, resize set 1320 780, move window to position 300 150
+for_window [class="Spotify"] floating enable, resize set 1320 780, move window to position 300 150
+for_window [class="zoom"] floating enable, resize set 1320 780, move window to position 300 150
 for_window [class="Gedit"] floating enable
 for_window [class="matplotlib"] floating enable
 for_window [class="jabref"] floating enable
