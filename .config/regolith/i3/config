@@ -626,17 +626,23 @@ bar {
 set_from_resource $i3-wm.binding.exit_app i3-wm.binding.exit_app q
 bindsym $mod+$i3-wm.binding.exit_app [con_id="__focused__"] kill
 
+## Launch // Google Search // <> g##
+for_window [class="floating_google"] floating enable
+set_from_resource $i3-wm.binding.google i3-wm.binding.google g
+set_from_resource $i3-wm.program.google i3-wm.program.google google-chrome --new-window --start-fullscreen www.google.com --class=floating_google
+bindsym $mod+y fullscreen disable, floating enable, resize set 1200 400, sticky enable, move window to position 200 500
+bindsym $mod+$i3-wm.binding.google exec $i3-wm.program.google
+
 ## Session // Exit App // <Alt> F4 ##
 bindsym $alt+F4 [con_id="__focused__"] kill
 
 ## Launch // VSCode // <> u ##
 bindsym $mod+u exec /snap/bin/code
 
-## Launch // Incognito Browser // <><Alt> Enter ##
-bindsym $mod+$alt+Return exec google-chrome --incognito
+## Launch // Incognito Browser // <><Ctrl> Enter ##
+bindsym $mod+Ctrl+Return exec google-chrome --incognito
 
 # Cause Settings app to float above tiled windows
-for_window [class="floating_term"] floating enable
 for_window [class="Spotify"] floating enable
 for_window [class="zoom"] floating enable
 for_window [class="Gedit"] floating enable
