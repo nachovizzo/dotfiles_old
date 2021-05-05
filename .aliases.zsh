@@ -2,16 +2,10 @@
 # @author    Ignacio Vizzo     [ivizzo@uni-bonn.de]
 #
 # Copyright (c) 2019 Ignacio Vizzo, all rights reserved
-alias apts='apt-cache search'
-alias erp='er-repo'
-alias suqui='subl ./'
-alias apts='apt-cache search'
-alias erps='er-repo status'
-alias catree='cat .tree | less'
+alias tree='tree -C'
 alias py='ipython3'
 alias coit='code . && exit'
 alias cor='code -r'
-alias cl=" /usr/bin/clear"
 alias rescan="nmcli device wifi rescan"
 alias list="nmcli device wifi list"
 alias deko='cd ~/Desktop'
@@ -26,17 +20,6 @@ alias re='cd ~/Research/'
 alias pu='cd ~/Research/publications'
 alias bi='cd ~/Research/bibliography'
 alias bo='cd ~/Documents/Books/'
-alias cpps='cd ~/Teaching/homeworks/cpp-homeworks-solutions'
-alias cpp1='cd ~/Teaching/homeworks/cpp-homeworks-solutions/homework_1'
-alias cpp2='cd ~/Teaching/homeworks/cpp-homeworks-solutions/homework_2'
-alias cpp3='cd ~/Teaching/homeworks/cpp-homeworks-solutions/homework_3'
-alias cpp4='cd ~/Teaching/homeworks/cpp-homeworks-solutions/homework_4'
-alias cpp5='cd ~/Teaching/homeworks/cpp-homeworks-solutions/homework_5'
-alias cpp6='cd ~/Teaching/homeworks/cpp-homeworks-solutions/homework_6'
-alias cpp7='cd ~/Teaching/homeworks/cpp-homeworks-solutions/homework_7'
-alias cpp8='cd ~/Teaching/homeworks/cpp-homeworks-solutions/homework_8'
-alias cpp9='cd ~/Teaching/homeworks/cpp-homeworks-solutions/homework_9'
-alias cppi='cd ~/Teaching/homeworks/homework-solutions-repo'
 alias za='zathura --fork'
 alias zas='i3-swallow zathura'
 alias zl='zas *(om[1])'
