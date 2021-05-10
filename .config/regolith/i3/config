@@ -275,8 +275,8 @@ set_from_resource $i3-wm.binding.focus_toggle i3-wm.binding.focus_toggle Shift+t
 bindsym $mod+$i3-wm.binding.focus_toggle focus mode_toggle
 
 ## Modify // Window Layout Mode // <> t ##
-set_from_resource $i3-wm.binding.layout_mode i3-wm.binding.layout_mode t
-bindsym $mod+$i3-wm.binding.layout_mode layout toggle tabbed splith splitv
+## set_from_resource $i3-wm.binding.layout_mode i3-wm.binding.layout_mode t
+## bindsym $mod+$i3-wm.binding.layout_mode layout toggle tabbed splith splitv
 
 ## Modify // Move Window to Workspace 1 - 10 // <><Shift> 0..9 ##
 bindsym $mod+Shift+$ws1_key move container to workspace number $ws1
@@ -622,6 +622,9 @@ bar {
 ###############################################################################
 # Nacho's Customizations
 ###############################################################################
+## Launch // Floating Terminal // <> t ##
+bindsym $mod+t exec gnome-terminal --class=floating_terminal
+
 ## Session // Exit App // <> q ##
 set_from_resource $i3-wm.binding.exit_app i3-wm.binding.exit_app q
 bindsym $mod+$i3-wm.binding.exit_app [con_id="__focused__"] kill
@@ -641,6 +644,7 @@ bindsym $mod+u exec /snap/bin/code
 bindsym $mod+Ctrl+Return exec google-chrome --incognito
 
 # Cause Settings app to float above tiled windows
+for_window [class="floating_terminal"] floating enable, resize set 1320 780, move window to position 300 150
 for_window [class="floating_google"] floating enable, resize set 1320 780, move window to position 300 150
 for_window [class="Spotify"] floating enable, resize set 1320 780, move window to position 300 150
 for_window [class="zoom"] floating enable, resize set 1320 780, move window to position 300 150
