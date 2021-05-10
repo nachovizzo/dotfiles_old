@@ -1,9 +1,7 @@
 if [[ -n $SSH_CONNECTION ]]; then
     ZSH_THEME="fwalch-hostname"
-    ZSH_TMUX_AUTOSTART="false"
 else
     ZSH_THEME="fwalch"
-    ZSH_TMUX_AUTOSTART="true"
 fi
 
 DISABLE_AUTO_UPDATE="true"
@@ -11,6 +9,7 @@ ENABLE_CORRECTION="false"
 HYPHEN_INSENSITIVE="true"
 ZSH_TMUX_AUTOCONNECT="false"
 ZSH_TMUX_AUTOQUIT="false"
+ZSH_TMUX_AUTOSTART="false"
 
 plugins=(
     colored-man-pages
