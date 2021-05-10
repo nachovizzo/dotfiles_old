@@ -1,9 +1,4 @@
-if [[ -n $SSH_CONNECTION ]]; then
-    ZSH_THEME="fwalch-hostname"
-else
-    ZSH_THEME="fwalch"
-fi
-
+[[ -n $SSH_CONNECTION ]] && ZSH_THEME="fwalch-hostname" || ZSH_THEME="fwalch"
 DISABLE_AUTO_UPDATE="true"
 ENABLE_CORRECTION="false"
 HYPHEN_INSENSITIVE="true"
