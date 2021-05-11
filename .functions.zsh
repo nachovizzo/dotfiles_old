@@ -139,3 +139,11 @@ timezsh() {
   shell=${1-$SHELL}
   for i in $(seq 1 10); do /usr/bin/time $shell -i -c exit; done
 }
+
+convert_3ds_to_ply() {
+    MODEL="$1"
+    BASENAME="$(basename -- $MODEL)"
+    FILENAME=${BASENAME%.*}.ply
+    echo "Converting $MODEL ${FILENAME}.ply"
+    ctmconv $MODEL ${FILENAME}
+}
