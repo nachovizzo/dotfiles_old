@@ -1,10 +1,11 @@
 [[ -n $SSH_CONNECTION ]] && ZSH_THEME="fwalch-hostname" || ZSH_THEME="fwalch"
+[[ -n $SSH_CONNECTION ]] && ZSH_TMUX_AUTOSTART="false"  || ZSH_TMUX_AUTOSTART="true"
+
 DISABLE_AUTO_UPDATE="true"
 ENABLE_CORRECTION="false"
 HYPHEN_INSENSITIVE="true"
 ZSH_TMUX_AUTOCONNECT="false"
 ZSH_TMUX_AUTOQUIT="true"
-ZSH_TMUX_AUTOSTART="true"
 
 plugins=(
     colored-man-pages
