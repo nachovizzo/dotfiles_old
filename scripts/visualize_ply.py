@@ -17,7 +17,7 @@ from print_geometry_type import is_mesh
 def visualize_geometry(ply, filename, headless, options=None, camera=None):
     def save_screenshoot(vis):
         image = vis.capture_screen_float_buffer(False)
-        plt.imsave(filename + '.jpg', np.asarray(image), dpi=1)
+        plt.imsave(filename + ".jpg", np.asarray(image), dpi=1)
         sys.exit(0)
 
     vis = o3d.visualization.Visualizer()
@@ -25,8 +25,8 @@ def visualize_geometry(ply, filename, headless, options=None, camera=None):
     if camera:
         viewpoint = o3d.io.read_pinhole_camera_parameters(camera)
         vis.create_window(
-            width=viewpoint.intrinsic.width,
-            height=viewpoint.intrinsic.height)
+            width=viewpoint.intrinsic.width, height=viewpoint.intrinsic.height
+        )
         ctr = vis.get_view_control()
         ctr.convert_from_pinhole_camera_parameters(viewpoint)
     else:
@@ -45,23 +45,21 @@ def visualize_geometry(ply, filename, headless, options=None, camera=None):
 
 
 @click.command()
-@click.argument('filename',
-                type=click.Path(exists=True))
-@click.option('--out',
-              '-o',
-              required=True,
-              default='screenshot',
-              help='Where to store the screenshot')
-@click.option('--headless',
-              is_flag=True,
-              default=False,
-              help='Headless rendering mode')
+@click.argument("filename", type=click.Path(exists=True))
+@click.option(
+    "--out",
+    "-o",
+    required=True,
+    default="screenshot",
+    help="Where to store the screenshot",
+)
+@click.option("--headless", is_flag=True, default=False, help="Headless rendering mode")
 def main(filename, out, headless):
     file_extension = os.path.splitext(filename)[-1]
-    if file_extension == '.pcd':
+    if file_extension == ".pcd":
         pcd = o3d.io.read_point_cloud(filename)
         visualize_geometry(pcd, out, headless)
-    elif is_mesh(filename):
+    elif file_extension == ".obj" or is_mesh(filename):
         mesh = o3d.io.read_triangle_mesh(filename)
         mesh.compute_triangle_normals()
         mesh.compute_vertex_normals()
