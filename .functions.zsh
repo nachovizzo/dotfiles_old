@@ -147,3 +147,7 @@ convert_3ds_to_ply() {
     echo "Converting $MODEL ${FILENAME}.ply"
     ctmconv $MODEL ${FILENAME}
 }
+
+check_includes() {
+    grep -rh include | sort | uniq
+}
