@@ -126,7 +126,7 @@ vim_binary () {
 cpp_sources() {
     find . -regextype posix-extended -regex \
         ".*\.(cpp|cxx|cc|hpp|hxx|h)" |
-        grep -vE "^./(build)/"
+        grep -vE "^./(build|3rdparty)/"
 }
 
 filename () {
