@@ -30,5 +30,8 @@ export VIRTUALENV=$HOME/dev/virtualenv/
 export AUTOSWITCH_SILENT=true
 
 if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
-    . $HOME/.nix-profile/etc/profile.d/nix.sh;
+    . $HOME/.nix-profile/etc/profile.d/nix.sh
 fi
+
+# Time format
+export TIMEFMT=$'\n================\nCPU\t%P\nuser\t%*U\nsystem\t%*S\ntotal\t%*E'
