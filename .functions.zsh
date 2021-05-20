@@ -151,3 +151,19 @@ convert_3ds_to_ply() {
 check_includes() {
     grep -rh include | sort | uniq
 }
+
+fast_remove() {
+    DIR="$1"
+    printf '%s ' '[WARNING] Removing all contents in ${DIR}, are you sure (y/n)'
+    read REPLY
+    if [[ ! $REPLY =~ ^[Yy]$ ]]
+    then
+        [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1
+    fi
+    mkdir /tmp/empty_directory
+    rsync -a --delete /tmp/empty_directory/ ${DIR}/
+    rm -rf ${DIR}
+    rm -rf /tmp/empty_directory
+    echo "Done!"
+}
+
