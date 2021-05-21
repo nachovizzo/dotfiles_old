@@ -162,6 +162,10 @@ check_includes() {
     grep -rh include | sort | uniq
 }
 
+check_imports() {
+    grep -rh import | sort | uniq
+}
+
 fast_remove() {
     DIR="$1"
     printf '%s ' '[WARNING] Removing all contents in ${DIR}, are you sure (y/n)'
