@@ -44,6 +44,16 @@ wsp_compress() {
     ffmpeg -i "${VIDEO}" -vcodec libx264 -acodec aac "${FILENAME}".mp4
 }
 
+cut_video() {
+    VIDEO="$1"
+    START_TIME="$2"
+    END_TIME="$3"
+    BASENAME="$(basename -- $VIDEO)"
+    FILENAME=${BASENAME%.*}
+    echo "Cutting $VIDEO from ${START_TIME} to ${END_TIME}..."
+    ffmpeg -ss ${START_TIME} -to ${END_TIME} -i ${VIDEO} -c copy ${FILENAME}_cut.mp4
+}
+
 split_video() {
     VIDEO="$1"
     BASENAME="$(basename -- $VIDEO)"
