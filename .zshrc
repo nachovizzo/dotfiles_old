@@ -4,6 +4,9 @@
 # Don't start tmux server if already running
 $(ps -e | grep -q tmux) && ZSH_TMUX_AUTOSTART="false"
 
+# Don't start tmux server if running a floating_terminal, cleanup later
+[[ $(xprop -id $(xdotool getactivewindow) | grep 'WM_CLASS(STRING)' | cut -d'"' -f4) = "floating_terminal" ]] && ZSH_TMUX_AUTOSTART="false"
+
 DISABLE_AUTO_UPDATE="true"
 ENABLE_CORRECTION="false"
 HYPHEN_INSENSITIVE="true"
