@@ -8,7 +8,7 @@ DISABLE_AUTO_UPDATE="true"
 ENABLE_CORRECTION="false"
 HYPHEN_INSENSITIVE="true"
 ZSH_TMUX_AUTOCONNECT="false"
-ZSH_TMUX_AUTOQUIT="false"
+ZSH_TMUX_AUTOQUIT="true"
 
 plugins=(
     colored-man-pages
