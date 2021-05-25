@@ -1,6 +1,9 @@
 [[ -n $SSH_CONNECTION ]] && ZSH_THEME="fwalch-hostname" || ZSH_THEME="fwalch"
 [[ -n $SSH_CONNECTION ]] && ZSH_TMUX_AUTOSTART="false"  || ZSH_TMUX_AUTOSTART="true"
 
+# Don't start tmux server if already running
+$(ps -e | grep -q tmux) && ZSH_TMUX_AUTOSTART="false"
+
 DISABLE_AUTO_UPDATE="true"
 ENABLE_CORRECTION="false"
 HYPHEN_INSENSITIVE="true"
