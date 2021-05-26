@@ -412,6 +412,10 @@ set -g @plugin 'tmux-plugins/tmux-open'
 #set -g @plugin 'tmux-plugins/tmux-continuum'
 #set -g @continuum-restore 'on'
 
+# -- tmux-open remap ----------------------------------------------------------
+set -g @open 'C-o'
+set -g @open-editor 'o'
+
 # -- custom variables ----------------------------------------------------------
 
 # to define a custom #{foo} variable, define a POSIX shell function between the
