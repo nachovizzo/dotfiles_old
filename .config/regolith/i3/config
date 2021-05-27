@@ -634,6 +634,11 @@ set_from_resource $i3-wm.binding.google i3-wm.binding.google g
 set_from_resource $i3-wm.program.google i3-wm.program.google google-chrome --user-data-dir=/tmp/chrome/ --app=https://www.google.com --class=floating_google
 bindsym $mod+$i3-wm.binding.google exec $i3-wm.program.google
 
+## Launch // Mattermost // <> m##
+set_from_resource $i3-wm.binding.mattermost i3-wm.binding.mattermost m
+set_from_resource $i3-wm.program.mattermost i3-wm.program.mattermost google-chrome --user-data-dir=/tmp/chrome/ --app=https://data1.ipb.uni-bonn.de/ipb --class=floating_mattermost
+bindsym $mod+$i3-wm.binding.mattermost exec $i3-wm.program.mattermost
+
 ## Session // Exit App // <Alt> F4 ##
 bindsym $alt+F4 [con_id="__focused__"] kill
 
@@ -646,6 +651,7 @@ bindsym $mod+Ctrl+Return exec google-chrome --incognito
 # Cause Settings app to float above tiled windows
 for_window [class="floating_terminal"] floating enable, resize set 1320 780, move window to position 300 150
 for_window [class="floating_google"] floating enable, resize set 1320 780, move window to position 300 150
+for_window [class="floating_mattermost"] floating enable, resize set 1320 780, move window to position 300 150
 for_window [class="Spotify"] floating enable, resize set 1320 780, move window to position 300 150
 for_window [class="zoom"] floating enable, resize set 1320 780, move window to position 300 150
 for_window [class="Open3D"]  floating enable, resize set 1320 780, move window to position 300 150
@@ -674,7 +680,7 @@ bindsym $mod+p exec "$HOME/scripts/config/presenter_mode_toggle.sh"
 
 ## Presentation // Touchpad Toggle // <Fn> F12 ##
 bindsym XF86Explorer exec "$HOME/scripts/config/touchpad_toggle.sh"
-bindsym $mod+m exec "$HOME/scripts/config/touchpad_toggle.sh"
+# bindsym $mod+m exec "$HOME/scripts/config/touchpad_toggle.sh"
 
 ## Presentation // ScreenKey // <><Alt>s ##
 bindsym $mod+$alt+s exec "$HOME/scripts/config/screenkey_toggle.sh"
