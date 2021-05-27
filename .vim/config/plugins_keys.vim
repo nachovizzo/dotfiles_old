@@ -18,7 +18,6 @@ nmap <silent><leader>or :OR<cr>
 " => coc-fzf Keybindigs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set mouse=a
-nnoremap <silent><leader><space> :<C-u>CocFzfList symbols<CR>
 nnoremap <silent><leader>cl      :<C-u>CocFzfList<CR>
 nnoremap <silent><leader>d       :<C-u>CocFzfList diagnostics --current-buf<CR>
 
@@ -27,9 +26,10 @@ nnoremap <silent><leader>d       :<C-u>CocFzfList diagnostics --current-buf<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TODO: Fix this shit!
 " let $foo=expand('%:p:h')
-nmap <silent><leader>m :CocCommand explorer<cr>
-nmap <silent><leader>n :CocCommand explorer --preset floating<cr>
-nmap <silent><leader>b :CocCommand explorer --preset buffer<cr>
+nmap <silent><leader>m       :CocCommand explorer<cr>
+nmap <silent><leader>n       :CocCommand explorer --preset floating<cr>
+nmap <silent><leader>b       :CocCommand explorer --preset buffer<cr>
+nmap <silent><leader><space> :CocCommand explorer --preset floating<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => SilverSearcher bindings
