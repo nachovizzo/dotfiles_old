@@ -181,3 +181,8 @@ fast_remove() {
     echo "Done!"
 }
 
+
+latest_file() {
+    REGEX="$1"
+    ls -t $REGEX | sort -n | head -n1 | xargs realpath
+}
