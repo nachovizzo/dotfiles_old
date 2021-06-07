@@ -356,8 +356,8 @@ workspace_layout $i3-wm.workspace.layout
 # Session Management
 ###############################################################################
 
-## Session // Exit App // <><Shift> q ##
-set_from_resource $i3-wm.binding.exit_app i3-wm.binding.exit_app Shift+q
+## Session // Exit App // <> q ##
+set_from_resource $i3-wm.binding.exit_app i3-wm.binding.exit_app q
 bindsym $mod+$i3-wm.binding.exit_app [con_id="__focused__"] kill
 
 ## Session // Terminate App // <><Alt> q ##
