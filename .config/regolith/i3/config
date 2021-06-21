@@ -425,7 +425,7 @@ bindsym $mod+$i3-wm.binding.bluetooth exec $i3-wm.program.bluetooth
 
 ## Launch // File Browser // <><Shift> n ##
 set_from_resource $i3-wm.binding.files i3-wm.binding.files Shift+n
-set_from_resource $i3-wm.program.files i3-wm.program.files /usr/bin/nautilus --new-window
+set_from_resource $i3-wm.program.files i3-wm.program.files /usr/bin/nautilus --new-window --class=floating_nautilus
 bindsym $mod+$i3-wm.binding.files exec $i3-wm.program.files
 
 ## Launch // Notification Viewer // <> n ##
@@ -659,6 +659,7 @@ bindsym $mod+u exec /snap/bin/code
 bindsym $mod+Ctrl+Return exec google-chrome --incognito
 
 # Cause Settings app to float above tiled windows
+for_window [class="floating_nautilus"] floating enable, resize set 1320 780, move window to position 300 150
 for_window [class="floating_terminal"] floating enable, resize set 1320 780, move window to position 300 150
 for_window [class="floating_google"] floating enable, resize set 1320 780, move window to position 300 150
 for_window [class="floating_mattermost"] floating enable, resize set 1320 780, move window to position 300 150
