@@ -184,5 +184,5 @@ fast_remove() {
 
 latest_file() {
     REGEX="$1"
-    ls -t $REGEX | head -n1 | xargs realpath
+    find $REGEX -type f -exec ls -1t "{}" + | head -n1 | xargs realpath
 }
