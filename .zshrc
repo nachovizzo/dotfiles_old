@@ -4,7 +4,7 @@ ENABLE_CORRECTION="false"
 HYPHEN_INSENSITIVE="true"
 ZSH_TMUX_AUTOCONNECT="false"
 ZSH_TMUX_AUTOQUIT="true"
-ZSH_TMUX_AUTOSTART="true"
+ZSH_TMUX_AUTOSTART="false"
 
 plugins=(
     colored-man-pages
