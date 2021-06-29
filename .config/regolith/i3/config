@@ -687,7 +687,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 ## Presentation // Toggle Presenter Mode // <> p ##
-bindsym $mod+p exec "$HOME/scripts/config/presenter_mode_toggle.sh"
+# bindsym $mod+p exec "$HOME/scripts/config/presenter_mode_toggle.sh"
 
 ## Presentation // Touchpad Toggle // <Fn> F12 ##
 bindsym XF86Explorer exec "$HOME/scripts/config/touchpad_toggle.sh"
@@ -719,6 +719,8 @@ bindsym --release $mod+x exec --no-startup-id "copy-paste cut"
 ## Presentation // Start Recording // <> F11 ##
 ## Presentation // Stop Recording // <> F12 ##
 
+## Nacho // Toggle Screen ON/OFF // <> p ##
+bindsym $mod+p exec "$HOME/scripts/config/toggle_screen.py"
 ###############################################################################
 # External programs launched with i3
 ###############################################################################
