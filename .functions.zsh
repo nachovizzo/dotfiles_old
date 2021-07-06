@@ -167,8 +167,8 @@ check_imports() {
 }
 
 fast_remove() {
-    DIR="$1"
-    printf '%s ' '[WARNING] Removing all contents in ${DIR}, are you sure (y/n)'
+    DIR="$(realpath $1)"
+    printf '%s ' "[WARNING] Removing all contents in \"${DIR}\", are you sure (y/n)"
     read REPLY
     if [[ ! $REPLY =~ ^[Yy]$ ]]
     then
