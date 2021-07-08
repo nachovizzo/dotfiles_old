@@ -95,7 +95,7 @@ bindsym $mod+$i3-wm.binding.terminal exec /usr/bin/x-terminal-emulator
 
 ## Launch // Browser // <><Shift> Enter ##
 set_from_resource $i3-wm.binding.browser i3-wm.binding.browser Shift+Return
-bindsym $mod+$i3-wm.binding.browser exec google-chrome --new-window 
+bindsym $mod+$i3-wm.binding.browser exec google-chrome --new-window
 
 set_from_resource $rofiTheme rofi.theme /etc/regolith/styles/lascaille/rofi.rasi
 
@@ -469,10 +469,10 @@ set_from_resource $i3-wm.binding.dec_gaps_big i3-wm.binding.dec_gaps_big Shift+m
 
 ## Resize // Enter Resize Mode // <> r ##
 mode "Resize Mode" {
-        # These bindings trigger as soon as you enter the resize mode
+# These bindings trigger as soon as you enter the resize mode
 
-        ## Resize // Resize Window // ↑ ↓ ← → ##
-        bindsym Left resize shrink width 6 px or 6 ppt
+## Resize // Resize Window // ↑ ↓ ← → ##
+    bindsym Left resize shrink width 6 px or 6 ppt
         bindsym Down resize grow height 6 px or 6 ppt
         bindsym Up resize shrink height 6 px or 6 ppt
         bindsym Right resize grow width 6 px or 6 ppt
@@ -482,7 +482,7 @@ mode "Resize Mode" {
         bindsym Shift+Up resize shrink height 12 px or 12 ppt
         bindsym Shift+Right resize grow width 12 px or 12 ppt
 
-        ## Resize // Resize Window // k j h l ##
+## Resize // Resize Window // k j h l ##
         bindsym $i3-wm.binding.left resize shrink width 6 px or 6 ppt
         bindsym $i3-wm.binding.up resize grow height 6 px or 6 ppt
         bindsym $i3-wm.binding.down resize shrink height 6 px or 6 ppt
@@ -493,13 +493,13 @@ mode "Resize Mode" {
         bindsym $i3-wm.binding.move_down resize shrink height 12 px or 12 ppt
         bindsym $i3-wm.binding.move_right resize grow width 12 px or 12 ppt
 
-        ## Resize // Window Gaps // + - ##
+## Resize // Window Gaps // + - ##
         bindsym $i3-wm.binding.dec_gaps gaps inner current minus 6
         bindsym $i3-wm.binding.inc_gaps gaps inner current plus 6
         bindsym $i3-wm.binding.dec_gaps_big gaps inner current minus 12
         bindsym $i3-wm.binding.inc_gaps_big gaps inner current plus 12
 
-        ## Resize // Exit Resize Mode // Escape or Enter ##
+## Resize // Exit Resize Mode // Escape or Enter ##
         bindsym Return mode "default"
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
@@ -612,25 +612,25 @@ set_from_resource $i3-wm.bar.status_command i3-wm.bar.status_command i3xrocks -u
 
 # The bar configuration
 bar {
-  position $i3-wm.bar.position
-  mode $i3-wm.bar.mode
-  font $i3-wm.bar.font
-  separator_symbol $i3-wm.bar.separator
-  status_command $i3-wm.bar.status_command
-  tray_output $i3-wm.bar.trayoutput
-  strip_workspace_numbers $i3-wm.bar.stripworkspacenumbers
+    position $i3-wm.bar.position
+        mode $i3-wm.bar.mode
+        font $i3-wm.bar.font
+        separator_symbol $i3-wm.bar.separator
+        status_command $i3-wm.bar.status_command
+        tray_output $i3-wm.bar.trayoutput
+        strip_workspace_numbers $i3-wm.bar.stripworkspacenumbers
 
-  colors {
-      background $i3-wm.bar.background.color
-      statusline $i3-wm.bar.statusline.color
-      separator  $i3-wm.bar.separator.color
+        colors {
+            background $i3-wm.bar.background.color
+                statusline $i3-wm.bar.statusline.color
+                separator  $i3-wm.bar.separator.color
 
 #                        BORDER  BACKGROUND TEXT
-      focused_workspace  $i3-wm.bar.workspace.focused.border.color      $i3-wm.bar.workspace.focused.background.color   $i3-wm.bar.workspace.focused.text.color
-      active_workspace   $i3-wm.bar.workspace.active.border.color       $i3-wm.bar.workspace.active.background.color    $i3-wm.bar.workspace.active.text.color
-      inactive_workspace $i3-wm.bar.workspace.inactive.border.color     $i3-wm.bar.workspace.inactive.background.color  $i3-wm.bar.workspace.inactive.text.color
-      urgent_workspace   $i3-wm.bar.workspace.urgent.border.color       $i3-wm.bar.workspace.urgent.background.color    $i3-wm.bar.workspace.urgent.text.color
-  }
+                focused_workspace  $i3-wm.bar.workspace.focused.border.color      $i3-wm.bar.workspace.focused.background.color   $i3-wm.bar.workspace.focused.text.color
+                active_workspace   $i3-wm.bar.workspace.active.border.color       $i3-wm.bar.workspace.active.background.color    $i3-wm.bar.workspace.active.text.color
+                inactive_workspace $i3-wm.bar.workspace.inactive.border.color     $i3-wm.bar.workspace.inactive.background.color  $i3-wm.bar.workspace.inactive.text.color
+                urgent_workspace   $i3-wm.bar.workspace.urgent.border.color       $i3-wm.bar.workspace.urgent.background.color    $i3-wm.bar.workspace.urgent.text.color
+        }
 }
 
 ###############################################################################
@@ -720,7 +720,16 @@ bindsym --release $mod+x exec --no-startup-id "copy-paste cut"
 ## Presentation // Stop Recording // <> F12 ##
 
 ## Nacho // Toggle Screen ON/OFF // <> p ##
-bindsym $mod+p exec "$HOME/scripts/config/toggle_screen.py"
+bindsym $mod+p exec "$HOME/scripts/config/toggle_screens.py"
+
+## Nacho // Toggle Screen 0 ON/OFF // <alt> 0 ##
+bindsym $alt+1 exec "$HOME/scripts/config/toggle_screens.py --idx 0"
+
+## Nacho // Toggle Screen 1 ON/OFF // <alt> 1 ##
+bindsym $alt+2 exec "$HOME/scripts/config/toggle_screens.py --idx 1"
+
+## Nacho // Toggle Screen 2 ON/OFF // <alt> 2 ##
+bindsym $alt+3 exec "$HOME/scripts/config/toggle_screens.py --idx 2"
 ###############################################################################
 # External programs launched with i3
 ###############################################################################
