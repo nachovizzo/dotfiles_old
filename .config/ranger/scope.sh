@@ -176,10 +176,10 @@ handle_image() {
                 && exit 6 || exit 1;;
 
 
-        ## PLY|PCD, some ply files are text/plain
+        ## PLY|PCD|OBJ, some ply files are text/plain
         application/octet-stream|text/plain)
             case "$FILE_EXTENSION_LOWER" in
-                ply|pcd) plytojpg "${FILE_PATH}" --out "${IMAGE_CACHE_PATH%.*}" && exit 6 || exit 1
+                ply|pcd|obj) plytojpg "${FILE_PATH}" --out "${IMAGE_CACHE_PATH%.*}" && exit 6 || exit 1
             esac;;
 
 
