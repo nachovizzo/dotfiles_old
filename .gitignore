@@ -192,3 +192,4 @@ go/
 Sharing
 Public
 .fzf
+.tmux_resurrect/

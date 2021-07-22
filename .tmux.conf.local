@@ -413,6 +413,8 @@ set -g @plugin 'tmux-plugins/tmux-resurrect'
 #set -g @plugin 'tmux-plugins/tmux-continuum'
 #set -g @continuum-restore 'on'
 
+set -g @resurrect-dir '$HOME/.tmux_resurrect/'
+
 # -- tmux-open remap ----------------------------------------------------------
 set -g @open 'C-o'
 set -g @open-editor 'o'
