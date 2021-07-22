@@ -84,15 +84,10 @@ start_notebook() {
 
 start_tensorboard() {
     logdir="$@"
-    URL="http://localhost:6006/"
     echo "Starting background TensorBoard server with logs at $logdir"
     tmux set-environment -g logdir $logdir \;             \
         new-session -s "[tensorboard] $(basename $(pwd))" \
         -d 'tensorboard --load_fast=false --logdir=$logdir'
-    # Wait for tensorboard to come up and open a browser
-    echo "Opening tensorboard application on web browser..."
-    sleep 2
-    gtk-launch $(xdg-settings get default-web-browser) $URL > /dev/null
 }
 
 start_notebook_headless() {
