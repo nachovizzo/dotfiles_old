@@ -87,7 +87,7 @@ start_tensorboard() {
     echo "Starting background TensorBoard server with logs at $logdir"
     tmux set-environment -g logdir $logdir \;             \
         new-session -s "[tensorboard] $(basename $(pwd))" \
-        -d 'tensorboard --load_fast=false --logdir=$logdir'
+        -d 'tensorboard --logdir=$logdir'
 }
 
 start_notebook_headless() {
