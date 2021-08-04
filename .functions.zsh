@@ -181,3 +181,9 @@ latest_file() {
     REGEX="$1"
     find $REGEX -type f -exec ls -1t "{}" + | head -n1 | xargs realpath
 }
+
+zip_folder() {
+    folder="$1"
+    echo "Creating zip file of $folder"
+    zip -r $folder.zip $folder
+}
