@@ -187,3 +187,15 @@ zip_folder() {
     echo "Creating zip file of $folder"
     zip -r $folder.zip $folder
 }
+
+load_hydra_completions() {
+    app="$1"
+    echo "Installing tab completions for $app"
+    eval "$(python3 $app -sc install=bash)"
+}
+
+unload_hydra_completions() {
+    app="$1"
+    echo "Uninstalling tab completions for $app"
+    eval "$(python3 $app -sc uninstall=bash)"
+}
