@@ -6,6 +6,11 @@ let g:airline_powerline_fonts = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Format Settings (using Neoformat)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:neoformat_python_docformatter = {
+            \ 'exe': 'docformatter',
+            \ 'args': ['-', '--wrap-summaries 100', '--wrap-descriptions 90'],
+            \ 'stdin': 1,
+            \ }
 let g:neoformat_enabled_python = ['black', 'docformatter']
 let g:neoformat_enabled_cpp = ['clangformat']
 let g:neoformat_enabled_c = ['clangformat']
