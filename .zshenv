@@ -22,8 +22,8 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 export TERM=xterm-256color
 
 # Usefull variables
-export DATASETS=$HOME/data
-export MODELS=$HOME/dev/deep_learning/models
+export DATASETS=$HOME/data/
+export MODELS=$HOME/data/models/
 
 # Virtual environments
 export VIRTUALENV=$HOME/dev/virtualenv/
