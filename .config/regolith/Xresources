@@ -1,5 +1,3 @@
-#include "/etc/regolith/styles/ayu-mirage/root"
-
 i3-wm.window.border.size:       3
 i3-wm.bar.trayoutput:           primary
 i3-wm.bar.position:             top
