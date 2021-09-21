@@ -95,7 +95,7 @@ bindsym $mod+$i3-wm.binding.terminal exec /usr/bin/x-terminal-emulator
 
 ## Launch // Browser // <><Shift> Enter ##
 set_from_resource $i3-wm.binding.browser i3-wm.binding.browser Shift+Return
-bindsym $mod+$i3-wm.binding.browser exec google-chrome --new-window
+bindsym $mod+$i3-wm.binding.browser exec gtk-launch $(xdg-settings get default-web-browser)
 
 set_from_resource $rofiTheme rofi.theme /etc/regolith/styles/lascaille/rofi.rasi
 
@@ -137,9 +137,9 @@ bindsym $mod+$i3-wm.binding.look_selector exec $i3-wm.program.look_selector
 set_from_resource $i3-wm.binding.focus_parent i3-wm.binding.focus_parent a
 bindsym $mod+$i3-wm.binding.focus_parent focus parent
 
-# Navigate // Relative Child // <> z ##/
-# set_from_resource $i3-wm.binding.focus_child i3-wm.binding.focus_child z
-# bindsym $mod+$i3-wm.binding.focus_child focus child
+## Navigate // Relative Child // <> z ##/
+set_from_resource $i3-wm.binding.focus_child i3-wm.binding.focus_child z
+bindsym $mod+$i3-wm.binding.focus_child focus child
 
 ## Navigate // Relative Window // <> ↑ ↓ ← → ##
 bindsym $mod+Left focus left
@@ -215,8 +215,8 @@ bindsym $mod+$i3-wm.binding.ws_prev_on_output2 workspace prev_on_output
 set_from_resource $i3-wm.binding.next_free i3-wm.binding.next_free grave
 bindsym $mod+$i3-wm.binding.next_free exec --no-startup-id /usr/bin/i3-next-workspace
 
-## Navigate // Scratchpad // <><Shift> a ##
-set_from_resource $i3-wm.binding.scratchpad i3-wm.binding.scratchpad Shift+a
+## Navigate // Scratchpad // <><Ctrl> a ##
+set_from_resource $i3-wm.binding.scratchpad i3-wm.binding.scratchpad Ctrl+a
 bindsym $mod+$i3-wm.binding.scratchpad scratchpad show
 
 ###############################################################################
@@ -259,13 +259,14 @@ bindsym $mod+$i3-wm.binding.take_right move workspace to output right
 set_from_resource $i3-wm.binding.split_v i3-wm.binding.split_v Shift+v
 bindsym $mod+$i3-wm.binding.split_v split vertical
 
-# Modify // Horizontal Window Orientation // <> g ##
+# Replaced by Floating Google#
+# Modify // Horizontal Window Orientation // <> g ## 
 # set_from_resource $i3-wm.binding.split_h i3-wm.binding.split_h g
 # bindsym $mod+$i3-wm.binding.split_h split horizontal
 
-# Modify // Toggle Window Orientation // <> Backspace ##
-# set_from_resource $i3-wm.binding.orientation_toggle i3-wm.binding.orientation_toggle BackSpace
-# bindsym $mod+$i3-wm.binding.orientation_toggle split toggle
+## Modify // Toggle Window Orientation // <> Backspace ##
+set_from_resource $i3-wm.binding.orientation_toggle i3-wm.binding.orientation_toggle BackSpace
+bindsym $mod+$i3-wm.binding.orientation_toggle split toggle
 
 ## Modify // Window Fullscreen Toggle // <> f ##
 set_from_resource $i3-wm.binding.fullscreen_toggle i3-wm.binding.fullscreen_toggle f
@@ -275,14 +276,15 @@ bindsym $mod+$i3-wm.binding.fullscreen_toggle fullscreen toggle
 set_from_resource $i3-wm.binding.float_toggle i3-wm.binding.float_toggle Shift+f
 bindsym $mod+Shift+$i3-wm.binding.float_toggle floating toggle
 
-## Modify // Move to Scratchpad // <><Shift> m ##
-set_from_resource $i3-wm.binding.move_scratchpad i3-wm.binding.move_scratchpad Shift+m
+## Modify // Move to Scratchpad // <><Ctrl> m ##
+set_from_resource $i3-wm.binding.move_scratchpad i3-wm.binding.move_scratchpad Ctrl+m
 bindsym $mod+$i3-wm.binding.move_scratchpad move to scratchpad
 
 ## Modify // Tile/Float Focus Toggle // <><Shift> t ##
 set_from_resource $i3-wm.binding.focus_toggle i3-wm.binding.focus_toggle Shift+t
 bindsym $mod+$i3-wm.binding.focus_toggle focus mode_toggle
 
+## Replaced by floating terminal
 ## Modify // Window Layout Mode // <> t ##
 ## set_from_resource $i3-wm.binding.layout_mode i3-wm.binding.layout_mode t
 ## bindsym $mod+$i3-wm.binding.layout_mode layout toggle tabbed splith splitv
@@ -403,10 +405,11 @@ bindsym $mod+$i3-wm.binding.sleep exec $i3-wm.program.sleep
 # System Management
 ###############################################################################
 
-## Modify // Sound Settings // <> s ##
-set_from_resource $i3-wm.binding.settings i3-wm.binding.settings s
-set_from_resource $i3-wm.program.settings i3-wm.program.settings gnome-control-center --class=floating_window sound
-bindsym $mod+$i3-wm.binding.settings exec $i3-wm.program.settings
+# Replaced by ctrl+c
+### Modify // Settings // <> c ##
+#set_from_resource $i3-wm.binding.settings i3-wm.binding.settings c
+#set_from_resource $i3-wm.program.settings i3-wm.program.settings gnome-control-center --#class=floating_window
+#bindsym $mod+$i3-wm.binding.settings exec $i3-wm.program.settings
 
 ## Modify // Display Settings // <> d ##
 set_from_resource $i3-wm.binding.display i3-wm.binding.display d
@@ -422,6 +425,11 @@ bindsym $mod+$i3-wm.binding.wifi exec $i3-wm.program.wifi
 set_from_resource $i3-wm.binding.bluetooth i3-wm.binding.bluetooth b
 set_from_resource $i3-wm.program.bluetooth i3-wm.program.bluetooth gnome-control-center --class=floating_window bluetooth
 bindsym $mod+$i3-wm.binding.bluetooth exec $i3-wm.program.bluetooth
+
+## Modify // Sound Settings // <> s ##
+set_from_resource $i3-wm.binding.sound i3-wm.binding.sound s
+set_from_resource $i3-wm.program.sound i3-wm.program.sound gnome-control-center --class=floating_window sound
+bindsym $mod+$i3-wm.binding.sound exec $i3-wm.program.sound
 
 ## Launch // File Browser // <><Shift> n ##
 set_from_resource $i3-wm.binding.files i3-wm.binding.files Shift+n
@@ -469,10 +477,10 @@ set_from_resource $i3-wm.binding.dec_gaps_big i3-wm.binding.dec_gaps_big Shift+m
 
 ## Resize // Enter Resize Mode // <> r ##
 mode "Resize Mode" {
-# These bindings trigger as soon as you enter the resize mode
+        # These bindings trigger as soon as you enter the resize mode
 
-## Resize // Resize Window // ↑ ↓ ← → ##
-    bindsym Left resize shrink width 6 px or 6 ppt
+        ## Resize // Resize Window // ↑ ↓ ← → ##
+        bindsym Left resize shrink width 6 px or 6 ppt
         bindsym Down resize grow height 6 px or 6 ppt
         bindsym Up resize shrink height 6 px or 6 ppt
         bindsym Right resize grow width 6 px or 6 ppt
@@ -482,7 +490,7 @@ mode "Resize Mode" {
         bindsym Shift+Up resize shrink height 12 px or 12 ppt
         bindsym Shift+Right resize grow width 12 px or 12 ppt
 
-## Resize // Resize Window // k j h l ##
+        ## Resize // Resize Window // k j h l ##
         bindsym $i3-wm.binding.left resize shrink width 6 px or 6 ppt
         bindsym $i3-wm.binding.up resize grow height 6 px or 6 ppt
         bindsym $i3-wm.binding.down resize shrink height 6 px or 6 ppt
@@ -493,13 +501,13 @@ mode "Resize Mode" {
         bindsym $i3-wm.binding.move_down resize shrink height 12 px or 12 ppt
         bindsym $i3-wm.binding.move_right resize grow width 12 px or 12 ppt
 
-## Resize // Window Gaps // + - ##
+        ## Resize // Window Gaps // + - ##
         bindsym $i3-wm.binding.dec_gaps gaps inner current minus 6
         bindsym $i3-wm.binding.inc_gaps gaps inner current plus 6
         bindsym $i3-wm.binding.dec_gaps_big gaps inner current minus 12
         bindsym $i3-wm.binding.inc_gaps_big gaps inner current plus 12
 
-## Resize // Exit Resize Mode // Escape or Enter ##
+        ## Resize // Exit Resize Mode // Escape or Enter ##
         bindsym Return mode "default"
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
@@ -612,25 +620,25 @@ set_from_resource $i3-wm.bar.status_command i3-wm.bar.status_command i3xrocks -u
 
 # The bar configuration
 bar {
-    position $i3-wm.bar.position
-        mode $i3-wm.bar.mode
-        font $i3-wm.bar.font
-        separator_symbol $i3-wm.bar.separator
-        status_command $i3-wm.bar.status_command
-        tray_output $i3-wm.bar.trayoutput
-        strip_workspace_numbers $i3-wm.bar.stripworkspacenumbers
+  position $i3-wm.bar.position
+  mode $i3-wm.bar.mode
+  font $i3-wm.bar.font
+  separator_symbol $i3-wm.bar.separator
+  status_command $i3-wm.bar.status_command
+  tray_output $i3-wm.bar.trayoutput
+  strip_workspace_numbers $i3-wm.bar.stripworkspacenumbers
 
-        colors {
-            background $i3-wm.bar.background.color
-                statusline $i3-wm.bar.statusline.color
-                separator  $i3-wm.bar.separator.color
+  colors {
+      background $i3-wm.bar.background.color
+      statusline $i3-wm.bar.statusline.color
+      separator  $i3-wm.bar.separator.color
 
 #                        BORDER  BACKGROUND TEXT
-                focused_workspace  $i3-wm.bar.workspace.focused.border.color      $i3-wm.bar.workspace.focused.background.color   $i3-wm.bar.workspace.focused.text.color
-                active_workspace   $i3-wm.bar.workspace.active.border.color       $i3-wm.bar.workspace.active.background.color    $i3-wm.bar.workspace.active.text.color
-                inactive_workspace $i3-wm.bar.workspace.inactive.border.color     $i3-wm.bar.workspace.inactive.background.color  $i3-wm.bar.workspace.inactive.text.color
-                urgent_workspace   $i3-wm.bar.workspace.urgent.border.color       $i3-wm.bar.workspace.urgent.background.color    $i3-wm.bar.workspace.urgent.text.color
-        }
+      focused_workspace  $i3-wm.bar.workspace.focused.border.color      $i3-wm.bar.workspace.focused.background.color   $i3-wm.bar.workspace.focused.text.color
+      active_workspace   $i3-wm.bar.workspace.active.border.color       $i3-wm.bar.workspace.active.background.color    $i3-wm.bar.workspace.active.text.color
+      inactive_workspace $i3-wm.bar.workspace.inactive.border.color     $i3-wm.bar.workspace.inactive.background.color  $i3-wm.bar.workspace.inactive.text.color
+      urgent_workspace   $i3-wm.bar.workspace.urgent.border.color       $i3-wm.bar.workspace.urgent.background.color    $i3-wm.bar.workspace.urgent.text.color
+  }
 }
 
 ###############################################################################
