@@ -8,6 +8,7 @@ export PATH=$PATH:$HOME/.local/bin/
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/go/bin
 export PATH=$PATH:$(ls -d $HOME/3rdparty/*/)
+export PATH=$PATH:$HOME/Teaching/green_room/modern_cpp/streamdeck/scripts/
 
 # Preferred editor for local and remote sessions
 export EDITOR='nvim'
