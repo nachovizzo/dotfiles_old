@@ -6,6 +6,7 @@ export PATH=$PATH:$HOME/scripts/
 export PATH=$PATH:$HOME/usr/bin
 export PATH=$PATH:$HOME/.local/bin/
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$HOME/go/bin
 export PATH=$PATH:$(ls -d $HOME/3rdparty/*/)
 
 # Preferred editor for local and remote sessions
