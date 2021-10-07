@@ -194,3 +194,4 @@ Public
 .fzf
 .tmux_resurrect/
 carlaCache
+.streamdeck_ui.json
