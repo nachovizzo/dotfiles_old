@@ -138,8 +138,8 @@ set_from_resource $i3-wm.binding.focus_parent i3-wm.binding.focus_parent a
 bindsym $mod+$i3-wm.binding.focus_parent focus parent
 
 ## Navigate // Relative Child // <> z ##/
-set_from_resource $i3-wm.binding.focus_child i3-wm.binding.focus_child z
-bindsym $mod+$i3-wm.binding.focus_child focus child
+# set_from_resource $i3-wm.binding.focus_child i3-wm.binding.focus_child z
+# bindsym $mod+$i3-wm.binding.focus_child focus child
 
 ## Navigate // Relative Window // <> ↑ ↓ ← → ##
 bindsym $mod+Left focus left
