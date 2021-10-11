@@ -731,13 +731,13 @@ bindsym --release $mod+x exec --no-startup-id "copy-paste cut"
 bindsym $mod+p exec "$HOME/scripts/config/toggle_screens.py"
 
 ## Nacho // Toggle Screen 0 ON/OFF // <alt> 0 ##
-bindsym $alt+1 exec "$HOME/scripts/config/toggle_screens.py --idx 0"
+# bindsym $alt+1 exec "$HOME/scripts/config/toggle_screens.py --idx 0"
 
 ## Nacho // Toggle Screen 1 ON/OFF // <alt> 1 ##
-bindsym $alt+2 exec "$HOME/scripts/config/toggle_screens.py --idx 1"
+# bindsym $alt+2 exec "$HOME/scripts/config/toggle_screens.py --idx 1"
 
 ## Nacho // Toggle Screen 2 ON/OFF // <alt> 2 ##
-bindsym $alt+3 exec "$HOME/scripts/config/toggle_screens.py --idx 2"
+# bindsym $alt+3 exec "$HOME/scripts/config/toggle_screens.py --idx 2"
 ###############################################################################
 # External programs launched with i3
 ###############################################################################
