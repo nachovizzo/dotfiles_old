@@ -10,7 +10,7 @@ HEIGHT=$(expr $(xrandr --query | awk -F '[ x,+]' '/connected primary/{print $5}'
 
 # Launch the snapshot gui
 flameshot gui &
-sleep 0.1
+sleep 0.2
 
 # Save the current mouse location
 eval $(xdotool getmouselocation --shell)
