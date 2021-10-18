@@ -695,7 +695,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 ## Presentation // Toggle Presenter Mode // <> p ##
-# bindsym $mod+p exec "$HOME/scripts/config/presenter_mode_toggle.sh"
+bindsym $mod+p exec "$HOME/scripts/config/presenter_mode_toggle.sh"
 
 ## Presentation // Touchpad Toggle // <Fn> F12 ##
 bindsym XF86Explorer exec "$HOME/scripts/config/touchpad_toggle.sh"
@@ -704,8 +704,8 @@ bindsym XF86Explorer exec "$HOME/scripts/config/touchpad_toggle.sh"
 ## Presentation // ScreenKey // <><Alt>s ##
 bindsym $mod+$alt+s exec "$HOME/scripts/config/screenkey_toggle.sh"
 
-## Presentation // Screenshot // <><PrtSc> ##
-bindsym $mod+Print exec "flameshot gui"
+# Presentation // Screenshot // <><PrtSc> ##
+# bindsym $mod+Print exec "flameshot gui"
 
 ## Session // Sleep //
 ## Presentation // Screenshot // <><Shift> s #
@@ -714,8 +714,8 @@ bindsym $mod+Print exec "flameshot gui"
 # bindsym $mod+$i3-wm.binding.sleep exec $i3-wm.program.sleep
 bindsym $mod+Shift+s exec "flameshot gui"
 
-## Presentation // Annotate Screen // <><Shift><PrtSc> ##
-bindsym $mod+Shift+Print exec "$HOME/scripts/flameshot/full_screen.sh"
+## Presentation // Annotate Screen // <><PrtSc> ##
+bindsym $mod+Print exec "$HOME/scripts/flameshot/full_screen.sh"
 
 ## Copy Paste Utilities
 bindsym --release $mod+c exec --no-startup-id "copy-paste copy"
@@ -727,8 +727,8 @@ bindsym --release $mod+x exec --no-startup-id "copy-paste cut"
 ## Presentation // Start Recording // <> F11 ##
 ## Presentation // Stop Recording // <> F12 ##
 
-## Nacho // Toggle Screen ON/OFF // <> p ##
-bindsym $mod+p exec "$HOME/scripts/config/toggle_screens.py"
+# Nacho // Toggle Screen ON/OFF // <> p ##
+# bindsym $mod+p exec "$HOME/scripts/config/toggle_screens.py"
 
 ## Nacho // Toggle Screen 0 ON/OFF // <alt> 0 ##
 # bindsym $alt+1 exec "$HOME/scripts/config/toggle_screens.py --idx 0"
