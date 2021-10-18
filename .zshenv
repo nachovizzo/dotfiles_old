@@ -21,7 +21,7 @@ export COMMAND_NOT_FOUND_INSTALL_PROMPT=1
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
-export TERM=screen-256color
+# export TERM=screen-256color
 
 # Usefull variables
 export DATASETS=$HOME/data/
