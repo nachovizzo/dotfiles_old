@@ -18,6 +18,8 @@ Plug 'sirtaj/vim-openscad'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 
+" New pure LUA plugins, WIP
+Plug 'akinsho/bufferline.nvim'
 Plug 'hoob3rt/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()
@@ -30,3 +32,6 @@ source ~/.vim/config/keybindings.vim
 source ~/.vim/config/plugins_config.vim
 source ~/.vim/config/plugins_keys.vim
 source ~/.vim/config/extended.vim
+
+" New LUA configuration, WIP
+luafile ~/.vim/config/init.lua
