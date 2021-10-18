@@ -28,6 +28,7 @@ require'lualine'.setup {
 }
 
 -- Buffer line setup
+--[[
 require'bufferline'.setup{
 	options = {
 		indicator_icon = ' ',
@@ -43,3 +44,4 @@ require'bufferline'.setup{
 		show_close_icon = false
 	},
 }
+--]]
