@@ -9,6 +9,7 @@ autocmd! BufWritePost ~/.vim/config/keybindings.vim    source $MYVIMRC
 autocmd! BufWritePost ~/.vim/config/plugins_config.vim source $MYVIMRC
 autocmd! BufWritePost ~/.vim/config/plugins_keys.vim   source $MYVIMRC
 autocmd! BufWritePost ~/.vim/config/extended.vim       source $MYVIMRC
+autocmd! BufWritePost ~/.vim/config/init.lua           source $MYVIMRC
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Filetypes syntax settings

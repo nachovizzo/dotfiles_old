@@ -18,7 +18,7 @@ Plug 'sirtaj/vim-openscad'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 
-" New pure LUA plugins, WIP
+" New LUA configuration, WIP
 Plug 'akinsho/bufferline.nvim'
 Plug 'hoob3rt/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'

@@ -46,3 +46,9 @@ xmap <silent>gc <Plug>NERDCommenterToggle<cr>
 " => fzf plugin
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <C-p> :Files<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => BufferLine
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <silent>[b :BufferLineCycleNext<CR>
+nnoremap <silent>]b :BufferLineCyclePrev<CR>
