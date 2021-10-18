@@ -32,6 +32,7 @@
     "explorer.file.showHiddenFiles": true,
     "explorer.file.column.clip.copy": "",
     "explorer.file.column.clip.cut": "",
-    "explorer.file.autoReveal": false,
-    "explorer.previewAction.onHover": false
+    "explorer.file.reveal.auto": false,
+    "explorer.previewAction.onHover": false,
+    "explorer.openAction.strategy": "sourceWindow"
 }
