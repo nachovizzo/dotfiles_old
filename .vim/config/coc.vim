@@ -15,7 +15,6 @@ let g:coc_global_extensions = [
 set signcolumn=no
 set updatetime=300
 set shortmess+=c
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Keystrokes mappings
 nmap <silent>gd <Plug>(coc-definition)
