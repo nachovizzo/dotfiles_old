@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'antoinemadec/coc-fzf'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --bin' }
+Plug 'Mofiqul/vscode.nvim'
 Plug 'junegunn/fzf.vim'
 Plug 'kevinoid/vim-jsonc'
 Plug 'morhetz/gruvbox'
