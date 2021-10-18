@@ -50,5 +50,6 @@ nmap <C-p> :Files<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => BufferLine
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent>[b :BufferLineCycleNext<CR>
-nnoremap <silent>]b :BufferLineCyclePrev<CR>
+" Jump buffer buffer with just ALT+h or ALT+l
+nnoremap <silent><M-h> :BufferLineCyclePrev<CR>
+nnoremap <silent><M-l> :BufferLineCycleNext<CR>

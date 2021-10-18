@@ -31,12 +31,6 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-" Remap move windows with just ALT+hjkl
-map <M-h> <C-w>H
-map <M-j> <C-w>J
-map <M-k> <C-w>K
-map <M-l> <C-w>L
-
 " Same but using the leader, you can't hold down this key, what a shame
 nmap <silent><leader>h :wincmd h<cr>
 nmap <silent><leader>j :wincmd j<cr>
