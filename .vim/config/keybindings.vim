@@ -1,35 +1,35 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => The most relevant keybindigs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <C-s>     :w<cr>
-nmap <leader>w :w<cr>
-nmap <leader>x :x<cr>
-nmap <leader>q :q!<cr>
+nmap <silent><C-s>     :w<cr>
+nmap <silent><leader>w :w<cr>
+nmap <silent><leader>x :x<cr>
+nmap <silent><leader>q :bd!<cr>
 
 " j+k or k+j escapes insert mode
 imap jk <ESC>
 imap kj <ESC>
 
 " Copy paste: leader+c / leader+v
-map <leader>c "+y
-map <leader>p "+p
+map <silent><leader>c "+y
+map <silent><leader>p "+p
 
 " Toggle highlight when <leader><cr> is pressed
 map <silent><expr> <leader><cr> (&hls && v:hlsearch ? ':set nohlsearch' : ':set hls')."\n"
 
 " Quickly open vim config file
-map <leader>e :e! ~/.vimrc<cr>
+map <silent><leader>e :e! ~/.vimrc<cr>
 
 " Jumb back to last buffer
-map <leader>6 <c-^><cr>
+map <silent><leader>6 <c-^><cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Shortcutting split navigation, saving a keypress:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remap split navigations to just CTRL +hjkl
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+map <silent><C-h> <C-w>h
+map <silent><C-j> <C-w>j
+map <silent><C-k> <C-w>k
+map <silent><C-l> <C-w>l
 
 " Same but using the leader, you can't hold down this key, what a shame
 nmap <silent><leader>h :wincmd h<cr>

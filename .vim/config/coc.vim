@@ -4,6 +4,7 @@ let g:coc_global_extensions = [
     \'coc-cmake',
     \'coc-explorer',
     \'coc-json',
+    \'coc-lua',
     \'coc-markdownlint',
     \'coc-pyright',
     \'coc-sh',
