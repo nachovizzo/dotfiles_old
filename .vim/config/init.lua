@@ -2,7 +2,7 @@
 require'lualine'.setup {
   options = {
     icons_enabled = true,
-    theme = 'auto',
+    theme = 'gruvbox',
     component_separators = {'', ''},
     section_separators = {'', ''},
     disabled_filetypes = {}
@@ -28,7 +28,6 @@ require'lualine'.setup {
 }
 
 -- Buffer line setup
---[[
 require'bufferline'.setup{
 	options = {
 		indicator_icon = ' ',
@@ -44,4 +43,3 @@ require'bufferline'.setup{
 		show_close_icon = false
 	},
 }
---]]
