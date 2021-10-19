@@ -4,7 +4,8 @@
 nmap <silent><C-s>     :w<cr>
 nmap <silent><leader>w :w<cr>
 nmap <silent><leader>x :x<cr>
-nmap <silent><leader>q :bd!<cr>
+nmap <silent><leader>q :if ((len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1) && expand('%') == '')<Bar>exe 'q'<Bar>else<Bar>exe 'bw'<Bar>endif<cr>
+
 
 " j+k or k+j escapes insert mode
 imap jk <ESC>
