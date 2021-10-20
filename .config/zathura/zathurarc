@@ -44,3 +44,9 @@ map [normal] w set "default-bg \"#FFFFFF\""
 map [normal] b set "default-bg \"#000000\""
 map [fullscreen] w set "default-bg \"#FFFFFF\""
 map [fullscreen] b set "default-bg \"#000000\""
+
+# Make presenters work
+map [normal]     <Right> navigate next
+map [normal]     <Left>  navigate previous
+map [fullscreen] <Right> navigate next
+map [fullscreen] <Left>  navigate previous
