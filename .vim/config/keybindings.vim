@@ -5,7 +5,7 @@ nmap <silent><C-s>     :w<cr>
 nmap <silent><leader>w :w<cr>
 nmap <silent><leader>x :x<cr>
 nmap <silent><leader>q :q!<cr>
-nmap <silent>q :bd<cr>
+nmap <silent>Q :bd<cr>
 
 " j+k or k+j escapes insert mode
 imap jk <ESC>
