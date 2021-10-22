@@ -38,3 +38,7 @@ if has("autocmd")
     \| exe "normal! g'\"" | endif
 endif
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => FileType associations
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+au BufReadPost *.tmux.* set syntax=tmux
