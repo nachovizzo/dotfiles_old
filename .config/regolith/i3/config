@@ -422,9 +422,9 @@ set_from_resource $i3-wm.program.wifi i3-wm.program.wifi gnome-control-center --
 bindsym $mod+$i3-wm.binding.wifi exec $i3-wm.program.wifi
 
 ## Modify // Bluetooth Settings // <> b ##
-set_from_resource $i3-wm.binding.bluetooth i3-wm.binding.bluetooth b
-set_from_resource $i3-wm.program.bluetooth i3-wm.program.bluetooth gnome-control-center --class=floating_window bluetooth
-bindsym $mod+$i3-wm.binding.bluetooth exec $i3-wm.program.bluetooth
+# set_from_resource $i3-wm.binding.bluetooth i3-wm.binding.bluetooth b
+# set_from_resource $i3-wm.program.bluetooth i3-wm.program.bluetooth gnome-control-center --class=floating_window bluetooth
+# bindsym $mod+$i3-wm.binding.bluetooth exec $i3-wm.program.bluetooth
 
 ## Modify // Sound Settings // <> s ##
 set_from_resource $i3-wm.binding.sound i3-wm.binding.sound s
@@ -721,6 +721,7 @@ bindsym $mod+Print exec "$HOME/scripts/flameshot/full_screen.sh"
 bindsym --release $mod+c exec --no-startup-id "copy-paste copy"
 bindsym --release $mod+v exec --no-startup-id "copy-paste paste"
 bindsym --release $mod+x exec --no-startup-id "copy-paste cut"
+bindsym --release $mod+b exec --no-startup-id "xdotool key ctrl+b"
 
 ## Presentation // Start Streaming // <> F9 ##
 ## Presentation // Stop Streaming // <> F10 ##
