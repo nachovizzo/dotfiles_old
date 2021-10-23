@@ -14,3 +14,4 @@
 # For this:
 #   key <CAPS> {        [ Super_L                 ]       };
 #   key <F12>  {        [ Super_L                 ]       };
+/usr/share/X11/xkb/symbols/pc
