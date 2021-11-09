@@ -23,8 +23,8 @@
 #  - https://wiki.eclipse.org/CDT/StandaloneDebugger
 #  - Download the latest cdt-standalone debugger release (not supported anymore) at:
 #    - https://download.eclipse.org/tools/cdt/releases/10.1/cdt-10.1.0/rcp/
-#  - Install on $HOME/dev/cdtdebugger/debugger/
-#  - Run this script
+#  - Untar the content into $HOME/dev/cdtdebugger/debugger/
+#  - Run this script from wherever you need, I have it on my $PATH, so it's acessible from wherever
 ###############################################################################
 
 export GTK_THEME="Adwaita:light"
@@ -113,4 +113,4 @@ while test $# -gt 0; do
 done
 
 # Run eclipse with the Stand-alone Debugger product specified
-$CDT_DEBUGGER/debugger/cdtdebug -data "$WORKSPACE" -configuration file\:"$CDT_DEBUGGER" "${options[@]}"
+$CDT_DEBUGGER/debugger/cdtdebug -data "$WORKSPACE" "${options[@]}"
