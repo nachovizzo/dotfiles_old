@@ -2,6 +2,7 @@
 # This is a slightly modified version of the cdtdebug.sh form the ECLPISE project
 ###############################################################################
 # Copyright (c) 2014, 2015 Red Hat, Inc. and others
+# Copyright (c) 2021 Ignacio Vizzo, all rights reserved(for modifications)
 #
 # This program and the accompanying materials
 # are made available under the terms of the Eclipse Public License 2.0
@@ -13,31 +14,17 @@
 # Contributors:
 #    Red Hat Inc. - initial API and implementation
 #    Marc Khouzam (Ericsson) - Update for remote debugging support (bug 450080)
-###############################################################################
-# @file      cdtdebug.zsh
-# @author    Ignacio Vizzo     [ivizzo@uni-bonn.de]
-#
-# Copyright (c) 2021 Ignacio Vizzo, all rights reserved(for modifications)
+#    Ignacio Vizzo (University of Bonn) - Make it work
 #
 ###############################################################################
 # Instructions:
 #
 # You should read at least once the offical documentation:
-#   - https://wiki.eclipse.org/CDT/StandaloneDebugger
-#
-# Then following the "Try out Full Eclipse Installation" section from previous page, :
-#   1. Download the IDE for C/C++ Developers tar file for your platform
-# https://www.eclipse.org/downloads
-#   2. Untar the C/C++ IDE into a local directory (let's call this $CDT_DIR)
-#   3. cd $CDT_DIR/eclipse/plugins/org.eclipse.cdt.debug.application_*/scripts
-#   4. There, run the command:
-#        - /bin/sh ./install.sh
-#        - this will create the directory: $HOME/cdtdebugger for you where the cdtdebug.sh script
-#          will be installed
-#   5. To run the debugger:
-#        - $HOME/cdtdebugger/cdtdebug.sh ... (see above or use --help option for arguments) this
-#          will default to use the workspace: workspace-cdtdebug if you do not specifiy a workspace
-#          via the -data option
+#  - https://wiki.eclipse.org/CDT/StandaloneDebugger
+#  - Download the latest cdt-standalone debugger release (not supported anymore) at:
+#    - https://download.eclipse.org/tools/cdt/releases/10.1/cdt-10.1.0/rcp/
+#  - Install on $HOME/dev/cdtdebugger/debugger/
+#  - Run this script
 ###############################################################################
 
 export GTK_THEME="Adwaita:light"
@@ -125,15 +112,5 @@ while test $# -gt 0; do
   esac
 done
 
-# Calculate platform-specific jar file names
-ECLIPSE_HOME=$HOME/dev/eclipse
-ECLIPSE_EXEC="$ECLIPSE_HOME/eclipse"
-
-PLUGIN_DIR="$ECLIPSE_HOME/plugins"
-OSGI_JAR=$(find "$PLUGIN_DIR" -maxdepth 1 -name 'org.eclipse.osgi_*.jar' -not -name '*source*' -exec basename {} \; | tail -1)
-
 # Run eclipse with the Stand-alone Debugger product specified
-"$ECLIPSE_EXEC" -clean -product org.eclipse.cdt.debug.application.product \
-  -data "$WORKSPACE" -configuration file\:"$CDT_DEBUGGER" \
-  -dev file\:"$CDT_DEBUGGER/dev.properties" "${options[@]}" \
-  -vmargs -Dosgi.jar=$OSGI_JAR -Declipse.home="$ECLIPSE_HOME"
+$CDT_DEBUGGER/debugger/cdtdebug -data "$WORKSPACE" -configuration file\:"$CDT_DEBUGGER" "${options[@]}"
