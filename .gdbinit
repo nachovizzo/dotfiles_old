@@ -6,7 +6,7 @@ python
 
 # License ----------------------------------------------------------------------
 
-# Copyright (c) 2015-2020 Andrea Cardaci <cyrus.and@gmail.com>
+# Copyright (c) 2015-2021 Andrea Cardaci <cyrus.and@gmail.com>
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -29,6 +29,8 @@ python
 # Imports ----------------------------------------------------------------------
 
 import ast
+import io
+import itertools
 import math
 import os
 import re
@@ -107,9 +109,14 @@ See the `prompt` attribute. This value is used as a Python format string where
                 'doc': '''Define the value of `{status}` when the target program is running.
 
 See the `prompt` attribute. This value is used as a Python format string.''',
-                'default': '\[\e[1;30m\]>>>\[\e[0m\]'
+                'default': '\[\e[90m\]>>>\[\e[0m\]'
             },
             # divider
+            'omit_divider': {
+                'doc': 'Omit the divider in external outputs when only one module is displayed.',
+                'default': False,
+                'type': bool
+            },
             'divider_fill_char_primary': {
                 'doc': 'Filler around the label for primary dividers',
                 'default': '─'
@@ -124,7 +131,7 @@ See the `prompt` attribute. This value is used as a Python format string.''',
             },
             'divider_fill_style_secondary': {
                 'doc': 'Style for `divider_fill_char_secondary`',
-                'default': '1;30'
+                'default': '90'
             },
             'divider_label_style_on_primary': {
                 'doc': 'Label style for non-empty primary dividers',
@@ -140,7 +147,7 @@ See the `prompt` attribute. This value is used as a Python format string.''',
             },
             'divider_label_style_off_secondary': {
                 'doc': 'Label style for empty secondary dividers',
-                'default': '1;30'
+                'default': '90'
             },
             'divider_label_skip': {
                 'doc': 'Gap between the aligning border and the label.',
@@ -167,7 +174,7 @@ See the `prompt` attribute. This value is used as a Python format string.''',
                 'default': '32'
             },
             'style_low': {
-                'default': '1;30'
+                'default': '90'
             },
             'style_high': {
                 'default': '1;37'
@@ -351,6 +358,9 @@ def fetch_breakpoints(watchpoints=False, pending=False):
     breakpoints = []
     # XXX in older versions gdb.breakpoints() returns None
     for gdb_breakpoint in gdb.breakpoints() or []:
+        # skip internal breakpoints
+        if gdb_breakpoint.number < 0:
+            continue
         addresses, is_pending = parsed_breakpoints[gdb_breakpoint.number]
         is_pending = getattr(gdb_breakpoint, 'pending', is_pending)
         if not pending and is_pending:
@@ -407,7 +417,9 @@ class Dashboard(gdb.Command):
     def on_continue(self, _):
         # try to contain the GDB messages in a specified area unless the
         # dashboard is printed to a separate file (dashboard -output ...)
-        if self.is_running() and not self.output:
+        # or there are no modules to display in the main terminal
+        enabled_modules = list(filter(lambda m: not m.output and m.enabled, self.modules))
+        if self.is_running() and not self.output and len(enabled_modules) > 0:
             width, _ = Dashboard.get_term_size()
             gdb.write(Dashboard.clear_screen())
             gdb.write(divider(width, 'Output/messages', True))
@@ -509,6 +521,9 @@ class Dashboard(gdb.Command):
                     buf += Dashboard.clear_screen()
                 # show message if all the modules in this output are disabled
                 if not any(instances):
+                    # skip the main terminal
+                    if fs is gdb:
+                        continue
                     # write the error message
                     buf += divider(width, 'Warning', True)
                     buf += '\n'
@@ -516,11 +531,7 @@ class Dashboard(gdb.Command):
                         buf += 'No module to display (see `dashboard -layout`)'
                     else:
                         buf += 'No module loaded'
-                    # write the terminator only in the main terminal
                     buf += '\n'
-                    if fs is gdb:
-                        buf += divider(width, primary=True)
-                        buf += '\n'
                     fs.write(buf)
                     continue
                 # process all the modules for that output
@@ -535,10 +546,12 @@ class Dashboard(gdb.Command):
                         # allow to continue on exceptions in modules
                         stacktrace = traceback.format_exc().strip()
                         lines = [ansi(stacktrace, R.style_error)]
-                    # create the divider accordingly
-                    div = divider(width, instance.label(), True, lines)
+                    # create the divider if needed
+                    div = []
+                    if not R.omit_divider or len(instances) > 1 or fs is gdb:
+                        div = [divider(width, instance.label(), True, lines)]
                     # write the data
-                    buf += '\n'.join([div] + lines)
+                    buf += '\n'.join(div + lines)
                     # write the newline for all but last unless main terminal
                     if n != len(instances) or fs is gdb:
                         buf += '\n'
@@ -616,7 +629,17 @@ class Dashboard(gdb.Command):
 
     @staticmethod
     def parse_inits(python):
-        for root, dirs, files in os.walk(os.path.expanduser('~/.gdbinit.d/')):
+        # paths where the .gdbinit.d directory might be
+        search_paths = [
+            '/etc/gdb-dashboard',
+            '{}/gdb-dashboard'.format(os.getenv('XDG_CONFIG_HOME', '~/.config')),
+            '~/Library/Preferences/gdb-dashboard',
+            '~/.gdbinit.d'
+        ]
+        # expand the tilde and walk the paths
+        inits_dirs = (os.walk(os.path.expanduser(path)) for path in search_paths)
+        # process all the init files in order
+        for root, dirs, files in itertools.chain.from_iterable(inits_dirs):
             dirs.sort()
             for init in sorted(files):
                 path = os.path.join(root, init)
@@ -1165,7 +1188,7 @@ class Source(Dashboard.Module):
         if style_changed or file_name != self.file_name or ts and ts > self.ts:
             try:
                 # reload the source file if changed
-                with open(file_name) as source_file:
+                with io.open(file_name, errors='replace') as source_file:
                     highlighter = Beautifier(file_name, self.tab_size)
                     self.highlighted = highlighter.active
                     source = highlighter.process(source_file.read())
@@ -1203,8 +1226,8 @@ class Source(Dashboard.Module):
             if int(number) == current_line:
                 # the current line has a different style without ANSI
                 if R.ansi:
-                    if self.highlighted:
-                        line_format = '{}' + ansi(number_format, R.style_selected_1) + '  {}'
+                    if self.highlighted and not self.highlight_line:
+                        line_format = '{}' + ansi(number_format, R.style_selected_1) + ' {}'
                     else:
                         line_format = '{}' + ansi(number_format + '  {}', R.style_selected_1)
                 else:
@@ -1259,6 +1282,12 @@ A value of 0 uses the whole height.''',
                 'name': 'tab_size',
                 'type': int,
                 'check': check_gt_zero
+            },
+            'highlight-line': {
+                'doc': 'Decide whether the whole current line should be highlighted.',
+                'default': False,
+                'name': 'highlight_line',
+                'type': bool
             }
         }
 
@@ -1299,16 +1328,8 @@ The instructions constituting the current statement are marked, if available.'''
         frame = gdb.selected_frame()  # PC is here
         height = self.height or (term_height - 1)
         try:
-            # disassemble the current block (if function information is
-            # available then try to obtain the boundaries by looking at the
-            # superblocks)
-            block = frame.block()
-            if frame.function():
-                while block and (not block.function or block.function.name != frame.function().name):
-                    block = block.superblock
-                block = block or frame.block()
-            asm_start = block.start
-            asm_end = block.end - 1
+            # disassemble the current block
+            asm_start, asm_end = self.fetch_function_boundaries()
             asm = self.fetch_asm(asm_start, asm_end, False, highlighter)
             # find the location of the PC
             pc_index = next(index for index, instr in enumerate(asm)
@@ -1340,7 +1361,10 @@ The instructions constituting the current statement are marked, if available.'''
             try:
                 extra_start = 0
                 extra_end = 0
-                asm = self.fetch_asm(frame.pc(), height, True, highlighter)
+                # allow to scroll down nevertheless
+                clamped_offset = min(self.offset, 0)
+                asm = self.fetch_asm(frame.pc(), height - clamped_offset, True, highlighter)
+                asm = asm[-clamped_offset:]
             except gdb.error as e:
                 msg = '{}'.format(e)
                 return [ansi(msg, R.style_error)]
@@ -1389,7 +1413,7 @@ The instructions constituting the current statement are marked, if available.'''
                 indicator = ansi(indicator, R.style_selected_1)
                 opcodes = ansi(opcodes, R.style_selected_1)
                 func_info = ansi(func_info, R.style_selected_1)
-                if not highlighter.active:
+                if not highlighter.active or self.highlight_line:
                     text = ansi(text, R.style_selected_1)
             elif line_info and line_info.pc <= addr < line_info.last:
                 if not R.ansi:
@@ -1398,7 +1422,7 @@ The instructions constituting the current statement are marked, if available.'''
                 indicator = ansi(indicator, R.style_selected_2)
                 opcodes = ansi(opcodes, R.style_selected_2)
                 func_info = ansi(func_info, R.style_selected_2)
-                if not highlighter.active:
+                if not highlighter.active or self.highlight_line:
                     text = ansi(text, R.style_selected_2)
             else:
                 addr_str = ansi(addr_str, R.style_low)
@@ -1452,6 +1476,12 @@ A value of 0 uses the whole height.''',
                 'default': True,
                 'name': 'show_function',
                 'type': bool
+            },
+            'highlight-line': {
+                'doc': 'Decide whether the whole current line should be highlighted.',
+                'default': False,
+                'name': 'highlight_line',
+                'type': bool
             }
         }
 
@@ -1460,6 +1490,26 @@ A value of 0 uses the whole height.''',
             self.offset += int(arg)
         else:
             self.offset = 0
+
+    def fetch_function_boundaries(self):
+        frame = gdb.selected_frame()
+        # parse the output of the disassemble GDB command to find the function
+        # boundaries, this should handle cases in which a function spans
+        # multiple discontinuous blocks
+        disassemble = run('disassemble')
+        for block_start, block_end in re.findall(r'Address range 0x([0-9a-f]+) to 0x([0-9a-f]+):', disassemble):
+            block_start = int(block_start, 16)
+            block_end = int(block_end, 16)
+            if block_start <= frame.pc() < block_end:
+                return block_start, block_end - 1 # need to be inclusive
+        # if function information is available then try to obtain the
+        # boundaries by looking at the superblocks
+        block = frame.block()
+        if frame.function():
+            while block and (not block.function or block.function.name != frame.function().name):
+                block = block.superblock
+            block = block or frame.block()
+        return block.start, block.end - 1
 
     def fetch_asm(self, start, end_or_count, relative, highlighter):
         # fetch asm from cache or disassemble
@@ -1486,7 +1536,7 @@ class Variables(Dashboard.Module):
 
     def lines(self, term_width, term_height, style_changed):
         return Variables.format_frame(
-            gdb.selected_frame(), self.show_arguments, self.show_locals, self.compact, self.align)
+            gdb.selected_frame(), self.show_arguments, self.show_locals, self.compact, self.align, self.sort)
 
     def attributes(self):
         return {
@@ -1511,11 +1561,16 @@ class Variables(Dashboard.Module):
                 'doc': 'Align variables in column flag (only if not compact).',
                 'default': False,
                 'type': bool
+            },
+            'sort': {
+                'doc': 'Sort variables by name.',
+                'default': False,
+                'type': bool
             }
         }
 
     @staticmethod
-    def format_frame(frame, show_arguments, show_locals, compact, align):
+    def format_frame(frame, show_arguments, show_locals, compact, align, sort):
         out = []
         # fetch frame arguments and locals
         decorator = gdb.FrameDecorator.FrameDecorator(frame)
@@ -1524,7 +1579,7 @@ class Variables(Dashboard.Module):
             def prefix(line):
                 return Stack.format_line('arg', line)
             frame_args = decorator.frame_args()
-            args_lines = Variables.fetch(frame, frame_args, compact, align)
+            args_lines = Variables.fetch(frame, frame_args, compact, align, sort)
             if args_lines:
                 if compact:
                     args_line = separator.join(args_lines)
@@ -1536,7 +1591,7 @@ class Variables(Dashboard.Module):
             def prefix(line):
                 return Stack.format_line('loc', line)
             frame_locals = decorator.frame_locals()
-            locals_lines = Variables.fetch(frame, frame_locals, compact, align)
+            locals_lines = Variables.fetch(frame, frame_locals, compact, align, sort)
             if locals_lines:
                 if compact:
                     locals_line = separator.join(locals_lines)
@@ -1547,7 +1602,7 @@ class Variables(Dashboard.Module):
         return out
 
     @staticmethod
-    def fetch(frame, data, compact, align):
+    def fetch(frame, data, compact, align, sort):
         lines = []
         name_width = 0
         if align and not compact:
@@ -1557,6 +1612,8 @@ class Variables(Dashboard.Module):
             equal = ansi('=', R.style_low)
             value = format_value(elem.sym.value(frame), compact)
             lines.append('{} {} {}'.format(name, equal, value))
+        if sort:
+            lines.sort()
         return lines
 
 class Stack(Dashboard.Module):
@@ -1593,7 +1650,8 @@ Optionally list the frame arguments and locals too.'''
             frame_lines = []
             frame_lines.append('[{}] {}'.format(frame_id, info))
             # add frame arguments and locals
-            variables = Variables.format_frame(frame, self.show_arguments, self.show_locals, self.compact, self.align)
+            variables = Variables.format_frame(
+                frame, self.show_arguments, self.show_locals, self.compact, self.align, self.sort)
             frame_lines.extend(variables)
             # add frame
             frames.append(frame_lines)
@@ -1644,6 +1702,11 @@ Optionally list the frame arguments and locals too.'''
                 'doc': 'Align variables in column flag (only if not compact).',
                 'default': False,
                 'type': bool
+            },
+            'sort': {
+                'doc': 'Sort variables by name.',
+                'default': False,
+                'type': bool
             }
         }
 
@@ -1656,11 +1719,17 @@ Optionally list the frame arguments and locals too.'''
     def get_pc_line(frame, style):
         frame_pc = ansi(format_address(frame.pc()), style)
         info = 'from {}'.format(frame_pc)
+        # if a frame function symbol is available then use it to fetch the
+        # current function name and address, otherwise fall back relying on the
+        # frame name
         if frame.function():
             name = ansi(frame.function(), style)
             func_start = to_unsigned(frame.function().value())
             offset = ansi(str(frame.pc() - func_start), style)
             info += ' in {}+{}'.format(name, offset)
+        elif frame.name():
+            name = ansi(frame.name(), style)
+            info += ' in {}'.format(name)
         sal = frame.find_sal()
         if sal and sal.symtab:
             file_name = ansi(sal.symtab.filename, style)
