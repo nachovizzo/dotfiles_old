@@ -23,6 +23,7 @@ set linebreak
 set hidden
 set nohlsearch
 set cmdheight=1
+set textwidth=100
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
