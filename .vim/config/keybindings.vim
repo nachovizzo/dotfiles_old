@@ -23,6 +23,9 @@ map <silent><leader>e :e! ~/.vimrc<cr>
 
 " Jumb back to last buffer
 map <silent><leader>6 <c-^><cr>
+
+" Create file if not there
+nmap <silent>gf :e <cfile><cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Shortcutting split navigation, saving a keypress:
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
