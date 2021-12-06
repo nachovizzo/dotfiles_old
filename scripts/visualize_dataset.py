@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from functools import partial
+from functools import lru_cache
 import glob
 import time
 
@@ -7,6 +8,7 @@ import click
 import open3d as o3d
 
 
+@lru_cache()
 def o3d_read_geometry(filename):
     return o3d.io.read_point_cloud(filename)
 
@@ -107,6 +109,7 @@ def visualizer(file_patterns):
     print("Visualizing {} models".format(len(files)))
     vis = Visualizer(files)
     vis.run()
+
 
 if __name__ == "__main__":
     visualizer()
