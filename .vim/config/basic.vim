@@ -10,25 +10,32 @@ filetype indent on
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set number relativenumber
+set number
+set relativenumber
 set backspace=eol,start,indent
-set whichwrap+=<,>,h,l
+set cmdheight=1
+set colorcolumn=+1
+set completeopt+=menuone,noselect
+set hidden
 set ignorecase
-set smartcase
+set inccommand=split
 set incsearch
 set lazyredraw
-set splitbelow splitright
-set nowrap
 set linebreak
-set hidden
+set mouse=a
 set nohlsearch
-set cmdheight=1
+set nowrap
+set smartcase
+set smartcase
+set splitbelow
+set splitright
+set termguicolors
 set textwidth=100
+set whichwrap+=<,>,h,l
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set termguicolors
 syntax enable
 colorscheme xcodedarkhc
 " colorscheme xcodelighthc
@@ -46,11 +53,10 @@ set undofile
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set expandtab
 set smarttab
-set ai "Auto indent
-set si "Smart indent
-set wrap "Wrap lines
+set autoindent
+set smartindent
+set wrap
 set expandtab
 set tabstop=2
 set shiftwidth=2

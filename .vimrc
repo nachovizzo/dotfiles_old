@@ -1,14 +1,15 @@
 " Automatically install plug if not there
 source ~/.vim/config/plug.vim
 
+set nocompatible
+
 call plug#begin('~/.vim/plugged')
+
 Plug 'antoinemadec/coc-fzf'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
-Plug 'Mofiqul/vscode.nvim'
 Plug 'kevinoid/vim-jsonc'
-Plug 'morhetz/gruvbox'
 Plug 'nachovizzo/committia.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdcommenter'
