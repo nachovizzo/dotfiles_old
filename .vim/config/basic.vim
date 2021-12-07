@@ -11,11 +11,12 @@ filetype indent on
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set number
-set relativenumber
 set backspace=eol,start,indent
+set clipboard^=unnamed
 set cmdheight=1
 set colorcolumn=+1
 set completeopt+=menuone,noselect
+set cursorline
 set hidden
 set ignorecase
 set inccommand=split
@@ -26,13 +27,11 @@ set mouse=a
 set nohlsearch
 set nowrap
 set smartcase
-set smartcase
 set splitbelow
 set splitright
 set termguicolors
 set textwidth=100
 set whichwrap+=<,>,h,l
-set cursorline
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts

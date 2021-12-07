@@ -1,8 +1,6 @@
 " Automatically install plug if not there
 source ~/.vim/config/plug.vim
 
-set nocompatible
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'antoinemadec/coc-fzf'
@@ -17,17 +15,16 @@ Plug 'sbdchd/neoformat'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'arzg/vim-colors-xcode'
 
 " Under evaluation
-Plug 'arzg/vim-colors-xcode'
 Plug 'lervag/vimtex'
 
 " New LUA configuration, WIP
 Plug 'akinsho/bufferline.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
-call plug#end()
 
-let g:xcodedark_green_comments = 0
+call plug#end()
 
 " All the real configuration
 source ~/.vim/config/basic.vim
