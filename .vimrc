@@ -24,7 +24,6 @@ Plug 'lervag/vimtex'
 
 " New LUA configuration, WIP
 Plug 'akinsho/bufferline.nvim'
-Plug 'hoob3rt/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()
 
@@ -41,4 +40,3 @@ source ~/.vim/config/extended.vim
 
 " New LUA configuration, WIP
 luafile ~/.vim/config/init.lua
-
