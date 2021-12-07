@@ -28,6 +28,8 @@ Plug 'hoob3rt/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()
 
+let g:xcodedark_green_comments = 0
+
 " All the real configuration
 source ~/.vim/config/basic.vim
 source ~/.vim/config/coc.vim
@@ -39,3 +41,4 @@ source ~/.vim/config/extended.vim
 
 " New LUA configuration, WIP
 luafile ~/.vim/config/init.lua
+

@@ -32,6 +32,7 @@ set splitright
 set termguicolors
 set textwidth=100
 set whichwrap+=<,>,h,l
+set cursorline
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
