@@ -28,13 +28,10 @@ set textwidth=100
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:vscode_style = "light"
-let g:gruvbox_contrast_dark = 'hard'
-set colorcolumn=100
 set termguicolors
-set background=dark
 syntax enable
-colorscheme gruvbox
+colorscheme xcodedarkhc
+" colorscheme xcodelighthc
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo

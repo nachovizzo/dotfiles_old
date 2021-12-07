@@ -60,3 +60,9 @@ vmap <silent><leader>r :call VisualSelection('replace', '')<cr>
 " => Function Calls
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <Leader>ipdb :call InsertIpdbLine()<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Colorscheme, TOOD: define a darktheme and a light theme
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <silent><leader>d :colorscheme  xcodedarkhc<cr>
+nmap <silent><leader>l :colorscheme xcodelighthc<cr>

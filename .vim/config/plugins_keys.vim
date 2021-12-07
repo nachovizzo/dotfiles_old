@@ -19,7 +19,6 @@ nmap <silent><leader>or :OR<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set mouse=a
 nnoremap <silent><leader>cl      :<C-u>CocFzfList<CR>
-nnoremap <silent><leader>d       :<C-u>CocFzfList diagnostics --current-buf<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => coc-explorer bindings

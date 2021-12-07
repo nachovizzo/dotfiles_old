@@ -17,6 +17,10 @@ Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 
+" Under evaluation
+Plug 'arzg/vim-colors-xcode'
+Plug 'lervag/vimtex'
+
 " New LUA configuration, WIP
 Plug 'akinsho/bufferline.nvim'
 Plug 'hoob3rt/lualine.nvim'
