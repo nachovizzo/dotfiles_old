@@ -7,10 +7,10 @@ regolith.look: midnight
 #include "/etc/regolith/styles/midnight/typeface"
 
 ! Typeface: SF Font
-#define typeface_bar_glyph      SF Pro Regular 13
-#define typeface_wm             pango:SF Pro Rounded Regular 16
-#define typeface_bar            pango:SF Pro Rounded Regular 13, Material Design Icons 13
-#define typeface_rofi           SF Pro Display Black 16
+#define typeface_bar_glyph      SF Pro Display Medium 13
+#define typeface_wm             pango:SF Pro Display Medium 16
+#define typeface_bar            pango:SF Pro Display Medium 13, Material Design Icons 13
+#define typeface_rofi           SF Pro Display Bold 16
 #define typeface_terminal       SF Mono Regular:pixelsize=16:antialias=true:autohint=true
 #define typeface_gnome_terminal SF Mono Regular 12
 
