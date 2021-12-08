@@ -2,7 +2,6 @@
 # @author    Ignacio Vizzo     [ivizzo@uni-bonn.de]
 #
 # Copyright (c) 2019 Ignacio Vizzo, all rights reserved
-alias tree='tree -C'
 alias py='ipython3'
 alias coit='code . && exit'
 alias cor='code -r'
