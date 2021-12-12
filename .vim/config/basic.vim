@@ -61,3 +61,9 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set softtabstop=-1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Read local .vimrc files
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set exrc
+set secure
