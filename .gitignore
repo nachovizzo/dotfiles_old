@@ -195,3 +195,4 @@ Public
 .tmux_resurrect/
 carlaCache
 .streamdeck_ui.json
+.pypirc
