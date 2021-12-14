@@ -14,7 +14,7 @@ set number
 set backspace=eol,start,indent
 set clipboard^=unnamed
 set cmdheight=1
-set colorcolumn=+1
+" set colorcolumn=+1
 set completeopt+=menuone,noselect
 set cursorline
 set hidden
@@ -30,15 +30,14 @@ set smartcase
 set splitbelow
 set splitright
 set termguicolors
-set textwidth=100
+" set textwidth=100
 set whichwrap+=<,>,h,l
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable
-colorscheme xcodedarkhc
-" colorscheme xcodelighthc
+colorscheme xcodelighthc
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
