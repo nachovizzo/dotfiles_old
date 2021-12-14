@@ -1,1 +1,25 @@
-#include "/etc/regolith/styles/midnight/root"
+regolith.look: midnight	
+
+! -- Styles - Colors
+#include "/etc/regolith/styles/midnight/color"
+
+! -- Styles - Fonts
+#include "/etc/regolith/styles/midnight/typeface"
+
+! Typeface: SF Font
+#define typeface_bar_glyph      SF Pro Display Medium 13
+#define typeface_wm             pango:SF Pro Display Medium 16
+#define typeface_bar            pango:SF Pro Display Medium 13, Material Design Icons 13
+#define typeface_rofi           SF Pro Display Bold 16
+#define typeface_terminal       SF Mono Regular:pixelsize=16:antialias=true:autohint=true
+#define typeface_gnome_terminal SF Mono Regular 12
+
+! -- Styles - Theme
+#include "/etc/regolith/styles/midnight/theme"
+
+! -- Applications
+! These files map values defined above into specific app settings.
+#include "/etc/regolith/styles/i3-wm"
+#include "/etc/regolith/styles/i3xrocks"
+#include "/etc/regolith/styles/rofi"
+#include "/etc/regolith/styles/gnome"

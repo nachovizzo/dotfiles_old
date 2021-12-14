@@ -43,16 +43,26 @@ let g:markdown_fenced_languages = [
       \]
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => gruvbox colorscheme modifications for CoC
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" User underline instead of undercurl
-hi CocErrorHighlight   cterm=underline gui=underline
-hi CocWarningHighlight cterm=underline gui=underline
-hi CocInfoHighlight    cterm=underline gui=underline
-hi CocHintHighlight    cterm=underline gui=underline
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERDCommenter
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:NERDCreateDefaultMappings = 0
 let g:NERDSpaceDelims = 1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" https://github.com/lervag/vimtex/issues/1946#issuecomment-843674951
+" => VimTeX highlight groups
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+hi texCmd guifg=#ad3da4 guibg=NONE gui=NONE ctermfg=127 ctermbg=NONE cterm=NONE
+hi! link texMathEnvArgName texEnvArgName
+hi! link texMathZone LocalIdent
+hi! link texMathZoneEnv texMathZone
+hi! link texMathZoneEnvStarred texMathZone
+hi! link texMathZoneX texMathZone
+hi! link texMathZoneXX texMathZone
+hi! link texMathZoneEnsured texMathZone
+
+" Small tweaks
+hi! link QuickFixLine Normal
+hi! link qfLineNr Normal
+hi! link EndOfBuffer LineNr
+hi! link Conceal LocalIdent

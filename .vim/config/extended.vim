@@ -20,10 +20,10 @@ au BufNewFile,BufRead .clang-* set syntax=yaml
 " => Autoreaload buffer when something changes
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FocusGained,BufEnter,CursorHold,CursorHoldI *
-            \ if mode() !~ '\v(c|r.?|!|t)' && getcmdwintype() == '' | checktime | endif
+      \ if mode() !~ '\v(c|r.?|!|t)' && getcmdwintype() == '' | checktime | endif
 
 autocmd FileChangedShellPost *
-            \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+      \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Disable automatic comment insertion
@@ -35,7 +35,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-    \| exe "normal! g'\"" | endif
+        \| exe "normal! g'\"" | endif
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

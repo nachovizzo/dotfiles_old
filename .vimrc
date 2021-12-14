@@ -2,13 +2,12 @@
 source ~/.vim/config/plug.vim
 
 call plug#begin('~/.vim/plugged')
+
 Plug 'antoinemadec/coc-fzf'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
-Plug 'Mofiqul/vscode.nvim'
 Plug 'kevinoid/vim-jsonc'
-Plug 'morhetz/gruvbox'
 Plug 'nachovizzo/committia.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdcommenter'
@@ -16,11 +15,15 @@ Plug 'sbdchd/neoformat'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'arzg/vim-colors-xcode'
+
+" Under evaluation
+Plug 'lervag/vimtex'
 
 " New LUA configuration, WIP
 Plug 'akinsho/bufferline.nvim'
-Plug 'hoob3rt/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
+
 call plug#end()
 
 " All the real configuration
