@@ -66,3 +66,8 @@ hi! link QuickFixLine Normal
 hi! link qfLineNr Normal
 hi! link EndOfBuffer LineNr
 hi! link Conceal LocalIdent
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => XCode color settings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:xcodelighthc_match_paren_style = 1
