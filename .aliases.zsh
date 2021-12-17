@@ -7,6 +7,7 @@ alias coit='code . && exit'
 alias cor='code -r'
 alias rescan="nmcli device wifi rescan"
 alias list="nmcli device wifi list"
+alias res='cd ~/results/'
 alias deko='cd ~/Desktop'
 alias dekon='cd ~/Desktop && ranger'
 alias de='cd ~/dev'
