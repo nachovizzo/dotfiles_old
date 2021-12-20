@@ -652,10 +652,7 @@ set_from_resource $i3-wm.binding.google i3-wm.binding.google g
 set_from_resource $i3-wm.program.google i3-wm.program.google google-chrome --user-data-dir=/tmp/chrome/ --app=https://www.google.com --class=floating_google
 bindsym $mod+$i3-wm.binding.google exec $i3-wm.program.google
 
-## Launch // Mattermost // <> m##
-set_from_resource $i3-wm.binding.mattermost i3-wm.binding.mattermost m
-set_from_resource $i3-wm.program.mattermost i3-wm.program.mattermost google-chrome --user-data-dir=/tmp/chrome/ --app=https://data1.ipb.uni-bonn.de/ipb --class=floating_mattermost
-bindsym $mod+$i3-wm.binding.mattermost exec $i3-wm.program.mattermost
+## Launch // EMPTY SLOT // <> m##
 
 ## Session // Exit App // <Alt> F4 ##
 bindsym $alt+F4 [con_id="__focused__"] kill
