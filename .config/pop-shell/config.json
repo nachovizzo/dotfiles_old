@@ -1,0 +1,33 @@
+{
+  "float": [
+    {
+      "class": "pop-shell-example",
+      "title": "pop-shell-example"
+    },
+    {
+      "class": "Gnome-tweaks"
+    },
+    {
+      "class": "Gnome-control-center"
+    },
+    {
+      "class": "Pop!_Shell Keyboard Shortcuts"
+    },
+    {
+      "class": "Gnome-extensions-app"
+    },
+    {
+      "class": "Org.gnome.Shell.Extensions"
+    },
+    {
+      "class": "Spotify"
+    },
+    {
+      "class": "Org.gnome.Weather"
+    }
+  ],
+  "skiptaskbarhidden": [],
+  "log_on_focus": false,
+  "move_pointer_on_switch": false,
+  "default_pointer_position": "TOP_LEFT"
+}
