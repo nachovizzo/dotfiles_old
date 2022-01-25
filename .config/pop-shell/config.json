@@ -5,6 +5,9 @@
       "title": "pop-shell-example"
     },
     {
+      "class": "Org.gnome.Shell.Extensions"
+    },
+    {
       "class": "Gnome-tweaks"
     },
     {
@@ -17,7 +20,7 @@
       "class": "Gnome-extensions-app"
     },
     {
-      "class": "Org.gnome.Shell.Extensions"
+      "class": "Evolution-alarm-notify"
     },
     {
       "class": "Spotify"
