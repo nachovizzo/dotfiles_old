@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=$HOME/scripts/config/create_chrome_cache.sh
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=create_chrome_cache
+Name=create_chrome_cache
+Comment[en_US]=
+Comment=
