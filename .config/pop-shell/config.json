@@ -27,6 +27,15 @@
     },
     {
       "class": "Org.gnome.Weather"
+    },
+    {
+      "class": "floating_terminal"
+    },
+    {
+      "class": "floating_google"
+    },
+    {
+      "class": "Org.gnome.Nautilus"
     }
   ],
   "skiptaskbarhidden": [],
