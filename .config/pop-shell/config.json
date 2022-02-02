@@ -36,6 +36,9 @@
     },
     {
       "class": "Org.gnome.Nautilus"
+    },
+    {
+      "class": "Open3D"
     }
   ],
   "skiptaskbarhidden": [],
