@@ -39,6 +39,9 @@
     },
     {
       "class": "Open3D"
+    },
+    {
+      "class": "Software-properties-gtk"
     }
   ],
   "skiptaskbarhidden": [],
