@@ -42,6 +42,9 @@
     },
     {
       "class": "Software-properties-gtk"
+    },
+    {
+      "class": "Baobab"
     }
   ],
   "skiptaskbarhidden": [],
