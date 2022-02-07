@@ -45,6 +45,9 @@
     },
     {
       "class": "Baobab"
+    },
+    {
+      "class": "Gnome-calculator"
     }
   ],
   "skiptaskbarhidden": [],
