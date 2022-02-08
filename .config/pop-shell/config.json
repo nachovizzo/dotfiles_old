@@ -48,6 +48,9 @@
     },
     {
       "class": "Gnome-calculator"
+    },
+    {
+      "class": "vdb_view"
     }
   ],
   "skiptaskbarhidden": [],
