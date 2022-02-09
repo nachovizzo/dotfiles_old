@@ -5,6 +5,7 @@ HYPHEN_INSENSITIVE="true"
 ZSH_TMUX_AUTOCONNECT="false"
 ZSH_TMUX_AUTOQUIT="true"
 ZSH_TMUX_AUTOSTART="false"
+ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
 
 plugins=(
     colored-man-pages
@@ -16,6 +17,7 @@ plugins=(
     tmux
     z
     zsh-autosuggestions
+    zsh-vi-mode
 )
 
 source $HOME/.zshrc_local
