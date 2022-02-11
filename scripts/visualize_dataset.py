@@ -63,9 +63,7 @@ class Visualizer:
     def update_geometry(self):
         print("Visualizing {}".format(self.files[self.idx]), end="\r")
         self.vis.clear_geometries()
-        self.vis.add_geometry(
-            o3d_read_geometry(self.files[self.idx]), reset_bounding_box=False
-        )
+        self.vis.add_geometry(read_geometry(self.files[self.idx]), reset_bounding_box=False)
         self.vis.poll_events()
         self.vis.update_renderer()
 
