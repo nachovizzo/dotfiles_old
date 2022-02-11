@@ -57,6 +57,9 @@
     },
     {
       "class": "Gedit"
+    },
+    {
+      "class": "visualizer"
     }
   ],
   "skiptaskbarhidden": [],
