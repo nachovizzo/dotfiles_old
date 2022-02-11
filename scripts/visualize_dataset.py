@@ -2,14 +2,19 @@
 from functools import partial
 from functools import lru_cache
 import glob
+import os
 import time
 
 import click
+import numpy as np
 import open3d as o3d
 
 
 @lru_cache()
-def o3d_read_geometry(filename):
+def read_geometry(filename):
+    if os.path.splitext(filename)[-1] == ".bin":
+        points = np.fromfile(filename, dtype=np.float32).reshape((-1, 4))[:, :3]
+        return o3d.geometry.PointCloud(o3d.utility.Vector3dVector(points))
     return o3d.io.read_point_cloud(filename)
 
 
@@ -29,7 +34,7 @@ class Visualizer:
 
         # Add first frame
         self.idx = 0
-        self.vis.add_geometry(o3d_read_geometry(self.files[self.idx]))
+        self.vis.add_geometry(read_geometry(self.files[self.idx]))
         self.print_help()
 
         # Continous time plot
