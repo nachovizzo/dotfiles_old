@@ -51,6 +51,9 @@
     },
     {
       "class": "vdb_view"
+    },
+    {
+      "class": "ObinsKit"
     }
   ],
   "skiptaskbarhidden": [],
