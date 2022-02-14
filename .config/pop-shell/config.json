@@ -63,6 +63,9 @@
     },
     {
       "class": "matplotlib"
+    },
+    {
+      "class": "Pavucontrol"
     }
   ],
   "skiptaskbarhidden": [],

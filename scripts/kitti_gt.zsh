@@ -3,5 +3,5 @@
 #
 # Copyright (c) 2019 Ignacio Vizzo, all rights reserved
 for SEQ in $(seq -w 0 10); do
-  eval KITTI_GT_${SEQ}='$DATASETS/kitti-odometry/dataset/kitti-poses/${SEQ}.txt'
+  eval KITTI_GT_${SEQ}='$DATASETS/kitti-odometry/dataset/kitti_poses/${SEQ}.txt'
 done
