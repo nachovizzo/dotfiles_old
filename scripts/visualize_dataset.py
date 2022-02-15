@@ -15,6 +15,10 @@ def read_geometry(filename):
     if os.path.splitext(filename)[-1] == ".bin":
         points = np.fromfile(filename, dtype=np.float32).reshape((-1, 4))[:, :3]
         return o3d.geometry.PointCloud(o3d.utility.Vector3dVector(points))
+    if os.path.splitext(filename)[-1] == ".obj":
+        mesh = o3d.io.read_triangle_mesh(filename)
+        mesh.compute_vertex_normals()
+        return mesh
     return o3d.io.read_point_cloud(filename)
 
 
