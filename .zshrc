@@ -12,7 +12,6 @@ plugins=(
     extract
     fzf
     git
-    sudo
     tmux
     z
     zsh-autosuggestions
