@@ -211,3 +211,7 @@ unload_hydra_completions() {
     echo "Uninstalling tab completions for $app"
     eval "$($app -sc uninstall=bash)"
 }
+
+function za() {
+    zathura --fork $1
+}
