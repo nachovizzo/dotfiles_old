@@ -66,6 +66,9 @@
     },
     {
       "class": "Pavucontrol"
+    },
+    {
+      "class": "rviz"
     }
   ],
   "skiptaskbarhidden": [],
