@@ -10,6 +10,10 @@ get_remote() {
     git remote -vv | tail -n1 | awk '{print $2}' | tr -d '\n' | xcopy
 }
 
+open_remote() {
+    xdg-open $(git remote -vv | grep origin | tail -n1 | awk '{print $2}' |  sed 's/:/\//' | sed 's/^.*@/https:\/\//' | awk -F ".git$" '{print $1}') 1> /dev/null
+}
+
 # Please turn this into a python script
 gdb_test() {
     TEST_CASE="$1"
@@ -213,5 +217,5 @@ unload_hydra_completions() {
 }
 
 function za() {
-    zathura --fork $1
+    zathura --fork $1 2>/dev/null
 }
