@@ -11,7 +11,7 @@ get_remote() {
 }
 
 open_remote() {
-    xdg-open $(git remote -vv | grep origin | tail -n1 | awk '{print $2}' |  sed 's/:/\//' | sed 's/^.*@/https:\/\//' | awk -F ".git$" '{print $1}') 1> /dev/null
+    xdg-open $(git remote -vv | grep origin | tail -n1 | awk '{print $2}' | xargs -I URL sh -c "echo URL | grep https || echo URL | sed 's/:/\//' | sed 's/^.*@/https:\/\//'") 1> /dev/null
 }
 
 # Please turn this into a python script
