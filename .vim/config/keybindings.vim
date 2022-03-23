@@ -64,3 +64,13 @@ map <Leader>ipdb :call InsertIpdbLine()<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <silent><leader>d :colorscheme  xcodedarkhc<cr>
 nmap <silent><leader>l :colorscheme xcodelighthc<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Useful mappings to make search results appear in the middle of the screen
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap * *zz
+nnoremap # #zz
+nnoremap g* g*zz
+nnoremap g# g#zz
