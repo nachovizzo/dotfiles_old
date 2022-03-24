@@ -13,7 +13,7 @@ filetype indent on
 set number
 set backspace=eol,start,indent
 set clipboard^=unnamed
-set cmdheight=2
+set cmdheight=1
 set colorcolumn=+1
 set completeopt+=menuone,noselect
 set cursorline
