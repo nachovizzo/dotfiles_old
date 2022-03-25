@@ -1,6 +1,6 @@
 {
   // CoC Settings
-  "diagnostic.enable": false,
+  "diagnostic.enable": true,
 
   // C++
   "clangd.enabled": true,
