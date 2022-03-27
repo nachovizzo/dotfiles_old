@@ -10,6 +10,6 @@ echo "--------------------------------------------------------------------------
 
 for seq in $(seq -w 00 10); do
     echo "Sequence ${BOLD_YELLOW}${seq}${RESET}"
-    kitti_seq_err $DATASETS/kitti-odometry/dataset/poses/${seq}.txt *${seq}*txt | tail -n2
+    kitti_seq_err $DATASETS/kitti-odometry/dataset/kitti_poses/${seq}.txt *${seq}*txt | tail -n2
     echo "---------------------------------------------------------------------------------------------"
 done
