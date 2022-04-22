@@ -127,7 +127,7 @@
 #  
 #  When False, pylab mode should not import any names into the user namespace.
 #  Default: True
- c.InteractiveShellApp.pylab_import_all = True
+#  c.InteractiveShellApp.pylab_import_all = True
 
 ## Reraise exceptions encountered loading IPython extensions?
 #  Default: False
