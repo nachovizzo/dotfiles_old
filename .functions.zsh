@@ -219,3 +219,13 @@ unload_hydra_completions() {
 function za() {
     zathura --fork $1 2>/dev/null
 }
+
+function render_frame_number() {
+    # More info: https://ffmpeg.org/ffmpeg-filters.html#drawtext 
+    VIDEO="$1"
+    TEXT="$2"
+    BASENAME="$(basename -- $VIDEO)"
+    FILENAME=${BASENAME%.*}
+    echo "Adding $TEXT + frame number to $VIDEO..."
+    ffmpeg -i $VIDEO -vf "drawtext=fontfile=Verdana_Bold.ttf: text='${TEXT} #%{frame_num}': start_number=1: x=(w-tw): y=h-(2*lh): fontcolor=black: fontsize=30" -c:a copy ${FILENAME}_fn.mp4
+}
