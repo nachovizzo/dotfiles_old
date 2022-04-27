@@ -4,6 +4,7 @@ source ~/.vim/config/plug.vim
 call plug#begin('~/.vim/plugged')
 
 Plug 'antoinemadec/coc-fzf'
+Plug 'arzg/vim-colors-xcode'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
@@ -15,7 +16,6 @@ Plug 'sbdchd/neoformat'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'arzg/vim-colors-xcode'
 
 " Under evaluation
 Plug 'lervag/vimtex'
