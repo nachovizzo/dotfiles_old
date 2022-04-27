@@ -4,6 +4,7 @@ from functools import lru_cache
 import glob
 import os
 import time
+from natsort import natsorted
 
 import click
 import numpy as np
@@ -112,11 +113,10 @@ class Visualizer:
 @click.argument("file_patterns", type=str)
 def visualizer(file_patterns):
     """Specify the filename pattern of the files you want to visualize."""
-    files = sorted(glob.glob(file_patterns))
+    files = natsorted(glob.glob(file_patterns))
     print("Visualizing {} models".format(len(files)))
     vis = Visualizer(files)
     vis.run()
-
 
 if __name__ == "__main__":
     visualizer()
