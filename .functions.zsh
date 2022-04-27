@@ -45,7 +45,8 @@ wsp_compress() {
     BASENAME="$(basename -- $VIDEO)"
     FILENAME=${BASENAME%.*}
     echo "Compressing $VIDEO for WhatsApp..."
-    ffmpeg -i "${VIDEO}" -vcodec libx264 -acodec aac "${FILENAME}".mp4
+    ffmpeg -i "${VIDEO}" -vcodec libx264 -acodec aac ${FILENAME}_wsp.mp4 2>/dev/zero
+    mv "${FILENAME}_wsp".mp4 ${VIDEO}
 }
 
 cut_video() {
