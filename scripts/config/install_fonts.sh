@@ -16,3 +16,5 @@ rm -rf SF*
 
 cp SFMono\ Medium\ Nerd\ Font\ Complete\ Mono.otf ~/.local/share/fonts
 fc-cache -f -v
+
+# dconf write, or dconf editor, manually select SF Mono
