@@ -18,3 +18,6 @@ cp SFMono\ Medium\ Nerd\ Font\ Complete\ Mono.otf ~/.local/share/fonts
 fc-cache -f -v
 
 # dconf write, or dconf editor, manually select SF Mono
+# dconf write /org/gnome/terminal/legacy/profiles:/<profile-id>/font "'SF Mono 11'"
+
+
