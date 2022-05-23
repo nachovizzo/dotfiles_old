@@ -7,7 +7,6 @@ let g:coc_global_extensions = [
     \'coc-lua',
     \'coc-markdownlint',
     \'coc-pyright',
-    \'coc-sh',
     \'coc-vimlsp',
     \'coc-vimtex',
     \'coc-yaml',
