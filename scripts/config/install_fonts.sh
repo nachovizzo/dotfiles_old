@@ -1,6 +1,18 @@
-git clone https://github.com/Twixes/SF-Mono-Powerline.git
-cd SF-Mono-Powerline
-mkdir -p ~/.local/share/fonts
-cp *.otf /usr/share/fonts/sfmono
-# docker run -v /path/to/fonts:/in -v /path/for/output:/out nerdfonts/patcher [OPTIONS]
+#!/bin/bash
 
+set -ex
+
+# Download Font
+# wget https://developer.apple.com/design/downloads/SF-Mono.dmg  && 7z x SF-Mono.dmg && cd SFMonoFonts/ && 7z x SF\ Mono\ Fonts.pkg && 7z x Payload~
+
+# Get the one I like the most
+mkdir -p sfmono
+cp SFMonoFonts/Library/Fonts/SF-Mono-Medium.otf sfmono/
+
+# Patch with docker container
+docker run -v $(realpath .)/sfmono/:/in -v $(realpath .)/patched:/out nerdfonts/patcher -c -s
+
+rm -rf SF*
+
+cp SFMono\ Medium\ Nerd\ Font\ Complete\ Mono.otf ~/.local/share/fonts
+fc-cache -f -v
