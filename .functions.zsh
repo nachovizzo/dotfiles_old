@@ -230,3 +230,5 @@ function render_frame_number() {
     echo "Adding $TEXT + frame number to $VIDEO..."
     ffmpeg -i $VIDEO -vf "drawtext=fontfile=Verdana_Bold.ttf: text='${TEXT} #%{frame_num}': start_number=1: x=(w-tw): y=h-(2*lh): fontcolor=black: fontsize=30" -c:a copy ${FILENAME}_fn.mp4
 }
+
+function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/"$@" }
