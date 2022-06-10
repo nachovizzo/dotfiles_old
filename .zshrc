@@ -12,6 +12,7 @@ plugins=(
     extract
     fzf
     git
+    thefuck
     tmux
     z
     zsh-autosuggestions
