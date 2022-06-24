@@ -1,9 +1,11 @@
 {
   // CoC Settings
   "diagnostic.enable": true,
+  "diagnostic.virtualText": false,
 
   // C++
   "clangd.enabled": true,
+  "clangd.inlayHints.enable": false,
   "clangd.compilationDatabasePath": "build/",
   "clangd.arguments": [
     "--background-index",
