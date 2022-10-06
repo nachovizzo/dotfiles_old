@@ -232,3 +232,11 @@ function render_frame_number() {
 }
 
 function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/"$@" }
+
+run_docker_cwd() {
+    docker run --rm -it -u 1000:1000 -v $(realpath .):/workspace -w /workspace $1
+}
+
+run_root_docker_cwd() {
+    docker run --rm -it -v $(realpath .):/workspace -w /workspace $1
+}

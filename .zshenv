@@ -12,7 +12,7 @@ export PATH=$PATH:$HOME/Teaching/green_room/modern_cpp/streamdeck/scripts/
 export PATH="$HOME/.poetry/bin:$PATH"
 
 # ZSH
-export FPATH=$FPATH:$HOME/.zfunc
+# export FPATH=$FPATH:$HOME/.zfunc
 
 # Preferred editor for local and remote sessions
 export EDITOR='nvim'

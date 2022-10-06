@@ -22,3 +22,7 @@ source $HOME/.zshrc_local
 source $ZSH/oh-my-zsh.sh
 source $HOME/.aliases.zsh
 source $HOME/.functions.zsh
+
+autoload -Uz compinit
+zstyle ':completion:*' menu select
+fpath+=~/.zfunc

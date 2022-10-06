@@ -6,7 +6,7 @@
   // C++
   "clangd.enabled": true,
   "clangd.inlayHints.enable": false,
-  "clangd.compilationDatabasePath": "build/",
+  "clangd.compilationDatabasePath": "",
   "clangd.arguments": [
     "--background-index",
     "--clang-tidy",
