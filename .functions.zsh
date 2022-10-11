@@ -74,10 +74,6 @@ split_video() {
     echo "Done!"
 }
 
-function gi() {
-    curl -sLw n https://www.toptal.com/developers/gitignore/api/$@
-}
-
 function cuda_is_availabe() {
     python3 -c "import torch; print(torch.cuda.is_available())"
 }
@@ -231,12 +227,14 @@ function render_frame_number() {
     ffmpeg -i $VIDEO -vf "drawtext=fontfile=Verdana_Bold.ttf: text='${TEXT} #%{frame_num}': start_number=1: x=(w-tw): y=h-(2*lh): fontcolor=black: fontsize=30" -c:a copy ${FILENAME}_fn.mp4
 }
 
-function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/"$@" }
-
 run_docker_cwd() {
     docker run --rm -it -u 1000:1000 -v $(realpath .):/workspace -w /workspace $1
 }
 
 run_root_docker_cwd() {
     docker run --rm -it -v $(realpath .):/workspace -w /workspace $1
+}
+
+function gitignore() {
+    curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;
 }
