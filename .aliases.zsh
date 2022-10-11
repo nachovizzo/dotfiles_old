@@ -43,6 +43,7 @@ alias ag='ag -U'
 alias start_notebook_tunnel='ssh -f -N ipb24-tunnel'
 alias docker_clean_images='docker rmi $(docker images -a --filter=dangling=true -q)'
 alias docker_clean_ps='docker rm $(docker ps --filter=status=exited --filter=status=created -q)'
+alias mkae='make'
 
 alias -g latest='*(om[1])'
 
