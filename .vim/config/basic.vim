@@ -37,8 +37,8 @@ set whichwrap+=<,>,h,l
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable
-colorscheme xcodedarkhc
-" colorscheme xcodelighthc
+colorscheme xcodedark
+" colorscheme xcodelight
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo

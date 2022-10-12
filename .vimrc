@@ -21,7 +21,7 @@ Plug 'tpope/vim-surround'
 Plug 'lervag/vimtex'
 
 " New LUA configuration, WIP
-Plug 'akinsho/bufferline.nvim', { 'tag': 'v1.*' }
+Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
 Plug 'kyazdani42/nvim-web-devicons'
 call plug#end()
 
